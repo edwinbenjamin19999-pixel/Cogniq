@@ -32,5 +32,8 @@ dist-ssr
 # Local environment files (never commit real secrets)
 .env
 .env.development
-.env.production
 !.env.example
+# .env.production is committed intentionally: it holds only public,
+# build-time frontend config (Supabase URL + anon key, Stripe pk_ token),
+# which Vite inlines into the client bundle anyway. No real secrets here.
+!.env.production
