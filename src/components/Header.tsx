@@ -4,15 +4,18 @@ import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, Menu, X } from "lucide-react";
 
 interface HeaderProps {
-  /** Force dark text/logo even before scroll (for pages with white/light hero backgrounds) */
+  /** Behålls för bakåtkompatibilitet — flat-headern är alltid solid vit. */
   lightBg?: boolean;
 }
 
-export const Header = ({ lightBg = false }: HeaderProps = {}) => {
+/**
+ * FLAT HEADER — solitt vitt block, ingen transparens eller blur.
+ * Skarp kant mot innehållet vid scroll (border, inte skugga).
+ */
+export const Header = (_props: HeaderProps = {}) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
-  const dark = scrolled || lightBg;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -29,24 +32,23 @@ export const Header = ({ lightBg = false }: HeaderProps = {}) => {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 h-[60px] ${
-        dark
-          ? "bg-[#050d1a]/90 backdrop-blur-sm border-b border-white/5"
-          : "bg-transparent"
+      className={`fixed top-0 z-50 w-full h-[60px] bg-white transition-colors duration-200 ${
+        scrolled ? "border-b-2 border-gray-100" : "border-b-2 border-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-0">
-          <span className="text-xl font-[800] text-white">Ledger</span>
-          <span className="text-xl font-[800] text-[#3b82f6] transition-colors">.io</span>
+          <span className="text-xl font-extrabold tracking-tight text-[#0F1B2D]">Ledger</span>
+          <span className="text-xl font-extrabold tracking-tight text-primary">.io</span>
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => {
             const isAnchor = link.href.startsWith("#");
-            const cls = "text-sm transition-colors text-white/70 hover:text-white";
+            const cls =
+              "text-sm font-medium text-[#0F1B2D]/70 hover:text-primary transition-colors duration-200";
             return isAnchor ? (
               <a key={link.label} href={link.href} className={cls}>
                 {link.label}
@@ -65,15 +67,11 @@ export const Header = ({ lightBg = false }: HeaderProps = {}) => {
             variant="ghost"
             size="sm"
             onClick={() => navigate("/auth")}
-            className="text-sm text-white/60 hover:bg-white/5 hover:text-white"
+            className="text-sm text-[#0F1B2D]/70 hover:text-[#0F1B2D]"
           >
             Logga in
           </Button>
-          <Button
-            size="sm"
-            onClick={() => navigate("/auth")}
-            className="text-sm h-9 bg-white text-[#050d1a] hover:bg-white/90 gap-1.5 rounded-lg font-semibold"
-          >
+          <Button size="sm" onClick={() => navigate("/auth")} className="text-sm h-9 gap-1.5">
             Kom igång gratis
             <ArrowRight className="w-3.5 h-3.5" />
           </Button>
@@ -81,19 +79,22 @@ export const Header = ({ lightBg = false }: HeaderProps = {}) => {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 transition-colors text-white/80"
+          className="md:hidden p-2 text-[#0F1B2D] transition-colors"
+          aria-label={mobileOpen ? "Stäng meny" : "Öppna meny"}
+          aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile dropdown — solitt block, tjock kant */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#0f1f35] border-b border-[rgba(255,255,255,0.05)] px-4 py-4 space-y-3">
+        <div className="md:hidden bg-white border-b-2 border-gray-100 px-4 py-4 space-y-3">
           {navLinks.map((link) => {
             const isAnchor = link.href.startsWith("#");
-            const cls = "block text-sm text-white/60 hover:text-white";
+            const cls =
+              "block text-sm font-medium text-[#0F1B2D]/70 hover:text-primary transition-colors";
             return isAnchor ? (
               <a
                 key={link.label}
@@ -117,7 +118,7 @@ export const Header = ({ lightBg = false }: HeaderProps = {}) => {
           <Button
             size="sm"
             onClick={() => { navigate("/auth"); setMobileOpen(false); }}
-            className="w-full h-10 text-sm bg-white text-[#050d1a] hover:bg-white/90 rounded-lg font-semibold"
+            className="w-full h-10 text-sm"
           >
             Kom igång gratis
           </Button>

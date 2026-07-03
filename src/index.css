@@ -17,71 +17,80 @@
   /* ═══ TEMA 1: Blått (standard) ═══ */
   :root,
   :root[data-theme="blue"] {
-    --background: 224 100% 97%;
-    --foreground: 210 57% 14%;
+    /* FLAT DESIGN TOKENS — hierarchy via färg/skala/typografi, aldrig djup.
+       Ink = navy (#0F1B2D) istället för grå — nordisk, ownable ton. */
+    --background: 0 0% 100%;
+    --foreground: 216 50% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 57% 14%;
+    --card-foreground: 216 50% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 57% 14%;
+    --popover-foreground: 216 50% 12%;
 
-    --primary: 210 57% 14%;
+    /* Action-blå: blue-600 (#2563EB) — klarar WCAG AA med vit text (blue-500 gör det inte) */
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 87% 43%;
-    --secondary-foreground: 210 57% 14%;
+    /* Emerald-600 — stödaccent, AA med vit text */
+    --secondary: 161 94% 30%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 27% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 180 87% 43%;
-    --accent-foreground: 210 57% 14%;
+    /* Accent = interaktions-tint (ghost/hover-ytor), inte dekor */
+    --accent: 220 14% 96%;
+    --accent-foreground: 216 50% 12%;
 
-    --brand: 192 91% 36%;
+    --brand: 221 83% 53%;
     --brand-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --success: 152 76% 36%;
+    --success: 161 94% 30%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 32 95% 44%;
-    --warning-foreground: 0 0% 100%;
+    /* Amber kräver mörk text för AA */
+    --warning: 38 92% 50%;
+    --warning-foreground: 216 50% 12%;
 
-    --border: 222 40% 92%;
-    --input: 222 40% 92%;
-    --ring: 210 57% 14%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
 
     --radius: 0.5rem;
 
-    --gradient-hero: linear-gradient(135deg, hsl(210 57% 14%) 0%, hsl(210 50% 23%) 50%, hsl(180 87% 30%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(224 100% 97%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(180 87% 43%) 0%, hsl(185 80% 48%) 100%);
-    --gradient-dashboard-header: linear-gradient(135deg, hsl(214 100% 97%) 0%, hsl(224 100% 98%) 100%);
+    /* Flat: gradienter neutraliserade till solida ytor (2-stop samma färg
+       så background-image-konsumenter inte går sönder) */
+    --gradient-hero: linear-gradient(180deg, hsl(221 83% 53%) 0%, hsl(221 83% 53%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-accent: linear-gradient(180deg, hsl(221 83% 53%) 0%, hsl(221 83% 53%) 100%);
+    --gradient-dashboard-header: linear-gradient(180deg, hsl(220 14% 96%) 0%, hsl(220 14% 96%) 100%);
 
-    --shadow-soft: 0 2px 8px rgba(15,33,55,0.06), 0 1px 3px rgba(15,33,55,0.04);
-    --shadow-hover: 0 8px 24px rgba(15,33,55,0.12), 0 2px 6px rgba(15,33,55,0.05);
-    --shadow-glow: 0 0 40px hsl(180 87% 43% / 0.18);
+    /* Flat: inga skuggor på element */
+    --shadow-soft: none;
+    --shadow-hover: none;
+    --shadow-glow: none;
 
     --transition-smooth: all 0.2s ease;
 
-    /* Sidebar */
-    --sidebar-background: 210 57% 14%;
+    /* Sidebar — solitt navy-block (flat) med blå accent */
+    --sidebar-background: 216 50% 12%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 210 57% 14%;
-    --sidebar-accent: 180 87% 43%;
+    --sidebar-primary-foreground: 216 50% 12%;
+    --sidebar-accent: 217 91% 60%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 100%;
-    --sidebar-ring: 180 87% 43%;
+    --sidebar-ring: 217 91% 60%;
 
-    --sidebar-menu-text: 0 0% 100% / 0.6;
+    --sidebar-menu-text: 0 0% 100% / 0.7;
     --sidebar-menu-hover-bg: 0 0% 100% / 0.07;
-    --sidebar-menu-active-bg: 180 87% 43% / 0.15;
-    --sidebar-menu-active-border: 180 87% 43%;
-    --sidebar-section-text: 0 0% 100% / 0.3;
+    --sidebar-menu-active-bg: 217 91% 60% / 0.18;
+    --sidebar-menu-active-border: 217 91% 60%;
+    --sidebar-section-text: 0 0% 100% / 0.4;
     --sidebar-logo-accent: 217 91% 60%;
     --sidebar-logo-text: 0 0% 100%;
     --sidebar-divider: 0 0% 100% / 0.07;
@@ -89,13 +98,13 @@
 
     /* Topbar */
     --topbar-bg: 0 0% 100%;
-    --topbar-border-bottom: 222 40% 92%;
-    --topbar-border-top: 180 87% 43%;
+    --topbar-border-bottom: 220 13% 91%;
+    --topbar-border-top: 221 83% 53%;
     --topbar-has-top-border: 1;
 
-    /* Value colors */
-    --value-negative: 0 84% 60%;
-    --value-positive: 142 71% 45%;
+    /* Value colors — semantik för bokföring: grönt positivt, rött negativt */
+    --value-negative: 0 72% 45%;
+    --value-positive: 161 94% 30%;
 
     /* ═══ White-label theme defaults (overridden at runtime by tenantTheme.ts) ═══ */
     --brand-primary: 192 91% 36%;
@@ -408,16 +417,16 @@ table tbody td,
    LEDGER.IO DESIGN SYSTEM v6 — Premium Polish Layer
    ══════════════════════════════════════════════════ */
 
-/* ── 0. PREMIUM CSS VARIABLES ── */
+/* ── 0. FLAT CSS VARIABLES — skuggor avstängda i hela lagret ── */
 :root {
-  --shadow-card: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.05);
-  --shadow-card-hover: 0 2px 4px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.07);
-  --shadow-button: 0 1px 3px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.08);
-  --shadow-button-hover: 0 2px 6px rgba(0,0,0,0.15), 0 6px 16px rgba(0,0,0,0.12);
-  --transition-smooth: all 180ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-lift: transform 180ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1);
-  --glow-accent: 0 0 12px rgba(14, 206, 206, 0.15);
-  --glow-accent-strong: 0 0 20px rgba(14, 206, 206, 0.25);
+  --shadow-card: none;
+  --shadow-card-hover: none;
+  --shadow-button: none;
+  --shadow-button-hover: none;
+  --transition-smooth: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-lift: transform 200ms cubic-bezier(0.4, 0, 0.2, 1), background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --glow-accent: none;
+  --glow-accent-strong: none;
 }
 
 /* ── 1. GLOBAL NUMERIC DESIGN SYSTEM ── */
@@ -436,28 +445,15 @@ table tbody td,
 .num-neutral { color: hsl(var(--foreground)); }
 .num-zero { color: hsl(var(--muted-foreground)); }
 
-/* ── 2. BODY BACKGROUND — premium gradient + texture ── */
+/* ── 2. BODY BACKGROUND — flat solid canvas, ingen textur ── */
 body {
-  background: linear-gradient(160deg, #f0f4ff 0%, #eef2fb 40%, #f0f4ff 100%) !important;
-  background-color: #f1f5f9;
+  background: hsl(var(--background)) !important;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 :root[data-theme="dark"] body {
-  background: linear-gradient(160deg, hsl(222 47% 8%) 0%, hsl(222 47% 10%) 40%, hsl(222 47% 8%) 100%) !important;
-  background-color: hsl(222 47% 8%);
-}
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  opacity: 0.018;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px 200px;
+  background: hsl(222 47% 8%) !important;
 }
 
 /* ── 3. GLOBAL CARD SYSTEM — depth + inner highlight + hover lift ── */
@@ -537,13 +533,12 @@ body::before {
   pointer-events: none;
 }
 
-/* ── 5. TAB NAVIGATION — premium glass ── */
+/* ── 5. TAB NAVIGATION — flat block ── */
 [role="tablist"] {
-  background: rgba(241,245,249,0.8);
-  backdrop-filter: blur(8px);
-  border-radius: 10px;
+  background: hsl(var(--muted));
+  border-radius: 8px;
   padding: 3px;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: none;
 }
 :root[data-theme="dark"] [role="tablist"] {
   background: hsl(217 33% 16% / 0.8);
@@ -559,8 +554,8 @@ body::before {
 [role="tab"][data-state="active"],
 [role="tab"][aria-selected="true"] {
   background: hsl(var(--card));
-  color: hsl(var(--foreground));
-  box-shadow: 0 1px 3px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
+  color: hsl(var(--primary));
+  box-shadow: none;
   font-weight: 600;
 }
 [role="tabpanel"] {
@@ -571,24 +566,24 @@ body::before {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── 6. SIDEBAR — premium gradient + glow bar ── */
+/* ── 6. SIDEBAR — solitt navy-block, flat aktiv-markör ── */
 [data-sidebar] {
-  background: linear-gradient(180deg, hsl(var(--sidebar-background)) 0%, hsl(var(--sidebar-background) / 0.95) 100%) !important;
-  box-shadow: inset -1px 0 0 hsl(0 0% 100% / 0.06);
+  background: hsl(var(--sidebar-background)) !important;
+  box-shadow: none;
 }
 [data-sidebar] [data-active="true"] {
   position: relative;
-  background: hsl(var(--sidebar-accent) / 0.14) !important;
-  box-shadow: inset 0 0 12px hsl(var(--sidebar-accent) / 0.06);
+  background: hsl(var(--sidebar-accent) / 0.18) !important;
+  box-shadow: none;
 }
 [data-sidebar] [data-active="true"]::after {
   content: '';
   position: absolute;
   left: 0; top: 18%; bottom: 18%;
   width: 3px;
-  background: linear-gradient(180deg, hsl(var(--sidebar-accent)) 0%, hsl(var(--sidebar-accent) / 0.5) 100%);
+  background: hsl(var(--sidebar-accent));
   border-radius: 0 3px 3px 0;
-  box-shadow: 0 0 8px hsl(var(--sidebar-accent) / 0.4);
+  box-shadow: none;
 }
 [data-sidebar] button {
   transition: var(--transition-smooth);
@@ -606,23 +601,22 @@ body::before {
   color: hsl(var(--sidebar-accent));
 }
 
-/* ── 7. BUTTONS — premium depth ── */
+/* ── 7. BUTTONS — flat: färgskifte + skala, aldrig djup ── */
 button:active:not(:disabled) {
   transform: scale(0.97);
 }
 button.bg-primary,
 button[class*="bg-primary"] {
-  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.88) 100%) !important;
-  box-shadow: var(--shadow-button);
+  box-shadow: none;
   transition: var(--transition-smooth);
-  border: 1px solid hsl(0 0% 100% / 0.1);
+  border: none;
   font-weight: 600;
   letter-spacing: 0.01em;
 }
 button.bg-primary:hover:not(:disabled),
 button[class*="bg-primary"]:hover:not(:disabled) {
-  box-shadow: var(--shadow-button-hover);
-  transform: translateY(-1px);
+  box-shadow: none;
+  transform: scale(1.03);
 }
 
 /* ── 8. FLOATING AI BUTTON — glow pulse ── */
@@ -766,31 +760,25 @@ table td.text-right, [class*="amount"], [class*="value"] {
 input:not([class*="bg-slate-"]):not([class*="bg-zinc-"]):not([class*="bg-neutral-"]):not([class*="bg-gray-9"]):focus,
 select:not([class*="bg-slate-"]):not([class*="bg-zinc-"]):focus,
 textarea:not([class*="bg-slate-"]):not([class*="bg-zinc-"]):focus {
-  border-color: rgba(14,206,206,0.5) !important;
-  box-shadow: 0 0 0 3px rgba(14,206,206,0.1) !important;
+  border-color: hsl(var(--primary)) !important;
+  box-shadow: none !important;
   outline: none;
   background: hsl(var(--card));
   transition: var(--transition-smooth);
 }
 
-/* Dark inputs: keep their own bg, just add cyan ring */
+/* Dark inputs: keep their own bg, hard flat border on focus */
 input[class*="bg-slate-"]:focus,
 input[class*="bg-zinc-"]:focus,
 textarea[class*="bg-slate-"]:focus {
-  border-color: rgba(99,102,241,0.6) !important;
-  box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
+  border-color: hsl(var(--primary)) !important;
+  box-shadow: none !important;
   outline: none;
 }
 
-/* ── 15. ELEVATION + GLOWS ── */
-.elevation-1 { box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03); }
-.elevation-2 { box-shadow: 0 4px 14px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.03); }
-.elevation-3 { box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.04); }
-.glow-green { box-shadow: 0 2px 8px rgba(0,0,0,0.05), 0 0 16px -4px hsl(142 71% 45% / 0.15); }
-.glow-red { box-shadow: 0 2px 8px rgba(0,0,0,0.05), 0 0 16px -4px hsl(0 84% 60% / 0.15); }
-.glow-blue { box-shadow: 0 2px 8px rgba(0,0,0,0.05), 0 0 16px -4px hsl(210 57% 50% / 0.15); }
-.glow-amber { box-shadow: 0 2px 8px rgba(0,0,0,0.05), 0 0 16px -4px hsl(38 92% 50% / 0.15); }
-.glow-accent { box-shadow: 0 2px 8px rgba(0,0,0,0.05), 0 0 16px -4px hsl(var(--accent) / 0.18); }
+/* ── 15. ELEVATION + GLOWS — neutraliserade (flat) ── */
+.elevation-1, .elevation-2, .elevation-3,
+.glow-green, .glow-red, .glow-blue, .glow-amber, .glow-accent { box-shadow: none; }
 
 /* ── 16. SCROLLBAR ── */
 ::-webkit-scrollbar { width: 5px; height: 5px; }
@@ -808,33 +796,28 @@ textarea[class*="bg-slate-"]:focus {
 .dashboard-section-content { background: hsl(var(--muted) / 0.15); border-radius: 16px; padding: 1rem; }
 
 /* ── 18. AUTH PREMIUM ── */
-@keyframes auth-bg-shift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 .auth-page-bg {
-  background: linear-gradient(135deg, hsl(224 100% 97%) 0%, hsl(220 60% 96%) 25%, hsl(224 100% 97%) 50%, hsl(210 40% 95%) 75%, hsl(224 100% 97%) 100%);
-  background-size: 400% 400%; animation: auth-bg-shift 20s ease infinite;
+  background: hsl(var(--muted));
 }
 .auth-card {
-  background: hsl(var(--card) / 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  border: 1px solid hsl(var(--border) / 0.5); border-radius: 1rem;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04), 0 0 60px hsl(var(--accent) / 0.06);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--border)); border-radius: 0.5rem;
+  box-shadow: none;
+  transition: border-color 0.2s ease;
 }
-.auth-card:hover { box-shadow: 0 16px 50px rgba(0,0,0,0.1), 0 6px 16px rgba(0,0,0,0.05), 0 0 80px hsl(var(--accent) / 0.08); }
+.auth-card:hover { border-color: hsl(var(--primary) / 0.4); }
 @keyframes auth-fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 .auth-stagger-1 { animation: auth-fade-up 0.5s cubic-bezier(0.4,0,0.2,1) 0.05s both; }
 .auth-stagger-2 { animation: auth-fade-up 0.5s cubic-bezier(0.4,0,0.2,1) 0.12s both; }
 .auth-stagger-3 { animation: auth-fade-up 0.5s cubic-bezier(0.4,0,0.2,1) 0.2s both; }
 .auth-stagger-4 { animation: auth-fade-up 0.5s cubic-bezier(0.4,0,0.2,1) 0.28s both; }
-.auth-logo-text { background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(210 70% 45%) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 0 8px hsl(var(--accent) / 0.15)); }
+.auth-logo-text { color: hsl(var(--primary)); }
 @keyframes auth-ai-pulse { 0%, 100% { box-shadow: 0 0 0 0 hsl(var(--accent) / 0.4); } 50% { box-shadow: 0 0 0 6px hsl(var(--accent) / 0); } }
 .auth-ai-dot { width: 7px; height: 7px; border-radius: 50%; background: hsl(var(--accent)); animation: auth-ai-pulse 2.5s ease-in-out infinite; }
-.auth-btn-primary { background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(210 50% 23%) 100%); box-shadow: 0 4px 14px hsl(var(--primary) / 0.25); transition: all 0.2s ease; position: relative; overflow: hidden; }
-.auth-btn-primary::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.08), transparent); transition: left 0.6s ease; }
-.auth-btn-primary:hover::after { left: 100%; }
-.auth-btn-primary:hover:not(:disabled) { box-shadow: 0 6px 20px hsl(var(--primary) / 0.35); transform: translateY(-2px); }
-.auth-btn-primary:active:not(:disabled) { transform: translateY(0) scale(0.98); }
-.auth-input:focus-within { transform: scale(1.005); transition: transform 0.15s ease; }
-.auth-input input:focus { box-shadow: 0 0 0 3px hsl(var(--accent) / 0.12), 0 2px 8px hsl(var(--accent) / 0.06) !important; border-color: hsl(var(--accent) / 0.5) !important; }
+.auth-btn-primary { background: hsl(var(--primary)); box-shadow: none; transition: all 0.2s ease; }
+.auth-btn-primary:hover:not(:disabled) { background: hsl(224 76% 48%); transform: scale(1.03); }
+.auth-btn-primary:active:not(:disabled) { transform: scale(0.98); }
+.auth-input input:focus { box-shadow: none !important; border-color: hsl(var(--primary)) !important; }
 
 /* ── 19. MICRO-ANIMATIONS & PAGE TRANSITIONS ── */
 @keyframes pulse-glow {
@@ -1463,36 +1446,24 @@ textarea[class*="bg-slate-"]:focus {
    ═══════════════════════════════════════════════ */
 @layer base {
   html, body {
-    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-    font-feature-settings: 'cv11', 'ss01';
+    font-family: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 13px;
   }
 
-  /* Force two-weight system: collapse all heavy weights to 500 */
-  .font-semibold,
-  .font-bold,
-  .font-extrabold,
-  .font-black {
-    font-weight: 500 !important;
-  }
-  [class*="font-["][class*="600"],
-  [class*="font-["][class*="700"],
-  [class*="font-["][class*="800"],
-  [class*="font-["][class*="900"] {
-    font-weight: 500 !important;
+  /* Flat: typografin bär hierarkin — feta vikter är kärnan, aldrig kollapsade */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
   b, strong {
-    font-weight: 500;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
+    font-weight: 600;
   }
 
-  /* Focus ring */
+  /* Focus ring — hög kontrast, ersätter skuggbaserad fokus */
   :focus-visible {
-    outline: 2px solid #0B4F6C;
+    outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
   }
   :focus:not(:focus-visible) {

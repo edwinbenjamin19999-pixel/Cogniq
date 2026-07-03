@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const FAQS = [
   {
@@ -27,16 +28,21 @@ const FAQS = [
   },
 ];
 
+/**
+ * FLAT FAQ — vit sektion, mörk text, tjocka border-2-avdelare mellan
+ * frågor (flat-systemets enda tillåtna divider). Öppen fråga markeras
+ * med blå kant — färg som struktur, inte skugga.
+ */
 export const FAQ = () => {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-2xl mx-auto">
-        <p className="text-[11px] uppercase tracking-[0.12em] text-[#3b82f6] text-center mb-3">
-          VANLIGA FRÅGOR
+    <section className="bg-white py-24 px-6">
+      <div className="mx-auto max-w-2xl">
+        <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#2563EB]">
+          Vanliga frågor
         </p>
-        <h2 className="text-3xl font-bold text-white text-center mb-12">
+        <h2 className="mb-12 text-center text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F1B2D]">
           Bra frågor förtjänar raka svar.
         </h2>
 
@@ -44,33 +50,35 @@ export const FAQ = () => {
           {FAQS.map((item, i) => {
             const isOpen = open === i;
             return (
-              <div key={item.q} className="border-b border-white/10 py-5">
+              <div
+                key={item.q}
+                className={`border-b-2 py-5 transition-colors duration-200 ${
+                  isOpen ? "border-[#2563EB]" : "border-gray-200"
+                }`}
+              >
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="w-full flex justify-between items-center text-left cursor-pointer"
+                  className="flex w-full cursor-pointer items-center justify-between rounded-md text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2"
                 >
-                  <span className="text-white font-medium text-base pr-4">
+                  <span
+                    className={`pr-4 text-base font-semibold transition-colors duration-200 ${
+                      isOpen ? "text-[#2563EB]" : "text-[#0F1B2D]"
+                    }`}
+                  >
                     {item.q}
                   </span>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                    className={`text-white/50 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
+                  <ChevronDown
+                    aria-hidden
+                    className={`h-5 w-5 shrink-0 transition-transform duration-200 ${
+                      isOpen ? "rotate-180 text-[#2563EB]" : "text-[#0F1B2D]/40"
+                    }`}
+                    strokeWidth={2.5}
+                  />
                 </button>
                 {isOpen && (
-                  <p className="text-white/50 text-sm leading-relaxed pt-3 pb-1">
+                  <p className="pt-3 pb-1 text-sm leading-relaxed text-[#0F1B2D]/60">
                     {item.a}
                   </p>
                 )}

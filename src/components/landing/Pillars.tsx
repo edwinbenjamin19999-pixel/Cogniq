@@ -1,17 +1,36 @@
+import { Bot, Landmark, CreditCard, ShieldCheck } from "lucide-react";
+
+/**
+ * FLAT COLOR-BLOCK CARDS — vit sektion med fyra mjukt tintade kortblock.
+ * Ingen skugga, ingen kant: färgen definierar ytan. Ikon i solid cirkel.
+ * Hover = subtil skala + färgintensifiering (posterprincip).
+ */
 const pillars = [
   {
+    icon: Bot,
+    tint: "bg-blue-50 hover:bg-blue-100",
+    iconCircle: "bg-[#2563EB] text-white",
     title: "Automatiserad bokföring",
     desc: "Lägg noll tid på bokföring. Ledger.io konterar mot BAS-kontoplanen automatiskt — du fokuserar på företaget.",
   },
   {
+    icon: Landmark,
+    tint: "bg-emerald-50 hover:bg-emerald-100",
+    iconCircle: "bg-[#059669] text-white",
     title: "Direkt till myndigheter",
     desc: "Moms (konto 2610–2650), AGI och inkomstskatt lämnas direkt till Skatteverket. Inga formulär, inga glömda deadlines.",
   },
   {
+    icon: CreditCard,
+    tint: "bg-amber-50 hover:bg-amber-100",
+    iconCircle: "bg-[#F59E0B] text-[#0F1B2D]",
     title: "Bankintegrationer",
     desc: "Koppla din bank en gång. Kontinuerlig bankavstämning mot verifikat — varje transaktion matchas och konteras automatiskt.",
   },
   {
+    icon: ShieldCheck,
+    tint: "bg-gray-100 hover:bg-gray-200",
+    iconCircle: "bg-[#0F1B2D] text-white",
     title: "Revision & kontroll",
     desc: "Resultat- och balansräkning alltid uppdaterad. Varje post är spårbar, verifierbar och revisionssäker.",
   },
@@ -19,21 +38,30 @@ const pillars = [
 
 export const Pillars = () => {
   return (
-    <section className="section-shell">
-      <div className="section-inner">
-        <p className="section-label">Plattformen</p>
-        <h2 className="section-headline text-3xl md:text-4xl font-semibold tracking-tight">
+    <section className="bg-white py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#2563EB]">
+          Plattformen
+        </p>
+        <h2 className="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F1B2D]">
           Fyra grundpelare — ett enda system.
         </h2>
-        <p className="section-lede text-[15px] leading-relaxed max-w-2xl">
+        <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-[#0F1B2D]/60">
           Allt du behöver för automatiserad bokföring och rapportering, integrerat från dag ett.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           {pillars.map((p) => (
-            <div key={p.title} className="dark-surface-card" style={{ padding: "28px 24px" }}>
-              <div className="h-px w-8 bg-[#3b82f6] mb-6" />
-              <h3 className="text-white font-medium text-base mb-2">{p.title}</h3>
-              <p className="text-white/60 text-sm leading-relaxed">{p.desc}</p>
+            <div
+              key={p.title}
+              className={`group rounded-lg p-7 transition-all duration-200 hover:scale-[1.02] ${p.tint}`}
+            >
+              <div
+                className={`flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-200 group-hover:scale-110 ${p.iconCircle}`}
+              >
+                <p.icon className="h-6 w-6" strokeWidth={2.5} aria-hidden />
+              </div>
+              <h3 className="mt-6 text-base font-bold text-[#0F1B2D]">{p.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-[#0F1B2D]/60">{p.desc}</p>
             </div>
           ))}
         </div>

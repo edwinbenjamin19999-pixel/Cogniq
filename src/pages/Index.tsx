@@ -19,39 +19,45 @@ import { FAQ } from "@/components/landing/FAQ";
 
 const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.Footer })));
 
+/**
+ * FLAT POSTER LAYOUT — sidan komponeras som en serie solida färgblock:
+ * blå (hero) → navy → vit → navy → amber → navy → vit → navy (footer).
+ * Sektioner byggda för mörk bakgrund (vit text) ligger i navy-block tills
+ * de konverteras; färgövergångarna är skarpa, aldrig tonade.
+ */
+const NavyBlock = ({ children }: { children: ReactNode }) => (
+  <div className="bg-[#0F1B2D]">{children}</div>
+);
+
 const Index = () => {
   return (
-    <div
-      className="min-h-screen"
-      style={{
-        background: `linear-gradient(
-          to bottom,
-          #1a3a5c 0%,
-          #0f2442 8%,
-          #071830 20%,
-          #050d1a 40%,
-          #050d1a 100%
-        )`,
-      }}
-    >
+    <div className="min-h-screen bg-white">
       <Header />
       <main>
         <Hero />
-        <CountdownCTA />
-        <InteractiveDemoPreview />
+        <NavyBlock>
+          <CountdownCTA />
+          <InteractiveDemoPreview />
+        </NavyBlock>
         <Pillars />
-        <HowItWorks />
-        <AutomationGrid />
-        <WhyNorthLedger />
-        <UseCases />
+        <NavyBlock>
+          <HowItWorks />
+          <AutomationGrid />
+          <WhyNorthLedger />
+          <UseCases />
+        </NavyBlock>
         <PilotCTA />
-        <SelectedFeatures />
-        <TrustCompliance />
-        <WhiteLabelSection />
+        <NavyBlock>
+          <SelectedFeatures />
+          <TrustCompliance />
+          <WhiteLabelSection />
+        </NavyBlock>
         <FAQ />
       </main>
       <Suspense fallback={null}>
-        <Footer />
+        <NavyBlock>
+          <Footer />
+        </NavyBlock>
       </Suspense>
     </div>
   );
