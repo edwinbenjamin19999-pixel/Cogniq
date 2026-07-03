@@ -47,9 +47,7 @@ const Index = () => {
         <PilotCTA />
         <SelectedFeatures />
         <TrustCompliance />
-        <NavyBlock>
-          <WhiteLabelSection />
-        </NavyBlock>
+        <WhiteLabelSection />
         <FAQ />
       </main>
       <Suspense fallback={null}>

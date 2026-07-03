@@ -1,217 +1,132 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * FLAT WHITE LABEL-BLOCK — solitt ink-navy, vita check-rutor, mockup i
+ * vit platt ram (som hero). Inga glows, gradienter eller skuggor.
+ */
 const points = [
   { title: "Din branding", desc: "Logotyp, färger, domän — helt ditt." },
   { title: "Ditt klientgränssnitt", desc: "Dina kunder ser aldrig Bokfy." },
   { title: "Samma motor", desc: "Full kraft av Bokfy under huven." },
 ];
 
+const KPIS = [
+  { label: "Omsättning", value: "284k", trend: "+12%" },
+  { label: "Resultat", value: "62k", trend: "+8%" },
+  { label: "Likviditet", value: "418k", trend: "+4%" },
+];
+
+const BARS = [30, 45, 38, 55, 48, 62, 58, 72, 68, 80, 75, 88];
+
 export const WhiteLabelSection = () => {
   const navigate = useNavigate();
   return (
-    <section className="section-shell">
-      <div className="section-inner">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left side */}
+    <section className="relative overflow-hidden bg-[#0F1B2D] py-24 px-6">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-28 -left-28 h-[340px] w-[340px] rounded-full bg-white/5"
+      />
+      <div className="relative mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          {/* Vänster */}
           <div className="lg:col-span-5">
-            <p className="section-label">White Label</p>
-            <h2 className="section-headline text-3xl md:text-4xl font-semibold tracking-tight leading-tight">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#60A5FA]">
+              White Label
+            </p>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight text-white">
               Lansera din egen bokföringsplattform.
             </h2>
-            <p className="section-lede text-base leading-relaxed">
-              Erbjud Bokfy under ditt varumärke. För redovisningsbyråer, banker och rådgivare.
+            <p className="mt-4 text-base leading-relaxed text-white/70">
+              Erbjud Bokfy under ditt varumärke. För redovisningsbyråer, banker
+              och rådgivare.
             </p>
 
-            {/* Feature list */}
             <ul className="mt-8 space-y-4">
               {points.map((p) => (
-                <li key={p.title} className="flex gap-3 items-start">
-                  <div
-                    className="flex-shrink-0 mt-0.5 flex items-center justify-center"
-                    style={{
-                      width: 20,
-                      height: 20,
-                      borderRadius: "50%",
-                      background: "rgba(37,99,235,0.12)",
-                      border: "1px solid rgba(37,99,235,0.3)",
-                    }}
-                  >
-                    <Check className="w-3 h-3" style={{ color: "#3b82f6" }} strokeWidth={3} />
-                  </div>
+                <li key={p.title} className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-[22px] w-[22px] flex-shrink-0 items-center justify-center rounded-md bg-white">
+                    <Check className="h-3 w-3 text-[#2563EB]" strokeWidth={3} aria-hidden />
+                  </span>
                   <div>
-                    <div className="text-white font-medium text-[15px]">{p.title}</div>
-                    <div className="text-white/55 text-[13px] mt-0.5">{p.desc}</div>
+                    <div className="text-[15px] font-bold text-white">{p.title}</div>
+                    <div className="mt-0.5 text-[13px] text-white/60">{p.desc}</div>
                   </div>
                 </li>
               ))}
             </ul>
 
-            <Button
+            <button
               onClick={() => navigate("/white-label")}
-              className="mt-8 h-11 px-6 bg-white text-[#0F1B2D] hover:bg-white/90 font-medium rounded-lg group"
+              className="group mt-8 inline-flex h-12 items-center gap-2 rounded-md bg-[#2563EB] px-6 text-[15px] font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1B2D]"
             >
               Läs mer om White Label
-              <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
-            </Button>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+            </button>
           </div>
 
-          {/* Right side: browser mockup */}
+          {/* Höger: mockup i vit platt ram */}
           <div className="lg:col-span-7">
-            <div
-              className="relative mx-auto"
-              style={{
-                maxWidth: 540,
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.10)",
-                borderRadius: 14,
-                overflow: "hidden",
-                boxShadow:
-                  "0 32px 80px rgba(0,0,0,0.45), 0 0 40px rgba(37,99,235,0.15), inset 0 1px 0 rgba(255,255,255,0.06)",
-              }}
-            >
-              {/* Browser chrome */}
-              <div
-                className="flex items-center"
-                style={{
-                  height: 36,
-                  background: "rgba(255,255,255,0.05)",
-                  borderBottom: "1px solid rgba(255,255,255,0.07)",
-                  padding: "0 14px",
-                  gap: 6,
-                }}
-              >
-                <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#FF5F57" }} />
-                <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#FFBD2E" }} />
-                <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#28CA41" }} />
-                <div
-                  className="flex items-center"
-                  style={{
-                    background: "rgba(255,255,255,0.06)",
-                    borderRadius: 6,
-                    height: 20,
-                    maxWidth: 220,
-                    flexGrow: 1,
-                    marginLeft: 10,
-                    padding: "0 10px",
-                  }}
-                >
-                  <span style={{ fontSize: 11, color: "rgba(255,255,255,0.45)" }}>
-                    app.byranab.se
-                  </span>
+            <div className="mx-auto max-w-[540px] overflow-hidden rounded-lg bg-white p-1.5">
+              {/* Browser chrome — flat grå list */}
+              <div className="flex items-center gap-1.5 rounded-t-md bg-gray-100 px-3.5 py-2.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-gray-300" />
+                <span className="h-2.5 w-2.5 rounded-full bg-gray-300" />
+                <span className="h-2.5 w-2.5 rounded-full bg-gray-300" />
+                <div className="ml-2 flex h-5 max-w-[220px] flex-grow items-center rounded bg-white px-2.5">
+                  <span className="text-[11px] text-gray-400">app.byranab.se</span>
                 </div>
               </div>
 
-              {/* Mockup body */}
-              <div style={{ background: "#0F1B2D", padding: 24 }}>
-                {/* Fake brand header */}
-                <div className="flex items-center justify-between mb-5">
+              {/* Mockup-kropp — mörk produktyta */}
+              <div className="rounded-b-md bg-[#0F1B2D] p-6">
+                <div className="mb-5 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div
-                      style={{
-                        width: 24,
-                        height: 24,
-                        borderRadius: 6,
-                        background: "linear-gradient(135deg, #fff, #d4d4d8)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "#0F1B2D",
-                        fontSize: 12,
-                        fontWeight: 800,
-                      }}
-                    >
+                    <div className="flex h-6 w-6 items-center justify-center rounded-md bg-white text-xs font-extrabold text-[#0F1B2D]">
                       B
                     </div>
-                    <span
-                      style={{
-                        color: "#fff",
-                        fontWeight: 700,
-                        fontSize: 15,
-                        letterSpacing: "-0.2px",
-                      }}
-                    >
+                    <span className="text-[15px] font-bold tracking-tight text-white">
                       ByrånAB
                     </span>
                   </div>
-                  <div
-                    style={{
-                      width: 28,
-                      height: 28,
-                      borderRadius: "50%",
-                      background: "rgba(255,255,255,0.08)",
-                      border: "1px solid rgba(255,255,255,0.1)",
-                    }}
-                  />
+                  <div className="h-7 w-7 rounded-full bg-white/10" />
                 </div>
 
-                {/* Page title */}
                 <div className="mb-4">
-                  <div className="text-[10px] uppercase tracking-wider text-white/40 mb-1">
+                  <div className="mb-1 text-[10px] uppercase tracking-wider text-white/50">
                     Översikt
                   </div>
-                  <div className="text-[14px] text-white font-medium">Mars 2026</div>
+                  <div className="text-[14px] font-semibold text-white">Mars 2026</div>
                 </div>
 
-                {/* KPI cards row */}
+                {/* KPI-rad — platta block med blå topplist */}
                 <div className="grid grid-cols-3 gap-2.5">
-                  {[
-                    { label: "Omsättning", value: "284k", trend: "+12%" },
-                    { label: "Resultat", value: "62k", trend: "+8%" },
-                    { label: "Likviditet", value: "418k", trend: "+4%" },
-                  ].map((k) => (
+                  {KPIS.map((k) => (
                     <div
                       key={k.label}
-                      style={{
-                        background: "rgba(255,255,255,0.03)",
-                        border: "1px solid rgba(255,255,255,0.06)",
-                        borderRadius: 8,
-                        padding: 12,
-                      }}
+                      className="rounded-md border-t-2 border-[#60A5FA] bg-white/[0.07] p-3"
                     >
-                      <div style={{ fontSize: 9, color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: 0.5 }}>
+                      <div className="text-[9px] uppercase tracking-wide text-white/50">
                         {k.label}
                       </div>
-                      <div
-                        style={{
-                          fontSize: 18,
-                          fontWeight: 700,
-                          color: "#fff",
-                          marginTop: 4,
-                          fontVariantNumeric: "tabular-nums",
-                        }}
-                      >
+                      <div className="mt-1 text-lg font-bold text-white tabular-nums">
                         {k.value}
                       </div>
-                      <div style={{ fontSize: 10, color: "#3b82f6", marginTop: 2 }}>
+                      <div className="mt-0.5 text-[10px] font-semibold text-emerald-300">
                         ↗ {k.trend}
                       </div>
                     </div>
                   ))}
                 </div>
 
-                {/* Tiny faux chart bars */}
-                <div
-                  className="mt-4"
-                  style={{
-                    background: "rgba(255,255,255,0.02)",
-                    border: "1px solid rgba(255,255,255,0.05)",
-                    borderRadius: 8,
-                    padding: 12,
-                  }}
-                >
-                  <div className="flex items-end justify-between" style={{ height: 48, gap: 4 }}>
-                    {[30, 45, 38, 55, 48, 62, 58, 72, 68, 80, 75, 88].map((h, i) => (
+                {/* Stapeldiagram — solida blå staplar */}
+                <div className="mt-4 rounded-md bg-white/[0.05] p-3">
+                  <div className="flex h-12 items-end justify-between gap-1">
+                    {BARS.map((h, i) => (
                       <div
                         key={i}
-                        style={{
-                          flex: 1,
-                          height: `${h}%`,
-                          background:
-                            "linear-gradient(to top, rgba(59,130,246,0.55), rgba(59,130,246,0.15))",
-                          borderRadius: 2,
-                        }}
+                        className="flex-1 rounded-sm bg-[#60A5FA]"
+                        style={{ height: `${h}%` }}
                       />
                     ))}
                   </div>

@@ -1,8 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
-import { ChevronDown } from "lucide-react";
+import { Check, ChevronDown, ArrowRight } from "lucide-react";
 
+/**
+ * FLAT PRISSIDA — blå poster-header → vita priskort där huvudplanen
+ * (Standard) bär "dramatic scale": större, blue-50-yta, tjock blå kant
+ * och badge. Enterprise = lugnt grått block. FAQ med border-2-avdelare.
+ * Avslut i ink-navy CTA-block.
+ */
 const standardFeatures = [
   "Automatisk bokföring med AI (≥95% konfidens)",
   "Bankintegrationer via PSD2 — SEB, Nordea, Handelsbanken, Swedbank",
@@ -45,10 +51,20 @@ const faqs = [
   },
 ];
 
-const FeatureItem = ({ text }: { text: string }) => (
-  <div className="flex gap-3 items-start py-2">
-    <span className="text-[#3b82f6] text-sm leading-6">✓</span>
-    <span className="text-white/70 text-[14px] leading-6">{text}</span>
+const FeatureItem = ({ text, onBlue = false }: { text: string; onBlue?: boolean }) => (
+  <div className="flex items-start gap-3 py-2">
+    <span
+      className={`mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md ${
+        onBlue ? "bg-[#2563EB]" : "bg-white"
+      }`}
+    >
+      <Check
+        className={`h-3 w-3 ${onBlue ? "text-white" : "text-[#2563EB]"}`}
+        strokeWidth={3}
+        aria-hidden
+      />
+    </span>
+    <span className="text-[14px] leading-6 text-[#0F1B2D]/75">{text}</span>
   </div>
 );
 
@@ -57,94 +73,105 @@ const Priser = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-[#0F1B2D]">
+    <div className="min-h-screen bg-white">
       <Header />
       <main>
-        {/* Header */}
-        <section className="bg-[#0F1B2D] pt-24 pb-16 text-center px-6">
-          <div className="text-[11px] uppercase tracking-[0.12em] text-[#3b82f6] mb-3">
-            PRISER
+        {/* Blått poster-huvud */}
+        <section className="relative overflow-hidden bg-[#2563EB] pt-[60px]">
+          <div aria-hidden className="pointer-events-none absolute inset-0">
+            <div className="absolute -top-28 -right-28 h-[340px] w-[340px] rounded-full bg-white/5" />
+            <div className="absolute -bottom-20 left-[12%] h-[180px] w-[180px] rotate-12 bg-white/5" />
           </div>
-          <h1 className="text-4xl font-bold text-white">Enkel prissättning.</h1>
-          <p className="text-white/50 text-lg mt-3 max-w-xl mx-auto">
-            Välj det som passar din verksamhet. Byt plan när du vill.
-          </p>
+          <div className="relative mx-auto max-w-2xl px-6 pt-20 pb-20 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-blue-100">
+              Priser
+            </p>
+            <h1 className="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+              Enkel prissättning.
+            </h1>
+            <p className="mx-auto mt-4 max-w-xl text-lg text-blue-50">
+              Välj det som passar din verksamhet. Byt plan när du vill.
+            </p>
+          </div>
         </section>
 
-        {/* Cards */}
-        <section className="bg-[#0F1B2D] pb-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto px-6">
-            {/* Standard */}
-            <div className="bg-[#0F1B2D] border border-white/10 rounded-2xl p-8">
-              <h2 className="text-xl font-semibold text-white">Standard</h2>
-              <p className="text-white/50 text-sm mt-1">
+        {/* Priskort */}
+        <section className="bg-white py-24">
+          <div className="mx-auto grid max-w-4xl grid-cols-1 items-start gap-6 px-6 md:grid-cols-2">
+            {/* Standard — huvudplan med dramatic scale */}
+            <div className="relative rounded-lg border-2 border-[#2563EB] bg-blue-50 p-8 lg:scale-[1.03] lg:origin-top transition-transform">
+              <span className="absolute -top-3.5 left-8 inline-flex items-center gap-1 rounded-full bg-[#2563EB] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
+                Populärast
+              </span>
+              <h2 className="text-xl font-bold text-[#0F1B2D]">Standard</h2>
+              <p className="mt-1 text-sm text-[#0F1B2D]/60">
                 För företag som vill automatisera sin bokföring
               </p>
               <div className="mt-6">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-5xl font-bold text-white tabular-nums">
+                  <span className="text-5xl font-extrabold tracking-tight text-[#0F1B2D] tabular-nums">
                     199 kr
                   </span>
-                  <span className="text-white/40 text-lg">/mån</span>
+                  <span className="text-lg text-[#0F1B2D]/50">/mån</span>
                 </div>
-                <p className="text-white/35 text-sm mt-2">
+                <p className="mt-2 text-sm text-[#0F1B2D]/60">
                   Därefter 399 kr/mån · Introerbjudande
                 </p>
-                <p className="text-white/25 text-xs mt-1">Exkl. moms</p>
+                <p className="mt-1 text-xs text-[#0F1B2D]/40">Exkl. moms</p>
               </div>
               <button
                 onClick={() => navigate("/auth")}
-                className="mt-6 w-full h-12 rounded-xl bg-white hover:bg-white/90 text-[#0F1B2D] font-semibold text-[15px] transition-colors"
+                className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#2563EB] text-[15px] font-bold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2"
               >
-                Kom igång gratis →
+                Kom igång gratis
+                <ArrowRight className="h-4 w-4" aria-hidden />
               </button>
-              <p className="text-white/30 text-xs text-center mt-3">
+              <p className="mt-3 text-center text-xs text-[#0F1B2D]/50">
                 14 dagar gratis · Ingen bindningstid
               </p>
-              <div className="border-t border-white/[0.08] mt-6 pt-6">
-                <p className="text-white/30 text-[10px] uppercase tracking-wider mb-4">
+              <div className="mt-6 border-t-2 border-[#2563EB]/15 pt-6">
+                <p className="mb-3 text-[10px] font-semibold uppercase tracking-wider text-[#0F1B2D]/50">
                   Vad som ingår
                 </p>
                 {standardFeatures.map((f) => (
-                  <FeatureItem key={f} text={f} />
+                  <FeatureItem key={f} text={f} onBlue />
                 ))}
-                <p className="text-white/30 text-[11px] mt-3 italic">
+                <p className="mt-3 text-[11px] italic text-[#0F1B2D]/50">
                   Utlägg registreras av den som gjort dem — inte av dig.
                 </p>
               </div>
             </div>
 
-            {/* Enterprise */}
-            <div className="relative bg-[#0F1B2D] border border-[#3b82f6]/30 rounded-2xl p-8">
-              <span className="absolute top-4 right-4 bg-[#3b82f6]/10 text-[#3b82f6] border border-[#3b82f6]/20 rounded-full text-[10px] px-3 py-1 uppercase tracking-wide">
+            {/* Enterprise — lugnt grått block */}
+            <div className="relative rounded-lg bg-gray-100 p-8">
+              <span className="absolute top-4 right-4 rounded-full bg-white px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-[#0F1B2D]/60">
                 För specifika behov
               </span>
-              <h2 className="text-xl font-semibold text-white">Enterprise</h2>
-              <p className="text-white/50 text-sm mt-1 pr-32">
-                För dig som behöver något utöver standard — anpassad kontoplan, egna integrationer eller skräddarsydd implementation.
+              <h2 className="text-xl font-bold text-[#0F1B2D]">Enterprise</h2>
+              <p className="mt-1 pr-24 text-sm text-[#0F1B2D]/60">
+                För dig som behöver något utöver standard — anpassad kontoplan,
+                egna integrationer eller skräddarsydd implementation.
               </p>
               <div className="mt-6">
-                <div className="text-3xl font-bold text-white">
+                <div className="text-3xl font-extrabold tracking-tight text-[#0F1B2D]">
                   Anpassat pris
                 </div>
-                <p className="text-white/40 text-sm mt-2">
+                <p className="mt-2 text-sm text-[#0F1B2D]/60">
                   Baserat på antal klienter, användare och behov
                 </p>
-                <p className="text-white/25 text-xs mt-1">
-                  Vi återkommer inom 24h
-                </p>
+                <p className="mt-1 text-xs text-[#0F1B2D]/40">Vi återkommer inom 24h</p>
               </div>
               <button
                 onClick={() => (window.location.href = "mailto:kontakt@bokfy.se")}
-                className="mt-6 w-full h-12 rounded-xl bg-transparent hover:bg-white/5 text-white font-semibold border border-white/20 hover:border-white/40 text-[15px] transition-colors"
+                className="mt-6 h-12 w-full rounded-md border-2 border-[#0F1B2D] bg-transparent text-[15px] font-bold text-[#0F1B2D] transition-colors duration-200 hover:bg-[#0F1B2D] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F1B2D] focus-visible:ring-offset-2"
               >
                 Boka demo →
               </button>
-              <p className="text-white/30 text-xs text-center mt-3">
+              <p className="mt-3 text-center text-xs text-[#0F1B2D]/50">
                 Vi återkommer inom 24h · Ingen bindningstid
               </p>
-              <div className="border-t border-white/[0.08] mt-6 pt-6">
-                <p className="text-white/30 text-[10px] uppercase tracking-wider mb-4">
+              <div className="mt-6 border-t-2 border-gray-200 pt-6">
+                <p className="mb-3 text-[10px] font-semibold uppercase tracking-wider text-[#0F1B2D]/50">
                   Allt i Standard, plus
                 </p>
                 {enterpriseFeatures.map((f) => (
@@ -155,10 +182,10 @@ const Priser = () => {
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="bg-[#0F1B2D] py-16 border-t border-white/5">
-          <div className="max-w-2xl mx-auto px-6">
-            <h2 className="text-2xl font-bold text-white text-center mb-10">
+        {/* FAQ — grå sektion, border-2-avdelare */}
+        <section className="bg-gray-100 py-20">
+          <div className="mx-auto max-w-2xl px-6">
+            <h2 className="mb-10 text-center text-3xl font-extrabold tracking-tight text-[#0F1B2D]">
               Vanliga frågor
             </h2>
             <div>
@@ -167,19 +194,33 @@ const Priser = () => {
                 return (
                   <div
                     key={f.q}
-                    className="border-b border-white/[0.08] py-5 cursor-pointer"
-                    onClick={() => setOpenIdx(open ? null : i)}
+                    className={`border-b-2 py-5 transition-colors duration-200 ${
+                      open ? "border-[#2563EB]" : "border-gray-200"
+                    }`}
                   >
-                    <div className="text-white font-medium flex justify-between items-center">
-                      <span>{f.q}</span>
+                    <button
+                      type="button"
+                      onClick={() => setOpenIdx(open ? null : i)}
+                      aria-expanded={open}
+                      className="flex w-full items-center justify-between rounded-md text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2"
+                    >
+                      <span
+                        className={`pr-4 font-semibold transition-colors duration-200 ${
+                          open ? "text-[#2563EB]" : "text-[#0F1B2D]"
+                        }`}
+                      >
+                        {f.q}
+                      </span>
                       <ChevronDown
-                        className={`w-4 h-4 text-white/40 transition-transform ${
-                          open ? "rotate-180" : ""
+                        aria-hidden
+                        strokeWidth={2.5}
+                        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
+                          open ? "rotate-180 text-[#2563EB]" : "text-[#0F1B2D]/40"
                         }`}
                       />
-                    </div>
+                    </button>
                     {open && (
-                      <p className="text-white/55 text-[14px] mt-3 leading-relaxed">
+                      <p className="mt-3 text-[14px] leading-relaxed text-[#0F1B2D]/60">
                         {f.a}
                       </p>
                     )}
@@ -190,25 +231,34 @@ const Priser = () => {
           </div>
         </section>
 
-        {/* Bottom CTA */}
-        <section className="bg-[#0F1B2D] py-16 text-center border-t border-white/5 px-6">
-          <h2 className="text-3xl font-bold text-white">Redo att börja?</h2>
-          <p className="text-white/50 mt-3">
-            Kom igång på några minuter. Ingen bindningstid.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <button
-              onClick={() => navigate("/auth")}
-              className="h-12 px-8 rounded-xl bg-white hover:bg-white/90 text-[#0F1B2D] font-semibold transition-colors"
-            >
-              Kom igång gratis →
-            </button>
-            <button
-              onClick={() => (window.location.href = "mailto:kontakt@bokfy.se")}
-              className="h-12 px-8 rounded-xl bg-transparent border border-white/20 text-white hover:bg-white/5 transition-colors"
-            >
-              Boka demo
-            </button>
+        {/* Ink-navy avslutsblock */}
+        <section className="relative overflow-hidden bg-[#0F1B2D] py-20 text-center">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-20 -bottom-20 h-[260px] w-[260px] rounded-full bg-white/5"
+          />
+          <div className="relative px-6">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+              Redo att börja?
+            </h2>
+            <p className="mt-3 text-white/70">
+              Kom igång på några minuter. Ingen bindningstid.
+            </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <button
+                onClick={() => navigate("/auth")}
+                className="inline-flex h-12 items-center gap-2 rounded-md bg-[#2563EB] px-8 font-bold text-white transition-all duration-200 hover:scale-105 hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1B2D]"
+              >
+                Kom igång gratis
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </button>
+              <button
+                onClick={() => (window.location.href = "mailto:kontakt@bokfy.se")}
+                className="h-12 rounded-md border-2 border-white/60 bg-transparent px-8 font-semibold text-white transition-colors duration-200 hover:bg-white hover:text-[#0F1B2D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1B2D]"
+              >
+                Boka demo
+              </button>
+            </div>
           </div>
         </section>
       </main>
