@@ -1,4 +1,5 @@
 import { lazy, Suspense, ReactNode } from "react";
+import { PageSEO } from "@/components/seo/PageSEO";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/landing/Hero";
 import { Pillars } from "@/components/landing/Pillars";
@@ -34,6 +35,11 @@ const Index = () => {
         )`,
       }}
     >
+      <PageSEO
+        title="Ledger.io — AI-driven bokföring för svenska företag"
+        description="Automatisera bokföring, moms, budget, prognos och rapportering i ett system som tänker själv. Byggt från grunden med AI som motor — för svenska företag."
+        path="/"
+      />
       <Header />
       <main>
         <Hero />

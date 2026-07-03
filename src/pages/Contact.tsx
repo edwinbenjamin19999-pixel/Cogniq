@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { PageSEO } from "@/components/seo/PageSEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -40,6 +41,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
+      <PageSEO
+        title="Kontakta oss — Ledger.io"
+        description="Har du frågor om Ledger.io eller vill boka en demo? Kontakta oss så återkommer vi vanligtvis inom 24 timmar på vardagar."
+        path="/contact"
+      />
       {/* Header */}
       <header
         className="sticky top-0 z-50 w-full border-b border-white/10 backdrop-blur"

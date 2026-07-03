@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { PageSEO } from "@/components/seo/PageSEO";
 import {
   Layers,
   Workflow,
@@ -109,6 +110,11 @@ const ProductRoadmap = () => {
 
   return (
     <div className="min-h-screen bg-[#FAFBFC]">
+      <PageSEO
+        title="Produktkarta — Ledger.io"
+        description="En levande finansiell plattform byggd för att skala. Se vad som är live, vad som byggs härnäst och vart Ledger.io är på väg."
+        path="/roadmap"
+      />
       {/* Header */}
       <header className="border-b border-slate-900/[0.06] bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">

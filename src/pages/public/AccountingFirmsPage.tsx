@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { PageSEO } from "@/components/seo/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -37,6 +38,11 @@ const BENEFITS = [
 export default function AccountingFirmsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <PageSEO
+        title="För redovisningsbyråer — Ledger.io"
+        description="Lansera din egen bokföringsplattform under ditt varumärke. White label för redovisningsbyråer, banker och rådgivare — med AI-driven bokföring och egen kontoplan."
+        path="/accounting-firms"
+      />
       <Header />
       <main className="flex-1">
         {/* Hero — dark */}

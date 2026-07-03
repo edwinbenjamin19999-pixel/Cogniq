@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { PageSEO } from "@/components/seo/PageSEO";
 import { Header } from "@/components/Header";
 
 const ICON_CLASS = "w-6 h-6 text-[#3b82f6] mb-4";
@@ -147,6 +148,11 @@ export default function Funktioner() {
 
   return (
     <div className="min-h-screen bg-[#050d1a]">
+      <PageSEO
+        title="Funktioner — Ledger.io"
+        description="Automatisk kontering, bankintegration i realtid, kvittohantering, momshantering, löpande bokslut och deklarationsredo — allt du behöver för bokföringen, från transaktion till deklaration."
+        path="/funktioner"
+      />
       <Header />
 
       {/* Page header */}

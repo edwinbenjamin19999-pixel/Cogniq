@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { PageSEO } from "@/components/seo/PageSEO";
 import { Header } from "@/components/Header";
 import { ChevronDown } from "lucide-react";
 
@@ -58,6 +59,11 @@ const Priser = () => {
 
   return (
     <div className="min-h-screen bg-[#0a1525]">
+      <PageSEO
+        title="Priser — Ledger.io"
+        description="Enkel prissättning för AI-driven bokföring: Standard från 199 kr/mån med 14 dagars gratis provperiod, eller Enterprise med anpassad kontoplan och white label. Ingen bindningstid."
+        path="/priser"
+      />
       <Header />
       <main>
         {/* Header */}
