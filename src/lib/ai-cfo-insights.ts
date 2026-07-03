@@ -190,21 +190,21 @@ async function analyzeCosts(companyId: string): Promise<CFOInsight | null> {
   const [thisRes, lastRes] = await Promise.all([
     supabase
       .from("journal_entry_lines")
-      .select("debit_amount, credit_amount, account_number, journal_entries!inner(entry_date, company_id)")
+      .select("debit, credit, chart_of_accounts!inner(account_number), journal_entries!inner(entry_date, company_id)")
       .eq("journal_entries.company_id", companyId)
       .gte("journal_entries.entry_date", thisMonth.split("T")[0])
-      .like("account_number", "5%"),
+      .like("chart_of_accounts.account_number", "5%"),
     supabase
       .from("journal_entry_lines")
-      .select("debit_amount, credit_amount, account_number, journal_entries!inner(entry_date, company_id)")
+      .select("debit, credit, chart_of_accounts!inner(account_number), journal_entries!inner(entry_date, company_id)")
       .eq("journal_entries.company_id", companyId)
       .gte("journal_entries.entry_date", lastMonth.split("T")[0])
       .lt("journal_entries.entry_date", thisMonth.split("T")[0])
-      .like("account_number", "5%"),
+      .like("chart_of_accounts.account_number", "5%"),
   ]);
 
   const sumDebit = (rows: any[] | null) =>
-    (rows || []).reduce((s, r) => s + (Number(r.debit_amount || 0) - Number(r.credit_amount || 0)), 0);
+    (rows || []).reduce((s, r) => s + (Number(r.debit || 0) - Number(r.credit || 0)), 0);
 
   const thisCosts = sumDebit(thisRes.data);
   const lastCosts = sumDebit(lastRes.data);
@@ -245,18 +245,19 @@ async function analyzeVAT(companyId: string): Promise<CFOInsight | null> {
 
   const { data } = await supabase
     .from("journal_entry_lines")
-    .select("debit_amount, credit_amount, account_number, journal_entries!inner(entry_date, company_id)")
+    .select("debit, credit, chart_of_accounts!inner(account_number), journal_entries!inner(entry_date, company_id)")
     .eq("journal_entries.company_id", companyId)
     .gte("journal_entries.entry_date", monthStart)
-    .or("account_number.eq.2611,account_number.eq.2641");
+    .in("chart_of_accounts.account_number", ["2611", "2641"]);
 
   if (!data || data.length === 0) return null;
 
   let outputVat = 0; // 2611 (credit-side liability)
   let inputVat = 0; // 2641 (debit-side receivable)
   data.forEach((r: any) => {
-    if (r.account_number === "2611") outputVat += Number(r.credit_amount || 0) - Number(r.debit_amount || 0);
-    if (r.account_number === "2641") inputVat += Number(r.debit_amount || 0) - Number(r.credit_amount || 0);
+    const acct = r.chart_of_accounts?.account_number;
+    if (acct === "2611") outputVat += Number(r.credit || 0) - Number(r.debit || 0);
+    if (acct === "2641") inputVat += Number(r.debit || 0) - Number(r.credit || 0);
   });
 
   const netVat = outputVat - inputVat;

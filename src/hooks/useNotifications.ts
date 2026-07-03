@@ -189,7 +189,7 @@ export function useNotifications() {
       // --- IMPORTANT: AI low confidence ---
       const { data: lowConf } = await supabase
         .from("ai_account_suggestions")
-        .select("id, transaction_id, confidence, suggested_account, created_at")
+        .select("id, confidence, created_at")
         .in("company_id", companyIds)
         .lt("confidence", 0.6)
         .order("created_at", { ascending: false })
@@ -273,8 +273,8 @@ export function useNotifications() {
           .from("accounting_periods")
           .select("id, status")
           .in("company_id", companyIds)
-          .eq("period_year", lastMonthEnd.getFullYear())
-          .eq("period_month", lastMonthEnd.getMonth() + 1)
+          .eq("year", lastMonthEnd.getFullYear())
+          .eq("month", lastMonthEnd.getMonth() + 1)
           .maybeSingle();
         if (!closed || closed.status !== "closed") {
           out.push({

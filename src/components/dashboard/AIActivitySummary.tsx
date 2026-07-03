@@ -57,7 +57,7 @@ export const AIActivitySummary = ({ companyId }: AIActivitySummaryProps) => {
         supabase.from("invoices").select("id", { count: "exact", head: true }).eq("company_id", companyId).eq("status", "paid").gte("updated_at", today),
         supabase.from("journal_entries").select("id", { count: "exact", head: true }).eq("company_id", companyId).gte("created_at", monthStartISO),
         supabase.from("journal_entries").select("id, description, created_at, ai_confidence, status").eq("company_id", companyId).order("created_at", { ascending: false }).limit(4),
-        supabase.from("invoices").select("id, invoice_number, customer_name, updated_at, status").eq("company_id", companyId).eq("status", "paid").order("updated_at", { ascending: false }).limit(2),
+        supabase.from("invoices").select("id, invoice_number, updated_at, status").eq("company_id", companyId).eq("status", "paid").order("updated_at", { ascending: false }).limit(2),
       ]);
 
       const items: FeedItem[] = [];

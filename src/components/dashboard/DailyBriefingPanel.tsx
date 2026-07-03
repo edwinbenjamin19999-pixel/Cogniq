@@ -70,7 +70,7 @@ export function DailyBriefingPanel({ companyId }: Props) {
           .limit(20),
         supabase
           .from("invoices")
-          .select("id, invoice_number, customer_name, updated_at, status")
+          .select("id, invoice_number, updated_at, status")
           .eq("company_id", companyId)
           .eq("status", "paid")
           .gte("updated_at", since)
