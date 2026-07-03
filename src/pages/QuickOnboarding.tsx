@@ -1479,7 +1479,7 @@ const QuickOnboarding = () => {
             <p>
               Fullständigt avtal:{" "}
               <a href="/legal/customer-agreement" target="_blank" rel="noreferrer" className="text-[#3b82f6] underline">
-                northledger.se/legal/customer-agreement
+                ledger.io/legal/customer-agreement
               </a>.
             </p>
             <p className="text-[12px] text-slate-500 leading-relaxed pt-1 border-t border-slate-200/70 mt-2">

@@ -15,7 +15,7 @@ export const NewsletterCTA = () => (
           onSubmit={(e) => {
             e.preventDefault();
             const email = (e.currentTarget.elements.namedItem("email") as HTMLInputElement)?.value;
-            if (email) window.location.href = `mailto:nyhetsbrev@northledger.se?subject=Prenumerera&body=${encodeURIComponent(email)}`;
+            if (email) window.location.href = `mailto:nyhetsbrev@ledger.io?subject=Prenumerera&body=${encodeURIComponent(email)}`;
           }}
         >
           <input

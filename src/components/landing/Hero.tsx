@@ -219,7 +219,7 @@ export const Hero = () => {
                 }}
               >
                 <span style={{ fontSize: 11, color: "rgba(255,255,255,0.35)" }}>
-                  app.northledger.se
+                  app.ledger.io
                 </span>
               </div>
             </div>

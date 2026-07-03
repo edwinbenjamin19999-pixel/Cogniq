@@ -31,7 +31,7 @@ const Contact = () => {
       const body = encodeURIComponent(
         `Namn: ${formData.name}\nFöretag: ${formData.company}\nEmail: ${formData.email}\n\nMeddelande:\n${formData.message}`,
       );
-      window.location.href = `mailto:support@northledger.se?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:support@ledger.io?subject=${subject}&body=${body}`;
       toast.success("E-postklient öppnad. Skicka meddelandet därifrån.");
     } finally {
       setIsSubmitting(false);
@@ -77,10 +77,10 @@ const Contact = () => {
                   title: "E-post",
                   content: (
                     <a
-                      href="mailto:support@northledger.se"
+                      href="mailto:support@ledger.io"
                       className="text-slate-600 hover:text-[#3b82f6] transition-colors"
                     >
-                      support@northledger.se
+                      support@ledger.io
                     </a>
                   ),
                 },

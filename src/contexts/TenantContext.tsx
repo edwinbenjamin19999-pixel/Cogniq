@@ -14,9 +14,9 @@ const TenantContext = createContext<TenantContextValue>({ tenant: null, loading:
 export const useTenant = () => useContext(TenantContext);
 
 const isStandardHost = (host: string) =>
-  host === "northledger.se" || host === "localhost" ||
+  host === "ledger.io" || host === "localhost" ||
   host.endsWith(".lovable.app") || host.endsWith(".lovableproject.com") ||
-  host === "app.northledger.se" || host === "www.northledger.se";
+  host === "app.ledger.io" || host === "www.ledger.io";
 
 export const TenantProvider = ({ slug: explicitSlug, children }: { slug?: string; children: ReactNode }) => {
   const [tenant, setTenant] = useState<ResolvedTenant | null>(null);
@@ -34,7 +34,7 @@ export const TenantProvider = ({ slug: explicitSlug, children }: { slug?: string
       if (host && !isStandardHost(host)) {
         resolved = await fetchTenantByDomain(host);
       }
-      // 2. Subdomain on northledger.se (e.g. clientname.northledger.se)
+      // 2. Subdomain on ledger.io (e.g. clientname.ledger.io)
       if (!resolved) {
         const slugFromHost = resolveTenantSlugFromHost(host);
         if (slugFromHost) resolved = await fetchTenantBySlug(slugFromHost);

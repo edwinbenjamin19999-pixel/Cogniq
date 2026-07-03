@@ -161,7 +161,7 @@ Senast: ${new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toLocaleDateString('s
 
 **Kontakt**
 För frågor om denna DPIA:
-E-post: privacy@northledger.se
+E-post: privacy@ledger.io
 Telefon: [Ditt telefonnummer]
 `;
 

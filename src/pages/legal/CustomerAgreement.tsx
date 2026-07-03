@@ -61,7 +61,7 @@ const CustomerAgreement = () => {
             <p>
               Vid avtalsstart gäller den prislista som publiceras på{" "}
               <a href="/pricing" className="text-[#3b82f6] no-underline hover:underline">
-                northledger.se/pricing
+                ledger.io/pricing
               </a>
               .
             </p>
@@ -187,8 +187,8 @@ const CustomerAgreement = () => {
             <p className="tabular-nums">
               Denna version: <strong>{VERSION}</strong>, ikraftträdande{" "}
               <strong>{EFFECTIVE_DATE}</strong>. Tidigare versioner finns på begäran via{" "}
-              <a href="mailto:legal@northledger.se" className="text-[#3b82f6] no-underline hover:underline">
-                legal@northledger.se
+              <a href="mailto:legal@ledger.io" className="text-[#3b82f6] no-underline hover:underline">
+                legal@ledger.io
               </a>
               .
             </p>
@@ -196,8 +196,8 @@ const CustomerAgreement = () => {
             <div className="mt-12 p-5 rounded-2xl bg-slate-50 border border-slate-200 not-prose">
               <p className="text-sm text-slate-600 leading-relaxed">
                 <strong className="text-[#0f1f35]">Frågor?</strong> Kontakta oss på{" "}
-                <a href="mailto:legal@northledger.se" className="text-[#3b82f6] hover:underline">
-                  legal@northledger.se
+                <a href="mailto:legal@ledger.io" className="text-[#3b82f6] hover:underline">
+                  legal@ledger.io
                 </a>{" "}
                 eller läs vår{" "}
                 <a href="/legal/privacy" className="text-[#3b82f6] hover:underline">

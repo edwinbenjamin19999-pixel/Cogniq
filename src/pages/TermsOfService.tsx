@@ -268,7 +268,7 @@ const TermsOfService = () => { const navigate = useNavigate();
             </p>
             <p>
               <strong>Ledger.io AB</strong><br />
-              E-post: legal@northledger.se<br />
+              E-post: legal@ledger.io<br />
               Telefon: +46 76 164 69 86<br />
               Adress: Karlsviksgatan 15, Stockholm, Sverige
             </p>

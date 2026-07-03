@@ -156,9 +156,9 @@ const Auth = () => {
         const { resolveTenantSlugFromHost, fetchTenantByDomain } = await import("@/lib/tenant/resolveTenant");
         const { setActiveTenantSlug } = await import("@/hooks/useUserTenants");
         const host = window.location.hostname.toLowerCase();
-        const isStandard = host === "northledger.se" || host === "localhost" ||
+        const isStandard = host === "ledger.io" || host === "localhost" ||
           host.endsWith(".lovable.app") || host.endsWith(".lovableproject.com") ||
-          host === "app.northledger.se" || host === "www.northledger.se";
+          host === "app.ledger.io" || host === "www.ledger.io";
         let tenantSlug: string | null = resolveTenantSlugFromHost(host);
         if (!tenantSlug && !isStandard) {
           const t = await fetchTenantByDomain(host);

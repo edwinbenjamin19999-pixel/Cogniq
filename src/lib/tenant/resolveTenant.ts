@@ -38,17 +38,17 @@ export interface ResolvedTenant {
 
 /**
  * Resolve a tenant from:
- *  1. Subdomain (clientname.northledger.se → slug = "clientname")
+ *  1. Subdomain (clientname.ledger.io → slug = "clientname")
  *  2. Explicit slug param (e.g. /wl/:slug/login)
- * Standard Ledger.io hosts (northledger.se, app.northledger.se, *.lovable.app) return null.
+ * Standard Ledger.io hosts (ledger.io, app.ledger.io, *.lovable.app) return null.
  */
 export function resolveTenantSlugFromHost(hostname: string): string | null {
   const RESERVED = new Set(["app", "www", "api", "admin", "id-preview", "preview"]);
   const host = hostname.toLowerCase();
-  if (host === "northledger.se" || host === "localhost") return null;
+  if (host === "ledger.io" || host === "localhost") return null;
   if (host.endsWith(".lovable.app") || host.endsWith(".lovableproject.com")) return null;
-  if (host.endsWith(".northledger.se")) {
-    const sub = host.replace(".northledger.se", "");
+  if (host.endsWith(".ledger.io")) {
+    const sub = host.replace(".ledger.io", "");
     if (RESERVED.has(sub) || sub.includes(".")) return null;
     return sub;
   }

@@ -42,7 +42,7 @@ const PrivacyPolicy = () => { const navigate = useNavigate();
               Ledger.io AB<br />
               Org.nr: 559196-8208<br />
               Karl Viedegangs gata 15, Stockholms innerstad<br />
-              E-post: privacy@northledger.se
+              E-post: privacy@ledger.io
             </p>
 
             <h2>3. Vilka personuppgifter samlar vi in?</h2>
@@ -212,7 +212,7 @@ const PrivacyPolicy = () => { const navigate = useNavigate();
               <strong>Så utövar du dina rättigheter:</strong> Gå till{" "}
               <a href="/gdpr" className="text-primary hover:underline">GDPR-inställningar</a> i din profil 
               för dataexport, radering och samtyckshantering. Du kan också kontakta oss direkt 
-              på privacy@northledger.se. Vi svarar inom 30 dagar.
+              på privacy@ledger.io. Vi svarar inom 30 dagar.
             </p>
 
             <h2>9. Säkerhetsåtgärder</h2>
@@ -305,7 +305,7 @@ const PrivacyPolicy = () => { const navigate = useNavigate();
             </p>
             <p>
               Ledger.io AB<br />
-              E-post: privacy@northledger.se<br />
+              E-post: privacy@ledger.io<br />
               Karl Viedegangs gata 15, Stockholms innerstad
             </p>
           </CardContent>

@@ -18,7 +18,7 @@ export const AboutFinalCTA = () => (
           Testa Ledger.io <ArrowRight className="w-4 h-4" />
         </Link>
         <a
-          href="mailto:demo@northledger.se?subject=Demo Ledger.io"
+          href="mailto:demo@ledger.io?subject=Demo Ledger.io"
           className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/20 bg-white/[0.03] text-white/90 font-medium text-sm hover:bg-white/[0.08] hover:border-white/30 transition-all"
         >
           Boka demo

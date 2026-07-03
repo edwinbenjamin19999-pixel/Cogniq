@@ -361,7 +361,7 @@ export function BankLinking({ companyId, onSuccess, flow = "standalone" }: BankL
                         <Info className="h-4 w-4" />
                         <AlertDescription className="text-xs">
                           <strong>{search}</strong> är under aktivering hos vår bankpartner.
-                          Kontakta <a href="mailto:support@northledger.se" className="underline font-medium">support@northledger.se</a> för manuell setup.
+                          Kontakta <a href="mailto:support@ledger.io" className="underline font-medium">support@ledger.io</a> för manuell setup.
                         </AlertDescription>
                       </Alert>
                     )}

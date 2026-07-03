@@ -62,12 +62,12 @@ export default function AccountingGuidesIndexPage() {
     "@type": "CollectionPage",
     name: "Bokföringsguider",
     description: "Praktiska guider om bokföring, moms, BAS-kontoplan och svenska redovisningsregler.",
-    url: "https://northledger.se/resources/accounting-guides",
+    url: "https://ledger.io/resources/accounting-guides",
     inLanguage: "sv-SE",
     hasPart: allCards.map((c) => ({
       "@type": "Article",
       headline: c.title,
-      url: `https://northledger.se/resources/accounting-guides/${c.slug}`,
+      url: `https://ledger.io/resources/accounting-guides/${c.slug}`,
     })),
   };
 

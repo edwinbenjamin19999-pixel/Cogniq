@@ -509,7 +509,7 @@ export const InteractiveDemoPreview = () => {
               }}
             >
               <span className="text-[11px] text-white/45 font-mono truncate">
-                app.northledger.se/{active}
+                app.ledger.io/{active}
               </span>
             </div>
           </div>

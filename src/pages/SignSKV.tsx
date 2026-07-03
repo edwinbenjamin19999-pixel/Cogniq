@@ -253,7 +253,7 @@ export default function SignSKV() {
         {/* Footer */}
         <div className="px-6 py-3 border-t bg-slate-50 text-[10px] text-slate-400 flex items-center justify-between">
           <span>Säker signering via BankID</span>
-          <span>northledger.se</span>
+          <span>ledger.io</span>
         </div>
       </div>
     </div>

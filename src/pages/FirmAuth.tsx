@@ -160,7 +160,7 @@ const FirmAuth = () => { const navigate = useNavigate();
             </form>
             <p className="text-center text-xs text-muted-foreground mt-4">
               Registrering av nya byråer är inte tillgänglig ännu.{" "}
-              <a href="mailto:kontakt@northledger.se" className="text-primary hover:underline">Kontakta oss</a> för tidig åtkomst.
+              <a href="mailto:kontakt@ledger.io" className="text-primary hover:underline">Kontakta oss</a> för tidig åtkomst.
             </p>
           </CardContent>
         </Card>

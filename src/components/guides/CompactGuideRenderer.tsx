@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
-  const url = `https://northledger.se${canonicalPath}`;
+  const url = `https://ledger.io${canonicalPath}`;
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -24,7 +24,7 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
     publisher: {
       "@type": "Organization",
       name: "Ledger.io",
-      logo: { "@type": "ImageObject", url: "https://northledger.se/og-image.jpg" },
+      logo: { "@type": "ImageObject", url: "https://ledger.io/og-image.jpg" },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     keywords: guide.keywords.join(", "),

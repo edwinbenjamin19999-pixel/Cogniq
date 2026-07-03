@@ -417,7 +417,7 @@ const AdminDashboard = () => { const { user, loading } = useAuth();
             <div>
               <label className="text-sm font-medium">KAM:s e-postadress</label>
               <Input
-                placeholder="kam@northledger.se"
+                placeholder="kam@ledger.io"
                 value={kamEmail}
                 onChange={e => setKamEmail(e.target.value)}
               />

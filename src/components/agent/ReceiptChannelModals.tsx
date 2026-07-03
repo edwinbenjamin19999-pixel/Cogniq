@@ -19,7 +19,7 @@ export function ReceiptChannelModals({ companyId }: ChannelModalsProps) { const 
   const [emailStatus, setEmailStatus] = useState<ChannelStatus>({ active: false, lastReceived: null });
   const [whatsappStatus, setWhatsappStatus] = useState<ChannelStatus>({ active: false, lastReceived: null });
 
-  const emailAddress = `kvitton@${companyId.slice(0, 8)}.northledger.se`;
+  const emailAddress = `kvitton@${companyId.slice(0, 8)}.ledger.io`;
   const whatsappNumber = "+46 70 123 45 67";
   const whatsappLink = "https://wa.me/46701234567";
 

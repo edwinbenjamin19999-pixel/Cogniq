@@ -149,8 +149,8 @@ const LegalDPA = () => {
             <p className="tabular-nums">
               Denna version: <strong>{VERSION}</strong>, ikraftträdande{" "}
               <strong>{EFFECTIVE_DATE}</strong>. Frågor:{" "}
-              <a href="mailto:dpo@northledger.se" className="text-[#3b82f6] no-underline hover:underline">
-                dpo@northledger.se
+              <a href="mailto:dpo@ledger.io" className="text-[#3b82f6] no-underline hover:underline">
+                dpo@ledger.io
               </a>
               .
             </p>

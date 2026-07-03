@@ -198,7 +198,7 @@ export default function PublicGuidePage() {
                   variant="outline"
                   className="h-11 px-6 rounded-lg border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF] hover:shadow-[0_0_12px_rgba(6,182,212,0.12)] hover:scale-[1.02] transition-all duration-200"
                 >
-                  <a href="mailto:kontakt@northledger.se">Boka demo</a>
+                  <a href="mailto:kontakt@ledger.io">Boka demo</a>
                 </Button>
               </div>
               <p className="text-xs text-[#94a3b8] mt-3">

@@ -101,7 +101,7 @@ export const FAQ = () => {
                 variant="glass"
                 className="h-11 px-6 rounded-lg"
               >
-                <a href="mailto:kontakt@northledger.se">Boka demo</a>
+                <a href="mailto:kontakt@ledger.io">Boka demo</a>
               </Button>
             </div>
             <p className="text-xs text-white/30 mt-3">Ingen bindningstid. Kom igång på några minuter.</p>

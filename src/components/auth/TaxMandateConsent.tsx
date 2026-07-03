@@ -62,7 +62,7 @@ DATASKYDD:
 Ledger.io hanterar dina uppgifter enligt GDPR och vår integritetspolicy.
 
 KONTAKT:
-Vid frågor kontakta support@northledger.se
+Vid frågor kontakta support@ledger.io
 
 Genom att acceptera denna fullmakt bekräftar jag att jag är behörig firmatecknare och har rätt att ge denna fullmakt.
 `;

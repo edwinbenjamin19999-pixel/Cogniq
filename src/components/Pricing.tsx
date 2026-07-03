@@ -100,7 +100,7 @@ export const Pricing = () => {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => (window.location.href = "mailto:kontakt@northledger.se")}
+                onClick={() => (window.location.href = "mailto:kontakt@ledger.io")}
                 className="h-12 rounded-xl border-white/15 bg-transparent text-white/80 hover:bg-white/5 hover:text-white font-medium"
               >
                 Boka demo

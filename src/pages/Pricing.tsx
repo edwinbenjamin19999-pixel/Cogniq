@@ -108,7 +108,7 @@ const Pricing = () => { const { user, loading } = useAuth();
           </p>
           <p className="text-sm text-muted-foreground">
             Behöver du Enterprise?{" "}
-            <a href="mailto:info@northledger.se" className="text-primary hover:underline">
+            <a href="mailto:info@ledger.io" className="text-primary hover:underline">
               Kontakta oss
             </a>
           </p>

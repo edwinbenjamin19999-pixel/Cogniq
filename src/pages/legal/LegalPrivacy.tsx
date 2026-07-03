@@ -35,8 +35,8 @@ const LegalPrivacy = () => {
             <h2>1. Personuppgiftsansvarig</h2>
             <p>
               Ledger.io AB, org.nr [556xxx-xxxx], med säte i Stockholm. Kontakt:{" "}
-              <a href="mailto:dpo@northledger.se" className="text-[#3b82f6] no-underline hover:underline">
-                dpo@northledger.se
+              <a href="mailto:dpo@ledger.io" className="text-[#3b82f6] no-underline hover:underline">
+                dpo@ledger.io
               </a>
               .
             </p>
@@ -93,8 +93,8 @@ const LegalPrivacy = () => {
             <p>
               För frågor om personuppgiftsbehandling eller för att utöva dina rättigheter,
               kontakta vårt dataskyddsombud på{" "}
-              <a href="mailto:dpo@northledger.se" className="text-[#3b82f6] no-underline hover:underline">
-                dpo@northledger.se
+              <a href="mailto:dpo@ledger.io" className="text-[#3b82f6] no-underline hover:underline">
+                dpo@ledger.io
               </a>
               .
             </p>

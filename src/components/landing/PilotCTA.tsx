@@ -9,7 +9,7 @@ export const PilotCTA = () => {
           Är du intresserad? Ansök om tidig tillgång — begränsat antal platser.
         </p>
         <a
-          href="mailto:pilot@northledger.se"
+          href="mailto:pilot@ledger.io"
           className="inline-block mt-4 text-[#3b82f6] text-sm hover:underline"
         >
           Ansök om pilotplats →

@@ -18,7 +18,7 @@ interface Props {
 }
 
 export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
-  const url = `https://northledger.se${canonicalPath}`;
+  const url = `https://ledger.io${canonicalPath}`;
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -31,7 +31,7 @@ export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
     publisher: {
       "@type": "Organization",
       name: "Ledger.io",
-      logo: { "@type": "ImageObject", url: "https://northledger.se/og-image.jpg" },
+      logo: { "@type": "ImageObject", url: "https://ledger.io/og-image.jpg" },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     keywords: article.keywords.join(", "),

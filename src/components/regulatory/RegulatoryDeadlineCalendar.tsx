@@ -53,7 +53,7 @@ function generateICS(deadlines: ComplianceDeadline[]): string { const lines = [
       `SUMMARY:${d.title}`,
       `DESCRIPTION:${d.description}${d.autoAction ? "\\n" + d.autoAction : ""}`,
       `CATEGORIES:${d.category}`,
-      `UID:${d.id}@northledger.se`,
+      `UID:${d.id}@ledger.io`,
       "END:VEVENT"
     );
   }
