@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Check } from "lucide-react";
+import hero3d from "@/assets/hero-3d.png";
 
 interface AuthShellProps {
   children: ReactNode;
@@ -30,12 +31,29 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
     <div className="min-h-screen flex flex-col lg:flex-row bg-white">
       {/* LEFT — flat blått poster-block, dolt på mobil */}
       <div className="hidden lg:flex flex-1 bg-[#0F172A] relative overflow-hidden flex-col justify-between p-12 xl:p-16">
-        {/* Geometrisk dekoration — platta former i låg opacitet */}
+        {/* Ambient dekoration — dot-mönster, glows och svävande 3D-glasloop */}
         <div aria-hidden className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)", backgroundSize: "32px 32px", opacity: 0.04 }} />
           <div className="absolute -top-32 -right-24 h-[440px] w-[440px] rounded-full bg-[#0052FF] opacity-30 blur-[140px]" />
           <div className="absolute bottom-[-10%] left-[-10%] h-[300px] w-[300px] rounded-full bg-[#4D7CFF] opacity-20 blur-[120px]" />
+          {/* Higgsfield 3D-glasloop — roterar långsamt uppe till höger */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={hero3d}
+            className="auth-3d-float absolute -right-16 top-[18%] w-[380px] opacity-70 mix-blend-screen"
+            style={{ maskImage: "radial-gradient(circle at 50% 50%, #000 46%, transparent 72%)", WebkitMaskImage: "radial-gradient(circle at 50% 50%, #000 46%, transparent 72%)" }}
+          >
+            <source src="/hero-3d.mp4" type="video/mp4" />
+          </video>
         </div>
+        <style>{`
+          @keyframes auth3dFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+          .auth-3d-float { animation: auth3dFloat 7s ease-in-out infinite; }
+          @media (prefers-reduced-motion: reduce) { .auth-3d-float { animation: none; } }
+        `}</style>
 
         <div className="relative z-10">
           <span className="text-2xl font-extrabold tracking-tight text-white">Cog</span>

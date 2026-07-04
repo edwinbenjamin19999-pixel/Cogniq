@@ -1,6 +1,8 @@
 import { lazy, Suspense, ReactNode } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/landing/Hero";
+import { Reveal } from "@/components/landing/Reveal";
+import { AIEngineSection } from "@/components/landing/AIEngineSection";
 import { Pillars } from "@/components/landing/Pillars";
 
 import { HowItWorks } from "@/components/landing/HowItWorks";
@@ -35,20 +37,21 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <CountdownCTA />
+        <Reveal><CountdownCTA /></Reveal>
         <NavyBlock>
-          <InteractiveDemoPreview />
+          <Reveal><InteractiveDemoPreview /></Reveal>
         </NavyBlock>
-        <Pillars />
-        <HowItWorks />
-        <AutomationGrid />
-        <WhyNorthLedger />
-        <UseCases />
-        <PilotCTA />
-        <SelectedFeatures />
-        <TrustCompliance />
-        <WhiteLabelSection />
-        <FAQ />
+        <Reveal><Pillars /></Reveal>
+        <AIEngineSection />
+        <Reveal><HowItWorks /></Reveal>
+        <Reveal><AutomationGrid /></Reveal>
+        <Reveal><WhyNorthLedger /></Reveal>
+        <Reveal><UseCases /></Reveal>
+        <Reveal><PilotCTA /></Reveal>
+        <Reveal><SelectedFeatures /></Reveal>
+        <Reveal><TrustCompliance /></Reveal>
+        <Reveal><WhiteLabelSection /></Reveal>
+        <Reveal><FAQ /></Reveal>
       </main>
       <Suspense fallback={null}>
         <NavyBlock>
