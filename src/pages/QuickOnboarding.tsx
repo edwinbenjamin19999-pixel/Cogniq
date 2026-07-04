@@ -894,11 +894,6 @@ const QuickOnboarding = () => {
 
   return (
     <AuthShell compact>
-      <div className="hidden lg:flex items-center gap-0 mb-10">
-        <span className="text-xl font-[800] text-[#3b82f6]">Cog</span>
-        <span className="text-xl font-[800] text-[#0F172A]">niq</span>
-      </div>
-
       <OnboardingProgress current={step} total={6} />
 
       {/* ============== Step 1 — Företag ============== */}

@@ -336,12 +336,6 @@ const Auth = () => {
 
   return (
     <AuthShell>
-      {/* Desktop logo (mobile already shown in shell) */}
-      <div className="hidden lg:flex items-center gap-0 mb-10">
-        <span className="text-xl font-extrabold tracking-tight text-[#0F172A]">Cog</span>
-        <span className="text-xl font-extrabold tracking-tight text-[#0052FF]">niq</span>
-      </div>
-
       {/* SIGN IN */}
       {mode === "signin" && (
         <>
