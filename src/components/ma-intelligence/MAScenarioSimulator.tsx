@@ -98,7 +98,7 @@ export function MAScenarioSimulator({ mostLikely, ebitda, revenue }: Props) { co
                   <p>Realistisk tidslinje: 6-12 månader för bolag i din storlek</p>
                   <p>Bästa exit-struktur: {capitalGain > 0 ? "3:12-reglerna ger lägst beskattning för kvalificerade aktier" : "Negativ kapitalvinst — kontrollera anskaffningsvärde"}</p>
                   {ebitda > 0 && (
-                    <div className="flex items-start gap-2 p-3 bg-[#FAEEDA] dark:bg-amber-900/10 rounded-lg border border-[#F0DDB7] dark:border-amber-800">
+                    <div className="flex items-start gap-2 p-3 bg-[#FAEEDA] dark:bg-neutral-700/10 rounded-lg border border-[#F0DDB7] dark:border-neutral-700">
                       <AlertTriangle className="h-4 w-4 text-[#7A5417] mt-0.5 shrink-0" />
                       <p className="text-xs">Din värdering är {ebitda > 0 ? "starkast nu (stark EBITDA)" : "svag"}. Om lönsamheten sjunker 20% → värde minskar med {formatSEK(mostLikely * 0.2)}.</p>
                     </div>

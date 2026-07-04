@@ -28,7 +28,7 @@ const PRODUCTION_INTEGRATIONS = [
 
 const statusConfig = {
   demo: { label: 'Demo-läge', variant: 'outline' as const, className: 'bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]' },
-  coming_soon: { label: 'Kommande', variant: 'outline' as const, className: 'bg-[#EFF6FF] text-blue-700 border-[#C8DDF5]' },
+  coming_soon: { label: 'Kommande', variant: 'outline' as const, className: 'bg-[#EFF6FF] text-black border-[#C8DDF5]' },
   active: { label: 'Aktiv', variant: 'default' as const, className: '' },
 };
 

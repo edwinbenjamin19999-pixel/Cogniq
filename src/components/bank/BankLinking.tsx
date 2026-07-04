@@ -43,17 +43,17 @@ const FALLBACK_BANKS: BankInfo[] = [
 
 // Bank-specific brand colors used as fallback initial-tile when no logo
 const BRAND_COLORS: Record<string, string> = {
-  Nordea: "bg-blue-600",
-  SEB: "bg-emerald-700",
+  Nordea: "bg-black",
+  SEB: "bg-neutral-700",
   Swedbank: "bg-orange-500",
   Handelsbanken: "bg-sky-700",
   Länsförsäkringar: "bg-blue-800",
-  Skandiabanken: "bg-green-600",
-  Danske: "bg-blue-700",
+  Skandiabanken: "bg-neutral-700",
+  Danske: "bg-black",
   ICA: "bg-red-600",
-  Sparbanken: "bg-amber-600",
+  Sparbanken: "bg-neutral-700",
   Forex: "bg-yellow-600",
-  Marginalen: "bg-rose-600",
+  Marginalen: "bg-neutral-700",
   Resurs: "bg-purple-600",
 };
 

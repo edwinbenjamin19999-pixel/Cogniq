@@ -231,7 +231,7 @@ export const DSCheckbox = ({
       className={cn(
         "inline-flex w-[14px] h-[14px] rounded-[3px] border-[1.5px] items-center justify-center transition-colors",
         isOn
-          ? "bg-[#1D4ED8] border-[#1D4ED8]"
+          ? "bg-[#000000] border-[#000000]"
           : "bg-white border-[#D1D5DB]",
         className,
       )}
@@ -262,7 +262,7 @@ export type DSStatusTone = "approved" | "pending" | "overdue" | "info";
 
 const STATUS_TONE: Record<DSStatusTone, string> = {
   approved: "bg-[#E1F5EE] text-[#085041] border-[0.5px] border-[#5DCAA5]",
-  pending: "bg-[#FAEEDA] text-[#412402] border-[0.5px] border-[#EF9F27]",
+  pending: "bg-[#FAEEDA] text-[#412402] border-[0.5px] border-[#525252]",
   overdue: "bg-[#FCEBEB] text-[#501313] border-[0.5px] border-[#F09595]",
   info: "bg-[#EFF6FF] text-[#0C447C] border-[0.5px] border-[#B5D4F4]",
 };
@@ -293,7 +293,7 @@ export type DSRiskTone = "safe" | "medium" | "high";
 
 const RISK_DOT: Record<DSRiskTone, string> = {
   safe: "bg-[#1D9E75]",
-  medium: "bg-[#EF9F27]",
+  medium: "bg-[#525252]",
   high: "bg-[#E24B4A]",
 };
 
@@ -311,7 +311,7 @@ export const DSRiskDot = ({ tone, className }: { tone: DSRiskTone; className?: s
 
 const confidenceTone = (pct: number) => {
   if (pct >= 80) return { fill: "bg-[#1D9E75]", text: "text-[#0F6E56]" };
-  if (pct >= 50) return { fill: "bg-[#EF9F27]", text: "text-[#633806]" };
+  if (pct >= 50) return { fill: "bg-[#525252]", text: "text-[#633806]" };
   return { fill: "bg-[#E24B4A]", text: "text-[#791F1F]" };
 };
 

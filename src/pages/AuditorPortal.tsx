@@ -238,7 +238,7 @@ export default function AuditorPortal() {
   return (
     <div className="min-h-screen bg-background">
       {/* Read-only banner */}
-      <div className="bg-amber-500/10 border-b border-amber-500/30 px-4 py-2 flex items-center justify-center gap-2 text-sm text-amber-900 dark:text-amber-200">
+      <div className="bg-neutral-700/10 border-b border-neutral-700/30 px-4 py-2 flex items-center justify-center gap-2 text-sm text-neutral-700 dark:text-neutral-300">
         <Lock className="h-4 w-4" />
         <span className="font-medium">Skrivskyddad åtkomst — du kan inte ändra något</span>
       </div>
@@ -293,7 +293,7 @@ export default function AuditorPortal() {
                         <td className="p-2">
                           <Button size="sm" variant="ghost" onClick={() => setCommentTarget({ type: "journal_entry", id: e.id, label: `Verifikation ${e.journal_number}` })} className="gap-1">
                             <MessageSquarePlus className="h-3 w-3" />
-                            {flagged ? <span className="text-amber-600">{flagged}</span> : null}
+                            {flagged ? <span className="text-neutral-700">{flagged}</span> : null}
                           </Button>
                         </td>
                       </tr>
@@ -347,7 +347,7 @@ export default function AuditorPortal() {
                           <td className="p-2">
                             <Button size="sm" variant="ghost" onClick={() => setCommentTarget({ type: "account", id: num, label: `Konto ${num}` })} className="gap-1">
                               <MessageSquarePlus className="h-3 w-3" />
-                              {flagged ? <span className="text-amber-600">{flagged}</span> : null}
+                              {flagged ? <span className="text-neutral-700">{flagged}</span> : null}
                             </Button>
                           </td>
                         </tr>

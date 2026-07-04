@@ -11,17 +11,17 @@ const LegalDPA = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#0F1B2D]">
+    <div className="min-h-screen bg-white text-[#000000]">
 
       <Header lightBg />
 
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="mb-10 pb-6 border-b border-slate-200">
-            <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
+            <p className="text-sm text-[#000000] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-[#0F1B2D] mb-3">
+            <h1 className="text-4xl font-bold tracking-tight text-[#000000] mb-3">
               Personuppgiftsbiträdesavtal (DPA)
             </h1>
             <p className="text-base text-slate-600">
@@ -30,7 +30,7 @@ const LegalDPA = () => {
             </p>
           </div>
 
-          <article className="prose prose-slate max-w-none prose-headings:text-[#0F1B2D] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0F1B2D]">
+          <article className="prose prose-slate max-w-none prose-headings:text-[#000000] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#000000]">
             <h2>1. Roller</h2>
             <p>
               <strong>Kunden</strong> är personuppgiftsansvarig för de uppgifter som behandlas
@@ -82,7 +82,7 @@ const LegalDPA = () => {
             <div className="not-prose overflow-x-auto mt-4 mb-6">
               <table className="w-full text-sm border border-slate-200 rounded-xl overflow-hidden">
                 <thead className="bg-slate-50">
-                  <tr className="text-left text-[#0F1B2D]">
+                  <tr className="text-left text-[#000000]">
                     <th className="px-4 py-2.5 font-semibold">Underbiträde</th>
                     <th className="px-4 py-2.5 font-semibold">Tjänst</th>
                     <th className="px-4 py-2.5 font-semibold">Plats</th>
@@ -149,7 +149,7 @@ const LegalDPA = () => {
             <p className="tabular-nums">
               Denna version: <strong>{VERSION}</strong>, ikraftträdande{" "}
               <strong>{EFFECTIVE_DATE}</strong>. Frågor:{" "}
-              <a href="mailto:dpo@bokfy.se" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="mailto:dpo@bokfy.se" className="text-[#000000] no-underline hover:underline">
                 dpo@bokfy.se
               </a>
               .

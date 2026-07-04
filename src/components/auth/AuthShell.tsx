@@ -29,7 +29,7 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-white">
       {/* LEFT — flat blått poster-block, dolt på mobil */}
-      <div className="hidden lg:flex flex-1 bg-[#2563EB] relative overflow-hidden flex-col justify-between p-12 xl:p-16">
+      <div className="hidden lg:flex flex-1 bg-[#000000] relative overflow-hidden flex-col justify-between p-12 xl:p-16">
         {/* Geometrisk dekoration — platta former i låg opacitet */}
         <div aria-hidden className="pointer-events-none absolute inset-0">
           <div className="absolute -top-32 -right-32 h-[420px] w-[420px] rounded-full bg-white/5" />
@@ -47,7 +47,7 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
           >
             Bokföring.
             <br />
-            <span className="inline-block bg-[#F59E0B] px-3 text-[#0F1B2D]">
+            <span className="inline-block bg-[#525252] px-3 text-[#000000]">
               Automatiserad.
             </span>
           </h2>
@@ -56,7 +56,7 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
             {FEATURES.map((f) => (
               <div key={f} className="flex items-center gap-3">
                 <div className="flex h-[26px] w-[26px] flex-shrink-0 items-center justify-center rounded-md bg-white">
-                  <Check className="h-3.5 w-3.5 text-[#2563EB]" strokeWidth={3} aria-hidden />
+                  <Check className="h-3.5 w-3.5 text-[#000000]" strokeWidth={3} aria-hidden />
                 </div>
                 <span className="text-sm font-medium text-white/90">{f}</span>
               </div>
@@ -68,7 +68,7 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
           {STATS.map((s) => (
             <div key={s.label}>
               <div className="text-[22px] font-extrabold text-white">{s.value}</div>
-              <div className="mt-0.5 text-[11.5px] uppercase tracking-wider text-blue-100">
+              <div className="mt-0.5 text-[11.5px] uppercase tracking-wider text-white">
                 {s.label}
               </div>
             </div>
@@ -81,8 +81,8 @@ export const AuthShell = ({ children, compact = false }: AuthShellProps) => {
         <div className="w-full max-w-sm mx-auto">
           {/* Mobile-only logo */}
           <div className="flex lg:hidden items-center gap-0 mb-8">
-            <span className="text-xl font-extrabold tracking-tight text-[#0F1B2D]">Bok</span>
-            <span className="text-xl font-extrabold tracking-tight text-[#2563EB]">fy</span>
+            <span className="text-xl font-extrabold tracking-tight text-[#000000]">Bok</span>
+            <span className="text-xl font-extrabold tracking-tight text-[#000000]">fy</span>
           </div>
           {children}
         </div>

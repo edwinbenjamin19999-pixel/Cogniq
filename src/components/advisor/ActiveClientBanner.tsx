@@ -27,7 +27,7 @@ export const ActiveClientBanner = () => {
     <button
       type="button"
       onClick={handleBack}
-      className="w-full flex items-center gap-2 bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-medium transition-colors"
+      className="w-full flex items-center gap-2 bg-[#000000] hover:bg-[#000000] text-white font-medium transition-colors"
       style={{ padding: "6px 16px", fontSize: "12px" }}
       aria-label="Återgå till byråöversikt"
     >

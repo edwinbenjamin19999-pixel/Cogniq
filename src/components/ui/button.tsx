@@ -5,25 +5,29 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 /**
- * FLAT DESIGN: feedback via färgskifte + skala — aldrig skuggor eller djup.
- * Fokus = solid högkontrast-ring (ring-2 ring-offset-2).
+ * MINIMALIST MONOCHROME: svartvitt, skarpa hörn, inversions-hover.
+ * Etiketter i mono/versaler med brett spärr. Rörelse: omedelbar (100ms).
+ * Fokus = 3px svart outline med offset.
  */
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
-  { variants: { variant: { default: "bg-primary text-primary-foreground font-semibold hover:bg-[hsl(224,76%,48%)] hover:scale-105 active:scale-100",
-        destructive: "bg-destructive text-destructive-foreground font-semibold hover:bg-[hsl(0,74%,42%)] hover:scale-105 active:scale-100",
-        outline: "border-2 border-primary bg-transparent text-primary font-semibold hover:bg-primary hover:text-primary-foreground",
-        secondary: "bg-muted text-foreground font-semibold hover:bg-[hsl(220,13%,91%)] hover:scale-105 active:scale-100",
-        ghost: "hover:bg-muted hover:text-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        chip: "rounded-full bg-blue-50 text-primary text-xs font-semibold hover:bg-blue-100 transition-colors duration-200",
-        hero: "bg-primary text-primary-foreground font-bold text-base hover:bg-[hsl(224,76%,48%)] hover:scale-105 active:scale-100",
-        glass: "bg-transparent border-2 border-white/60 text-white font-semibold hover:bg-white hover:text-[hsl(216,50%,12%)]",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-none font-mono text-xs uppercase tracking-widest font-medium transition-colors duration-100 focus-visible:outline-none focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-foreground focus-visible:outline-offset-[3px] disabled:pointer-events-none disabled:opacity-40 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  { variants: { variant: {
+        // Solid svart → inverterar till vit med svart kant
+        default: "bg-foreground text-background border-2 border-foreground hover:bg-background hover:text-foreground",
+        destructive: "bg-foreground text-background border-2 border-foreground hover:bg-background hover:text-foreground",
+        // Outline → fylls svart
+        outline: "border-2 border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background",
+        secondary: "bg-muted text-foreground border-2 border-transparent hover:border-foreground",
+        ghost: "text-foreground hover:underline underline-offset-4 decoration-2",
+        link: "text-foreground underline-offset-4 hover:underline normal-case tracking-normal font-serif",
+        chip: "border border-foreground bg-transparent text-foreground normal-case tracking-normal hover:bg-foreground hover:text-background",
+        hero: "bg-foreground text-background border-2 border-foreground hover:bg-background hover:text-foreground text-sm",
+        glass: "bg-transparent border-2 border-background text-background hover:bg-background hover:text-foreground",
       },
-      size: { default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        xl: "h-14 rounded-md px-10 text-base",
+      size: { default: "h-11 px-6 py-2",
+        sm: "h-9 px-4",
+        lg: "h-12 px-8",
+        xl: "h-14 px-10 text-sm",
         icon: "h-10 w-10",
       },
     },

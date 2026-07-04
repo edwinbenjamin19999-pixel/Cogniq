@@ -106,9 +106,9 @@ export function OperatingConsole() {
       : "healthy";
 
   const statusBadge = {
-    healthy: { label: "Operativ", cls: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]", dot: "bg-emerald-500" },
-    degraded: { label: "Degraderad", cls: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]", dot: "bg-amber-500" },
-    blocked: { label: "Blockerad", cls: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]", dot: "bg-rose-500" },
+    healthy: { label: "Operativ", cls: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]", dot: "bg-neutral-700" },
+    degraded: { label: "Degraderad", cls: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]", dot: "bg-neutral-700" },
+    blocked: { label: "Blockerad", cls: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]", dot: "bg-neutral-700" },
   }[derivedStatus];
 
   const lastRunFmt = health.lastRunAt

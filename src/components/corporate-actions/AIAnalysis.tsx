@@ -175,15 +175,15 @@ export const AIAnalysis = ({ actionType, formData }: AIAnalysisProps) => { const
     danger: ShieldAlert,
   };
 
-  const statusColors = { ok: "border-[#BFE6D6] dark:border-emerald-700",
-    warning: "border-[#F0DDB7] dark:border-amber-700",
-    info: "border-blue-300 dark:border-blue-700",
+  const statusColors = { ok: "border-[#BFE6D6] dark:border-neutral-700",
+    warning: "border-[#F0DDB7] dark:border-neutral-700",
+    info: "border-black dark:border-black",
     danger: "border-destructive",
   };
 
   const iconColors = { ok: "text-[#085041]",
     warning: "text-[#7A5417]",
-    info: "text-blue-600",
+    info: "text-black",
     danger: "text-destructive",
   };
 

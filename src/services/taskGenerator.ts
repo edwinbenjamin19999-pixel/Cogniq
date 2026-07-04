@@ -134,7 +134,7 @@ async function buildMissingReceipts(client: ClientLite): Promise<AutoTask | null
     actionLabel: "Påminn klient",
     actionHref: `/wl/app/clients/${client.id}`,
     iconName: "FileX",
-    iconColor: "#EF9F27",
+    iconColor: "#525252",
     ageMs: oldest * DAY,
     isAIGenerated: true,
   };
@@ -162,7 +162,7 @@ async function buildStaleBankRecon(client: ClientLite): Promise<AutoTask | null>
     actionLabel: "Starta avstämning",
     actionHref: "/wl/app",
     iconName: "Building2",
-    iconColor: "#EF9F27",
+    iconColor: "#525252",
     ageMs: lastDays * DAY,
     isAIGenerated: true,
   };
@@ -188,7 +188,7 @@ function buildVATDueSoon(client: ClientLite): AutoTask | null {
     actionLabel: "Beräkna och förbered",
     actionHref: "/wl/app/vat",
     iconName: "Calendar",
-    iconColor: "#EF9F27",
+    iconColor: "#525252",
     ageMs: 0,
     isAIGenerated: true,
   };
@@ -213,7 +213,7 @@ function buildAGIDueSoon(client: ClientLite): AutoTask | null {
     actionLabel: "Förbered AGI",
     actionHref: "/wl/app/agi",
     iconName: "FileCheck",
-    iconColor: "#1D4ED8",
+    iconColor: "#000000",
     ageMs: 0,
     isAIGenerated: true,
   };

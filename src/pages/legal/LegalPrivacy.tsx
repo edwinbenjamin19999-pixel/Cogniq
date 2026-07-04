@@ -11,17 +11,17 @@ const LegalPrivacy = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#0F1B2D]">
+    <div className="min-h-screen bg-white text-[#000000]">
 
       <Header lightBg />
 
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="mb-10 pb-6 border-b border-slate-200">
-            <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
+            <p className="text-sm text-[#000000] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-[#0F1B2D] mb-3">
+            <h1 className="text-4xl font-bold tracking-tight text-[#000000] mb-3">
               Integritetspolicy
             </h1>
             <p className="text-base text-slate-600">
@@ -31,11 +31,11 @@ const LegalPrivacy = () => {
             </p>
           </div>
 
-          <article className="prose prose-slate max-w-none prose-headings:text-[#0F1B2D] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0F1B2D]">
+          <article className="prose prose-slate max-w-none prose-headings:text-[#000000] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#000000]">
             <h2>1. Personuppgiftsansvarig</h2>
             <p>
               Bokfy AB, org.nr [556xxx-xxxx], med säte i Stockholm. Kontakt:{" "}
-              <a href="mailto:dpo@bokfy.se" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="mailto:dpo@bokfy.se" className="text-[#000000] no-underline hover:underline">
                 dpo@bokfy.se
               </a>
               .
@@ -48,7 +48,7 @@ const LegalPrivacy = () => {
               <li><strong>Faktura- och betalningsuppgifter:</strong> organisationsnummer, fakturaadress, transaktionshistorik.</li>
               <li><strong>Tekniska uppgifter:</strong> IP-adress, enhetsinformation, loggar, cookies (se separat cookiepolicy).</li>
               <li><strong>Bokföringsdata:</strong> behandlas separat under{" "}
-                <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">DPA</a>
+                <a href="/legal/dpa" className="text-[#000000] no-underline hover:underline">DPA</a>
                 {" "}— Bokfy är då personuppgiftsbiträde, inte ansvarig.
               </li>
             </ul>
@@ -73,7 +73,7 @@ const LegalPrivacy = () => {
             <h2>5. Mottagare</h2>
             <p>
               Personuppgifter delas med våra underleverantörer (drift, AI, e-post — se{" "}
-              <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">DPA</a>
+              <a href="/legal/dpa" className="text-[#000000] no-underline hover:underline">DPA</a>
               ), myndigheter när lag kräver det (Skatteverket, Bolagsverket,
               Finansinspektionen) samt revisorer och rådgivare under sekretessavtal.
               All behandling sker inom EU/EES.
@@ -93,7 +93,7 @@ const LegalPrivacy = () => {
             <p>
               För frågor om personuppgiftsbehandling eller för att utöva dina rättigheter,
               kontakta vårt dataskyddsombud på{" "}
-              <a href="mailto:dpo@bokfy.se" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="mailto:dpo@bokfy.se" className="text-[#000000] no-underline hover:underline">
                 dpo@bokfy.se
               </a>
               .

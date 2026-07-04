@@ -11,9 +11,9 @@ interface Props { companyId: string }
 const COLORS = [
   "hsl(var(--brand-primary))",
   "hsl(var(--brand-accent, var(--brand-primary)))",
-  "#6366f1",
+  "#525252",
   "#0ea5e9",
-  "#14b8a6",
+  "#000000",
   "#94a3b8",
 ];
 

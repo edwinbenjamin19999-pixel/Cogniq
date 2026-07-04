@@ -67,12 +67,12 @@ const CoSign = () => {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white flex items-center justify-center p-6">
       <div className="w-full max-w-lg bg-white rounded-2xl border border-slate-200 shadow-sm p-7">
         <div className="flex items-center gap-2 mb-1">
-          <FileSignature className="w-5 h-5 text-[#3b82f6]" />
-          <span className="text-[12px] font-semibold tracking-wide text-[#3b82f6] uppercase">
+          <FileSignature className="w-5 h-5 text-[#000000]" />
+          <span className="text-[12px] font-semibold tracking-wide text-[#000000] uppercase">
             Bokfy · Medsignering
           </span>
         </div>
-        <h1 className="text-[22px] font-bold text-[#0F1B2D] tracking-tight">
+        <h1 className="text-[22px] font-bold text-[#000000] tracking-tight">
           Signera kundavtal
         </h1>
 
@@ -98,9 +98,9 @@ const CoSign = () => {
         {!state.loading && state.valid && !done && (
           <>
             <p className="text-sm text-slate-600 mt-2 mb-5">
-              <span className="font-semibold text-[#0F1B2D]">{state.initiator?.name}</span>
+              <span className="font-semibold text-[#000000]">{state.initiator?.name}</span>
               {" "}har påbörjat onboarding för{" "}
-              <span className="font-semibold text-[#0F1B2D]">
+              <span className="font-semibold text-[#000000]">
                 {state.company?.name || "ditt bolag"}
               </span>
               {state.company?.org_number ? ` (${state.company.org_number})` : ""}.
@@ -129,7 +129,7 @@ const CoSign = () => {
             <button
               onClick={() => setBankIdOpen(true)}
               disabled={signing}
-              className="w-full h-[52px] rounded-xl bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold text-[15px] flex items-center justify-center gap-2 transition-colors"
+              className="w-full h-[52px] rounded-xl bg-[#000000] hover:bg-[#000000] text-white font-semibold text-[15px] flex items-center justify-center gap-2 transition-colors"
             >
               <ShieldCheck className="w-4 h-4" />
               Signera med BankID

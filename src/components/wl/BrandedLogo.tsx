@@ -42,9 +42,9 @@ export function BrandedLogo({ onClick }: Props) {
   }
 
   return (
-    <button onClick={handle} className="text-xl font-bold tracking-tight">
-      <span className="text-white font-bold">Bok</span>
-      <span className="text-[#3b82f6] font-bold">fy</span>
+    <button onClick={handle} className="font-display text-xl tracking-tight text-white">
+      <span className="font-bold">Bok</span>
+      <span className="font-medium italic">fy</span>
     </button>
   );
 }

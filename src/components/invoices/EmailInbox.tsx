@@ -30,7 +30,7 @@ interface EmailInboxProps { companyId: string;
   companyName?: string;
 }
 
-const STATUS_MAP: Record<string, { label: string; color: string; icon: any }> = { new: { label: "Ny", color: "text-blue-600", icon: Mail },
+const STATUS_MAP: Record<string, { label: string; color: string; icon: any }> = { new: { label: "Ny", color: "text-black", icon: Mail },
   processing: { label: "Bearbetas", color: "text-[#7A5417]", icon: Loader2 },
   processed: { label: "Behandlad", color: "text-[#085041]", icon: CheckCircle2 },
   failed: { label: "Misslyckad", color: "text-destructive", icon: AlertTriangle },

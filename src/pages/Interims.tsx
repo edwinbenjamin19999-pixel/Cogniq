@@ -37,7 +37,7 @@ const TimelineBar = ({ schedule }: TimelineProps) => {
             ? "bg-[#1D9E75]"
             : p.status === "skipped"
               ? "bg-[#94A3B8]"
-              : "bg-[#3b82f6]/40";
+              : "bg-[#000000]/40";
         return (
           <div
             key={p.id}
@@ -157,7 +157,7 @@ const Interims = () => {
                 <SelectContent>{companies.map((c) => <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>)}</SelectContent>
               </Select>
             )}
-            <Button size="sm" onClick={() => setShowManual(true)} className="h-[34px] bg-[#3b82f6] hover:bg-[#2563eb]">
+            <Button size="sm" onClick={() => setShowManual(true)} className="h-[34px] bg-[#000000] hover:bg-[#000000]">
               <Plus className="w-4 h-4 mr-1" /> Ny periodisering
             </Button>
           </div>
@@ -232,17 +232,17 @@ const Interims = () => {
                         <TableCell><TimelineBar schedule={s} /></TableCell>
                         <TableCell>
                           {s.status === "completed" ? (
-                            <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200">
+                            <Badge variant="outline" className="bg-neutral-100 text-neutral-700 border-neutral-300">
                               <CheckCircle2 className="w-3 h-3 mr-1" /> Klar
                             </Badge>
                           ) : s.status === "cancelled" ? (
                             <Badge variant="outline" className="bg-slate-50 text-slate-600 border-slate-200">Avbruten</Badge>
                           ) : expiring ? (
-                            <Badge variant="outline" className="bg-amber-50 text-amber-700 border-amber-200">
+                            <Badge variant="outline" className="bg-neutral-100 text-neutral-700 border-neutral-300">
                               <AlertTriangle className="w-3 h-3 mr-1" /> Förfaller snart
                             </Badge>
                           ) : (
-                            <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">Aktiv</Badge>
+                            <Badge variant="outline" className="bg-neutral-100 text-black border-black">Aktiv</Badge>
                           )}
                         </TableCell>
                       </TableRow>
@@ -300,7 +300,7 @@ const Interims = () => {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setShowManual(false)}>Avbryt</Button>
-            <Button onClick={handleManualSave} disabled={saving} className="bg-[#3b82f6] hover:bg-[#2563eb]">
+            <Button onClick={handleManualSave} disabled={saving} className="bg-[#000000] hover:bg-[#000000]">
               {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : "Skapa"}
             </Button>
           </DialogFooter>

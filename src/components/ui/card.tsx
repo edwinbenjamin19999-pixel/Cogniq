@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 
 const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
   <div ref={ref} className={cn(
-    // Flat: färgblock utan skugga — hårfin kant skiljer kort från canvas
-    "rounded-lg border border-border",
+    // Monochrome: skarpa hörn, svart kant, ingen skugga
+    "rounded-none border border-foreground",
     "bg-card text-card-foreground",
     "shadow-none",
-    "transition-colors duration-200 ease-out",
+    "transition-colors duration-100 ease-out",
     className
   )} {...props} />
 ));

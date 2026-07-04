@@ -52,10 +52,10 @@ export const PortfolioAlertsWidget = () => {
             const issue = getTopIssue(c);
             const dot =
               c.urgency === "high"
-                ? "bg-rose-500"
+                ? "bg-neutral-700"
                 : c.urgency === "medium"
-                  ? "bg-amber-500"
-                  : "bg-emerald-500";
+                  ? "bg-neutral-700"
+                  : "bg-neutral-700";
             return (
               <button
                 key={c.id}

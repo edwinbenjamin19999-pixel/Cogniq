@@ -31,12 +31,12 @@ const CASES = [
 /**
  * FLAT "EMERALD BENEFITS"-BLOCK — helt emerald-600-block (posterprincip:
  * en sektion, en färg). Vita ikon-cirklar med emerald-ikon, white/10-kort.
- * AA: vit text på #059669 passerar.
+ * AA: vit text på #000000 passerar.
  */
 export const UseCases = () => {
   const reveal = useScrollReveal<HTMLDivElement>();
   return (
-    <section className="relative overflow-hidden bg-[#059669] py-24 px-6">
+    <section className="relative overflow-hidden bg-[#000000] py-24 px-6">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-32 right-[8%] h-[320px] w-[320px] rounded-full bg-white/10"
@@ -63,7 +63,7 @@ export const UseCases = () => {
               key={title}
               className="group rounded-lg bg-white/10 p-7 transition-all duration-200 hover:scale-[1.02] hover:bg-white/[0.16]"
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#059669] transition-transform duration-200 group-hover:scale-110">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#000000] transition-transform duration-200 group-hover:scale-110">
                 <Icon className="h-5 w-5" strokeWidth={2.5} aria-hidden />
               </div>
               <h3 className="mb-2 text-xl font-bold tracking-tight text-white">{title}</h3>

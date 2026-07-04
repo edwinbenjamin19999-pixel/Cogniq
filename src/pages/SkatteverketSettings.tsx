@@ -174,7 +174,7 @@ export default function SkatteverketSettings() {
 
         <div className="grid gap-6 max-w-2xl">
           {/* Integration status */}
-          <Card className="border-green-300 dark:border-green-700">
+          <Card className="border-neutral-300 dark:border-neutral-700">
             <CardHeader className="pb-3">
               <CardTitle className="text-base flex items-center gap-2">
                 <Shield className="h-4 w-4 text-[#085041]" />

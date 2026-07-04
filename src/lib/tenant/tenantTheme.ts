@@ -132,7 +132,7 @@ export function assessColorQuality(hex: string): {
 /* ── Build full theme object ───────────────────────────────────── */
 export function deriveTenantTheme(primaryHex: string, accentHex?: string | null): TenantTheme {
   const safePrimary = /^#?[0-9a-f]{6}$/i.test((primaryHex || "").replace("#", ""))
-    ? primaryHex : "#3b82f6";
+    ? primaryHex : "#000000";
   const [pr, pg, pb] = hexToRgb(safePrimary);
   const [ph, ps, pl] = rgbToHsl(pr, pg, pb);
   const { h, s, l, clamped } = clampPremium(ph, ps, pl);
@@ -254,7 +254,7 @@ export function applyTenantTheme(theme: TenantTheme, opts?: { tenantSlug?: strin
 
 /* ── Bokfy default fallback ──────────────────────────────────── */
 export function getDefaultTheme(): TenantTheme {
-  return deriveTenantTheme("#3b82f6", null);
+  return deriveTenantTheme("#000000", null);
 }
 
 export function applyDefaultTheme() {

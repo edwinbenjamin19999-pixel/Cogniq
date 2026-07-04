@@ -14,11 +14,11 @@ interface CapabilityLayerCardProps {
 const statusStyles: Record<LayerStatus, { label: string; className: string }> = {
   live: {
     label: "LIVE",
-    className: "bg-[rgba(16,185,129,0.08)] text-[#059669]",
+    className: "bg-[rgba(16,185,129,0.08)] text-[#000000]",
   },
   expanding: {
     label: "EXPANDING",
-    className: "bg-[rgba(59,130,246,0.08)] text-[#2563EB]",
+    className: "bg-[rgba(59,130,246,0.08)] text-[#000000]",
   },
   next: {
     label: "NEXT",

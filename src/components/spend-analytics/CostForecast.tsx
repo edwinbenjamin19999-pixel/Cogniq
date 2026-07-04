@@ -95,10 +95,10 @@ export function CostForecast({ monthlyData }: Props) {
                 dataKey="actual"
                 name="Faktisk kostnad"
                 fill="url(#areaFillTeal)"
-                stroke="#3b82f6"
+                stroke="#000000"
                 strokeWidth={2.5}
                 connectNulls={false}
-                activeDot={{ r: 6, fill: '#0d9488', strokeWidth: 3, stroke: '#0f172a' }}
+                activeDot={{ r: 6, fill: '#000000', strokeWidth: 3, stroke: '#0f172a' }}
                 {...LINE_ANIMATION}
               />
               <Area

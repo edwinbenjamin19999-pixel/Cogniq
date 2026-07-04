@@ -267,21 +267,21 @@ const Auth = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white">
-        <Loader2 className="w-6 h-6 animate-spin text-[#3b82f6]" />
+        <Loader2 className="w-6 h-6 animate-spin text-[#000000]" />
       </div>
     );
   }
 
   // FLAT: solid blå CTA — färgskifte + skala, aldrig skugga (matchar landningssidan)
   const primaryBtn =
-    "w-full h-[52px] rounded-md bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold text-[15px] " +
+    "w-full h-[52px] rounded-md bg-[#000000] hover:bg-[#000000] text-white font-bold text-[15px] " +
     "hover:scale-[1.02] active:scale-100 transition-all duration-200 " +
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 " +
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#000000] focus-visible:ring-offset-2 " +
     "disabled:opacity-60 disabled:hover:scale-100 flex items-center justify-center gap-2";
 
   const googleBtn =
-    "w-full h-[52px] rounded-md border-2 border-gray-200 bg-white hover:border-[#2563EB] hover:bg-blue-50 " +
-    "transition-colors duration-200 font-semibold text-[15px] text-[#0F1B2D] " +
+    "w-full h-[52px] rounded-md border-2 border-gray-200 bg-white hover:border-[#000000] hover:bg-neutral-100 " +
+    "transition-colors duration-200 font-semibold text-[15px] text-[#000000] " +
     "disabled:opacity-60 flex items-center justify-center gap-3";
 
   const handleGoogle = async () => {
@@ -325,7 +325,7 @@ const Auth = () => {
         <button
           type="button"
           onClick={onToggle}
-          className="absolute inset-y-0 right-0 flex h-full w-12 items-center justify-center text-slate-400 transition-colors hover:text-[#3b82f6]"
+          className="absolute inset-y-0 right-0 flex h-full w-12 items-center justify-center text-slate-400 transition-colors hover:text-[#000000]"
           aria-label={visible ? "Dölj lösenord" : "Visa lösenord"}
         >
           <Icon className="h-4 w-4" />
@@ -338,15 +338,15 @@ const Auth = () => {
     <AuthShell>
       {/* Desktop logo (mobile already shown in shell) */}
       <div className="hidden lg:flex items-center gap-0 mb-10">
-        <span className="text-xl font-extrabold tracking-tight text-[#0F1B2D]">Bok</span>
-        <span className="text-xl font-extrabold tracking-tight text-[#2563EB]">fy</span>
+        <span className="text-xl font-extrabold tracking-tight text-[#000000]">Bok</span>
+        <span className="text-xl font-extrabold tracking-tight text-[#000000]">fy</span>
       </div>
 
       {/* SIGN IN */}
       {mode === "signin" && (
         <>
           <div className="mb-8">
-            <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">Välkommen tillbaka</h2>
+            <h2 className="text-[24px] font-bold tracking-tight text-[#000000]">Välkommen tillbaka</h2>
             <p className="text-sm text-slate-500 mt-1">Logga in på ditt konto</p>
           </div>
 
@@ -377,7 +377,7 @@ const Auth = () => {
               <button
                 type="button"
                 onClick={() => setMode("reset")}
-                className="text-[13px] text-slate-500 hover:text-[#3b82f6] transition-colors"
+                className="text-[13px] text-slate-500 hover:text-[#000000] transition-colors"
               >
                 Glömt lösenord?
               </button>
@@ -391,7 +391,7 @@ const Auth = () => {
           <div className="mt-8 text-center">
             <button
               onClick={() => setMode("signup")}
-              className="text-[13px] text-slate-600 hover:text-[#3b82f6] transition-colors font-medium"
+              className="text-[13px] text-slate-600 hover:text-[#000000] transition-colors font-medium"
             >
               Skapa konto →
             </button>
@@ -405,7 +405,7 @@ const Auth = () => {
           <OnboardingProgress current={1} />
 
           <div className="mb-8">
-            <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">Skapa konto</h2>
+            <h2 className="text-[24px] font-bold tracking-tight text-[#000000]">Skapa konto</h2>
             <p className="text-sm text-slate-500 mt-1">Aktivera ditt finansiella operativsystem</p>
           </div>
 
@@ -439,7 +439,7 @@ const Auth = () => {
           <div className="mt-8 text-center">
             <button
               onClick={() => setMode("signin")}
-              className="text-[13px] text-slate-600 hover:text-[#3b82f6] transition-colors font-medium"
+              className="text-[13px] text-slate-600 hover:text-[#000000] transition-colors font-medium"
             >
               Har du redan konto? Logga in
             </button>
@@ -455,11 +455,11 @@ const Auth = () => {
           <div className="mb-8">
             <button
               onClick={() => setMode("signin")}
-              className="text-[13px] text-slate-500 hover:text-[#3b82f6] transition-colors mb-6"
+              className="text-[13px] text-slate-500 hover:text-[#000000] transition-colors mb-6"
             >
               ← Tillbaka
             </button>
-            <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">Återställ lösenord</h2>
+            <h2 className="text-[24px] font-bold tracking-tight text-[#000000]">Återställ lösenord</h2>
             <p className="text-sm text-slate-500 mt-1">Vi skickar en länk till din e-post</p>
           </div>
 
@@ -477,7 +477,7 @@ const Auth = () => {
       {mode === "update" && (
         <>
           <div className="mb-8">
-            <h2 className="text-[24px] font-bold tracking-tight text-[#0F1B2D]">Nytt lösenord</h2>
+            <h2 className="text-[24px] font-bold tracking-tight text-[#000000]">Nytt lösenord</h2>
             <p className="text-sm text-slate-500 mt-1">Ange ditt nya lösenord nedan</p>
           </div>
 

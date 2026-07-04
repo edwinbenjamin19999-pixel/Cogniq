@@ -171,7 +171,7 @@ const TaxMandates = () => {
 
   const getStatusBadge = (status: string) => {
     switch (status) {
-      case 'active': return <Badge className="bg-green-500"><CheckCircle2 className="h-3 w-3 mr-1" />Aktiv</Badge>;
+      case 'active': return <Badge className="bg-neutral-700"><CheckCircle2 className="h-3 w-3 mr-1" />Aktiv</Badge>;
       case 'pending': return <Badge variant="secondary"><Clock className="h-3 w-3 mr-1" />Väntande</Badge>;
       case 'revoked': return <Badge variant="destructive"><XCircle className="h-3 w-3 mr-1" />Återkallad</Badge>;
       case 'expired': return <Badge variant="outline"><AlertTriangle className="h-3 w-3 mr-1" />Utgången</Badge>;

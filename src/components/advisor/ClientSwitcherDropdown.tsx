@@ -167,7 +167,7 @@ export const ClientSwitcherDropdown = ({ variant = "desktop" }: Props) => {
               <div className="text-sm font-semibold">Sorterad efter brådska</div>
             </div>
             {criticalCount > 0 && (
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#FCE8E8] text-white border border-rose-300/30">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#FCE8E8] text-white border border-neutral-300/30">
                 <Flame className="h-2.5 w-2.5" />
                 {criticalCount} kritisk{criticalCount === 1 ? "" : "a"}
               </span>
@@ -229,10 +229,10 @@ export const ClientSwitcherDropdown = ({ variant = "desktop" }: Props) => {
               const tier = p?.tier ?? "stable";
               const dot =
                 tier === "critical"
-                  ? "bg-rose-500"
+                  ? "bg-neutral-700"
                   : tier === "warning"
-                  ? "bg-amber-500"
-                  : "bg-emerald-500";
+                  ? "bg-neutral-700"
+                  : "bg-neutral-700";
               return (
                 <button
                   key={c.id}

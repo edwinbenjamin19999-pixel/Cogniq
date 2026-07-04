@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useWaitlistCount } from "@/hooks/useWaitlistCount";
 
 /**
- * FLAT POSTER HERO — solitt blått block (blue-600), hierarki via skala och
- * vikt. Dekoration = stora geometriska former i låg opacitet, aldrig blur
- * eller glow. CTA-feedback via färgskifte + skala, aldrig skuggor.
+ * MINIMALIST MONOCHROME HERO — tesen. Vit yta, svart text. Oversized
+ * Playfair-rubrik som grafiskt element. Tjock svart regel som skiljetecken.
+ * Inga färger, gradienter eller skuggor — endast typografi, linjer och
+ * negativ yta. Produktbilden gråskaligt inramad.
  */
 export const Hero = () => {
   const navigate = useNavigate();
@@ -13,164 +14,113 @@ export const Hero = () => {
 
   const scrollToId = (id: string) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    else window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
   };
-  const scrollToHowItWorks = () => scrollToId("how-it-works");
 
   return (
-    <section
-      id="hero-section"
-      className="relative w-full overflow-hidden bg-[#2563EB] pt-[60px]"
-    >
-      {/* Geometrisk dekoration — platta former, låg opacitet (posterprincip) */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-white/5" />
-        <div className="absolute top-1/3 -left-32 w-[340px] h-[340px] rounded-full bg-white/5" />
-        <div className="absolute bottom-[-120px] right-[12%] w-[260px] h-[260px] bg-white/5 rotate-12" />
-      </div>
-
-      <div className="relative mx-auto max-w-4xl px-6 pt-20 pb-16 text-center">
-        {/* Badge — solid amber-tagg, versaler */}
-        <div className="flex justify-center hero-anim hero-anim-badge">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#F59E0B] px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#0F1B2D]">
+    <section className="relative w-full bg-background pt-[60px]">
+      <div className="mx-auto max-w-6xl px-6 md:px-8 lg:px-12">
+        {/* Eyebrow */}
+        <div className="flex items-center gap-4 pt-20">
+          <span className="font-mono text-xs uppercase tracking-[0.25em] text-foreground">
             AI som kärna — inte som ett lager
+          </span>
+          <span aria-hidden className="h-px flex-1 bg-neutral-300" />
+          <span className="hidden font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground sm:inline">
+            Est. 2026 · Sverige
           </span>
         </div>
 
-        {/* Headline — extra bold, tight */}
-        <h1 className="hero-anim hero-anim-headline mt-6 text-white font-extrabold tracking-tight leading-[1.05] text-[clamp(40px,6.5vw,76px)]">
-          Ekonomin på autopilot.
+        {/* Oversized display headline */}
+        <h1 className="mt-10 font-display font-black leading-[0.92] tracking-tighter text-foreground text-[clamp(56px,13vw,168px)]">
+          Ekonomin
+          <br />
+          på <span className="italic font-medium">autopilot.</span>
         </h1>
 
-        {/* Subheadline */}
-        <p className="hero-anim hero-anim-sub mx-auto mt-6 max-w-xl text-lg leading-relaxed text-blue-50">
-          Det enda ekonomisystemet där AI inte är ett tillägg — det är motorn.
-          Bokföring, moms, budget, prognos och rapportering i ett system som
-          tänker själv.
-        </p>
-
-        {/* CTAs — vit solid + tjock outline (border-4), fylls vid hover */}
-        <div className="hero-anim hero-anim-cta mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            onClick={() => navigate("/auth")}
-            className="h-14 rounded-md bg-white px-8 text-base font-bold text-[#0F1B2D] transition-all duration-200 hover:scale-105 hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#2563EB] inline-flex items-center gap-2"
-          >
-            Kom igång gratis
-            <ArrowRight className="h-5 w-5" />
-          </button>
-          <button
-            onClick={scrollToHowItWorks}
-            className="h-14 rounded-md border-4 border-white bg-transparent px-6 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#0F1B2D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#2563EB]"
-          >
-            Se hur det fungerar ↓
-          </button>
+        {/* Thick rule + bordered square (decorative punctuation) */}
+        <div className="mt-10 flex items-center gap-4">
+          <span aria-hidden className="h-1 w-24 bg-foreground" />
+          <span aria-hidden className="h-3 w-3 border-2 border-foreground" />
         </div>
 
-        {/* Social proof — ärlig status, hög kontrast på blått */}
-        <div className="hero-anim hero-anim-cta mt-10 border-t-2 border-white/20 pt-6">
-          <p className="text-sm font-medium text-white">
-            <span
-              aria-hidden
-              className="hero-live-dot mr-2 inline-block h-2 w-2 rounded-full bg-emerald-300 align-middle"
-            />
-            {count.toLocaleString("sv-SE")} anmälda · 14 aktiva pilotkunder · Lansering Q3 2026
+        {/* Lead + CTAs in editorial two-column */}
+        <div className="mt-10 grid grid-cols-1 gap-10 border-t border-foreground pt-10 md:grid-cols-12">
+          <p className="font-serif text-xl leading-relaxed text-foreground md:col-span-7">
+            Det enda ekonomisystemet där AI inte är ett tillägg — det är motorn.
+            Bokföring, moms, budget, prognos och rapportering i ett system som
+            tänker själv.
           </p>
-          <p className="mx-auto mt-5 max-w-xl text-xs font-semibold uppercase tracking-[0.15em] text-blue-100">
-            Bokföring · Moms · Löner · Budget · Prognos · Rapportering · Revision · API
-          </p>
-        </div>
-
-        {/* Produkt-mockup — vit platt ram, ingen skugga: kontrasten gör jobbet */}
-        <div className="hero-anim hero-anim-video mx-auto mt-14 max-w-[820px]">
-          <div className="overflow-hidden rounded-lg bg-white p-1.5">
-            {/* Browser chrome — flat grå list */}
-            <div className="flex items-center gap-1.5 rounded-t-md bg-gray-100 px-3.5 py-2.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-gray-300" />
-              <span className="h-2.5 w-2.5 rounded-full bg-gray-300" />
-              <span className="h-2.5 w-2.5 rounded-full bg-gray-300" />
-              <div className="ml-2 flex h-5 max-w-[260px] flex-grow items-center rounded bg-white px-2.5">
-                <span className="text-[11px] text-gray-400 hero-urlbar-text">app.bokfy.se</span>
-              </div>
-            </div>
-
-            {/* Branded fallback-yta bakom videon — aldrig en tom svart ruta */}
-            <div
-              aria-hidden={false}
-              className="relative w-full overflow-hidden rounded-b-md"
-              style={{ aspectRatio: "16 / 10", background: "#0F1B2D" }}
+          <div className="flex flex-col items-start gap-4 md:col-span-5">
+            <button
+              onClick={() => navigate("/auth")}
+              className="group inline-flex h-14 items-center gap-3 border-2 border-foreground bg-foreground px-8 font-mono text-xs uppercase tracking-widest text-background transition-colors duration-100 hover:bg-background hover:text-foreground focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-foreground focus-visible:outline-offset-[3px]"
             >
-              <div
-                aria-hidden
-                className="absolute inset-0"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
-                  backgroundSize: "44px 44px",
-                }}
-              />
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                poster="/hero-demo-poster.jpg"
-                className="absolute inset-0 block h-full w-full object-cover"
-              >
-                <source src="/hero-demo.mp4" type="video/mp4" />
-              </video>
-            </div>
+              Kom igång gratis
+              <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+            </button>
+            <button
+              onClick={() => scrollToId("how-it-works")}
+              className="font-mono text-xs uppercase tracking-widest text-foreground underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-foreground focus-visible:outline-offset-2"
+            >
+              Se hur det fungerar ↓
+            </button>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="mt-10 flex justify-center">
-          <button
-            onClick={scrollToHowItWorks}
-            aria-label="Scrolla ned"
-            className="text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-md"
-          >
-            <ChevronDown size={22} className="hero-chevron" />
-          </button>
+        {/* Metadata row — mono */}
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-2 border-t border-neutral-200 pt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+          <span className="text-foreground">
+            {count.toLocaleString("sv-SE")} anmälda
+          </span>
+          <span aria-hidden>/</span>
+          <span>14 aktiva pilotkunder</span>
+          <span aria-hidden>/</span>
+          <span>Lansering Q3 2026</span>
         </div>
       </div>
 
-      <style>{`
-        @keyframes heroFadeUp {
-          from { opacity: 0; transform: translateY(12px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes heroFadeUpLg {
-          from { opacity: 0; transform: translateY(20px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes pulseDown {
-          0%, 100% { transform: translateY(0); opacity: 0.7; }
-          50%      { transform: translateY(6px); opacity: 1; }
-        }
-        .hero-anim { opacity: 0; animation-fill-mode: forwards; animation-timing-function: cubic-bezier(0.16,1,0.3,1); }
-        .hero-anim-badge    { animation: heroFadeUp 400ms 0ms forwards cubic-bezier(0.16,1,0.3,1); }
-        .hero-anim-headline { animation: heroFadeUp 400ms 80ms forwards cubic-bezier(0.16,1,0.3,1); }
-        .hero-anim-sub      { animation: heroFadeUp 400ms 160ms forwards cubic-bezier(0.16,1,0.3,1); }
-        .hero-anim-cta      { animation: heroFadeUp 400ms 240ms forwards cubic-bezier(0.16,1,0.3,1); }
-        .hero-anim-video    { animation: heroFadeUpLg 600ms 360ms forwards cubic-bezier(0.16,1,0.3,1); }
-        .hero-chevron       { animation: pulseDown 1.5s ease infinite; }
-        @keyframes heroLivePulse {
-          0%, 100% { opacity: 1; transform: scale(1); }
-          50%      { opacity: 0.6; transform: scale(1.3); }
-        }
-        .hero-live-dot { animation: heroLivePulse 2s ease-in-out infinite; }
-        @media (prefers-reduced-motion: reduce) {
-          .hero-anim { opacity: 1; animation: none; }
-          .hero-chevron, .hero-live-dot { animation: none; }
-        }
-        @media (max-width: 640px) {
-          .hero-urlbar-text { display: none; }
-        }
-      `}</style>
+      {/* Product mockup — bordered, grayscale, editorial */}
+      <div className="mx-auto mt-16 max-w-6xl px-6 md:px-8 lg:px-12">
+        <div className="border-2 border-foreground">
+          <div className="flex items-center gap-2 border-b-2 border-foreground bg-background px-4 py-2.5">
+            <span className="h-2.5 w-2.5 border border-foreground" />
+            <span className="h-2.5 w-2.5 border border-foreground" />
+            <span className="h-2.5 w-2.5 border border-foreground" />
+            <span className="ml-3 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+              app.bokfy.se
+            </span>
+          </div>
+          <div
+            className="relative w-full overflow-hidden bg-muted"
+            style={{ aspectRatio: "16 / 10" }}
+          >
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                backgroundImage:
+                  "linear-gradient(#00000010 1px, transparent 1px), linear-gradient(90deg, #00000010 1px, transparent 1px)",
+                backgroundSize: "40px 40px",
+              }}
+            />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster="/hero-demo-poster.jpg"
+              className="absolute inset-0 block h-full w-full object-cover grayscale"
+            >
+              <source src="/hero-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+
+      {/* Thick section divider */}
+      <div aria-hidden className="mx-auto mt-16 h-1 max-w-6xl bg-foreground" />
     </section>
   );
 };

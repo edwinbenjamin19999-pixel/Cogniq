@@ -112,8 +112,11 @@ export default {
         "0.5": "0.5px",
       },
       fontFamily: {
-        sans: ["Outfit", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
-        mono: ["JetBrains Mono", "Fira Code", "ui-monospace", "monospace"],
+        // Minimalist Monochrome: serif bär hela systemet
+        sans: ["Source Serif 4", "Georgia", "serif"],
+        serif: ["Source Serif 4", "Georgia", "serif"],
+        display: ["Playfair Display", "Georgia", "serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",

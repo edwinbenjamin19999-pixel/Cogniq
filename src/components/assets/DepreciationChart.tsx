@@ -59,12 +59,12 @@ export const DepreciationChart = ({ asset, bookValue, taxValue }: DepreciationCh
               ]}
               contentStyle={{ fontSize: 11 }}
             />
-            <Bar dataKey="remaining" fill="#3b82f6" radius={[2, 2, 0, 0]} name="remaining" />
-            <Bar dataKey="depreciation" fill="#3b82f6" radius={[2, 2, 0, 0]} name="depreciation" />
+            <Bar dataKey="remaining" fill="#000000" radius={[2, 2, 0, 0]} name="remaining" />
+            <Bar dataKey="depreciation" fill="#000000" radius={[2, 2, 0, 0]} name="depreciation" />
             <Line
               type="monotone"
               dataKey="taxValue"
-              stroke="#f59e0b"
+              stroke="#525252"
               strokeDasharray="5 5"
               strokeWidth={2}
               dot={false}

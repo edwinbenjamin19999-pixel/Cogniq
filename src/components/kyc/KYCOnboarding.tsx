@@ -554,7 +554,7 @@ export const KYCOnboarding = ({ companyId, onComplete }: KYCOnboardingProps) => 
               {representatives.length === 0 && (
                 <Alert className="bg-[#FAEEDA] border-[#F0DDB7]">
                   <AlertCircle className="h-4 w-4 text-[#7A5417]" />
-                  <AlertDescription className="text-sm text-[#7A5417] dark:text-amber-200">
+                  <AlertDescription className="text-sm text-[#7A5417] dark:text-neutral-300">
                     Lägg till minst en företrädare för att fortsätta
                   </AlertDescription>
                 </Alert>

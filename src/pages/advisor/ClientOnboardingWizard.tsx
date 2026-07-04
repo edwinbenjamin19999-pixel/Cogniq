@@ -146,7 +146,7 @@ export default function ClientOnboardingWizard() {
           return (
             <li key={s.key} className="flex-1 flex items-center gap-2 min-w-0">
               <div className={`h-9 w-9 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
-                done ? "bg-emerald-100 text-emerald-700" : active ? "bg-[hsl(var(--brand-primary))] text-white" : "bg-slate-100 text-slate-400"
+                done ? "bg-neutral-100 text-neutral-700" : active ? "bg-[hsl(var(--brand-primary))] text-white" : "bg-slate-100 text-slate-400"
               }`}>
                 {done ? <CheckCircle2 className="h-4 w-4" /> : <Icon className="h-4 w-4" />}
               </div>
@@ -240,7 +240,7 @@ export default function ClientOnboardingWizard() {
 
         {step === 4 && (
           <div className="text-center py-8 space-y-4">
-            <div className="h-16 w-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto">
+            <div className="h-16 w-16 rounded-full bg-neutral-100 text-neutral-700 flex items-center justify-center mx-auto">
               <PartyPopper className="h-8 w-8" />
             </div>
             <h2 className="text-2xl font-bold text-[#0F172A]">Klart!</h2>

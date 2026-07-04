@@ -39,10 +39,10 @@ export const FAQ = () => {
   return (
     <section className="bg-white py-24 px-6">
       <div className="mx-auto max-w-2xl">
-        <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#2563EB]">
+        <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#000000]">
           Vanliga frågor
         </p>
-        <h2 className="mb-12 text-center text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F1B2D]">
+        <h2 className="mb-12 text-center text-3xl md:text-4xl font-extrabold tracking-tight text-[#000000]">
           Bra frågor förtjänar raka svar.
         </h2>
 
@@ -53,18 +53,18 @@ export const FAQ = () => {
               <div
                 key={item.q}
                 className={`border-b-2 py-5 transition-colors duration-200 ${
-                  isOpen ? "border-[#2563EB]" : "border-gray-200"
+                  isOpen ? "border-[#000000]" : "border-gray-200"
                 }`}
               >
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="flex w-full cursor-pointer items-center justify-between rounded-md text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2"
+                  className="flex w-full cursor-pointer items-center justify-between rounded-md text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#000000] focus-visible:ring-offset-2"
                 >
                   <span
                     className={`pr-4 text-base font-semibold transition-colors duration-200 ${
-                      isOpen ? "text-[#2563EB]" : "text-[#0F1B2D]"
+                      isOpen ? "text-[#000000]" : "text-[#000000]"
                     }`}
                   >
                     {item.q}
@@ -72,13 +72,13 @@ export const FAQ = () => {
                   <ChevronDown
                     aria-hidden
                     className={`h-5 w-5 shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-[#2563EB]" : "text-[#0F1B2D]/40"
+                      isOpen ? "rotate-180 text-[#000000]" : "text-[#000000]/40"
                     }`}
                     strokeWidth={2.5}
                   />
                 </button>
                 {isOpen && (
-                  <p className="pt-3 pb-1 text-sm leading-relaxed text-[#0F1B2D]/60">
+                  <p className="pt-3 pb-1 text-sm leading-relaxed text-[#000000]/60">
                     {item.a}
                   </p>
                 )}

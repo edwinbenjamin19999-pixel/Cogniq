@@ -11,17 +11,17 @@ const CustomerAgreement = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#0F1B2D]">
+    <div className="min-h-screen bg-white text-[#000000]">
 
       <Header lightBg />
 
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="mb-10 pb-6 border-b border-slate-200">
-            <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
+            <p className="text-sm text-[#000000] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-[#0F1B2D] mb-3">
+            <h1 className="text-4xl font-bold tracking-tight text-[#000000] mb-3">
               Kundavtal
             </h1>
             <p className="text-base text-slate-600">
@@ -30,7 +30,7 @@ const CustomerAgreement = () => {
             </p>
           </div>
 
-          <article className="prose prose-slate max-w-none prose-headings:text-[#0F1B2D] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#0F1B2D]">
+          <article className="prose prose-slate max-w-none prose-headings:text-[#000000] prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700 prose-strong:text-[#000000]">
             <h2>1. Parter och definitioner</h2>
             <p>
               Avtalet ingås mellan Bokfy AB, org.nr [556xxx-xxxx] (&quot;Bokfy&quot;) och den
@@ -60,7 +60,7 @@ const CustomerAgreement = () => {
             <h3>4.1 Prislista</h3>
             <p>
               Vid avtalsstart gäller den prislista som publiceras på{" "}
-              <a href="/pricing" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="/pricing" className="text-[#000000] no-underline hover:underline">
                 bokfy.se/pricing
               </a>
               .
@@ -116,11 +116,11 @@ const CustomerAgreement = () => {
             <p>
               Bokfy agerar personuppgiftsbiträde åt Kunden för de personuppgifter som behandlas
               i Tjänsten. Behandlingen regleras i separat{" "}
-              <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="/legal/dpa" className="text-[#000000] no-underline hover:underline">
                 personuppgiftsbiträdesavtal (DPA)
               </a>
               . För egna personuppgifter (t.ex. kontaktpersoner) gäller{" "}
-              <a href="/legal/privacy" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="/legal/privacy" className="text-[#000000] no-underline hover:underline">
                 integritetspolicyn
               </a>
               .
@@ -162,7 +162,7 @@ const CustomerAgreement = () => {
             <p>
               Bokfy använder underleverantörer för drift, lagring, AI-tjänster och e-post.
               Aktuell lista över underbiträden finns i{" "}
-              <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="/legal/dpa" className="text-[#000000] no-underline hover:underline">
                 DPA
               </a>
               . Tillkommande underleverantörer meddelas Kunden i förväg.
@@ -187,7 +187,7 @@ const CustomerAgreement = () => {
             <p className="tabular-nums">
               Denna version: <strong>{VERSION}</strong>, ikraftträdande{" "}
               <strong>{EFFECTIVE_DATE}</strong>. Tidigare versioner finns på begäran via{" "}
-              <a href="mailto:legal@bokfy.se" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="mailto:legal@bokfy.se" className="text-[#000000] no-underline hover:underline">
                 legal@bokfy.se
               </a>
               .
@@ -195,16 +195,16 @@ const CustomerAgreement = () => {
 
             <div className="mt-12 p-5 rounded-2xl bg-slate-50 border border-slate-200 not-prose">
               <p className="text-sm text-slate-600 leading-relaxed">
-                <strong className="text-[#0F1B2D]">Frågor?</strong> Kontakta oss på{" "}
-                <a href="mailto:legal@bokfy.se" className="text-[#3b82f6] hover:underline">
+                <strong className="text-[#000000]">Frågor?</strong> Kontakta oss på{" "}
+                <a href="mailto:legal@bokfy.se" className="text-[#000000] hover:underline">
                   legal@bokfy.se
                 </a>{" "}
                 eller läs vår{" "}
-                <a href="/legal/privacy" className="text-[#3b82f6] hover:underline">
+                <a href="/legal/privacy" className="text-[#000000] hover:underline">
                   integritetspolicy
                 </a>{" "}
                 och{" "}
-                <a href="/legal/dpa" className="text-[#3b82f6] hover:underline">
+                <a href="/legal/dpa" className="text-[#000000] hover:underline">
                   DPA
                 </a>
                 .

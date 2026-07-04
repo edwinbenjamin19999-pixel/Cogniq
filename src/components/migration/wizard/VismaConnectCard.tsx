@@ -137,9 +137,9 @@ export const VismaConnectCard = ({ companyId, onFetched }: Props) => {
       <div className="bg-[#FAFBFC] border-[0.5px] border-[#DFE4EA] rounded-[12px] p-5 space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="h-5 w-5 text-emerald-600" />
+            <CheckCircle2 className="h-5 w-5 text-neutral-700" />
             <div>
-              <p className="text-sm font-semibold text-[#1D4ED8]">Ansluten till Visma eEkonomi</p>
+              <p className="text-sm font-semibold text-[#000000]">Ansluten till Visma eEkonomi</p>
               {conn.vismaCompanyId && (
                 <p className="text-[11px] text-[#64748B]">Bolag: {conn.vismaCompanyId}</p>
               )}
@@ -147,7 +147,7 @@ export const VismaConnectCard = ({ companyId, onFetched }: Props) => {
           </div>
           <button
             onClick={handleDisconnect}
-            className="text-[11px] text-[#94A3B8] hover:text-[#1D4ED8] underline"
+            className="text-[11px] text-[#94A3B8] hover:text-[#000000] underline"
           >
             Koppla från
           </button>
@@ -156,8 +156,8 @@ export const VismaConnectCard = ({ companyId, onFetched }: Props) => {
         {(fetching || Object.keys(progress).length > 0) && (
           <div className="bg-[#EFF6FF] border-[0.5px] border-[#B5D4F4] rounded-[12px] p-4 space-y-3">
             <div className="flex items-center gap-2">
-              <Zap className="h-3.5 w-3.5 text-[#1D4ED8]" />
-              <p className="text-[10px] uppercase tracking-wider font-semibold text-[#1D4ED8]">
+              <Zap className="h-3.5 w-3.5 text-[#000000]" />
+              <p className="text-[10px] uppercase tracking-wider font-semibold text-[#000000]">
                 {fetching ? "Hämtar data från Visma" : "Hämtning klar"}
               </p>
             </div>
@@ -171,7 +171,7 @@ export const VismaConnectCard = ({ companyId, onFetched }: Props) => {
         {!fetching && (
           <Button
             onClick={handleFetch}
-            className="bg-[#1D4ED8] hover:bg-[#1D4ED8]/90 text-[#E6F4FA] rounded-[8px] h-[44px] px-5 text-[13px] font-medium"
+            className="bg-[#000000] hover:bg-[#000000]/90 text-[#E6F4FA] rounded-[8px] h-[44px] px-5 text-[13px] font-medium"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
             {Object.keys(progress).length > 0 ? "Hämta igen" : "Hämta data nu"}
@@ -187,7 +187,7 @@ export const VismaConnectCard = ({ companyId, onFetched }: Props) => {
         <p className="text-[10px] uppercase tracking-wider font-semibold text-[#94A3B8]">
           Visma eEkonomi
         </p>
-        <h3 className="text-base font-semibold text-[#1D4ED8] mt-1">
+        <h3 className="text-base font-semibold text-[#000000] mt-1">
           Anslut ditt Visma-konto
         </h3>
         <p className="text-[12px] text-[#64748B] mt-1 leading-relaxed">
@@ -196,16 +196,16 @@ export const VismaConnectCard = ({ companyId, onFetched }: Props) => {
       </div>
 
       {error && (
-        <div className="flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-[8px] p-2.5">
-          <AlertTriangle className="h-3.5 w-3.5 text-amber-700 mt-0.5 shrink-0" />
-          <p className="text-[11px] text-amber-900 leading-relaxed">{error}</p>
+        <div className="flex items-start gap-2 bg-neutral-100 border border-neutral-300 rounded-[8px] p-2.5">
+          <AlertTriangle className="h-3.5 w-3.5 text-neutral-700 mt-0.5 shrink-0" />
+          <p className="text-[11px] text-neutral-700 leading-relaxed">{error}</p>
         </div>
       )}
 
       <Button
         onClick={handleConnect}
         disabled={connecting}
-        className="bg-[#1D4ED8] hover:bg-[#1D4ED8]/90 text-[#E6F4FA] rounded-[8px] h-[44px] px-5 text-[13px] font-medium"
+        className="bg-[#000000] hover:bg-[#000000]/90 text-[#E6F4FA] rounded-[8px] h-[44px] px-5 text-[13px] font-medium"
       >
         {connecting ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : null}
         Anslut Visma eEkonomi
@@ -236,12 +236,12 @@ const ProgressRow = ({
     <div>
       <div className="flex items-center justify-between text-[11px] mb-1">
         <span className="text-[#64748B]">{label}</span>
-        <span className="font-medium text-[#1D4ED8]">
+        <span className="font-medium text-[#000000]">
           {c > 0 ? `${c.toLocaleString("sv-SE")} hämtade` : active ? "Hämtar…" : "—"}
         </span>
       </div>
       <div className="h-[3px] bg-[#DBEAFE] rounded-full overflow-hidden">
-        <div className="h-full bg-[#1D4ED8] transition-all duration-500" style={{ width: `${pct}%` }} />
+        <div className="h-full bg-[#000000] transition-all duration-500" style={{ width: `${pct}%` }} />
       </div>
     </div>
   );

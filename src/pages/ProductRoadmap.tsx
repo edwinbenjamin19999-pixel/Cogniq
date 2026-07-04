@@ -133,7 +133,7 @@ const ProductRoadmap = () => {
         {/* Hero */}
         <section className="max-w-3xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-slate-900/[0.06] bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600 shadow-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span className="h-1.5 w-1.5 rounded-full bg-neutral-700" />
             Product Evolution
           </span>
           <h1 className="mt-5 text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl md:leading-[1.1]">
@@ -176,7 +176,7 @@ const ProductRoadmap = () => {
             <ul className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {summaryBullets.map((b) => (
                 <li key={b} className="flex items-start gap-3 text-sm text-slate-700">
-                  <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#0d9488]" />
+                  <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#000000]" />
                   <span>{b}</span>
                 </li>
               ))}

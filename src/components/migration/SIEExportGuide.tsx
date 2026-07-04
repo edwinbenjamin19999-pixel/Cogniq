@@ -161,7 +161,7 @@ export const SIEExportGuide = ({ defaultSource = "fortnox", trigger }: Props) =>
 
                 {/* Plan caveat */}
                 {g.planNote && (
-                  <Alert className="border-[#F0DDB7] bg-amber-50/60 dark:bg-amber-950/20 dark:border-amber-900">
+                  <Alert className="border-[#F0DDB7] bg-neutral-100/60 dark:bg-amber-950/20 dark:border-neutral-700">
                     <ShieldAlert className="h-4 w-4 text-[#7A5417]" />
                     <AlertTitle className="text-sm">Krävs rätt prenumeration</AlertTitle>
                     <AlertDescription className="text-xs text-muted-foreground">
@@ -172,8 +172,8 @@ export const SIEExportGuide = ({ defaultSource = "fortnox", trigger }: Props) =>
 
                 {/* Permission caveat */}
                 {g.permissionNote && (
-                  <Alert className="border-[#C8DDF5] bg-blue-50/60 dark:bg-blue-950/20 dark:border-blue-900">
-                    <UserCog className="h-4 w-4 text-blue-600" />
+                  <Alert className="border-[#C8DDF5] bg-neutral-100/60 dark:bg-blue-950/20 dark:border-black">
+                    <UserCog className="h-4 w-4 text-black" />
                     <AlertTitle className="text-sm">Krävs rätt behörighet</AlertTitle>
                     <AlertDescription className="text-xs text-muted-foreground">
                       {g.permissionNote}
@@ -198,7 +198,7 @@ export const SIEExportGuide = ({ defaultSource = "fortnox", trigger }: Props) =>
                 </div>
 
                 {/* Help */}
-                <Alert className="border-[#BFE6D6] bg-emerald-50/50 dark:bg-emerald-950/20 dark:border-emerald-900">
+                <Alert className="border-[#BFE6D6] bg-neutral-100/50 dark:bg-emerald-950/20 dark:border-neutral-700">
                   <Mail className="h-4 w-4 text-[#085041]" />
                   <AlertTitle className="text-sm">Fastnar du? Vi hjälper till gratis</AlertTitle>
                   <AlertDescription className="text-xs text-muted-foreground">

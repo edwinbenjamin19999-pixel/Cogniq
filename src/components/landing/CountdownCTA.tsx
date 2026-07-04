@@ -44,7 +44,7 @@ export const CountdownCTA = () => {
   return (
     <section
       id="signup"
-      className="relative overflow-hidden bg-[#0F1B2D] py-24 md:py-32 scroll-mt-20"
+      className="relative overflow-hidden bg-[#000000] py-24 md:py-32 scroll-mt-20"
     >
       {/* Geometrisk dekoration — platta former i låg opacitet */}
       <div
@@ -73,7 +73,7 @@ export const CountdownCTA = () => {
         <p className="mb-6 text-sm font-semibold text-white">
           <span
             aria-hidden
-            className="mr-2 inline-block h-2 w-2 rounded-full bg-emerald-400 align-middle"
+            className="mr-2 inline-block h-2 w-2 rounded-full bg-neutral-700 align-middle"
           />
           <span className="tabular-nums">{count.toLocaleString("sv-SE")}</span>{" "}
           företag redan anmälda
@@ -89,7 +89,7 @@ export const CountdownCTA = () => {
             placeholder="Ditt namn (valfritt)"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="h-12 w-full rounded-md border-2 border-transparent bg-white px-4 text-[15px] text-[#0F1B2D] placeholder:text-[#0F1B2D]/40 focus:border-[#2563EB] focus:outline-none transition-colors duration-200"
+            className="h-12 w-full rounded-md border-2 border-transparent bg-white px-4 text-[15px] text-[#000000] placeholder:text-[#000000]/40 focus:border-[#000000] focus:outline-none transition-colors duration-200"
           />
           <label htmlFor="cta-email" className="sr-only">E-postadress</label>
           <input
@@ -100,12 +100,12 @@ export const CountdownCTA = () => {
             placeholder="din@email.se"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-12 w-full rounded-md border-2 border-transparent bg-white px-4 text-[15px] text-[#0F1B2D] placeholder:text-[#0F1B2D]/40 focus:border-[#2563EB] focus:outline-none transition-colors duration-200"
+            className="h-12 w-full rounded-md border-2 border-transparent bg-white px-4 text-[15px] text-[#000000] placeholder:text-[#000000]/40 focus:border-[#000000] focus:outline-none transition-colors duration-200"
           />
           <button
             type="submit"
             disabled={loading}
-            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#2563EB] text-base font-bold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1D4ED8] disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1B2D]"
+            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#000000] text-base font-bold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#000000] disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#000000]"
           >
             {loading ? "Skickar..." : "Säkra din plats"}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />

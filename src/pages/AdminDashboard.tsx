@@ -38,7 +38,7 @@ const tierLabels: Record<string, string> = { mini: "Mini",
   enterprise: "Enterprise",
 };
 
-const statusColors: Record<string, string> = { active: "bg-[#E1F5EE] text-[#085041] dark:bg-green-900 dark:text-green-200",
+const statusColors: Record<string, string> = { active: "bg-[#E1F5EE] text-[#085041] dark:bg-neutral-700 dark:text-neutral-300",
   trialing: "bg-[#EFF6FF] text-blue-800 dark:bg-blue-900 dark:text-blue-200",
   past_due: "bg-[#FCE8E8] text-[#7A1A1A] dark:bg-red-900 dark:text-red-200",
   canceled: "bg-muted text-muted-foreground",
@@ -242,7 +242,7 @@ const AdminDashboard = () => { const { user, loading } = useAuth();
         </Card>
         <Card>
           <CardContent className="p-4 flex items-center gap-3">
-            <Clock className="h-8 w-8 text-blue-500" />
+            <Clock className="h-8 w-8 text-black" />
             <div>
               <p className="text-2xl font-bold">{totalTrialing}</p>
               <p className="text-xs text-muted-foreground">Trial</p>

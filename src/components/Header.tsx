@@ -39,7 +39,7 @@ export const Header = (_props: HeaderProps = {}) => {
       <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-0">
-          <span className="text-xl font-extrabold tracking-tight text-[#0F1B2D]">Bok</span>
+          <span className="text-xl font-extrabold tracking-tight text-[#000000]">Bok</span>
           <span className="text-xl font-extrabold tracking-tight text-primary">fy</span>
         </Link>
 
@@ -48,7 +48,7 @@ export const Header = (_props: HeaderProps = {}) => {
           {navLinks.map((link) => {
             const isAnchor = link.href.startsWith("#");
             const cls =
-              "text-sm font-medium text-[#0F1B2D]/70 hover:text-primary transition-colors duration-200";
+              "text-sm font-medium text-[#000000]/70 hover:text-primary transition-colors duration-200";
             return isAnchor ? (
               <a key={link.label} href={link.href} className={cls}>
                 {link.label}
@@ -67,7 +67,7 @@ export const Header = (_props: HeaderProps = {}) => {
             variant="ghost"
             size="sm"
             onClick={() => navigate("/auth")}
-            className="text-sm text-[#0F1B2D]/70 hover:text-[#0F1B2D]"
+            className="text-sm text-[#000000]/70 hover:text-[#000000]"
           >
             Logga in
           </Button>
@@ -79,7 +79,7 @@ export const Header = (_props: HeaderProps = {}) => {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 text-[#0F1B2D] transition-colors"
+          className="md:hidden p-2 text-[#000000] transition-colors"
           aria-label={mobileOpen ? "Stäng meny" : "Öppna meny"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -94,7 +94,7 @@ export const Header = (_props: HeaderProps = {}) => {
           {navLinks.map((link) => {
             const isAnchor = link.href.startsWith("#");
             const cls =
-              "block text-sm font-medium text-[#0F1B2D]/70 hover:text-primary transition-colors";
+              "block text-sm font-medium text-[#000000]/70 hover:text-primary transition-colors";
             return isAnchor ? (
               <a
                 key={link.label}

@@ -33,7 +33,7 @@ const testimonials = [
 const Stars = () => (
   <div
     className="flex items-center"
-    style={{ gap: 2, marginBottom: 16, color: "#3b82f6", fontSize: 14, letterSpacing: 1 }}
+    style={{ gap: 2, marginBottom: 16, color: "#000000", fontSize: 14, letterSpacing: 1 }}
     aria-label="5 av 5 stjärnor"
   >
     ★★★★★
@@ -59,7 +59,7 @@ export const Testimonials = () => {
               className="dark-surface-card flex flex-col"
               style={{
                 padding: "28px 24px",
-                ...(t.highlighted ? { borderLeft: "3px solid #3b82f6" } : {}),
+                ...(t.highlighted ? { borderLeft: "3px solid #000000" } : {}),
               }}
             >
               <Stars />
@@ -82,14 +82,14 @@ export const Testimonials = () => {
                       height: 44,
                       borderRadius: "50%",
                       padding: 2,
-                      background: "linear-gradient(135deg, #3b82f6, rgba(37,99,235,0.3))",
+                      background: "linear-gradient(135deg, #000000, rgba(0,0,0,0.3))",
                       flexShrink: 0,
                     }}
                   >
                     <div
                       className="w-full h-full rounded-full flex items-center justify-center"
                       style={{
-                        background: "#0F1B2D",
+                        background: "#000000",
                         color: "#fff",
                         fontSize: 13,
                         fontWeight: 700,
@@ -117,7 +117,7 @@ export const Testimonials = () => {
           <a
             href="/about"
             className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
-            style={{ color: "#3b82f6", fontSize: 14 }}
+            style={{ color: "#000000", fontSize: 14 }}
           >
             Se fler kundberättelser
             <span aria-hidden>→</span>
