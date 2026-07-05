@@ -46,7 +46,7 @@ const Contact = () => {
         style={{ backgroundColor: "rgba(5, 13, 26, 0.9)" }}
       >
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-[#3b82f6]">
+          <Link to="/" className="text-2xl font-bold text-[#0052FF]">
             Cogniq
           </Link>
           <Link to="/">
@@ -78,7 +78,7 @@ const Contact = () => {
                   content: (
                     <a
                       href="mailto:support@cogniq.se"
-                      className="text-slate-600 hover:text-[#3b82f6] transition-colors"
+                      className="text-slate-600 hover:text-[#0052FF] transition-colors"
                     >
                       support@cogniq.se
                     </a>
@@ -99,8 +99,8 @@ const Contact = () => {
                   key={title}
                   className="rounded-2xl border border-slate-200 bg-white p-5 flex items-start gap-4 shadow-sm"
                 >
-                  <div className="p-2.5 rounded-xl bg-[#3b82f6]/10 border border-[#3b82f6]/20">
-                    <Icon className="w-5 h-5 text-[#3b82f6]" />
+                  <div className="p-2.5 rounded-xl bg-[#0052FF]/10 border border-[#0052FF]/20">
+                    <Icon className="w-5 h-5 text-[#0052FF]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1 text-slate-900">{title}</h3>
@@ -136,7 +136,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Ditt namn"
-                      className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#3b82f6]/40"
+                      className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#0052FF]/40"
                     />
                   </div>
                   <div className="space-y-2">
@@ -148,7 +148,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="din@email.se"
-                      className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#3b82f6]/40"
+                      className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#0052FF]/40"
                     />
                   </div>
                 </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     placeholder="Ditt företagsnamn"
-                    className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#3b82f6]/40"
+                    className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#0052FF]/40"
                   />
                 </div>
 
@@ -173,7 +173,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Beskriv ditt ärende..."
-                    className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#3b82f6]/40"
+                    className="bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#0052FF]/40"
                   />
                 </div>
 
@@ -181,7 +181,7 @@ const Contact = () => {
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
-                  className="w-full md:w-auto bg-[#3b82f6] hover:bg-[#0052FF] text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)]"
+                  className="w-full md:w-auto bg-[#0052FF] hover:bg-[#0052FF] text-white shadow-[0_4px_20px_rgba(0,82,255,0.35)]"
                 >
                   {isSubmitting ? (
                     "Skickar..."

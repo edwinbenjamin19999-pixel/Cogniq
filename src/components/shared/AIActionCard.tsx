@@ -35,9 +35,9 @@ const KIND_META: Record<ActionKind, {
   label: string;
 }> = {
   financial: {
-    edge: "bg-[#3b82f6]/60",
+    edge: "bg-[#0052FF]/60",
     iconBg: "bg-[#EFF6FF]",
-    iconColor: "text-[#3b82f6] dark:text-[#1E3A5F]",
+    iconColor: "text-[#0052FF] dark:text-[#1E3A5F]",
     Icon: Banknote,
     label: "Finansiell åtgärd",
   },
@@ -208,7 +208,7 @@ export function AIActionCard({ action, onDismiss, className }: Props) {
           loading={busy}
           onClick={handlePrimary}
           size="sm"
-          className="bg-[#3b82f6] hover:bg-[#3b82f6] text-white h-8 text-xs"
+          className="bg-[#0052FF] hover:bg-[#0052FF] text-white h-8 text-xs"
         >
           {action.primary.label}
           <ArrowRight className="ml-1 h-3 w-3" />

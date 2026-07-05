@@ -53,7 +53,7 @@ export function RollingForecast13w({ weeks, loading, runwayWeek, overlayShift = 
             <span className="h-2 w-3 rounded-sm bg-emerald-500/30" /> Best
           </span>
           <span className="inline-flex items-center gap-1">
-            <span className="h-2 w-3 rounded-sm bg-[#3b82f6]" /> Förväntat
+            <span className="h-2 w-3 rounded-sm bg-[#0052FF]" /> Förväntat
           </span>
           <span className="inline-flex items-center gap-1">
             <span className="h-2 w-3 rounded-sm bg-rose-500/30" /> Worst

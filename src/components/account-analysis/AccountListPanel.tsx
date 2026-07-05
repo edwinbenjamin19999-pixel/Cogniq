@@ -62,7 +62,7 @@ export const AccountListPanel = ({ summaries, selectedAccount, onSelectAccount }
                 onClick={() => setSortBy(s)}
                 className={`text-[10px] px-2 py-1 rounded transition-colors ${
                   sortBy === s
-                    ? 'bg-[#EFF6FF] text-[#3b82f6] dark:bg-blue-900/40 dark:text-[#1E3A5F]'
+                    ? 'bg-[#EFF6FF] text-[#0052FF] dark:bg-blue-900/40 dark:text-[#1E3A5F]'
                     : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'
                 }`}
               >
@@ -79,7 +79,7 @@ export const AccountListPanel = ({ summaries, selectedAccount, onSelectAccount }
             value={search}
             onChange={e => setSearch(e.target.value)}
             className="w-full pl-8 pr-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-600 text-xs
-                       bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-[#3b82f6] focus:outline-none"
+                       bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-[#0052FF] focus:outline-none"
           />
         </div>
 
@@ -92,7 +92,7 @@ export const AccountListPanel = ({ summaries, selectedAccount, onSelectAccount }
                 filter === f.key
                   ? f.key === 'anomalies'
                     ? 'bg-[#FAEEDA] text-[#7A5417] dark:bg-amber-900/40 dark:text-[#C28A2B]'
-                    : 'bg-[#EFF6FF] text-[#3b82f6] dark:bg-blue-900/40 dark:text-[#1E3A5F]'
+                    : 'bg-[#EFF6FF] text-[#0052FF] dark:bg-blue-900/40 dark:text-[#1E3A5F]'
                   : 'bg-slate-100 text-slate-500 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-400'
               }`}
             >
@@ -115,7 +115,7 @@ export const AccountListPanel = ({ summaries, selectedAccount, onSelectAccount }
                 onClick={() => onSelectAccount(account.accountNumber)}
                 className={`px-4 py-3 cursor-pointer transition-colors border-b border-slate-50 dark:border-slate-700/50
                   ${selected
-                    ? 'bg-[#EFF6FF] dark:bg-blue-900/20 border-l-2 border-l-[#3b82f6]'
+                    ? 'bg-[#EFF6FF] dark:bg-blue-900/20 border-l-2 border-l-[#0052FF]'
                     : 'hover:bg-slate-50 dark:hover:bg-slate-800/40 border-l-2 border-l-transparent'
                   }`}
               >
@@ -154,7 +154,7 @@ export const AccountListPanel = ({ summaries, selectedAccount, onSelectAccount }
                       data={account.monthlyTrend}
                       width={50}
                       height={14}
-                      color={selected ? '#3b82f6' : '#94a3b8'}
+                      color={selected ? '#0052FF' : '#94a3b8'}
                     />
                     <span className="text-[9px] text-slate-400 tabular-nums">{account.transactionCount} tx</span>
                   </div>

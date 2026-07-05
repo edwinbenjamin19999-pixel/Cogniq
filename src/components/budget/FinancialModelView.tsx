@@ -181,7 +181,7 @@ export const FinancialModelView = ({ rr, br }: Props) => {
           <td key={i} className={cn(
             "py-1.5 px-1.5 text-right text-[11px] tabular-nums font-mono whitespace-nowrap",
             isTotal && "text-white font-bold",
-            isKPI && "text-[#3b82f6] dark:text-[#1E3A5F] font-semibold",
+            isKPI && "text-[#0052FF] dark:text-[#1E3A5F] font-semibold",
             !isTotal && !isKPI && v < 0 && "text-[#7A1A1A] dark:text-[#C73838]",
           )}>
             {row.isPercent ? fmtPct(v) : fmt(v)}
@@ -190,7 +190,7 @@ export const FinancialModelView = ({ rr, br }: Props) => {
         <td className={cn(
           "py-1.5 px-2 text-right text-xs tabular-nums font-mono font-bold whitespace-nowrap border-l-2 border-slate-200 dark:border-slate-700",
           isTotal && "text-white border-slate-700",
-          isKPI && "text-[#3b82f6] dark:text-[#1E3A5F]",
+          isKPI && "text-[#0052FF] dark:text-[#1E3A5F]",
           !isTotal && !isKPI && row.annual < 0 && "text-[#7A1A1A] dark:text-[#C73838]",
         )}>
           {row.isPercent ? fmtPct(row.annual) : fmt(row.annual)}
@@ -240,7 +240,7 @@ export const FinancialModelView = ({ rr, br }: Props) => {
 
       {/* Side by side */}
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-        {renderTable("Resultaträkning", plRows, "bg-[#3b82f6]", "Helår")}
+        {renderTable("Resultaträkning", plRows, "bg-[#0052FF]", "Helår")}
         {renderTable("Balansräkning", bsRows, "bg-violet-400", "Dec")}
       </div>
     </div>

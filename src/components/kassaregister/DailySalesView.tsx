@@ -170,7 +170,7 @@ export function DailySalesView({ connection }: Props) { const today = format(new
                     Stang dagen för att skapa verifikation: Debit 1910/1920/1930, Credit 3000 + moms
                   </p>
                 </div>
-                <Button onClick={handleCloseDay} disabled={closeDaySales.isPending} className="gap-1.5 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
+                <Button onClick={handleCloseDay} disabled={closeDaySales.isPending} className="gap-1.5 bg-[#0052FF] hover:bg-[#0052FF]/90 text-white">
                   <Lock className="h-3.5 w-3.5" />
                   {closeDaySales.isPending ? "Bokfor..." : "Stang dagen"}
                 </Button>
@@ -189,7 +189,7 @@ export function DailySalesView({ connection }: Props) { const today = format(new
         <Card>
           <CardContent className="py-8 text-center space-y-3">
             <p className="text-muted-foreground">Ingen forsaljning registrerad idag</p>
-            <Button onClick={() => setShowManual(true)} className="gap-1.5 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
+            <Button onClick={() => setShowManual(true)} className="gap-1.5 bg-[#0052FF] hover:bg-[#0052FF]/90 text-white">
               <Plus className="h-4 w-4" />
               Registrera forsaljning
             </Button>
@@ -224,7 +224,7 @@ export function DailySalesView({ connection }: Props) { const today = format(new
                     {chartData.map((entry, index) => (
                       <Cell
                         key={`cell-${index}`}
-                        fill={entry.total === bestDay?.total_sales ? "#3b82f6" : "hsl(var(--muted-foreground) / 0.2)"}
+                        fill={entry.total === bestDay?.total_sales ? "#0052FF" : "hsl(var(--muted-foreground) / 0.2)"}
                       />
                     ))}
                   </Bar>
@@ -260,7 +260,7 @@ export function DailySalesView({ connection }: Props) { const today = format(new
             </div>
             <div className="flex justify-end gap-2 pt-2">
               <Button variant="outline" onClick={() => setShowManual(false)}>Avbryt</Button>
-              <Button onClick={handleManualSave} disabled={upsertSales.isPending} className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
+              <Button onClick={handleManualSave} disabled={upsertSales.isPending} className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-white">
                 {upsertSales.isPending ? "Sparar..." : "Spara"}
               </Button>
             </div>

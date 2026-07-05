@@ -122,8 +122,8 @@ export const InlineHint = ({
   const toneCls =
     tone === "warning"
       ? "border-amber-500/30 bg-amber-500/5"
-      : "border-[#3b82f6]/30 bg-[#3b82f6]/5";
-  const iconCls = tone === "warning" ? "text-amber-500" : "text-[#3b82f6]";
+      : "border-[#0052FF]/30 bg-[#0052FF]/5";
+  const iconCls = tone === "warning" ? "text-amber-500" : "text-[#0052FF]";
 
   return (
     <div
@@ -140,7 +140,7 @@ export const InlineHint = ({
       {actionLabel && onAction && (
         <button
           onClick={onAction}
-          className="shrink-0 h-7 px-2.5 rounded-md bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white font-medium transition-colors"
+          className="shrink-0 h-7 px-2.5 rounded-md bg-[#0052FF] hover:bg-[#0052FF]/90 text-white font-medium transition-colors"
         >
           {actionLabel}
         </button>

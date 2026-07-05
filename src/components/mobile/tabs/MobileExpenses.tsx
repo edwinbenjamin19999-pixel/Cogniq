@@ -345,7 +345,7 @@ const NewExpenseSheet = ({
 
   const aiBadge = (field: string) =>
     aiFilled.has(field) ? (
-      <span className="ml-2 inline-flex items-center gap-[3px] text-[9px] text-[#534AB7] bg-[#EEEDFE] px-[6px] py-[1px] rounded-full font-medium">
+      <span className="ml-2 inline-flex items-center gap-[3px] text-[9px] text-[#4D7CFF] bg-[#EEEDFE] px-[6px] py-[1px] rounded-full font-medium">
         <Sparkles size={8} /> AI-ifyllt
       </span>
     ) : null;

@@ -205,7 +205,7 @@ export const SupplierInvoiceApprovalActions = ({
             ) : (
               <Button
                 size="sm"
-                className={`${btnH} bg-[#3b82f6] hover:bg-[#3b82f6] text-white`}
+                className={`${btnH} bg-[#0052FF] hover:bg-[#0052FF] text-white`}
                 disabled={busy}
                 onClick={handleAttest}
               >
@@ -282,7 +282,7 @@ export const SupplierInvoiceApprovalActions = ({
           <>
             <Button
               size="sm"
-              className={`${btnH} bg-[#3b82f6] hover:bg-[#3b82f6] text-white`}
+              className={`${btnH} bg-[#0052FF] hover:bg-[#0052FF] text-white`}
               disabled={busy}
               onClick={handleAttest}
             >

@@ -24,7 +24,7 @@ interface Props {
 
 export function GroupKPIPanel({ revenue, ebit, totalAssets, groupEquity, cash, unresolvedICDiff }: Props) {
   const kpis: KPI[] = [
-    { key: 'rev', label: 'Konsoliderad omsättning', value: revenue, icon: TrendingUp, accent: 'from-[#3b82f6]/20 to-[#3b82f6]/5' },
+    { key: 'rev', label: 'Konsoliderad omsättning', value: revenue, icon: TrendingUp, accent: 'from-[#0052FF]/20 to-[#0052FF]/5' },
     { key: 'ebit', label: 'EBIT', value: ebit, icon: ebit >= 0 ? TrendingUp : TrendingDown, accent: ebit >= 0 ? 'from-emerald-500/20 to-emerald-600/5' : 'from-red-500/20 to-red-600/5' },
     { key: 'assets', label: 'Totala tillgångar', value: totalAssets, icon: Building, accent: 'from-blue-500/20 to-blue-600/5' },
     { key: 'equity', label: 'Eget kapital koncern', value: groupEquity, icon: PiggyBank, accent: 'from-purple-500/20 to-purple-600/5' },

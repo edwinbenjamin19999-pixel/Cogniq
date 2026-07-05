@@ -43,7 +43,7 @@ const DUE_BUCKETS = [
   { key: "today", label: "Idag", dot: "bg-rose-400", textTone: "text-[#7A1A1A]" },
   { key: "tomorrow", label: "Imorgon", dot: "bg-amber-500", textTone: "text-[#7A5417]" },
   { key: "thisweek", label: "Denna vecka", dot: "bg-amber-400", textTone: "text-[#7A5417]" },
-  { key: "nextweek", label: "Nästa vecka", dot: "bg-[#3b82f6]", textTone: "text-[#3b82f6]" },
+  { key: "nextweek", label: "Nästa vecka", dot: "bg-[#0052FF]", textTone: "text-[#0052FF]" },
   { key: "later", label: "Senare", dot: "bg-slate-400", textTone: "text-slate-600" },
 ] as const;
 
@@ -61,7 +61,7 @@ function dueBucket(date: string | null): typeof DUE_BUCKETS[number]["key"] {
 const PRIO_META = {
   pay_now: { label: "Kritisk", dot: "bg-rose-500", textTone: "text-[#7A1A1A]" },
   pay_soon: { label: "Hög", dot: "bg-amber-500", textTone: "text-[#7A5417]" },
-  can_wait: { label: "Normal", dot: "bg-[#3b82f6]", textTone: "text-[#3b82f6]" },
+  can_wait: { label: "Normal", dot: "bg-[#0052FF]", textTone: "text-[#0052FF]" },
   strategic_delay: { label: "Låg", dot: "bg-slate-400", textTone: "text-slate-600" },
 } as const;
 
@@ -129,7 +129,7 @@ export function PaymentGroupedList(props: Props) {
             className={cn(
               "px-3 py-1 rounded-full text-xs font-medium transition-colors",
               groupBy === o.v
-                ? "bg-[#EFF6FF] text-[#3b82f6] border border-[#C8DDF5]"
+                ? "bg-[#EFF6FF] text-[#0052FF] border border-[#C8DDF5]"
                 : "text-slate-600 hover:bg-slate-50 border border-transparent",
             )}
           >

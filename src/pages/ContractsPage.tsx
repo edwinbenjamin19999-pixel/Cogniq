@@ -101,7 +101,7 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
           <div className="relative max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#C8DDF5] mb-5">
               <Sparkles className="h-3.5 w-3.5 text-[#1E3A5F]" />
-              <span className="text-xs font-medium text-[#3b82f6] tracking-wide">REVENUE INTELLIGENCE</span>
+              <span className="text-xs font-medium text-[#0052FF] tracking-wide">REVENUE INTELLIGENCE</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
               Lägg till din första återkommande intäktsström
@@ -110,7 +110,7 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
               AI genererar fakturor, intäkter och prognoser automatiskt — du gör inget.
             </p>
             <div className="flex flex-wrap gap-3 mb-10">
-              <Button size="lg" onClick={() => setShowForm(true)} className="bg-[#3b82f6] hover:bg-[#3b82f6] text-slate-950 font-semibold shadow-lg shadow-[#3b82f6]/20">
+              <Button size="lg" onClick={() => setShowForm(true)} className="bg-[#0052FF] hover:bg-[#0052FF] text-slate-950 font-semibold shadow-lg shadow-[#0052FF]/20">
                 <Plus className="h-4 w-4 mr-1.5" />Lägg till återkommande intäktsström
               </Button>
               <Button size="lg" variant="outline" onClick={() => setShowExamples(true)} className="border-slate-700 bg-slate-900/50 text-slate-200 hover:bg-slate-800 hover:text-white">
@@ -142,10 +142,10 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="bg-slate-100/60 dark:bg-slate-900/60 p-1 rounded-full">
-              <TabsTrigger value="overview" className="rounded-full data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white data-[state=active]:shadow-sm">Översikt</TabsTrigger>
-              <TabsTrigger value="contracts" className="rounded-full data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white data-[state=active]:shadow-sm">Avtal</TabsTrigger>
-              <TabsTrigger value="timeline" className="rounded-full data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white data-[state=active]:shadow-sm">Tidslinje</TabsTrigger>
-              <TabsTrigger value="forecast" className="rounded-full data-[state=active]:bg-[#3b82f6] data-[state=active]:text-white data-[state=active]:shadow-sm">Prognos</TabsTrigger>
+              <TabsTrigger value="overview" className="rounded-full data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-sm">Översikt</TabsTrigger>
+              <TabsTrigger value="contracts" className="rounded-full data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-sm">Avtal</TabsTrigger>
+              <TabsTrigger value="timeline" className="rounded-full data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-sm">Tidslinje</TabsTrigger>
+              <TabsTrigger value="forecast" className="rounded-full data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-sm">Prognos</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-6 pt-4">
@@ -183,7 +183,7 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
                       ) : (
                         <div className="space-y-2">
                           {upcomingRenewals.map(({ c, days }) => (
-                            <button key={c.id} onClick={() => setSelectedContract(c)} className="w-full text-left p-2.5 rounded-lg border border-slate-200/60 hover:bg-[#3b82f6]/[0.04] transition-colors flex items-center justify-between gap-3">
+                            <button key={c.id} onClick={() => setSelectedContract(c)} className="w-full text-left p-2.5 rounded-lg border border-slate-200/60 hover:bg-[#0052FF]/[0.04] transition-colors flex items-center justify-between gap-3">
                               <div className="min-w-0">
                                 <p className="text-sm font-medium truncate">{c.title}</p>
                                 <p className="text-[11px] text-muted-foreground truncate">{c.customer?.name || "—"}</p>

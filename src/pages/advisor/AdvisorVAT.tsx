@@ -23,7 +23,7 @@ const TABS: Array<{ key: VATStage | "all"; label: string; icon: typeof Receipt }
 
 const STAGE_META: Record<VATStage, { label: string; tone: string }> = {
   draft: { label: "Utkast", tone: "bg-slate-100 text-slate-700" },
-  review: { label: "Granskning", tone: "bg-[#EFF6FF] text-[#3b82f6]" },
+  review: { label: "Granskning", tone: "bg-[#EFF6FF] text-[#0052FF]" },
   awaiting_client: { label: "Klient", tone: "bg-[#FAEEDA] text-[#7A5417]" },
   ready: { label: "Redo", tone: "bg-[#E1F5EE] text-[#085041]" },
   submitted: { label: "Inlämnad", tone: "bg-[#EFF6FF] text-blue-700" },
@@ -253,8 +253,8 @@ const AdvisorVAT = () => {
       )}
 
       <div className="rounded-2xl border border-[#C8DDF5] bg-blue-50/40 p-4 flex items-start gap-3">
-        <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5" />
-        <div className="text-xs text-[#3b82f6]">
+        <Sparkles className="h-4 w-4 text-[#0052FF] mt-0.5" />
+        <div className="text-xs text-[#0052FF]">
           <strong>AI-radar:</strong> Filtrera på "Saknar data" eller "Hög risk" för att hitta klienter som behöver akut momsåtgärd.
         </div>
       </div>

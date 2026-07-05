@@ -83,7 +83,7 @@ export default function PublicGuidePage() {
                   <AccordionTrigger className="px-6 py-5 hover:no-underline gap-3">
                     <div className="flex items-center gap-3 flex-1 text-left">
                       <div className="w-10 h-10 rounded-xl bg-[rgba(0,82,255,0.08)] flex items-center justify-center shrink-0">
-                        <cat.icon className="w-5 h-5 text-[#3b82f6]" />
+                        <cat.icon className="w-5 h-5 text-[#0052FF]" />
                       </div>
                       <div>
                         <span className="font-semibold text-[#0F172A] text-base">{cat.label}</span>
@@ -98,7 +98,7 @@ export default function PublicGuidePage() {
                           <div className="rounded-lg hover:bg-slate-50 transition-colors">
                             <CollapsibleTrigger className="flex items-start gap-3 p-3 w-full text-left group">
                               <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium text-[#0F172A] group-hover:text-[#3b82f6] transition-colors">
+                                <p className="text-sm font-medium text-[#0F172A] group-hover:text-[#0052FF] transition-colors">
                                   {item.title}
                                 </p>
                                 <p className="text-xs text-[#475569] mt-0.5 leading-relaxed">
@@ -115,7 +115,7 @@ export default function PublicGuidePage() {
                                     <ol className="space-y-1.5">
                                       {item.steps.map((step, si) => (
                                         <li key={si} className="flex gap-2 text-xs text-[#475569] leading-relaxed">
-                                          <span className="w-5 h-5 rounded-full bg-[rgba(0,82,255,0.1)] text-[#3b82f6] flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">
+                                          <span className="w-5 h-5 rounded-full bg-[rgba(0,82,255,0.1)] text-[#0052FF] flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">
                                             {si + 1}
                                           </span>
                                           {step}
@@ -156,7 +156,7 @@ export default function PublicGuidePage() {
             {filteredFaq.length > 0 && (
               <div className="mb-16">
                 <div className="flex items-center gap-2 mb-4">
-                  <HelpCircle className="h-5 w-5 text-[#3b82f6]" />
+                  <HelpCircle className="h-5 w-5 text-[#0052FF]" />
                   <h2 className="text-lg font-semibold text-[#0F172A]">Vanliga frågor</h2>
                 </div>
                 <Accordion type="single" collapsible className="space-y-2">
@@ -186,7 +186,7 @@ export default function PublicGuidePage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <Button
                   asChild
-                  className="h-11 px-6 bg-[#3b82f6] text-white hover:bg-[#3b82f6] rounded-lg shadow-[0_4px_20px_rgba(0,82,255,0.3)]"
+                  className="h-11 px-6 bg-[#0052FF] text-white hover:bg-[#0052FF] rounded-lg shadow-[0_4px_20px_rgba(0,82,255,0.3)]"
                 >
                   <a href="/auth">
                     Logga in
@@ -196,7 +196,7 @@ export default function PublicGuidePage() {
                 <Button
                   asChild
                   variant="outline"
-                  className="h-11 px-6 rounded-lg border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF] hover:shadow-[0_0_12px_rgba(0,82,255,0.12)] hover:scale-[1.02] transition-all duration-200"
+                  className="h-11 px-6 rounded-lg border-[#C8DDF5] text-[#0052FF] hover:bg-[#EFF6FF] hover:shadow-[0_0_12px_rgba(0,82,255,0.12)] hover:scale-[1.02] transition-all duration-200"
                 >
                   <a href="mailto:kontakt@cogniq.se">Boka demo</a>
                 </Button>

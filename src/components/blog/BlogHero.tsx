@@ -8,9 +8,9 @@ interface Props {
 
 export const BlogHero = ({ eyebrow = "Insikter", title, subtitle }: Props) => (
   <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white pt-32 pb-16">
-    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#3b82f6]/30 to-transparent" />
+    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#0052FF]/30 to-transparent" />
     <div className="container mx-auto max-w-4xl px-6 text-center">
-      <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-blue-50 px-3 py-1 text-xs font-medium text-[#3b82f6]">
+      <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-blue-50 px-3 py-1 text-xs font-medium text-[#0052FF]">
         <Sparkles className="w-3 h-3" />
         {eyebrow}
       </div>

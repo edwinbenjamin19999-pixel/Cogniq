@@ -27,7 +27,7 @@ export function UploadInvoiceFAB() {
           </SheetHeader>
           <div
             className={`mt-6 rounded-2xl border-2 border-dashed transition-all duration-200 p-10 text-center cursor-pointer
-              ${dragOver ? "border-[#3b82f6]/70 bg-[#EFF6FF]" : "border-slate-200 bg-slate-50/40 hover:border-[#3b82f6]/50 hover:bg-blue-50/40"}`}
+              ${dragOver ? "border-[#0052FF]/70 bg-[#EFF6FF]" : "border-slate-200 bg-slate-50/40 hover:border-[#0052FF]/50 hover:bg-blue-50/40"}`}
             onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
             onDragLeave={() => setDragOver(false)}
             onDrop={(e) => {
@@ -37,7 +37,7 @@ export function UploadInvoiceFAB() {
               setOpen(false);
             }}
           >
-            <Upload className="h-10 w-10 mx-auto mb-3 text-[#3b82f6]" />
+            <Upload className="h-10 w-10 mx-auto mb-3 text-[#0052FF]" />
             <p className="text-sm font-medium text-slate-800">Dra och släpp faktura</p>
             <p className="text-xs text-slate-500 mt-1">PDF, bild eller skannad faktura</p>
             <p className="text-[11px] text-slate-400 mt-4">AI tolkar leverantör, belopp och förfallodag automatiskt</p>

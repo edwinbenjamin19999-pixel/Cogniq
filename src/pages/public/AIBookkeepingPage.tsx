@@ -49,7 +49,7 @@ export default function AIBookkeepingPage() {
         {/* Hero */}
         <section className="pt-32 pb-16 bg-gradient-to-b from-blue-50/40 to-white">
           <div className="container mx-auto max-w-3xl px-6 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#0052FF]">
               <Sparkles className="w-3 h-3" />
               AI-bokföring förklarat
             </div>
@@ -94,7 +94,7 @@ export default function AIBookkeepingPage() {
               {AUTO.map((a) => (
                 <div key={a.title} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
-                    <a.icon className="w-5 h-5 text-[#3b82f6]" />
+                    <a.icon className="w-5 h-5 text-[#0052FF]" />
                   </div>
                   <h3 className="mt-4 font-semibold text-[#0F172A]">{a.title}</h3>
                   <p className="mt-2 text-sm text-[#64748b] leading-relaxed">{a.desc}</p>
@@ -120,7 +120,7 @@ export default function AIBookkeepingPage() {
           <div className="container mx-auto max-w-4xl px-6 grid sm:grid-cols-3 gap-4 text-center">
             {[{i: Shield, t: "GDPR-säker", d: "Krypterad data, EU-hosting"}, {i: Zap, t: "30 min onboarding", d: "Vi importerar din historik"}, {i: Clock, t: "10+ h/mån sparat", d: "Genomsnitt SME-kund"}].map((x) => (
               <div key={x.t} className="rounded-2xl border border-slate-100 p-6">
-                <x.i className="w-5 h-5 mx-auto text-[#3b82f6]" />
+                <x.i className="w-5 h-5 mx-auto text-[#0052FF]" />
                 <div className="mt-3 font-semibold text-[#0F172A]">{x.t}</div>
                 <div className="text-sm text-[#64748b]">{x.d}</div>
               </div>

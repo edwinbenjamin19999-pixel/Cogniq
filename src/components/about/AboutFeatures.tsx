@@ -12,15 +12,15 @@ export const AboutFeatures = () => (
     <div className="container mx-auto max-w-6xl px-6">
       <div className="text-center max-w-2xl mx-auto mb-14">
         <h2 className="text-4xl md:text-5xl font-bold text-white leading-[1.05]" style={{ letterSpacing: "-0.8px" }}>
-          En plattform. <span className="text-[#3b82f6]">Hela ekonomin.</span>
+          En plattform. <span className="text-[#0052FF]">Hela ekonomin.</span>
         </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {features.map((f) => (
-          <div key={f.title} className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 hover:border-[#3b82f6]/20 hover:bg-white/[0.03] transition-colors">
-            <div className="w-11 h-11 rounded-lg bg-[#3b82f6]/[0.08] border border-[#3b82f6]/20 flex items-center justify-center">
-              <f.icon className="w-5 h-5 text-[#3b82f6]" />
+          <div key={f.title} className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 hover:border-[#0052FF]/20 hover:bg-white/[0.03] transition-colors">
+            <div className="w-11 h-11 rounded-lg bg-[#0052FF]/[0.08] border border-[#0052FF]/20 flex items-center justify-center">
+              <f.icon className="w-5 h-5 text-[#0052FF]" />
             </div>
             <h3 className="mt-5 text-white font-semibold text-lg">{f.title}</h3>
             <p className="mt-2 text-[14px] text-white/60 leading-relaxed">{f.desc}</p>

@@ -46,13 +46,13 @@ const CATEGORY_CONFIG: Record<string, { icon: React.ElementType; label: string; 
   round_number: { icon: AlertTriangle, label: "Jämna belopp", color: "text-[#EAB308]" },
   ghost_vendor: { icon: UserX, label: "Spökleverantör", color: "text-[#EF4444]" },
   personal_expense: { icon: ShoppingCart, label: "Privat kostnad", color: "text-purple-500" },
-  timing: { icon: Clock, label: "Tidpunktsavvikelse", color: "text-[#3B82F6]" },
+  timing: { icon: Clock, label: "Tidpunktsavvikelse", color: "text-[#0052FF]" },
   account_misuse: { icon: BookOpen, label: "Kontomissbruk", color: "text-[#7A5417]" },
   price_increase: { icon: TrendingUp, label: "Prisavvikelse", color: "text-[#F97316]" },
   new_vendor_high: { icon: UserX, label: "Ny leverantör, högt belopp", color: "text-[#EF4444]" },
   account_direction: { icon: BookOpen, label: "Konteringsavvikelse", color: "text-[#EF4444]" },
   vat_mismatch: { icon: AlertTriangle, label: "Momsavstämningsfel", color: "text-[#EAB308]" },
-  missing_period: { icon: CalendarDays, label: "Saknad post", color: "text-[#3B82F6]" },
+  missing_period: { icon: CalendarDays, label: "Saknad post", color: "text-[#0052FF]" },
   revenue_drop: { icon: TrendingUp, label: "Intäktsavvikelse", color: "text-[#EF4444]" },
 };
 
@@ -803,7 +803,7 @@ function AnomalyCard({ anomaly, expanded, onToggle, onResolve, onIgnore, onEscal
               <Badge className={`text-[10px] ${
                 anomaly.severity === "high" ? "bg-[#EF4444] text-white" :
                 anomaly.severity === "medium" ? "bg-[#EAB308] text-white" :
-                "bg-[#3B82F6] text-white"
+                "bg-[#0052FF] text-white"
               }`}>
                 {anomaly.severity === "high" ? "Kritisk" : anomaly.severity === "medium" ? "Medium" : "Info"}
               </Badge>

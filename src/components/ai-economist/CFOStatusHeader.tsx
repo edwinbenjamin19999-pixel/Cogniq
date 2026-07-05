@@ -38,7 +38,7 @@ export function CFOStatusHeader({
   const handleMode = (m: AutomationMode) => { onAutomationChange(m); setSavedPing("mode"); };
 
   const StatusPill = loading
-    ? { text: "Analyserar…", color: "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5] dark:bg-[#EFF6FF] dark:text-[#3b82f6] dark:border-[#C8DDF5]" }
+    ? { text: "Analyserar…", color: "bg-[#EFF6FF] text-[#0052FF] border-[#C8DDF5] dark:bg-[#EFF6FF] dark:text-[#0052FF] dark:border-[#C8DDF5]" }
     : criticalCount > 0
     ? { text: `${criticalCount} kritiska`, color: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8] dark:bg-[#FCE8E8] dark:text-rose-200 dark:border-[#F4C8C8]" }
     : totalInsights > 0
@@ -51,7 +51,7 @@ export function CFOStatusHeader({
       <div className="relative flex items-start justify-between gap-6 flex-wrap">
         <div className="min-w-0">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-xl bg-[#0F1F3D] flex items-center justify-center shadow-lg shadow-[#3b82f6]/30">
+            <div className="h-10 w-10 rounded-xl bg-[#0F1F3D] flex items-center justify-center shadow-lg shadow-[#0052FF]/30">
               <Sparkles className="h-5 w-5 text-white" />
             </div>
             <div>
@@ -76,7 +76,7 @@ export function CFOStatusHeader({
                   className={cn(
                     "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all",
                     personaMode === p
-                      ? "bg-white dark:bg-white/15 text-slate-900 dark:text-white shadow-sm ring-1 ring-[#3b82f6]/50 dark:ring-[#3b82f6]/30"
+                      ? "bg-white dark:bg-white/15 text-slate-900 dark:text-white shadow-sm ring-1 ring-[#0052FF]/50 dark:ring-[#0052FF]/30"
                       : "text-slate-500 dark:text-white/50 hover:text-slate-700 dark:hover:text-white/80"
                   )}
                 >

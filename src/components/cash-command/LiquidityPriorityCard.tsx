@@ -89,7 +89,7 @@ export function LiquidityPriorityCard({
 
           {/* AI rationale folded in */}
           <p className="text-xs italic text-slate-500 dark:text-white/60 mt-1.5 leading-relaxed flex items-start gap-1.5">
-            <Sparkles className="h-3 w-3 mt-0.5 shrink-0 text-[#3b82f6]" />
+            <Sparkles className="h-3 w-3 mt-0.5 shrink-0 text-[#0052FF]" />
             <span>{insight.description}</span>
           </p>
 
@@ -101,7 +101,7 @@ export function LiquidityPriorityCard({
               </span>
               <span className="text-[11px] text-muted-foreground">inom 14 dagar</span>
               {runwayDelta !== 0 && (
-                <span className="text-xs text-[#3b82f6] dark:text-[#3b82f6] font-medium">
+                <span className="text-xs text-[#0052FF] dark:text-[#0052FF] font-medium">
                   · Runway {runwayDelta >= 0 ? "+" : ""}
                   {runwayDelta} dgr
                 </span>
@@ -116,7 +116,7 @@ export function LiquidityPriorityCard({
         <div className="mt-4 border-t border-slate-100 dark:border-white/5 pt-3">
           <button
             onClick={() => setExpanded((s) => !s)}
-            className="w-full flex items-center justify-between text-xs font-medium text-slate-700 dark:text-white/80 hover:text-[#3b82f6] dark:hover:text-[#3b82f6] transition-colors"
+            className="w-full flex items-center justify-between text-xs font-medium text-slate-700 dark:text-white/80 hover:text-[#0052FF] dark:hover:text-[#0052FF] transition-colors"
           >
             <span className="flex items-center gap-1.5">
               {expanded ? <ChevronDown className="h-3.5 w-3.5" /> : <ChevronRight className="h-3.5 w-3.5" />}
@@ -203,7 +203,7 @@ export function LiquidityPriorityCard({
         </button>
         <Link
           to={route.href}
-          className="px-3 py-2 rounded-lg text-sm flex items-center gap-1.5 text-slate-700 dark:text-white/80 hover:text-[#3b82f6] dark:hover:text-[#3b82f6] hover:bg-slate-100 dark:hover:bg-white/5 transition-all"
+          className="px-3 py-2 rounded-lg text-sm flex items-center gap-1.5 text-slate-700 dark:text-white/80 hover:text-[#0052FF] dark:hover:text-[#0052FF] hover:bg-slate-100 dark:hover:bg-white/5 transition-all"
         >
           <ExternalLink className="h-3.5 w-3.5" />
           {route.label}

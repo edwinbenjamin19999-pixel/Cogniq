@@ -315,7 +315,7 @@ const AdvisorTax = () => {
 function StageBadge({ stage }: { stage: TaxStage }) {
   const map: Record<TaxStage, { label: string; tone: string }> = {
     draft: { label: "Utkast", tone: "bg-slate-100 text-slate-700" },
-    review: { label: "Granskning", tone: "bg-[#EFF6FF] text-[#3b82f6]" },
+    review: { label: "Granskning", tone: "bg-[#EFF6FF] text-[#0052FF]" },
     awaiting_client: { label: "Klient", tone: "bg-[#FAEEDA] text-[#7A5417]" },
     ready: { label: "Redo", tone: "bg-[#E1F5EE] text-[#085041]" },
     submitted: { label: "Inlämnad", tone: "bg-[#EFF6FF] text-blue-700" },

@@ -239,7 +239,7 @@ const ESGReportingPage = () => {
                 {Math.round((1 - esg.co2Total / 18.2) * 100)}% under snitt
               </span>
             ) : undefined} />
-          <KPICard gradient="from-blue-500 to-[#3b82f6]" icon={Award}
+          <KPICard gradient="from-blue-500 to-[#0052FF]" icon={Award}
             value={<AnimatedNumber value={scores.total} suffix="/100" />}
             label="ESG Score" subtitle={`E: ${scores.e} | S: ${scores.s} | G: ${scores.g}`}
             extra={<MiniProgressRing percent={scores.total} />} />

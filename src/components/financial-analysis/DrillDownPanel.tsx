@@ -175,7 +175,7 @@ export function DrillDownPanel({ row, open, onClose, companyId, fromDate, toDate
             <Button
               variant="default"
               size="sm"
-              className="flex-1 bg-[#3b82f6] hover:bg-[#3b82f6]"
+              className="flex-1 bg-[#0052FF] hover:bg-[#0052FF]"
               onClick={() => onSimulate?.(row)}
             >
               <Sparkles className="h-3.5 w-3.5 mr-1.5" />

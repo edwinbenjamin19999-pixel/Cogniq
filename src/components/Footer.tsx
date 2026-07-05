@@ -55,7 +55,7 @@ const FooterLinkColumn = ({ title, links }: { title: string; links: { label: str
     <ul className="space-y-2.5">
       {links.map((link) => (
         <li key={link.to + link.label}>
-          <Link to={link.to} className="text-sm text-white/70 hover:text-[#3b82f6] transition-colors">
+          <Link to={link.to} className="text-sm text-white/70 hover:text-[#0052FF] transition-colors">
             {link.label}
           </Link>
         </li>
@@ -74,13 +74,13 @@ export const Footer = () => {
           <div className="space-y-5 sm:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center gap-0">
               <span className="text-2xl font-[800] text-white tracking-tight">Cog</span>
-              <span className="text-2xl font-[800] text-[#3b82f6] tracking-tight">niq</span>
+              <span className="text-2xl font-[800] text-[#0052FF] tracking-tight">niq</span>
             </Link>
             <p className="text-sm text-white/60 max-w-[260px] leading-relaxed">
               AI-driven bokföringsplattform för SME:s och växande företag i Sverige
             </p>
             <div className="space-y-2.5 text-sm text-white/60">
-              <a href="mailto:info@cogniq.se" className="flex items-center gap-2 hover:text-[#3b82f6] transition-colors">
+              <a href="mailto:info@cogniq.se" className="flex items-center gap-2 hover:text-[#0052FF] transition-colors">
                 <Mail className="w-4 h-4 shrink-0" />
                 info@cogniq.se
               </a>
@@ -89,7 +89,7 @@ export const Footer = () => {
                 <span>Stockholm, Sverige</span>
               </div>
             </div>
-            <Link to="/contact" className="inline-flex items-center gap-1 text-sm text-[#3b82f6] hover:text-[#4D7CFF] transition-colors font-medium">
+            <Link to="/contact" className="inline-flex items-center gap-1 text-sm text-[#0052FF] hover:text-[#4D7CFF] transition-colors font-medium">
               Boka demo →
             </Link>
           </div>
@@ -107,7 +107,7 @@ export const Footer = () => {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {trustItems.map((item) => (
               <div key={item.text} className="flex items-center gap-2 text-xs text-white/60">
-                <item.icon className="w-3.5 h-3.5 text-[#3b82f6]" />
+                <item.icon className="w-3.5 h-3.5 text-[#0052FF]" />
                 <span>{item.text}</span>
               </div>
             ))}

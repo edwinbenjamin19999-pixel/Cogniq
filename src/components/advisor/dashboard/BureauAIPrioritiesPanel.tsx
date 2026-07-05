@@ -69,7 +69,7 @@ export const BureauAIPrioritiesPanel = () => {
             className="h-[18px] w-[18px] rounded-full flex items-center justify-center"
             style={{ background: "#0040CC" }}
           >
-            <span className="h-[7px] w-[7px] rounded-full bg-[#3b82f6]" />
+            <span className="h-[7px] w-[7px] rounded-full bg-[#0052FF]" />
           </div>
           <span className="text-[10px] font-medium uppercase tracking-[0.07em] text-white/60">
             AI-prioriteringar idag
@@ -110,7 +110,7 @@ export const BureauAIPrioritiesPanel = () => {
 
       <button
         onClick={() => navigate("/wl/app/insights")}
-        className="mt-2.5 text-[11px] text-[#3b82f6] hover:underline"
+        className="mt-2.5 text-[11px] text-[#0052FF] hover:underline"
       >
         Visa fullständig AI-logg →
       </button>

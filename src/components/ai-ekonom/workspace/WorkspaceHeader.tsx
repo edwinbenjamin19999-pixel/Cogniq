@@ -51,7 +51,7 @@ export function WorkspaceHeader({
     <div className="flex items-start justify-between gap-4 px-6 py-4 border-b border-border bg-background">
       <div className="min-w-0">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-[#3b82f6]" />
+          <Sparkles className="w-5 h-5 text-[#0052FF]" />
           <h1 className="text-[20px] font-semibold tracking-tight text-foreground">AI Ekonom</h1>
         </div>
         <p className="text-[13px] text-muted-foreground mt-0.5">
@@ -72,7 +72,7 @@ export function WorkspaceHeader({
             onClick={() => setOpen((o) => !o)}
             className={cn(
               "inline-flex items-center gap-1.5 h-9 px-3 rounded-lg border text-[13px] font-medium transition",
-              open ? "border-[#3b82f6] bg-[#3b82f6]/5 text-[#3b82f6]" : "border-border bg-card text-foreground hover:bg-muted"
+              open ? "border-[#0052FF] bg-[#0052FF]/5 text-[#0052FF]" : "border-border bg-card text-foreground hover:bg-muted"
             )}
           >
             <History className="w-3.5 h-3.5" /> Historik
@@ -104,7 +104,7 @@ export function WorkspaceHeader({
                                 if (e.key === "Enter") { onRename(c.id, editValue.trim() || c.title); setEditingId(null); }
                                 if (e.key === "Escape") setEditingId(null);
                               }}
-                              className="flex-1 h-8 px-2 rounded-md border border-border bg-background text-[13px] focus:outline-none focus:border-[#3b82f6]"
+                              className="flex-1 h-8 px-2 rounded-md border border-border bg-background text-[13px] focus:outline-none focus:border-[#0052FF]"
                             />
                             <button
                               onClick={() => { onRename(c.id, editValue.trim() || c.title); setEditingId(null); }}
@@ -123,14 +123,14 @@ export function WorkspaceHeader({
                           <div
                             className={cn(
                               "flex items-center gap-2 px-2 py-1.5 mx-1 rounded-lg cursor-pointer",
-                              isActive ? "bg-[#3b82f6]/10" : "hover:bg-muted"
+                              isActive ? "bg-[#0052FF]/10" : "hover:bg-muted"
                             )}
                             onClick={() => { onSelect(c.id); setOpen(false); }}
                           >
                             <div className="flex-1 min-w-0">
                               <div className={cn(
                                 "text-[13px] truncate",
-                                isActive ? "text-[#3b82f6] font-medium" : "text-foreground"
+                                isActive ? "text-[#0052FF] font-medium" : "text-foreground"
                               )}>{c.title}</div>
                               <div className="text-[11px] text-muted-foreground">{relTime(c.updated_at)}</div>
                             </div>

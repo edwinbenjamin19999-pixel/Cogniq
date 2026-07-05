@@ -9,7 +9,7 @@ export const ComparisonTable = ({ rows }: { rows: Row[] }) => (
         <tr className="border-b border-slate-100 bg-slate-50/60">
           <th className="text-left font-semibold text-[#0F172A] px-6 py-4">Funktion</th>
           <th className="text-left font-semibold text-[#64748b] px-6 py-4">Traditionellt system</th>
-          <th className="text-left font-semibold text-[#3b82f6] px-6 py-4">Cogniq</th>
+          <th className="text-left font-semibold text-[#0052FF] px-6 py-4">Cogniq</th>
         </tr>
       </thead>
       <tbody>
@@ -23,7 +23,7 @@ export const ComparisonTable = ({ rows }: { rows: Row[] }) => (
             </td>
             <td className="px-6 py-4 text-[#0F172A]">
               {typeof r.ai === "boolean"
-                ? (r.ai ? <Check className="w-4 h-4 text-[#3b82f6]" /> : <X className="w-4 h-4 text-slate-300" />)
+                ? (r.ai ? <Check className="w-4 h-4 text-[#0052FF]" /> : <X className="w-4 h-4 text-slate-300" />)
                 : r.ai}
             </td>
           </tr>

@@ -60,11 +60,11 @@ export function ForecastVersionPicker({
         className={cn(
           "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition",
           activeVersionId === null
-            ? "border-[#3b82f6] bg-[#EFF6FF] text-[#3b82f6]"
+            ? "border-[#0052FF] bg-[#EFF6FF] text-[#0052FF]"
             : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50",
         )}
       >
-        <span className="h-1.5 w-1.5 rounded-full bg-[#3b82f6]" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#0052FF]" />
         Rolling (live)
       </button>
 
@@ -77,7 +77,7 @@ export function ForecastVersionPicker({
             className={cn(
               "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition",
               active
-                ? "border-[#3b82f6] bg-[#EFF6FF] text-[#3b82f6]"
+                ? "border-[#0052FF] bg-[#EFF6FF] text-[#0052FF]"
                 : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50",
             )}
             title={`Låst ${new Date(v.locked_at).toLocaleDateString("sv-SE")}`}

@@ -124,7 +124,7 @@ export function ActionExecuteSheet({
               </Card>
               <Card className="p-3">
                 <div className="text-[10px] uppercase tracking-wide text-muted-foreground">Runway</div>
-                <div className="mt-1 text-base font-semibold tabular-nums text-[#3b82f6]">
+                <div className="mt-1 text-base font-semibold tabular-nums text-[#0052FF]">
                   {runwayDelta >= 0 ? "+" : ""}
                   {runwayDelta} d
                 </div>
@@ -136,7 +136,7 @@ export function ActionExecuteSheet({
             </div>
 
             <Card className="p-4 bg-[#EFF6FF] border-[#C8DDF5]">
-              <div className="text-[11px] uppercase tracking-wide text-[#3b82f6] dark:text-[#1E3A5F] mb-2">
+              <div className="text-[11px] uppercase tracking-wide text-[#0052FF] dark:text-[#1E3A5F] mb-2">
                 Förväntad effekt
               </div>
               <ul className="space-y-1 text-xs">
@@ -180,7 +180,7 @@ export function ActionExecuteSheet({
                 Lägg till i förhandsvisning
               </Button>
               <Button
-                className="flex-1 bg-[#3b82f6] hover:bg-[#3b82f6] text-white"
+                className="flex-1 bg-[#0052FF] hover:bg-[#0052FF] text-white"
                 onClick={handleExecute}
                 disabled={executing || !primary}
               >
@@ -194,7 +194,7 @@ export function ActionExecuteSheet({
         {/* PROGRESS */}
         {stage === "progress" && (
           <div className="mt-8 flex flex-col items-center justify-center gap-3 py-12">
-            <Loader2 className="h-8 w-8 animate-spin text-[#3b82f6]" />
+            <Loader2 className="h-8 w-8 animate-spin text-[#0052FF]" />
             <p className="text-sm text-muted-foreground">Utför {primary?.label?.toLowerCase()}…</p>
           </div>
         )}

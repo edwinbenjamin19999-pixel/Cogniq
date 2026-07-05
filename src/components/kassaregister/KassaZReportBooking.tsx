@@ -83,7 +83,7 @@ export function KassaZReportBooking({ sales }: Props) { const [autoMode, setAuto
         <>
           <div className="flex items-center justify-between">
             <p className="text-sm font-medium">{unbookedDays.length} dag(ar) väntar på bokföring</p>
-            <Button onClick={handleBookAll} size="sm" className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground">
+            <Button onClick={handleBookAll} size="sm" className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-foreground">
               Bokför alla
             </Button>
           </div>
@@ -166,7 +166,7 @@ export function KassaZReportBooking({ sales }: Props) { const [autoMode, setAuto
 
                   <Button
                     onClick={() => handleBook(day)}
-                    className="w-full bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground gap-1.5"
+                    className="w-full bg-[#0052FF] hover:bg-[#0052FF]/90 text-foreground gap-1.5"
                   >
                     <CheckCircle className="h-4 w-4" />
                     Bokför automatiskt
@@ -180,8 +180,8 @@ export function KassaZReportBooking({ sales }: Props) { const [autoMode, setAuto
 
       {/* AI suggestion */}
       {autoMode && (
-        <div className="flex items-start gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20">
-          <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
+        <div className="flex items-start gap-2 p-3 rounded-lg bg-[#0052FF]/5 border border-[#0052FF]/20">
+          <Sparkles className="h-4 w-4 text-[#0052FF] mt-0.5 flex-shrink-0" />
           <p className="text-xs text-muted-foreground">
             Automatisk bokföring aktiverad. Z-rapporter bokförs kl 23:00 varje dag.
             AI verifierar summor, betalmetoder och moms innan bokföring. Vid avvikelse skickas

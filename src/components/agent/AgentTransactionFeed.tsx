@@ -187,12 +187,12 @@ export function AgentTransactionFeed({ companyId }: Props) { const [transactions
           {/* Animated AI illustration */}
           <div className="flex items-center justify-center gap-3">
             <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-[#3b82f6]/20 animate-ping" />
+              <div className="absolute inset-0 rounded-full bg-[#0052FF]/20 animate-ping" />
               <div className="relative bg-white/10 border border-white/15 rounded-full p-3">
                 <Bot className="h-6 w-6 text-white" />
               </div>
             </div>
-            <div className="h-px w-8 bg-gradient-to-r from-[#3b82f6] to-transparent" />
+            <div className="h-px w-8 bg-gradient-to-r from-[#0052FF] to-transparent" />
             <div className="bg-white/10 border border-white/15 rounded-full p-3">
               <Brain className="h-6 w-6 text-white" />
             </div>
@@ -209,20 +209,20 @@ export function AgentTransactionFeed({ companyId }: Props) { const [transactions
               onClick={() => window.location.href = "/bank"}
               className="group flex flex-col items-center gap-2 p-4 rounded-xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.10] hover:border-white/20 transition-all"
             >
-              <Link className="h-5 w-5 text-[#3b82f6] group-hover:scale-110 transition-transform" />
+              <Link className="h-5 w-5 text-[#0052FF] group-hover:scale-110 transition-transform" />
               <span className="text-xs font-semibold text-white/90">Koppla bank</span>
             </button>
             <button
               onClick={() => window.location.href = "/assistant"}
               className="group flex flex-col items-center gap-2 p-4 rounded-xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.10] hover:border-white/20 transition-all"
             >
-              <FileText className="h-5 w-5 text-[#3b82f6] group-hover:scale-110 transition-transform" />
+              <FileText className="h-5 w-5 text-[#0052FF] group-hover:scale-110 transition-transform" />
               <span className="text-xs font-semibold text-white/90">Ladda upp kvitto</span>
             </button>
             <button
               className="group flex flex-col items-center gap-2 p-4 rounded-xl border border-white/10 bg-white/[0.06] hover:bg-white/[0.10] hover:border-white/20 transition-all"
             >
-              <Bot className="h-5 w-5 text-[#3b82f6] group-hover:scale-110 transition-transform" />
+              <Bot className="h-5 w-5 text-[#0052FF] group-hover:scale-110 transition-transform" />
               <span className="text-xs font-semibold text-white/90">Aktivera auto-bokföring</span>
             </button>
           </div>

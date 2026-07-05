@@ -467,7 +467,7 @@ const TaxCalculation = () => {
                       <div key={i} className="grid grid-cols-12 gap-2 items-center py-1.5 border-t border-slate-100">
                         <span className="col-span-4 text-[13px] text-slate-800">{row.label}</span>
                         <span className="col-span-2 text-[11px] text-slate-500 font-mono">{row.accountRange || "–"}</span>
-                        <span className="col-span-3 text-right text-[13px] font-mono text-[#3b82f6]">{fmt(row.autoValue)}</span>
+                        <span className="col-span-3 text-right text-[13px] font-mono text-[#0052FF]">{fmt(row.autoValue)}</span>
                         <div className="col-span-3"><Input type="text" value={row.adjustedValue} onChange={e => updateResultRow(i, parseFloat(e.target.value.replace(/\s/g, "").replace(",", ".")) || 0)} className="text-right font-mono h-7 text-[13px]" /></div>
                       </div>
                     ))}
@@ -486,7 +486,7 @@ const TaxCalculation = () => {
                         <span className="col-span-4 text-[13px] text-slate-800">{row.label}</span>
                         <Badge variant="outline" className="col-span-1 text-[10px] justify-center">{row.sign}</Badge>
                         <span className="col-span-2 text-[11px] text-slate-500 font-mono">{row.accountRange || "Man."}</span>
-                        <span className="col-span-2 text-right text-[13px] font-mono text-[#3b82f6]">{fmt(row.autoValue)}</span>
+                        <span className="col-span-2 text-right text-[13px] font-mono text-[#0052FF]">{fmt(row.autoValue)}</span>
                         <div className="col-span-3"><Input type="text" value={row.adjustedValue} onChange={e => updateAdjustmentRow(i, parseFloat(e.target.value.replace(/\s/g, "").replace(",", ".")) || 0)} className="text-right font-mono h-7 text-[13px]" /></div>
                       </div>
                     ))}
@@ -573,7 +573,7 @@ const TaxCalculation = () => {
                     <div className="text-2xl font-bold font-mono text-slate-900 tabular-nums">{fmt(vatBoxes.net)} kr</div>
                   </div>
                   {vatBoxes.hasData && (
-                    <Link to="/vat-reports" className="inline-flex items-center gap-1 text-xs text-[#3b82f6] hover:text-[#3b82f6] font-medium">
+                    <Link to="/vat-reports" className="inline-flex items-center gap-1 text-xs text-[#0052FF] hover:text-[#0052FF] font-medium">
                       <Link2 className="h-3 w-3" />Öppna Momsmodulen
                     </Link>
                   )}

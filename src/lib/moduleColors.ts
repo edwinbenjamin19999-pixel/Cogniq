@@ -4,7 +4,7 @@
  */
 export const MODULE_COLORS = {
   bokforing:   { solid: 'bg-slate-800',   light: 'bg-slate-50',   text: 'text-slate-600',   border: 'border-slate-300',   accent: '#1e293b', darkBg: 'dark:bg-slate-900/30' },
-  fakturering: { solid: 'bg-[#3b82f6]',    light: 'bg-blue-50',    text: 'text-[#3b82f6]',    border: 'border-blue-200',    accent: '#3b82f6', darkBg: 'dark:bg-blue-900/30' },
+  fakturering: { solid: 'bg-[#0052FF]',    light: 'bg-blue-50',    text: 'text-[#0052FF]',    border: 'border-blue-200',    accent: '#0052FF', darkBg: 'dark:bg-blue-900/30' },
   lon:         { solid: 'bg-emerald-600',  light: 'bg-emerald-50', text: 'text-emerald-600', border: 'border-emerald-200', accent: '#059669', darkBg: 'dark:bg-emerald-900/30' },
   moms:        { solid: 'bg-violet-600',   light: 'bg-violet-50',  text: 'text-violet-600',  border: 'border-violet-200',  accent: '#7c3aed', darkBg: 'dark:bg-violet-900/30' },
   skatt:       { solid: 'bg-amber-500',    light: 'bg-amber-50',   text: 'text-amber-600',   border: 'border-amber-200',   accent: '#d97706', darkBg: 'dark:bg-amber-900/30' },

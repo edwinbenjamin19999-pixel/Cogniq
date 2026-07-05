@@ -17,7 +17,7 @@ export default function GuidesHubPage() {
         {/* Hero */}
         <section className="pt-32 pb-12 bg-gradient-to-b from-slate-50 to-white">
           <div className="container mx-auto max-w-3xl px-6 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#0052FF]">
               <BookOpen className="w-3 h-3" />
               Bokföringsguider
             </div>

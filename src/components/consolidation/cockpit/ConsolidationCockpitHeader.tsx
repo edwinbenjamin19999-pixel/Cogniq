@@ -31,10 +31,10 @@ export function ConsolidationCockpitHeader({
           <div className="space-y-3">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-2xl bg-[#0F1F3D] border border-[#C8DDF5] flex items-center justify-center backdrop-blur-sm">
-                <Building2 className="w-6 h-6 text-[#3b82f6]" />
+                <Building2 className="w-6 h-6 text-[#0052FF]" />
               </div>
               <div>
-                <p className="text-xs font-medium uppercase tracking-widest text-[#3b82f6]/70">Group Consolidation Cockpit</p>
+                <p className="text-xs font-medium uppercase tracking-widest text-[#0052FF]/70">Group Consolidation Cockpit</p>
                 <h1 className="text-2xl font-semibold text-white tracking-tight">{groupName || 'Välj koncern'}</h1>
               </div>
             </div>
@@ -83,7 +83,7 @@ export function ConsolidationCockpitHeader({
               size="sm"
               onClick={onRunConsolidation}
               disabled={isRunning}
-              className="bg-[#0F1F3D] hover:from-[#3b82f6] hover:to-[#3b82f6] text-white border-0 shadow-[0_0_20px_rgba(0,82,255,0.3)]"
+              className="bg-[#0F1F3D] hover:from-[#0052FF] hover:to-[#0052FF] text-white border-0 shadow-[0_0_20px_rgba(0,82,255,0.3)]"
             >
               <Play className="w-4 h-4 mr-1.5" />
               {isRunning ? 'Kör…' : 'Kör konsolidering'}

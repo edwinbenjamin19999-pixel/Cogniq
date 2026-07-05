@@ -154,7 +154,7 @@ export const TransactionTable = ({ details, onOpenVoucher, onToggleReviewed }: T
                     <div className="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                       <button
                         onClick={e => { e.stopPropagation(); onOpenVoucher(row); }}
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium bg-[#EFF6FF] text-[#3b82f6] hover:bg-[#EFF6FF] border border-[#C8DDF5] transition-colors"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium bg-[#EFF6FF] text-[#0052FF] hover:bg-[#EFF6FF] border border-[#C8DDF5] transition-colors"
                         title="Redigera verifikation"
                       >
                         <Pencil className="w-3 h-3" /> Redigera

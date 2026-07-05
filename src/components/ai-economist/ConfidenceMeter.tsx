@@ -46,7 +46,7 @@ export function ConfidenceMeter({ confidence, factors, size = "md", className }:
             <div className="font-semibold text-slate-900 dark:text-white mb-1">Varför {pct}%?</div>
             {factors.map((f, i) => (
               <div key={i} className="flex gap-1.5 text-slate-600 dark:text-white/70">
-                <span className="text-[#3b82f6] dark:text-[#1E3A5F]">•</span>
+                <span className="text-[#0052FF] dark:text-[#1E3A5F]">•</span>
                 <span>{f}</span>
               </div>
             ))}

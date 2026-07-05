@@ -74,7 +74,7 @@ export function ObservabilityBlock() {
                 "w-1.5 h-1.5 rounded-full flex-shrink-0",
                 a.status === "completed" && "bg-emerald-500",
                 a.status === "failed" && "bg-rose-500",
-                a.status === "running" && "bg-[#3b82f6] animate-pulse",
+                a.status === "running" && "bg-[#0052FF] animate-pulse",
                 !["completed", "failed", "running"].includes(a.status) && "bg-slate-300",
               )} />
               <span className="font-mono text-[11px] text-slate-600 flex-1 truncate">
@@ -84,7 +84,7 @@ export function ObservabilityBlock() {
                 "text-[10px] px-1.5 py-0.5 rounded-full font-medium",
                 a.status === "completed" && "bg-[#E1F5EE] text-[#085041]",
                 a.status === "failed" && "bg-[#FCE8E8] text-[#7A1A1A]",
-                a.status === "running" && "bg-[#EFF6FF] text-[#3b82f6]",
+                a.status === "running" && "bg-[#EFF6FF] text-[#0052FF]",
                 !["completed", "failed", "running"].includes(a.status) && "bg-slate-100 text-slate-600",
               )}>
                 {a.status}

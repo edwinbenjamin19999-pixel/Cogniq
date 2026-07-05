@@ -67,8 +67,8 @@ const CoSign = () => {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white flex items-center justify-center p-6">
       <div className="w-full max-w-lg bg-white rounded-2xl border border-slate-200 shadow-sm p-7">
         <div className="flex items-center gap-2 mb-1">
-          <FileSignature className="w-5 h-5 text-[#3b82f6]" />
-          <span className="text-[12px] font-semibold tracking-wide text-[#3b82f6] uppercase">
+          <FileSignature className="w-5 h-5 text-[#0052FF]" />
+          <span className="text-[12px] font-semibold tracking-wide text-[#0052FF] uppercase">
             Cogniq · Medsignering
           </span>
         </div>
@@ -129,7 +129,7 @@ const CoSign = () => {
             <button
               onClick={() => setBankIdOpen(true)}
               disabled={signing}
-              className="w-full h-[52px] rounded-xl bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold text-[15px] flex items-center justify-center gap-2 transition-colors"
+              className="w-full h-[52px] rounded-xl bg-[#0052FF] hover:bg-[#0052FF] text-white font-semibold text-[15px] flex items-center justify-center gap-2 transition-colors"
             >
               <ShieldCheck className="w-4 h-4" />
               Signera med BankID

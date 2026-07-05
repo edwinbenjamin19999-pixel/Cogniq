@@ -242,7 +242,7 @@ const AdvisorSupplierInvoices = () => {
                   size="sm"
                   onClick={seedDemo}
                   disabled={seeding}
-                  className="mt-4 border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF]"
+                  className="mt-4 border-[#C8DDF5] text-[#0052FF] hover:bg-[#EFF6FF]"
                 >
                   <Database className="h-3.5 w-3.5 mr-1.5" />
                   {seeding ? "Skapar…" : "Skapa demoleverantörsfakturor"}

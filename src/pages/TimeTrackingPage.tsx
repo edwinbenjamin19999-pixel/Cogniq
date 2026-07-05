@@ -84,7 +84,7 @@ function KPICard({ gradient, icon: Icon, value, label, subtitle, badge, extra }:
 const PROJECT_GRADIENTS = [
   "from-violet-500 to-purple-600", "from-blue-500 to-indigo-600",
   "from-emerald-500 to-blue-600", "from-rose-500 to-pink-600",
-  "from-amber-500 to-orange-600", "from-[#3b82f6] to-blue-600",
+  "from-amber-500 to-orange-600", "from-[#0052FF] to-blue-600",
 ];
 
 function ProjectCard({ project, index, timeEntries }: { project: Project; index: number; timeEntries: TimeEntry[] }) {

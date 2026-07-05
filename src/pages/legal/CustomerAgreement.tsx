@@ -18,7 +18,7 @@ const CustomerAgreement = () => {
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="mb-10 pb-6 border-b border-slate-200">
-            <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
+            <p className="text-sm text-[#0052FF] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
             <h1 className="text-4xl font-bold tracking-tight text-[#0F172A] mb-3">
@@ -60,7 +60,7 @@ const CustomerAgreement = () => {
             <h3>4.1 Prislista</h3>
             <p>
               Vid avtalsstart gäller den prislista som publiceras på{" "}
-              <a href="/pricing" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="/pricing" className="text-[#0052FF] no-underline hover:underline">
                 cogniq.se/pricing
               </a>
               .
@@ -116,11 +116,11 @@ const CustomerAgreement = () => {
             <p>
               Cogniq agerar personuppgiftsbiträde åt Kunden för de personuppgifter som behandlas
               i Tjänsten. Behandlingen regleras i separat{" "}
-              <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="/legal/dpa" className="text-[#0052FF] no-underline hover:underline">
                 personuppgiftsbiträdesavtal (DPA)
               </a>
               . För egna personuppgifter (t.ex. kontaktpersoner) gäller{" "}
-              <a href="/legal/privacy" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="/legal/privacy" className="text-[#0052FF] no-underline hover:underline">
                 integritetspolicyn
               </a>
               .
@@ -162,7 +162,7 @@ const CustomerAgreement = () => {
             <p>
               Cogniq använder underleverantörer för drift, lagring, AI-tjänster och e-post.
               Aktuell lista över underbiträden finns i{" "}
-              <a href="/legal/dpa" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="/legal/dpa" className="text-[#0052FF] no-underline hover:underline">
                 DPA
               </a>
               . Tillkommande underleverantörer meddelas Kunden i förväg.
@@ -187,7 +187,7 @@ const CustomerAgreement = () => {
             <p className="tabular-nums">
               Denna version: <strong>{VERSION}</strong>, ikraftträdande{" "}
               <strong>{EFFECTIVE_DATE}</strong>. Tidigare versioner finns på begäran via{" "}
-              <a href="mailto:legal@cogniq.se" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="mailto:legal@cogniq.se" className="text-[#0052FF] no-underline hover:underline">
                 legal@cogniq.se
               </a>
               .
@@ -196,15 +196,15 @@ const CustomerAgreement = () => {
             <div className="mt-12 p-5 rounded-2xl bg-slate-50 border border-slate-200 not-prose">
               <p className="text-sm text-slate-600 leading-relaxed">
                 <strong className="text-[#0F172A]">Frågor?</strong> Kontakta oss på{" "}
-                <a href="mailto:legal@cogniq.se" className="text-[#3b82f6] hover:underline">
+                <a href="mailto:legal@cogniq.se" className="text-[#0052FF] hover:underline">
                   legal@cogniq.se
                 </a>{" "}
                 eller läs vår{" "}
-                <a href="/legal/privacy" className="text-[#3b82f6] hover:underline">
+                <a href="/legal/privacy" className="text-[#0052FF] hover:underline">
                   integritetspolicy
                 </a>{" "}
                 och{" "}
-                <a href="/legal/dpa" className="text-[#3b82f6] hover:underline">
+                <a href="/legal/dpa" className="text-[#0052FF] hover:underline">
                   DPA
                 </a>
                 .

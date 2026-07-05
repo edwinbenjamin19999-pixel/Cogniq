@@ -8,8 +8,8 @@ export const AdvisorAI = () => {
   return (
     <div className="space-y-4 p-4 pb-4">
       <div className="flex items-center gap-2">
-        <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-[#3b82f6]/30 to-blue-500/30 flex items-center justify-center">
-          <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+        <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-[#0052FF]/30 to-blue-500/30 flex items-center justify-center">
+          <Sparkles className="h-4 w-4 text-[#0052FF]" />
         </div>
         <div>
           <h1 className="text-xl font-bold text-white leading-none">AI-insikter</h1>

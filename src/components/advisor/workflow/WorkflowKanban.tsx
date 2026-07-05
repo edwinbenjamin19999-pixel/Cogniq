@@ -142,7 +142,7 @@ const KanbanColumn = ({
       className={cn(
         "rounded-xl border-2 bg-slate-50/50 p-3 min-h-[400px] transition-colors",
         accent,
-        isOver && "bg-blue-50/60 border-[#3b82f6]",
+        isOver && "bg-blue-50/60 border-[#0052FF]",
       )}
     >
       <div className="flex items-center justify-between mb-3 px-1">
@@ -186,8 +186,8 @@ const KanbanCard = ({
       onClick={onClick}
       className={cn(
         "group rounded-lg bg-white border border-slate-200 p-3 shadow-sm cursor-grab active:cursor-grabbing transition-all",
-        "hover:shadow-md hover:border-[#3b82f6]",
-        (isDragging || dragging) && "opacity-60 ring-2 ring-[#3b82f6]",
+        "hover:shadow-md hover:border-[#0052FF]",
+        (isDragging || dragging) && "opacity-60 ring-2 ring-[#0052FF]",
       )}
     >
       <div className="flex items-start justify-between gap-2 mb-2">

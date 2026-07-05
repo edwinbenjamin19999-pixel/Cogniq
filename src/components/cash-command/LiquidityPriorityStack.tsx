@@ -49,9 +49,9 @@ export function LiquidityPriorityStack({
   return (
     <section className="space-y-3">
       <div className="flex items-center gap-2">
-        <Sparkles className="w-4 h-4 text-[#3b82f6]" />
+        <Sparkles className="w-4 h-4 text-[#0052FF]" />
         <h2 className="text-sm font-semibold">Topprioriteringar</h2>
-        <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#3b82f6] font-medium">
+        <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#0052FF] font-medium">
           {sorted.length}
         </span>
         <span className="text-xs text-muted-foreground ml-1">

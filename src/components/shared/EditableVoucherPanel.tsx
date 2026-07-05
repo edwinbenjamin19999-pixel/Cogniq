@@ -63,7 +63,7 @@ const AccountCombo = ({ accounts, value, onChange }: { accounts: Account[]; valu
       <PopoverTrigger asChild>
         <button
           type="button"
-          className="h-8 w-full text-xs flex items-center justify-start px-2 rounded-md border border-slate-200 bg-white hover:border-[#3b82f6] transition-colors text-left truncate"
+          className="h-8 w-full text-xs flex items-center justify-start px-2 rounded-md border border-slate-200 bg-white hover:border-[#0052FF] transition-colors text-left truncate"
         >
           {selected ? (
             <span className="truncate">
@@ -292,7 +292,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
           <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200">
             <div className="flex items-center gap-3 min-w-0">
               <div className="w-9 h-9 rounded-xl bg-[#EFF6FF] border border-[#C8DDF5] flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-[#3b82f6]" />
+                <Sparkles className="w-4 h-4 text-[#0052FF]" />
               </div>
               <div className="min-w-0">
                 <h3 className="font-semibold text-slate-900 text-sm truncate">
@@ -412,7 +412,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                       <button
                         type="button"
                         onClick={addLine}
-                        className="inline-flex items-center gap-1 text-xs text-[#3b82f6] hover:text-[#3b82f6] font-medium"
+                        className="inline-flex items-center gap-1 text-xs text-[#0052FF] hover:text-[#0052FF] font-medium"
                       >
                         <Plus className="w-3.5 h-3.5" /> Lägg till rad
                       </button>
@@ -525,7 +525,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
               <Button
                 onClick={() => handleSave(false)}
                 disabled={saving || !totals.balanced}
-                className="flex-1 bg-[#3b82f6] hover:bg-[#3b82f6] text-white text-xs h-9"
+                className="flex-1 bg-[#0052FF] hover:bg-[#0052FF] text-white text-xs h-9"
               >
                 <Save className="w-3.5 h-3.5 mr-1.5" />
                 {saving ? "Sparar…" : "Spara ändring"}
@@ -536,7 +536,7 @@ export const EditableVoucherPanel = ({ detail, onClose, mode = "edit", onSaved }
                 variant="outline"
                 className="text-xs h-9"
               >
-                <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#3b82f6]" />
+                <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#0052FF]" />
                 Spara & lär AI
               </Button>
               <Button

@@ -112,7 +112,7 @@ export function AccountRow({ account, classColor, search, onEdit, onToggle }: Pr
           <button onClick={onEdit} className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" title="Redigera">
             <Pencil className="w-3.5 h-3.5" />
           </button>
-          <button onClick={() => navigate('/account-analysis')} className="p-1.5 rounded-lg text-slate-400 hover:text-[#3b82f6] hover:bg-[#EFF6FF] transition-colors" title="Analysera">
+          <button onClick={() => navigate('/account-analysis')} className="p-1.5 rounded-lg text-slate-400 hover:text-[#0052FF] hover:bg-[#EFF6FF] transition-colors" title="Analysera">
             <BarChart3 className="w-3.5 h-3.5" />
           </button>
           <button className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" title="Fler alternativ">

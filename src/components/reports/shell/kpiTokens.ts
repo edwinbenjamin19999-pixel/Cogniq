@@ -55,7 +55,7 @@ export const ACCENT_STYLES: Record<KpiAccent, AccentStyle> = {
   emerald: { bg: "bg-emerald-500/[0.08]", fg: "text-emerald-600 dark:text-[#1D9E75]", stroke: "stroke-emerald-500" },
   rose:    { bg: "bg-rose-500/[0.08]",    fg: "text-rose-600 dark:text-[#C73838]",       stroke: "stroke-rose-500" },
   slate:   { bg: "bg-slate-900/[0.06]",   fg: "text-slate-700 dark:text-slate-300",     stroke: "stroke-slate-500" },
-  cyan:    { bg: "bg-[#3b82f6]/[0.08]",    fg: "text-[#3b82f6] dark:text-[#1E3A5F]",       stroke: "stroke-[#3b82f6]" },
+  cyan:    { bg: "bg-[#0052FF]/[0.08]",    fg: "text-[#0052FF] dark:text-[#1E3A5F]",       stroke: "stroke-[#0052FF]" },
   amber:   { bg: "bg-amber-500/[0.10]",   fg: "text-amber-600 dark:text-[#C28A2B]",     stroke: "stroke-amber-500" },
 };
 

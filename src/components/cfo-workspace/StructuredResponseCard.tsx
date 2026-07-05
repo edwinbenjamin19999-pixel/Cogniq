@@ -71,7 +71,7 @@ export const StructuredResponseCard = ({ structured, companyId }: Props) => {
     <div className="space-y-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900/80 p-6 shadow-sm">
       {/* Summary */}
       <div>
-        <div className="text-xs font-semibold uppercase tracking-wider text-[#3b82f6] dark:text-[#1E3A5F] mb-2">Sammanfattning</div>
+        <div className="text-xs font-semibold uppercase tracking-wider text-[#0052FF] dark:text-[#1E3A5F] mb-2">Sammanfattning</div>
         <p className="text-lg font-medium text-slate-900 dark:text-white leading-relaxed">{structured.summary}</p>
       </div>
 
@@ -96,9 +96,9 @@ export const StructuredResponseCard = ({ structured, companyId }: Props) => {
       {/* Recommendation */}
       <div className="rounded-xl bg-[#0F1F3D] border border-[#C8DDF5] p-4">
         <div className="flex items-start gap-3">
-          <CheckCircle2 className="h-5 w-5 text-[#3b82f6] dark:text-[#1E3A5F] shrink-0 mt-0.5" />
+          <CheckCircle2 className="h-5 w-5 text-[#0052FF] dark:text-[#1E3A5F] shrink-0 mt-0.5" />
           <div>
-            <div className="text-xs font-bold uppercase tracking-wider text-[#3b82f6] dark:text-[#3b82f6] mb-1">Rekommendation</div>
+            <div className="text-xs font-bold uppercase tracking-wider text-[#0052FF] dark:text-[#0052FF] mb-1">Rekommendation</div>
             <p className="text-sm font-medium text-slate-900 dark:text-white">{structured.recommendation}</p>
           </div>
         </div>
@@ -125,7 +125,7 @@ export const StructuredResponseCard = ({ structured, companyId }: Props) => {
       {/* Confidence */}
       <div className="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-800">
         <span className="text-xs text-slate-500">Konfidens: {Math.round((structured.confidence || 0) * 100)}%</span>
-        <span className="text-xs text-[#3b82f6] dark:text-[#1E3A5F] font-medium">AI CFO</span>
+        <span className="text-xs text-[#0052FF] dark:text-[#1E3A5F] font-medium">AI CFO</span>
       </div>
     </div>
   );

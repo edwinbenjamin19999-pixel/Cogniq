@@ -29,7 +29,7 @@ export function CashRunwayCard({ cash, netResult }: CashRunwayCardProps) {
     label = "Kassaposition stark";
     Icon = Shield;
   } else if (runway >= 6) {
-    gradient = "from-[#3b82f6] to-[#3b82f6]";
+    gradient = "from-[#0052FF] to-[#0052FF]";
     label = `${runway} månader kvar`;
     Icon = Clock;
   } else if (runway >= 3) {

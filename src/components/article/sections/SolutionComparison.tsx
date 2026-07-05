@@ -3,13 +3,13 @@ import type { SolutionComparison as SolutionComparisonData } from "@/data/guides
 
 export const SolutionComparison = ({ data }: { data: SolutionComparisonData }) => (
   <section className="relative my-16 -mx-2 md:-mx-6 rounded-[28px] bg-gradient-to-br from-[#0F172A] via-[#101a3a] to-[#0F172A] p-8 md:p-10 overflow-hidden">
-    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#3b82f6]/40 to-transparent" />
+    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#0052FF]/40 to-transparent" />
 
     <div className="flex items-center gap-2.5">
-      <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#3b82f6]/15 border border-[#3b82f6]/20">
-        <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+      <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#0052FF]/15 border border-[#0052FF]/20">
+        <Sparkles className="h-4 w-4 text-[#0052FF]" />
       </span>
-      <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#3b82f6]">Automation</span>
+      <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#0052FF]">Automation</span>
     </div>
     <h2 className="!mt-4 !text-[28px] md:!text-[32px] font-semibold tracking-tight !text-white !mb-4">
       Hur Cogniq automatiserar detta
@@ -33,15 +33,15 @@ export const SolutionComparison = ({ data }: { data: SolutionComparisonData }) =
       </div>
 
       {/* Med Cogniq */}
-      <div className="relative rounded-2xl border border-[#3b82f6]/20 bg-[#3b82f6]/[0.08] p-5 overflow-hidden">
-        <div className="absolute inset-x-0 top-0 h-px bg-[#3b82f6]/40" />
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-[#3b82f6]/15 border border-[#3b82f6]/30 px-2.5 py-1 text-[11px] uppercase tracking-[0.14em] font-semibold text-[#3b82f6] shadow-[0_0_20px_-4px_rgba(0,82,255,0.4)]">
+      <div className="relative rounded-2xl border border-[#0052FF]/20 bg-[#0052FF]/[0.08] p-5 overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-px bg-[#0052FF]/40" />
+        <div className="inline-flex items-center gap-1.5 rounded-full bg-[#0052FF]/15 border border-[#0052FF]/30 px-2.5 py-1 text-[11px] uppercase tracking-[0.14em] font-semibold text-[#0052FF] shadow-[0_0_20px_-4px_rgba(0,82,255,0.4)]">
           Med Cogniq
         </div>
         <ul className="mt-4 space-y-3">
           {data.comparison.map((row, i) => (
             <li key={i} className="flex items-start gap-2.5 text-[15px] text-white font-medium leading-relaxed">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#3b82f6]" />
+              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#0052FF]" />
               <span>{row.northledger}</span>
             </li>
           ))}

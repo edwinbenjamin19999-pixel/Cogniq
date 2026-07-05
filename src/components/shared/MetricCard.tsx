@@ -10,7 +10,7 @@ interface MetricCardProps {
   value: React.ReactNode;
   subLabel?: string;
   icon?: LucideIcon;
-  solidClass: string; // e.g. 'bg-[#3b82f6]'
+  solidClass: string; // e.g. 'bg-[#0052FF]'
   trend?: { value: string; positive: boolean };
   className?: string;
 }

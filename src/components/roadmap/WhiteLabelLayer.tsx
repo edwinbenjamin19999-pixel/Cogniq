@@ -31,12 +31,12 @@ export const WhiteLabelLayer = () => {
   return (
     <section className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#0F172A] via-[#101a3a] to-[#0F172A] p-8 shadow-[0_30px_80px_rgba(15,23,42,0.18)] md:p-14">
       {/* Subtle glow */}
-      <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#3b82f6]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#0052FF]/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#EFF6FF] blur-3xl" />
 
       <div className="relative">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#3b82f6]">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0052FF]">
             White Label
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">
@@ -54,7 +54,7 @@ export const WhiteLabelLayer = () => {
               key={f.title}
               className="group rounded-[18px] border border-white/[0.08] bg-white/[0.04] p-5 backdrop-blur-sm transition-all duration-[160ms] hover:-translate-y-0.5 hover:border-white/[0.16] hover:bg-white/[0.06]"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-white/[0.06] text-[#3b82f6] ring-1 ring-white/[0.08]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-white/[0.06] text-[#0052FF] ring-1 ring-white/[0.08]">
                 <f.icon className="h-[18px] w-[18px]" strokeWidth={1.6} />
               </div>
               <h3 className="mt-4 text-sm font-semibold tracking-tight text-white">{f.title}</h3>

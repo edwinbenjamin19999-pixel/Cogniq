@@ -90,7 +90,7 @@ export const AIWorkflowAnalysisPanel = ({
           <button
             type="button"
             onClick={onRegenerate}
-            className="mt-[16px] text-[11px] text-[#3b82f6] hover:text-[#3b82f6] font-medium"
+            className="mt-[16px] text-[11px] text-[#0052FF] hover:text-[#0052FF] font-medium"
           >
             Generera ny analys →
           </button>

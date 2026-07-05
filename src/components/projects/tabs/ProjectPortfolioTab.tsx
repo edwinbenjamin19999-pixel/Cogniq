@@ -206,7 +206,7 @@ function PortfolioContent({ projects }: { projects: Project[] }) { const data = 
                   <YAxis tickFormatter={(v) => fmt(v)} tick={{ fontSize: 11 }} />
                   <Tooltip formatter={(v: number) => fmt(v) + " kr"} />
                   <Legend content={<CustomLegend />} />
-                  <Bar dataKey="revenue" name="Intäkter" fill="#3b82f6" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="revenue" name="Intäkter" fill="#0052FF" radius={[6, 6, 0, 0]} />
                   <Bar dataKey="cost" name="Kostnader" fill="hsl(var(--muted-foreground))" radius={[6, 6, 0, 0]} opacity={0.5} />
                   <Bar dataKey="result" name="Resultat" fill="#10b981" radius={[6, 6, 0, 0]} />
                 </BarChart>

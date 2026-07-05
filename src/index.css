@@ -145,10 +145,10 @@
      useBureauBranding() further overrides --brand-primary at runtime. Standard
      Cogniq surfaces (outside .wl-scope) keep navy via --primary. */
   .wl-scope {
-    --brand-primary: 192 91% 36%;        /* cyan-600  #3b82f6 */
-    --brand-primary-hover: 192 91% 30%;  /* cyan-700  #3b82f6 */
+    --brand-primary: 192 91% 36%;        /* cyan-600  #0052FF */
+    --brand-primary-hover: 192 91% 30%;  /* cyan-700  #0052FF */
     --brand-sidebar: 197 94% 14%;        /* cyan-950  #083344 */
-    --brand-accent: 174 72% 56%;         /* teal-400  #3b82f6 */
+    --brand-accent: 174 72% 56%;         /* teal-400  #0052FF */
     --brand-ring: 192 91% 44%;
     --brand-on-primary: #ffffff;
   }
@@ -1288,11 +1288,11 @@ textarea[class*="bg-slate-"]:focus {
 .board-mode-light .border-white\/20 {
   border-color: hsl(220 20% 88%) !important;
 }
-.board-mode-light .text-[#3b82f6],
-.board-mode-light .text-[#3b82f6]\/90,
-.board-mode-light .text-[#3b82f6]\/80,
-.board-mode-light .text-[#3b82f6]\/70,
-.board-mode-light .text-[#3b82f6] {
+.board-mode-light .text-[#0052FF],
+.board-mode-light .text-[#0052FF]\/90,
+.board-mode-light .text-[#0052FF]\/80,
+.board-mode-light .text-[#0052FF]\/70,
+.board-mode-light .text-[#0052FF] {
   color: hsl(192 91% 36%) !important;
 }
 .board-mode-light .text-rose-400,
@@ -1310,16 +1310,16 @@ textarea[class*="bg-slate-"]:focus {
 .board-mode-light .bg-emerald-500\/\[0\.04\] { background-color: hsl(160 84% 39% / 0.06) !important; }
 .board-mode-light .bg-rose-500\/10 { background-color: hsl(0 72% 51% / 0.12) !important; }
 .board-mode-light .border-emerald-500\/10 { border-color: hsl(160 84% 39% / 0.25) !important; }
-.board-mode-light .from-[#3b82f6]\/\[0\.06\],
-.board-mode-light .from-[#3b82f6]\/\[0\.04\] {
+.board-mode-light .from-[#0052FF]\/\[0\.06\],
+.board-mode-light .from-[#0052FF]\/\[0\.04\] {
   --tw-gradient-from: hsl(192 91% 36% / 0.05) !important;
 }
 .board-mode-light .to-purple-500\/\[0\.04\] {
   --tw-gradient-to: hsl(280 60% 50% / 0.04) !important;
 }
-.board-mode-light .border-[#3b82f6]\/20 { border-color: hsl(192 91% 36% / 0.30) !important; }
-.board-mode-light .hover\:border-[#3b82f6]\/30:hover,
-.board-mode-light .hover\:border-[#3b82f6]\/40:hover {
+.board-mode-light .border-[#0052FF]\/20 { border-color: hsl(192 91% 36% / 0.30) !important; }
+.board-mode-light .hover\:border-[#0052FF]\/30:hover,
+.board-mode-light .hover\:border-[#0052FF]\/40:hover {
   border-color: hsl(192 91% 36% / 0.50) !important;
 }
 
@@ -1333,7 +1333,7 @@ textarea[class*="bg-slate-"]:focus {
     /* Brand */
     --ds-brand-deep:    #0040CC;
     --ds-brand-mid:     #0040CC;
-    --ds-brand-accent:  #3b82f6;
+    --ds-brand-accent:  #0052FF;
     --ds-brand-tint:    #EFF6FF;
 
     /* Semantic */
@@ -1351,7 +1351,7 @@ textarea[class*="bg-slate-"]:focus {
     --ds-danger-text:    #501313;
 
     /* AI (purple — only for AI elements) */
-    --ds-ai:        #534AB7;
+    --ds-ai:        #4D7CFF;
     --ds-ai-bg:     #EEEDFE;
     --ds-ai-border: #AFA9EC;
     --ds-ai-text:   #26215C;
@@ -1570,7 +1570,7 @@ textarea[class*="bg-slate-"]:focus {
 }
 /* Typographic rhythm inside sections */
 .section-label {
-  color: #3b82f6;
+  color: #0052FF;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.18em;

@@ -37,7 +37,7 @@ export const WelcomeOverlay = ({ onComplete, durationMs = 2600, companyName }: W
       aria-live="polite"
     >
       <div className="flex items-center gap-0 mb-6">
-        <span className="text-3xl font-[800] text-[#3b82f6]">Cog</span>
+        <span className="text-3xl font-[800] text-[#0052FF]">Cog</span>
         <span className="text-3xl font-[800] text-[#0F172A]">niq</span>
       </div>
 
@@ -51,7 +51,7 @@ export const WelcomeOverlay = ({ onComplete, durationMs = 2600, companyName }: W
       {/* Thin progress bar */}
       <div className="mt-8 w-[200px] h-[2px] bg-slate-100 rounded-full overflow-hidden">
         <div
-          className="h-full bg-[#3b82f6] rounded-full"
+          className="h-full bg-[#0052FF] rounded-full"
           style={{
             animation: "wl-progress 2.2s ease-out forwards",
           }}

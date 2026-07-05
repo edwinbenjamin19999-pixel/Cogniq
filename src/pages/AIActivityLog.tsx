@@ -286,7 +286,7 @@ export default function AIActivityLog() {
               <div className="h-10">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={summary.spark}>
-                    <Line type="monotone" dataKey="v" stroke="#3b82f6" strokeWidth={2} dot={false} isAnimationActive={false} />
+                    <Line type="monotone" dataKey="v" stroke="#0052FF" strokeWidth={2} dot={false} isAnimationActive={false} />
                   </LineChart>
                 </ResponsiveContainer>
               </div>

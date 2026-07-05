@@ -277,7 +277,7 @@ export const ProactiveAGIPanel = ({ companyId, onTaskCreated, environment }: Pro
             onClick={handleSign}
             disabled={signing}
             className="flex-1"
-            style={{ backgroundColor: '#3b82f6', color: '#0F2137' }}
+            style={{ backgroundColor: '#0052FF', color: '#0F2137' }}
           >
             {signing ? (
               <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Signerar...</>

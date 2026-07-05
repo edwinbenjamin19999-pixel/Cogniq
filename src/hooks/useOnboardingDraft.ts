@@ -29,7 +29,7 @@ const INITIAL: OnboardingDraft = {
   slug: "",
   logo_url: null,
   logo_file: null,
-  primary_color: "#3b82f6",
+  primary_color: "#0052FF",
   accent_color: null,
   ai_name: "AI Ekonom",
   modules: DEFAULT_MODULES,

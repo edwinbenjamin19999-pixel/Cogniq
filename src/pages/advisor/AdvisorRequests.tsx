@@ -17,7 +17,7 @@ const TABS: Array<{ key: string; label: string }> = [
 ];
 
 const STATUS_META: Record<string, { label: string; tone: string }> = {
-  open: { label: "Öppen", tone: "bg-[#EFF6FF] text-[#3b82f6]" },
+  open: { label: "Öppen", tone: "bg-[#EFF6FF] text-[#0052FF]" },
   awaiting_client: { label: "Väntar klient", tone: "bg-[#FAEEDA] text-[#7A5417]" },
   responded: { label: "Besvarad", tone: "bg-[#EFF6FF] text-blue-700" },
   resolved: { label: "Avslutad", tone: "bg-[#E1F5EE] text-[#085041]" },
@@ -151,7 +151,7 @@ const AdvisorRequests = () => {
               >
                 <div className="min-w-0">
                   <div className="text-sm font-semibold text-[#0F172A] truncate flex items-center gap-1.5">
-                    {r.ai_generated && <Sparkles className="h-3 w-3 text-[#3b82f6] shrink-0" />}
+                    {r.ai_generated && <Sparkles className="h-3 w-3 text-[#0052FF] shrink-0" />}
                     {r.title}
                   </div>
                   {r.message && (
@@ -200,8 +200,8 @@ const AdvisorRequests = () => {
       )}
 
       <div className="rounded-2xl border border-[#C8DDF5] bg-blue-50/40 p-4 flex items-start gap-3">
-        <MessageSquare className="h-4 w-4 text-[#3b82f6] mt-0.5" />
-        <div className="text-xs text-[#3b82f6]">
+        <MessageSquare className="h-4 w-4 text-[#0052FF] mt-0.5" />
+        <div className="text-xs text-[#0052FF]">
           <strong>Tips:</strong> {awaitingClient} förfrågningar ligger hos klient — skicka påminnelse om svar dröjer mer än 3 dagar.
         </div>
       </div>

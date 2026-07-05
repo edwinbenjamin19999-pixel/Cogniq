@@ -15,7 +15,7 @@ export const RelatedGuides = ({ slugs }: { slugs: string[] }) => {
   if (!items.length) return null;
   return (
     <section className="not-prose my-14">
-      <div className="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#3b82f6]">
+      <div className="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#0052FF]">
         Fortsätt läsa
       </div>
       <h2 className="mt-2 text-[26px] font-semibold tracking-tight text-[#0F172A]">
@@ -37,7 +37,7 @@ export const RelatedGuides = ({ slugs }: { slugs: string[] }) => {
             <p className="mt-2 text-[14px] text-slate-600 leading-relaxed line-clamp-2 flex-1">
               {g.excerpt}
             </p>
-            <div className="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#3b82f6]">
+            <div className="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0052FF]">
               Läs guiden
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>

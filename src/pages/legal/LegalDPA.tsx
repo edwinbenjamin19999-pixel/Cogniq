@@ -18,7 +18,7 @@ const LegalDPA = () => {
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="mb-10 pb-6 border-b border-slate-200">
-            <p className="text-sm text-[#3b82f6] font-semibold tabular-nums mb-2">
+            <p className="text-sm text-[#0052FF] font-semibold tabular-nums mb-2">
               {VERSION} · Gäller från {EFFECTIVE_DATE}
             </p>
             <h1 className="text-4xl font-bold tracking-tight text-[#0F172A] mb-3">
@@ -149,7 +149,7 @@ const LegalDPA = () => {
             <p className="tabular-nums">
               Denna version: <strong>{VERSION}</strong>, ikraftträdande{" "}
               <strong>{EFFECTIVE_DATE}</strong>. Frågor:{" "}
-              <a href="mailto:dpo@cogniq.se" className="text-[#3b82f6] no-underline hover:underline">
+              <a href="mailto:dpo@cogniq.se" className="text-[#0052FF] no-underline hover:underline">
                 dpo@cogniq.se
               </a>
               .

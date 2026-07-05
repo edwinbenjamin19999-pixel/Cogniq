@@ -78,10 +78,10 @@ export function KPIStoryCard({
         "shadow-sm transition-all duration-200",
         // Hover (only when not disabled)
         reliable &&
-          "hover:shadow-lg hover:border-[#C8DDF5] dark:hover:border-[#3b82f6] hover:-translate-y-0.5",
+          "hover:shadow-lg hover:border-[#C8DDF5] dark:hover:border-[#0052FF] hover:-translate-y-0.5",
         // States
         isAlert && "border-l-4 border-l-rose-500",
-        !isAlert && simulationActive && "shadow-[0_0_24px_rgba(0,82,255,0.18)] border-[#3b82f6] dark:border-[#3b82f6]",
+        !isAlert && simulationActive && "shadow-[0_0_24px_rgba(0,82,255,0.18)] border-[#0052FF] dark:border-[#0052FF]",
         !isAlert && !simulationActive && expanded && verdict.accentClass,
         !reliable && "border-dashed opacity-80",
         className,
@@ -89,8 +89,8 @@ export function KPIStoryCard({
     >
       {/* Live pill in simulation */}
       {simulationActive && reliable && (
-        <span className="absolute top-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-[#EFF6FF] border border-[#C8DDF5] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[#3b82f6] dark:text-[#3b82f6] animate-pulse">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#3b82f6]" /> Live
+        <span className="absolute top-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-[#EFF6FF] border border-[#C8DDF5] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[#0052FF] dark:text-[#0052FF] animate-pulse">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#0052FF]" /> Live
         </span>
       )}
 

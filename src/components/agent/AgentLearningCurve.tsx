@@ -51,12 +51,12 @@ export function AgentLearningCurve({ companyId, history }: AgentLearningCurvePro
               <ChartGradients />
               <defs>
                 <linearGradient id="autoRateGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#0052FF" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#0052FF" stopOpacity={0} />
                 </linearGradient>
                 <linearGradient id="confGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#818cf8" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#818cf8" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#4D7CFF" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#4D7CFF" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <CartesianGrid {...GRID_PROPS} />
@@ -70,11 +70,11 @@ export function AgentLearningCurve({ companyId, history }: AgentLearningCurvePro
                 labelStyle={{ fontWeight: "bold" }}
                 contentStyle={chartTheme.tooltipStyle}
               />
-              <ReferenceLine y={97} stroke="#3b82f6" strokeDasharray="5 5" label={{ value: "Mål 97%", position: "right", fontSize: 10 }} />
+              <ReferenceLine y={97} stroke="#0052FF" strokeDasharray="5 5" label={{ value: "Mål 97%", position: "right", fontSize: 10 }} />
               <Area
                 type="monotone"
                 dataKey="autoRate"
-                stroke="#3b82f6"
+                stroke="#0052FF"
                 fill="url(#autoRateGrad)"
                 strokeWidth={2}
                 name="autoRate"
@@ -82,7 +82,7 @@ export function AgentLearningCurve({ companyId, history }: AgentLearningCurvePro
               <Area
                 type="monotone"
                 dataKey="avgConfidence"
-                stroke="#818cf8"
+                stroke="#4D7CFF"
                 fill="url(#confGrad)"
                 strokeWidth={2}
                 name="avgConfidence"

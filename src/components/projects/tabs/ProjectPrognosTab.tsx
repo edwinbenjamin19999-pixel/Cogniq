@@ -88,7 +88,7 @@ export function ProjectPrognosTab({ project, totalRevenue, totalCost }: Props) {
                 <Tooltip formatter={(v: number) => fmt(v)} />
                 <Legend content={<CustomLegend />} />
                 <Line type="monotone" dataKey="Budgeterad" stroke="hsl(var(--muted-foreground))" strokeDasharray="5 5" strokeWidth={2} dot={false} />
-                <Area type="monotone" dataKey="Faktiskt" fill="#3b82f6" stroke="#3b82f6" fillOpacity={0.2} />
+                <Area type="monotone" dataKey="Faktiskt" fill="#0052FF" stroke="#0052FF" fillOpacity={0.2} />
                 <Line type="monotone" dataKey="Optimistisk" stroke="#10b981" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />
                 <Line type="monotone" dataKey="Basfall" stroke="#f59e0b" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />
                 <Line type="monotone" dataKey="Pessimistisk" stroke="#ef4444" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />

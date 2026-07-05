@@ -239,7 +239,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10" style={{ animationDelay: '50ms' }}>
           <CardContent className="pt-4 pb-3 px-4">
             <div className="flex items-center gap-2 mb-1">
-              <TrendingUp className="h-4 w-4 text-[#3b82f6]" />
+              <TrendingUp className="h-4 w-4 text-[#0052FF]" />
               <span className="text-xs text-muted-foreground">Omsättning (mån)</span>
             </div>
             <div className="flex items-center gap-2">
@@ -395,7 +395,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         {nextActions.map((action, i) => (
           <button
             key={i}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full border border-blue-200/30 bg-[#EFF6FF] dark:bg-blue-950/20 text-[#3b82f6] dark:text-[#3b82f6] hover:shadow-[0_0_12px_rgba(0,82,255,0.15)] hover:scale-[1.02] transition-all duration-200"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full border border-blue-200/30 bg-[#EFF6FF] dark:bg-blue-950/20 text-[#0052FF] dark:text-[#0052FF] hover:shadow-[0_0_12px_rgba(0,82,255,0.15)] hover:scale-[1.02] transition-all duration-200"
           >
             <ArrowRight className="h-3 w-3" />
             {action}

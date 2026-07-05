@@ -43,18 +43,18 @@ export default function AccountingFirmsPage() {
         <section className="relative overflow-hidden bg-[#0F172A] pt-32 pb-20 text-white">
           <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 70% 30%, rgba(0,82,255,0.4), transparent 60%)" }} />
           <div className="relative container mx-auto max-w-4xl px-6 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-[#3b82f6]/30 bg-[#3b82f6]/10 px-3 py-1 text-xs font-medium text-[#3b82f6]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-[#0052FF]/30 bg-[#0052FF]/10 px-3 py-1 text-xs font-medium text-[#0052FF]">
               <Sparkles className="w-3 h-3" />
               För redovisningsbyråer
             </div>
             <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] text-white">
-              Lansera din egen <span className="text-[#3b82f6]">bokföringsplattform</span>
+              Lansera din egen <span className="text-[#0052FF]">bokföringsplattform</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto">
               Erbjud Cogniq under ditt varumärke — med automation, AI och full kontroll över dina klienter.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild className="bg-[#3b82f6] text-[#0a1428] hover:bg-[#3b82f6] font-semibold h-11 px-6">
+              <Button asChild className="bg-[#0052FF] text-[#0a1428] hover:bg-[#0052FF] font-semibold h-11 px-6">
                 <Link to="/white-label">Starta White Label <ArrowRight className="w-4 h-4 ml-1" /></Link>
               </Button>
               <Button asChild variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white h-11 px-6">
@@ -90,7 +90,7 @@ export default function AccountingFirmsPage() {
             <p className="mt-4 text-[#475569] leading-relaxed text-lg">
               Cogniq White Label ger dig hela kraften av en modern AI-driven bokföringsplattform — men presenterad som din egen produkt. Du behåller relationen, varumärket och marginalen.
             </p>
-            <Button asChild className="mt-6 bg-[#3b82f6] text-white hover:bg-[#3b82f6]">
+            <Button asChild className="mt-6 bg-[#0052FF] text-white hover:bg-[#0052FF]">
               <Link to="/white-label">Se hela White Label-pitchen <ArrowRight className="w-4 h-4 ml-1" /></Link>
             </Button>
           </div>
@@ -107,7 +107,7 @@ export default function AccountingFirmsPage() {
               {FEATURES.map((f) => (
                 <div key={f.title} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
-                    <f.icon className="w-5 h-5 text-[#3b82f6]" />
+                    <f.icon className="w-5 h-5 text-[#0052FF]" />
                   </div>
                   <h3 className="mt-4 font-semibold text-[#0F172A]">{f.title}</h3>
                   <p className="mt-2 text-sm text-[#64748b] leading-relaxed">{f.desc}</p>
@@ -127,7 +127,7 @@ export default function AccountingFirmsPage() {
             <div className="grid md:grid-cols-4 gap-4">
               {STEPS.map((s) => (
                 <div key={s.n} className="rounded-2xl bg-white border border-slate-100 p-6">
-                  <div className="w-9 h-9 rounded-full bg-[#3b82f6] text-white font-bold flex items-center justify-center">{s.n}</div>
+                  <div className="w-9 h-9 rounded-full bg-[#0052FF] text-white font-bold flex items-center justify-center">{s.n}</div>
                   <h3 className="mt-4 font-semibold text-[#0F172A]">{s.t}</h3>
                   <p className="mt-2 text-sm text-[#64748b] leading-relaxed">{s.d}</p>
                 </div>
@@ -145,7 +145,7 @@ export default function AccountingFirmsPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
               {BENEFITS.map((b) => (
                 <div key={b.label} className="rounded-2xl border border-slate-100 bg-white p-6 text-center shadow-sm">
-                  <div className="text-4xl md:text-5xl font-bold text-[#3b82f6]">{b.stat}</div>
+                  <div className="text-4xl md:text-5xl font-bold text-[#0052FF]">{b.stat}</div>
                   <div className="mt-2 text-sm text-[#64748b]">{b.label}</div>
                 </div>
               ))}
@@ -158,7 +158,7 @@ export default function AccountingFirmsPage() {
           <div className="container mx-auto max-w-4xl px-6 flex flex-wrap justify-center gap-6 text-sm text-[#64748b]">
             {["BAS-kontoplan", "K2/K3-stöd", "GDPR-säker", "BankID-signering", "Skatteverket-integration"].map((t) => (
               <span key={t} className="inline-flex items-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-[#3b82f6]" />{t}
+                <CheckCircle className="w-4 h-4 text-[#0052FF]" />{t}
               </span>
             ))}
           </div>
@@ -170,11 +170,11 @@ export default function AccountingFirmsPage() {
             <div className="relative overflow-hidden rounded-3xl bg-[#0F172A] p-10 md:p-14 text-center text-white">
               <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 50% 0%, rgba(0,82,255,0.4), transparent 60%)" }} />
               <div className="relative">
-                <Shield className="w-7 h-7 mx-auto text-[#3b82f6]" />
+                <Shield className="w-7 h-7 mx-auto text-[#0052FF]" />
                 <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-white">Redo att skala din byrå?</h2>
                 <p className="mt-3 text-white/70 max-w-md mx-auto">Boka en partnergenomgång — vi visar plattformen och räknar hem caset tillsammans.</p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-                  <Button asChild className="bg-[#3b82f6] text-[#0a1428] hover:bg-[#3b82f6] font-semibold">
+                  <Button asChild className="bg-[#0052FF] text-[#0a1428] hover:bg-[#0052FF] font-semibold">
                     <Link to="/white-label">Starta White Label <ArrowRight className="w-4 h-4 ml-1" /></Link>
                   </Button>
                   <Button asChild variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white">

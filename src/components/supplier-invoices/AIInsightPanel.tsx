@@ -197,7 +197,7 @@ export function AIInsightPanel({ invoice }: Props) {
           <Button
             size="sm"
             disabled={!canAcceptSuggestion || wf.savePreAccounting.isPending}
-            className="bg-[#0F1F3D] text-white hover:from-[#3b82f6] hover:to-blue-500 justify-start"
+            className="bg-[#0F1F3D] text-white hover:from-[#0052FF] hover:to-blue-500 justify-start"
             onClick={() => {
               wf.savePreAccounting.mutate({
                 invoice_id: invoice.id,

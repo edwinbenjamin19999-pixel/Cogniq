@@ -20,7 +20,7 @@ const DOC_TYPE_LABELS: Record<string, { label: string; icon: typeof FileText; co
   bank_statement: { label: "Kontoutdrag", icon: Building2, color: "bg-[#E1F5EE] text-[#085041]" },
   employment_agreement: { label: "Anställningsavtal", icon: User, color: "bg-[#F1F5F9] text-violet-800" },
   annual_report: { label: "Årsredovisning", icon: FileText, color: "bg-[#FAEEDA] text-[#7A5417]" },
-  invoice: { label: "Faktura", icon: Receipt, color: "bg-[#EFF6FF] text-[#3b82f6]" },
+  invoice: { label: "Faktura", icon: Receipt, color: "bg-[#EFF6FF] text-[#0052FF]" },
   insurance_policy: { label: "Försäkringsbrev", icon: Shield, color: "bg-[#FCE8E8] text-[#7A1A1A]" },
   price_list: { label: "Prislista", icon: List, color: "bg-orange-100 text-orange-800" },
   other: { label: "Övrigt", icon: HelpCircle, color: "bg-gray-100 text-gray-800" },
@@ -82,7 +82,7 @@ function AIPipeline({ analyzing, done }: { analyzing: boolean; done: boolean }) 
           <div key={step} className="flex items-center gap-1">
             <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
               isComplete ? "bg-[#E1F5EE] text-[#085041] dark:bg-emerald-900/30 dark:text-[#1D9E75]" :
-              isActive ? "bg-[#EFF6FF] text-[#3b82f6] dark:bg-blue-900/30 dark:text-[#1E3A5F] animate-pulse" :
+              isActive ? "bg-[#EFF6FF] text-[#0052FF] dark:bg-blue-900/30 dark:text-[#1E3A5F] animate-pulse" :
               "bg-muted text-muted-foreground"
             }`}>
               {isComplete && <CheckCircle2 className="w-3 h-3" />}
@@ -110,10 +110,10 @@ function AIPreviewPanel({ result }: { result: any }) {
   const pct = Math.round((result.confidence || 0) * 100);
 
   return (
-    <Card className="bg-[#0F1F3D] dark:from-blue-950/20 dark:to-blue-950/20 border-blue-200/50 dark:border-[#3b82f6]/30">
+    <Card className="bg-[#0F1F3D] dark:from-blue-950/20 dark:to-blue-950/20 border-blue-200/50 dark:border-[#0052FF]/30">
       <CardContent className="p-5">
         <div className="flex items-center gap-2 mb-4">
-          <Sparkles className="w-5 h-5 text-[#3b82f6]" />
+          <Sparkles className="w-5 h-5 text-[#0052FF]" />
           <span className="text-sm font-semibold text-foreground">AI identifierade</span>
           <Badge className={`${typeInfo.color} ml-1`}>{typeInfo.label}</Badge>
           <Badge className="bg-[#E1F5EE] text-[#085041] border-0 ml-auto">{pct}% konfidens</Badge>
@@ -140,13 +140,13 @@ function AIPreviewPanel({ result }: { result: any }) {
           )}
         </div>
 
-        <div className="p-3 rounded-lg bg-white/60 dark:bg-slate-800/40 border border-blue-100/50 dark:border-[#3b82f6]/20 mb-4">
+        <div className="p-3 rounded-lg bg-white/60 dark:bg-slate-800/40 border border-blue-100/50 dark:border-[#0052FF]/20 mb-4">
           <p className="text-xs text-muted-foreground mb-1">Föreslagen kontering</p>
           <p className="text-sm font-medium text-foreground">{suggestedAccount}</p>
         </div>
 
         <div className="flex gap-2">
-          <Button size="sm" className="bg-[#0F1F3D] hover:from-[#3b82f6] hover:to-blue-700 text-white" onClick={() => toast.success("Verifikation skapad automatiskt!")}>
+          <Button size="sm" className="bg-[#0F1F3D] hover:from-[#0052FF] hover:to-blue-700 text-white" onClick={() => toast.success("Verifikation skapad automatiskt!")}>
             <Zap className="w-4 h-4 mr-1" />
             Bokför automatiskt
           </Button>

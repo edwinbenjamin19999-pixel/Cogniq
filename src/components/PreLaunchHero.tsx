@@ -90,8 +90,8 @@ export const PreLaunchHero = () => {
         <div className="max-w-[760px] mx-auto text-center">
           {/* Launch pill */}
           <div className="inline-flex items-center gap-2.5 mb-8 border border-[rgba(0,82,255,0.25)] rounded-full px-5 py-2 bg-[rgba(0,82,255,0.06)]">
-            <span className="w-2 h-2 rounded-full bg-[#3b82f6] animate-pulse" />
-            <span className="text-sm text-[#3b82f6] font-medium">
+            <span className="w-2 h-2 rounded-full bg-[#0052FF] animate-pulse" />
+            <span className="text-sm text-[#0052FF] font-medium">
               Lansering om {countdown.days} dagar — Early access öppen
             </span>
           </div>
@@ -105,7 +105,7 @@ export const PreLaunchHero = () => {
             }}
           >
             Bokföring för företag som vill{" "}
-            <span className="text-[#3b82f6]">framåt</span>
+            <span className="text-[#0052FF]">framåt</span>
           </h1>
 
           {/* Paragraph */}
@@ -121,7 +121,7 @@ export const PreLaunchHero = () => {
                 key={h}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[rgba(255,255,255,0.06)] border border-[rgba(255,255,255,0.1)] text-[rgba(255,255,255,0.65)] text-[12.5px]"
               >
-                <Check className="w-3.5 h-3.5 text-[#3b82f6]" />
+                <Check className="w-3.5 h-3.5 text-[#0052FF]" />
                 {h}
               </div>
             ))}
@@ -159,7 +159,7 @@ export const PreLaunchHero = () => {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full h-12 text-[15px] font-semibold bg-[#3b82f6] text-white hover:bg-[#3b82f6] rounded-lg shadow-[0_4px_20px_rgba(0,82,255,0.4)]"
+              className="w-full h-12 text-[15px] font-semibold bg-[#0052FF] text-white hover:bg-[#0052FF] rounded-lg shadow-[0_4px_20px_rgba(0,82,255,0.4)]"
             >
               {loading ? "Skickar..." : "Säkra din plats"}
               <ArrowRight className="w-4 h-4 ml-1.5" />

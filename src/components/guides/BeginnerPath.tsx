@@ -15,7 +15,7 @@ export const BeginnerPath = () => (
       <div className="grid md:grid-cols-4 gap-4">
         {STEPS.map((s) => (
           <div key={s.n} className="rounded-2xl bg-white border border-slate-100 p-6 shadow-sm">
-            <div className="w-9 h-9 rounded-full bg-[#3b82f6] text-white font-bold flex items-center justify-center">{s.n}</div>
+            <div className="w-9 h-9 rounded-full bg-[#0052FF] text-white font-bold flex items-center justify-center">{s.n}</div>
             <h3 className="mt-4 font-semibold text-[#0F172A]">{s.title}</h3>
             <p className="mt-2 text-sm text-[#64748b] leading-relaxed">{s.desc}</p>
           </div>

@@ -188,7 +188,7 @@ export function RutRotInvoiceList({ settings }: { settings: RutRotSettings }) { 
         <DialogContent className="max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Shield className="h-4 w-4 text-[#3b82f6]" />
+              <Shield className="h-4 w-4 text-[#0052FF]" />
               Kontroll före ansökan
             </DialogTitle>
           </DialogHeader>
@@ -212,7 +212,7 @@ export function RutRotInvoiceList({ settings }: { settings: RutRotSettings }) { 
 
             {validationResult?.ok ? (
               <Button
-                className="w-full bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground gap-1.5"
+                className="w-full bg-[#0052FF] hover:bg-[#0052FF]/90 text-foreground gap-1.5"
                 onClick={() => { if (reviewInvoice) { updateStatus.mutate({ id: reviewInvoice.id,
                       skv_status: "applied",
                       skv_applied_at: new Date().toISOString(),

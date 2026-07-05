@@ -150,7 +150,7 @@ export const GlobalCommandBar = () => {
               "0 8px 24px rgba(15,23,42,0.18), inset 0 1px 0 rgba(255,255,255,0.04)",
           }}
         >
-          <Search className="h-4 w-4 text-[#3b82f6]" />
+          <Search className="h-4 w-4 text-[#0052FF]" />
           <span className="flex-1 text-sm text-white/60">
             Fråga AI-copilot eller skriv kommando · t.ex. "visa riskklienter"
           </span>
@@ -175,9 +175,9 @@ export const GlobalCommandBar = () => {
             {/* Input row */}
             <div className="flex items-center gap-3 h-12 px-4 border-b border-white/10">
               {clientsLoading ? (
-                <Loader2 className="h-4 w-4 text-[#3b82f6] animate-spin" />
+                <Loader2 className="h-4 w-4 text-[#0052FF] animate-spin" />
               ) : (
-                <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+                <Sparkles className="h-4 w-4 text-[#0052FF]" />
               )}
               <input
                 ref={inputRef}
@@ -284,7 +284,7 @@ export const GlobalCommandBar = () => {
                         setAiQuestion(q.trim());
                         setQ("");
                       }}
-                      className="inline-flex items-center gap-1.5 bg-[#3b82f6]/20 hover:bg-[#3b82f6]/30 text-[#3b82f6] rounded-md px-3 py-1.5 text-[12px] font-medium transition-colors"
+                      className="inline-flex items-center gap-1.5 bg-[#0052FF]/20 hover:bg-[#0052FF]/30 text-[#0052FF] rounded-md px-3 py-1.5 text-[12px] font-medium transition-colors"
                     >
                       <Sparkles className="h-3 w-3" /> Fråga AI-copilot istället
                     </button>
@@ -358,12 +358,12 @@ const IntentRow = ({
     }}
     onMouseEnter={onMouseEnter}
     className={`w-full flex items-center justify-between px-4 py-2.5 text-left transition-colors ${
-      active ? "bg-[#3b82f6]/15" : "hover:bg-white/5"
+      active ? "bg-[#0052FF]/15" : "hover:bg-white/5"
     }`}
   >
     <div className="min-w-0 flex-1">
       <div className="flex items-center gap-2">
-        {tone === "ai" && <Sparkles className="h-3 w-3 text-[#3b82f6] shrink-0" />}
+        {tone === "ai" && <Sparkles className="h-3 w-3 text-[#0052FF] shrink-0" />}
         <div className="text-sm text-white truncate">{intent.label}</div>
       </div>
       <div className="text-[11px] text-white/45 truncate">{intent.description}</div>

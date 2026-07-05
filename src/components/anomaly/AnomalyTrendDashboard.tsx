@@ -15,12 +15,12 @@ interface Props { companyId: string;
   anomalies: { category: string; severity: string; status: string }[];
 }
 
-const SEVERITY_COLORS = { high: "#EF4444", medium: "#EAB308", low: "#3B82F6" };
+const SEVERITY_COLORS = { high: "#EF4444", medium: "#EAB308", low: "#0052FF" };
 const CATEGORY_COLORS: Record<string, string> = { duplicate: "#F97316",
   personal_expense: "#A855F7",
   unusual_amount: "#EF4444",
   round_number: "#EAB308",
-  timing: "#3B82F6",
+  timing: "#0052FF",
   ghost_vendor: "#6B7280",
   account_misuse: "#D97706",
 };
@@ -177,7 +177,7 @@ export function AnomalyTrendDashboard({ companyId, anomalies }: Props) {
                   <Tooltip content={<ChartTooltip />} cursor={TOOLTIP_CURSOR} />
                   <Bar dataKey="Kritisk" stackId="a" fill="#EF4444" radius={[0, 0, 0, 0]} />
                   <Bar dataKey="Medium" stackId="a" fill="#EAB308" radius={[0, 0, 0, 0]} />
-                  <Bar dataKey="Info" stackId="a" fill="#3B82F6" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="Info" stackId="a" fill="#0052FF" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -248,7 +248,7 @@ export function AnomalyTrendDashboard({ companyId, anomalies }: Props) {
                     contentStyle={{ background: "rgba(15,23,42,0.95)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "14px", backdropFilter: "blur(12px)", fontSize: "12px" }}
                     formatter={(v: number) => [`${v}%`, "Resolutionsgrad"]}
                   />
-                  <Line type="monotone" dataKey="rate" stroke="#3b82f6" strokeWidth={2} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="rate" stroke="#0052FF" strokeWidth={2} dot={{ r: 3 }} />
                   {/* Target line at 90% */}
                   <Line type="monotone" dataKey={() => 90} stroke="hsl(var(--muted-foreground))" strokeDasharray="5 5" strokeWidth={1} dot={false} name="Mål" />
                 </LineChart>

@@ -42,7 +42,7 @@ export function EquityBridgeChart({ equity, cash, totalAssets }: EquityBridgeCha
         />
         <Area type="monotone" dataKey="assets" fill="url(#assetsFill)" stroke="#94a3b8" strokeWidth={1} dot={false} />
         <Line type="monotone" dataKey="equity" stroke="#10b981" strokeWidth={2} dot={false} />
-        <Line type="monotone" dataKey="cash" stroke="#3b82f6" strokeWidth={2} dot={false} />
+        <Line type="monotone" dataKey="cash" stroke="#0052FF" strokeWidth={2} dot={false} />
       </ComposedChart>
     </ResponsiveContainer>
   );

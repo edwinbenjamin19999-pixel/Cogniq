@@ -157,7 +157,7 @@ export const BusinessPulseWidget = ({ companyId, size = "large" }: BusinessPulse
                   {urgency}
                 </span>
               )}
-              <span className="text-[#3b82f6] text-xs hover:underline flex-shrink-0">
+              <span className="text-[#0052FF] text-xs hover:underline flex-shrink-0">
                 {actionLabel}
               </span>
             </button>
@@ -169,7 +169,7 @@ export const BusinessPulseWidget = ({ companyId, size = "large" }: BusinessPulse
       {!isMedium && insights.length > 0 && (
         <button
           onClick={() => navigate("/reports")}
-          className="border-t border-gray-100 pt-3 pb-3 mt-1 px-6 text-[#3b82f6] hover:underline text-xs font-medium text-left cursor-pointer"
+          className="border-t border-gray-100 pt-3 pb-3 mt-1 px-6 text-[#0052FF] hover:underline text-xs font-medium text-left cursor-pointer"
         >
           Visa fullständig logg →
         </button>

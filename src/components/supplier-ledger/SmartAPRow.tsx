@@ -82,7 +82,7 @@ export function SmartAPRow({ invoice, group, isSelected, cashBalance, companyId,
   const toneClass = {
     rose: "text-[#7A1A1A]",
     amber: "text-[#7A5417]",
-    cyan: "text-[#3b82f6]",
+    cyan: "text-[#0052FF]",
     slate: "text-slate-500",
     emerald: "text-[#085041]",
   }[aiLine?.tone || "slate"];

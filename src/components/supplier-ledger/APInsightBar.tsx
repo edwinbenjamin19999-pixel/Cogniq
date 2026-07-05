@@ -39,7 +39,7 @@ export function APInsightBar({ invoices, cashBalance, onOptimize }: Props) {
         </div>
         <div className="flex-1 min-w-0 space-y-1.5">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-[#3b82f6] bg-[#EFF6FF] px-2 py-0.5 rounded-full flex items-center gap-1">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-[#0052FF] bg-[#EFF6FF] px-2 py-0.5 rounded-full flex items-center gap-1">
               <Sparkles className="h-3 w-3" /> AI-rekommendation
             </span>
           </div>

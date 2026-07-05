@@ -31,7 +31,7 @@ export function Step2Modules({ draft, toggleModule }: Props) {
   return (
     <div className="max-w-5xl mx-auto space-y-8">
       <div>
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EFF6FF] border border-blue-100 text-[10px] font-semibold text-[#3b82f6] uppercase tracking-wider mb-3">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EFF6FF] border border-blue-100 text-[10px] font-semibold text-[#0052FF] uppercase tracking-wider mb-3">
           Steg 2 · Plattform
         </div>
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">
@@ -98,7 +98,7 @@ export function Step2Modules({ draft, toggleModule }: Props) {
               <div className="flex items-center gap-2">
                 <h3 className="text-sm font-semibold text-slate-900">{m.name}</h3>
                 {m.recommended && !disabled && (
-                  <span className="text-[9px] font-semibold uppercase tracking-wider text-[#3b82f6] bg-[#EFF6FF] px-1.5 py-0.5 rounded">
+                  <span className="text-[9px] font-semibold uppercase tracking-wider text-[#0052FF] bg-[#EFF6FF] px-1.5 py-0.5 rounded">
                     Rek.
                   </span>
                 )}

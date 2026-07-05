@@ -17,7 +17,7 @@ export const EarlyBirdCTA = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6">
         <div className="max-w-[600px] mx-auto">
           <div className="rounded-3xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-xl shadow-[0_0_60px_rgba(0,82,255,0.06)] p-12 sm:p-14 text-center">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[rgba(0,82,255,0.08)] border border-[rgba(0,82,255,0.2)] text-[#3b82f6] text-xs font-semibold mb-8">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[rgba(0,82,255,0.08)] border border-[rgba(0,82,255,0.2)] text-[#0052FF] text-xs font-semibold mb-8">
               <Sparkles className="w-3.5 h-3.5" />
               AI-driven ekonomifunktion
             </div>
@@ -27,7 +27,7 @@ export const EarlyBirdCTA = () => {
               style={{ fontSize: "clamp(28px, 4vw, 40px)", letterSpacing: "-1.5px" }}
             >
               Redo att slippa{" "}
-              <span className="text-[#3b82f6]">bokföring</span> för alltid?
+              <span className="text-[#0052FF]">bokföring</span> för alltid?
             </h2>
 
             <p className="text-[16px] text-white/50 leading-relaxed max-w-[420px] mx-auto mb-10">
@@ -36,7 +36,7 @@ export const EarlyBirdCTA = () => {
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
               <Button
-                className="h-12 px-8 rounded-xl text-[15px] font-semibold bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] text-white hover:brightness-110 shadow-[0_4px_24px_rgba(0,82,255,0.4)] hover:scale-[1.03] transition-all duration-200"
+                className="h-12 px-8 rounded-xl text-[15px] font-semibold bg-gradient-to-r from-[#0052FF] to-[#0052FF] text-white hover:brightness-110 shadow-[0_4px_24px_rgba(0,82,255,0.4)] hover:scale-[1.03] transition-all duration-200"
                 onClick={() => (window.location.href = "/auth")}
               >
                 Låt AI ta över din bokföring

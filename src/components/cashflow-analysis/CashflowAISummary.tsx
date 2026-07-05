@@ -137,7 +137,7 @@ export function CashflowAISummary({
     <Card className="flex h-full flex-col p-5">
       <div className="mb-3 flex items-start justify-between gap-3">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#EFF6FF] text-[#3b82f6] dark:text-[#3b82f6]">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#EFF6FF] text-[#0052FF] dark:text-[#0052FF]">
             <Sparkles className="h-4 w-4" />
           </div>
           <div>
@@ -167,7 +167,7 @@ export function CashflowAISummary({
 
       <div className="min-h-[120px] flex-1 whitespace-pre-wrap text-sm leading-relaxed text-foreground">
         {text || (loading ? "Analyserar perioden…" : "Inga AI-insikter ännu.")}
-        {loading && text ? <span className="ml-0.5 inline-block h-3 w-1 animate-pulse bg-[#3b82f6]" /> : null}
+        {loading && text ? <span className="ml-0.5 inline-block h-3 w-1 animate-pulse bg-[#0052FF]" /> : null}
       </div>
 
       {drivers.length > 0 ? (
@@ -189,7 +189,7 @@ export function CashflowAISummary({
                 }
                 className={cn(
                   "inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/40 px-2.5 py-1 text-[11px] font-medium",
-                  "hover:border-[#C8DDF5] hover:bg-[#EFF6FF] hover:text-[#3b82f6] dark:hover:text-[#3b82f6]",
+                  "hover:border-[#C8DDF5] hover:bg-[#EFF6FF] hover:text-[#0052FF] dark:hover:text-[#0052FF]",
                 )}
               >
                 <span>{d.label}</span>

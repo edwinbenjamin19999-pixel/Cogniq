@@ -5,7 +5,7 @@ export const FinalCTABlock = () => (
   <section className="not-prose relative left-1/2 -translate-x-1/2 w-screen max-w-[1400px] my-20">
     <div className="border-y border-slate-900/[0.06] bg-gradient-to-br from-[#F0F9FF] via-[#FAFBFC] to-[#ECFEFF] py-20 px-8">
       <div className="max-w-2xl mx-auto text-center">
-        <div className="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#3b82f6]">
+        <div className="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#0052FF]">
           Redo att börja?
         </div>
         <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-[-0.02em] text-[#0F172A]">
@@ -44,7 +44,7 @@ export const FinalCTABlock = () => (
             <p className="text-[13px] text-slate-600">Automatisera detta för alla dina kunder under ditt eget varumärke.</p>
           </div>
         </div>
-        <ArrowRight className="w-4 h-4 text-[#3b82f6] group-hover:translate-x-0.5 transition-transform" />
+        <ArrowRight className="w-4 h-4 text-[#0052FF] group-hover:translate-x-0.5 transition-transform" />
       </Link>
     </div>
   </section>

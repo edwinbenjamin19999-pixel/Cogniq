@@ -18,8 +18,8 @@ export default function PublicPlaceholderPage({ title, description, icon: Icon }
       <main className="flex-1 flex items-center justify-center px-4 py-32">
         <div className="max-w-lg w-full text-center space-y-6">
           {Icon && (
-            <div className="mx-auto w-14 h-14 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center">
-              <Icon className="w-7 h-7 text-[#3b82f6]" />
+            <div className="mx-auto w-14 h-14 rounded-2xl bg-[#0052FF]/10 flex items-center justify-center">
+              <Icon className="w-7 h-7 text-[#0052FF]" />
             </div>
           )}
           <h1 className="text-3xl sm:text-4xl font-bold text-[#0F172A]">{title}</h1>

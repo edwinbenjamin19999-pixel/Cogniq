@@ -18,7 +18,7 @@ const statusStyles: Record<LayerStatus, { label: string; className: string }> = 
   },
   expanding: {
     label: "EXPANDING",
-    className: "bg-[rgba(59,130,246,0.08)] text-[#0052FF]",
+    className: "bg-[rgba(0,82,255,0.08)] text-[#0052FF]",
   },
   next: {
     label: "NEXT",

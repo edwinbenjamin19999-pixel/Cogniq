@@ -97,7 +97,7 @@ export const BureauActivityFeed = () => {
               className="flex items-center gap-2.5 px-3.5 py-2.5"
               style={{ borderBottom: "0.5px solid #F1F5F9", minHeight: 44 }}
             >
-              {it.is_ai && <Sparkles className="h-3 w-3 text-[#534AB7]" />}
+              {it.is_ai && <Sparkles className="h-3 w-3 text-[#4D7CFF]" />}
               <div
                 className="h-7 w-7 rounded-full flex items-center justify-center text-[10px] font-bold flex-shrink-0"
                 style={{ background: c.bg, color: c.text }}

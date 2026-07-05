@@ -216,7 +216,7 @@ export default function ClientPortal() {
                   <YAxis stroke="#94A3B8" fontSize={11} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
                   <Tooltip formatter={(v: number) => fmt(v)} />
                   <Legend wrapperStyle={{ fontSize: 11 }} />
-                  <Bar dataKey="revenue" name="Intäkter" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="revenue" name="Intäkter" fill="#0052FF" radius={[4, 4, 0, 0]} />
                   <Bar dataKey="costs" name="Kostnader" fill="#1e293b" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>

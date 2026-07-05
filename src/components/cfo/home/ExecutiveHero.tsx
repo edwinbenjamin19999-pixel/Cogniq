@@ -16,10 +16,10 @@ interface Props {
 }
 
 const TONE_CFG = {
-  strong: { ring: "from-emerald-400/30 to-[#3b82f6]/20", chip: "bg-[#E1F5EE] text-[#085041] dark:text-emerald-300", Icon: TrendingUp },
+  strong: { ring: "from-emerald-400/30 to-[#0052FF]/20", chip: "bg-[#E1F5EE] text-[#085041] dark:text-emerald-300", Icon: TrendingUp },
   watch: { ring: "from-amber-400/30 to-orange-400/20", chip: "bg-[#FAEEDA] text-[#7A5417] dark:text-amber-300", Icon: AlertTriangle },
   risk: { ring: "from-rose-400/30 to-orange-400/20", chip: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-rose-300", Icon: TrendingDown },
-  neutral: { ring: "from-[#3b82f6]/30 to-indigo-400/20", chip: "bg-[#EFF6FF] text-[#3b82f6] dark:text-[#3b82f6]", Icon: Sparkles },
+  neutral: { ring: "from-[#0052FF]/30 to-indigo-400/20", chip: "bg-[#EFF6FF] text-[#0052FF] dark:text-[#0052FF]", Icon: Sparkles },
 } as const;
 
 export function ExecutiveHero({ loading, headline, bullets = [], recommendation, confidence, tone = "neutral" }: Props) {
@@ -102,7 +102,7 @@ export function ExecutiveHero({ loading, headline, bullets = [], recommendation,
                 className="flex items-start gap-2.5 animate-fade-in"
                 style={{ animationDelay: `${i * 60}ms`, fontSize: 15, lineHeight: 1.8, color: "#1F2937" }}
               >
-                <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#3b82f6] shrink-0" />
+                <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#0052FF] shrink-0" />
                 <span>{b}</span>
               </li>
             ))}

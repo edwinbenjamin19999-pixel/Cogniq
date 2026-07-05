@@ -11,7 +11,7 @@ interface Props {
 }
 
 const AVATAR_PALETTE = [
-  "#0040CC", "#5DCAA5", "#EF9F27", "#85B7EB", "#A78BFA",
+  "#0040CC", "#5DCAA5", "#EF9F27", "#85B7EB", "#4D7CFF",
   "#F09595", "#22A06B", "#0C447C", "#412402", "#475569",
 ];
 

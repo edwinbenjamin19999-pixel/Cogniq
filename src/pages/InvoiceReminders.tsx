@@ -36,7 +36,7 @@ type Recommendation = {
 };
 
 const ACTION_META: Record<Recommendation["action"], { icon: typeof Mail; tone: string }> = {
-  remind1: { icon: Mail, tone: "bg-[#3b82f6] hover:bg-[#3b82f6] text-white" },
+  remind1: { icon: Mail, tone: "bg-[#0052FF] hover:bg-[#0052FF] text-white" },
   remind2: { icon: Mail, tone: "bg-amber-600 hover:bg-amber-700 text-white" },
   call: { icon: Phone, tone: "bg-blue-600 hover:bg-blue-700 text-white" },
   plan: { icon: CalendarClock, tone: "bg-violet-600 hover:bg-violet-700 text-white" },
@@ -242,24 +242,24 @@ const InvoiceReminders = () => {
           <div className="rounded-2xl bg-[#0F1F3D] border border-[#C8DDF5] p-6 shadow-lg">
             <div className="flex flex-col lg:flex-row lg:items-center gap-5">
               <div className="flex items-start gap-4 flex-1">
-                <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-blue-600 flex items-center justify-center shadow-lg shadow-[#3b82f6]/30 flex-shrink-0">
+                <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0052FF] to-blue-600 flex items-center justify-center shadow-lg shadow-[#0052FF]/30 flex-shrink-0">
                   <Sparkles className="h-6 w-6 text-white" />
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-bold tracking-[0.2em] text-[#3b82f6] uppercase">
+                    <span className="text-[10px] font-bold tracking-[0.2em] text-[#0052FF] uppercase">
                       AI Beslutsmotor
                     </span>
-                    <span className="h-1 w-1 rounded-full bg-[#3b82f6]/60" />
+                    <span className="h-1 w-1 rounded-full bg-[#0052FF]/60" />
                     <span className="text-[10px] text-slate-300">live-analys</span>
                   </div>
                   <p className="text-lg font-semibold text-white leading-tight">
                     {enriched.length} fordringar analyserade —{" "}
-                    <span className="text-[#3b82f6]">{formatSEK(Math.round(aiSummary.recoveryEst))}</span> bedöms återvinningsbart
+                    <span className="text-[#0052FF]">{formatSEK(Math.round(aiSummary.recoveryEst))}</span> bedöms återvinningsbart
                   </p>
                   <div className="flex flex-wrap gap-2 pt-1">
                     {aiSummary.remind > 0 && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#3b82f6]/15 border border-[#3b82f6]/30 text-[#3b82f6] text-xs font-medium">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#0052FF]/15 border border-[#0052FF]/30 text-[#0052FF] text-xs font-medium">
                         <Mail className="h-3 w-3" /> {aiSummary.remind} påminnelser räcker
                       </span>
                     )}
@@ -278,7 +278,7 @@ const InvoiceReminders = () => {
               </div>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-[#3b82f6] to-blue-600 hover:from-[#3b82f6] hover:to-blue-700 text-white shadow-lg shadow-[#3b82f6]/20 lg:flex-shrink-0"
+                className="bg-gradient-to-r from-[#0052FF] to-blue-600 hover:from-[#0052FF] hover:to-blue-700 text-white shadow-lg shadow-[#0052FF]/20 lg:flex-shrink-0"
                 onClick={() => toast.success(`${enriched.length} rekommenderade åtgärder köade för utförande`)}
               >
                 <Zap className="h-4 w-4 mr-2" />
@@ -353,10 +353,10 @@ const InvoiceReminders = () => {
                     {/* Right: AI recommendation + actions */}
                     <div className="p-5 bg-slate-50/60 dark:bg-slate-900/60">
                       <div className="flex items-start gap-2 mb-3">
-                        <Sparkles className="h-3.5 w-3.5 text-[#3b82f6] mt-0.5 flex-shrink-0" />
+                        <Sparkles className="h-3.5 w-3.5 text-[#0052FF] mt-0.5 flex-shrink-0" />
                         <div className="space-y-0.5 flex-1 min-w-0">
                           <div className="flex items-center gap-2">
-                            <span className="text-[10px] font-bold tracking-[0.15em] text-[#3b82f6] dark:text-[#1E3A5F] uppercase">
+                            <span className="text-[10px] font-bold tracking-[0.15em] text-[#0052FF] dark:text-[#1E3A5F] uppercase">
                               AI rekommenderar
                             </span>
                             <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-[#085041]">

@@ -132,7 +132,7 @@ const CustomerAvatar = ({ name }: { name: string }) => {
   const colors = [
     "from-violet-500 to-indigo-500", "from-emerald-500 to-blue-500",
     "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
-    "from-blue-500 to-[#3b82f6]", "from-fuchsia-500 to-purple-500",
+    "from-blue-500 to-[#0052FF]", "from-fuchsia-500 to-purple-500",
   ];
   const idx = name.charCodeAt(0) % colors.length;
   return (
@@ -911,7 +911,7 @@ const OutgoingARView = ({
   }, [list, searchQuery]);
 
   const segmentMeta: Record<OutgoingSegment, { label: string; dot: string; tone: "rose" | "amber" | "emerald" | "slate" | "cyan" }> = {
-    all: { label: "Alla utestående", dot: "bg-[#3b82f6]", tone: "cyan" },
+    all: { label: "Alla utestående", dot: "bg-[#0052FF]", tone: "cyan" },
     action: { label: "Behöver åtgärd", dot: "bg-rose-500", tone: "rose" },
     due_soon: { label: "Förfaller snart", dot: "bg-amber-500", tone: "amber" },
     overdue: { label: "Förfallna", dot: "bg-rose-500", tone: "rose" },

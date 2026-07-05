@@ -22,10 +22,10 @@ const TONE_STYLES = {
   },
   info: {
     bg: 'bg-[#0F1F3D] dark:from-blue-950/20 dark:to-blue-950/10',
-    border: 'border-blue-200/50 dark:border-[#3b82f6]/30',
-    accent: 'bg-[#3b82f6]',
-    iconBg: 'bg-[#EFF6FF] text-[#3b82f6] dark:bg-blue-900/30 dark:text-[#1E3A5F]',
-    title: 'text-[#3b82f6] dark:text-[#3b82f6]',
+    border: 'border-blue-200/50 dark:border-[#0052FF]/30',
+    accent: 'bg-[#0052FF]',
+    iconBg: 'bg-[#EFF6FF] text-[#0052FF] dark:bg-blue-900/30 dark:text-[#1E3A5F]',
+    title: 'text-[#0052FF] dark:text-[#0052FF]',
   },
   warning: {
     bg: 'bg-[#0F1F3D] dark:from-amber-950/20 dark:to-orange-950/10',

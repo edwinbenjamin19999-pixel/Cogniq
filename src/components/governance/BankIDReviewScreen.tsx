@@ -128,7 +128,7 @@ export const BankIDReviewScreen = ({ actionType,
 
         <Button
           className="w-full h-12 text-sm font-semibold"
-          style={{ backgroundColor: "#3b82f6", color: "#1a1a2e" }}
+          style={{ backgroundColor: "#0052FF", color: "#1a1a2e" }}
           disabled={!allChecked || signing}
           onClick={onSign}
         >

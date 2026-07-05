@@ -95,7 +95,7 @@ export function CostForecast({ monthlyData }: Props) {
                 dataKey="actual"
                 name="Faktisk kostnad"
                 fill="url(#areaFillTeal)"
-                stroke="#3b82f6"
+                stroke="#0052FF"
                 strokeWidth={2.5}
                 connectNulls={false}
                 activeDot={{ r: 6, fill: '#0d9488', strokeWidth: 3, stroke: '#0f172a' }}

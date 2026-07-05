@@ -18,7 +18,7 @@ export default function CompliancePage() {
       <main className="flex-1">
         <section className="pt-32 pb-12 bg-gradient-to-b from-slate-50 to-white">
           <div className="container mx-auto max-w-3xl px-6 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#0052FF]">
               <Shield className="w-3 h-3" />
               Regelefterlevnad
             </div>
@@ -36,7 +36,7 @@ export default function CompliancePage() {
             {SECTIONS.map((s) => (
               <div key={s.title} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
                 <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
-                  <s.icon className="w-5 h-5 text-[#3b82f6]" />
+                  <s.icon className="w-5 h-5 text-[#0052FF]" />
                 </div>
                 <h3 className="mt-4 font-semibold text-[#0F172A]">{s.title}</h3>
                 <p className="mt-2 text-sm text-[#64748b] leading-relaxed">{s.desc}</p>

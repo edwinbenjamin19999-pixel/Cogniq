@@ -24,9 +24,9 @@ export function BillingAssistant() { const { unbilled } = useUnbilledSummary();
   return (
     <div className="space-y-4 mt-4">
       {/* Summary banner */}
-      <div className="rounded-lg border border-[#3b82f6]/30 bg-[#3b82f6]/5 p-4">
+      <div className="rounded-lg border border-[#0052FF]/30 bg-[#0052FF]/5 p-4">
         <div className="flex items-start gap-2">
-          <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
+          <Sparkles className="h-4 w-4 text-[#0052FF] mt-0.5 flex-shrink-0" />
           <div className="space-y-1">
             <p className="text-sm font-medium">Dags att fakturera — AI har identifierat:</p>
             <p className="text-2xl font-bold">{formatKr(totalValue)}</p>
@@ -152,7 +152,7 @@ export function BillingAssistant() { const { unbilled } = useUnbilledSummary();
                           </Button>
                           <Button
                             size="sm"
-                            className="gap-1 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground"
+                            className="gap-1 bg-[#0052FF] hover:bg-[#0052FF]/90 text-foreground"
                             onClick={() => setReviewClient(u.client)}
                           >
                             Fakturera allt

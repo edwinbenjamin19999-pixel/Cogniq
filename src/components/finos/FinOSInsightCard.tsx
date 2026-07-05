@@ -95,7 +95,7 @@ export function FinOSInsightCard({ insight, dense = false, className }: Props) {
           {insight.evidence.map((e, i) => (
             <li key={i} className="flex items-center gap-2">
               {e.href ? (
-                <a href={e.href} className="underline underline-offset-2 hover:text-[#3b82f6]">{e.label}</a>
+                <a href={e.href} className="underline underline-offset-2 hover:text-[#0052FF]">{e.label}</a>
               ) : (
                 <span>{e.label}</span>
               )}

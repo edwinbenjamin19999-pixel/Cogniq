@@ -159,7 +159,7 @@ export function RegulatoryChat({ companyId }: Props) { const [messages, setMessa
                 <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                   <div
                     className={`max-w-[85%] rounded-lg px-3 py-2 ${ msg.role === "user"
-                        ? "bg-[#3b82f6] text-white"
+                        ? "bg-[#0052FF] text-white"
                         : "bg-card border"
                     }`}
                   >

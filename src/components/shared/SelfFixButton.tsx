@@ -110,7 +110,7 @@ export function SelfFixButton({
         <DialogContent className="max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Wand2 className="w-4 h-4 text-[#3b82f6]" />
+              <Wand2 className="w-4 h-4 text-[#0052FF]" />
               Självfix — {module}
             </DialogTitle>
             <DialogDescription>

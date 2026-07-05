@@ -80,7 +80,7 @@ export const MasterArticleTemplate = ({ article, canonicalPath }: Props) => {
               <ul className="mt-4 space-y-2">
                 {section.list.items.map((item, j) => (
                   <li key={j} className="flex items-start gap-2 leading-relaxed">
-                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3b82f6]" />
+                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0052FF]" />
                     <span>{item}</span>
                   </li>
                 ))}

@@ -103,8 +103,8 @@ export const AIActionCard = ({ action, onComplete }: Props) => {
       )}
     >
       <div className="flex items-start gap-2">
-        <div className="w-6 h-6 rounded-md bg-[#3b82f6]/15 flex items-center justify-center shrink-0 mt-0.5">
-          <Sparkles className="w-3.5 h-3.5 text-[#3b82f6]" />
+        <div className="w-6 h-6 rounded-md bg-[#0052FF]/15 flex items-center justify-center shrink-0 mt-0.5">
+          <Sparkles className="w-3.5 h-3.5 text-[#0052FF]" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="font-semibold text-foreground">{action.title}</div>
@@ -127,7 +127,7 @@ export const AIActionCard = ({ action, onComplete }: Props) => {
         <div className="flex gap-2 pt-1">
           <button
             onClick={execute}
-            className="flex-1 h-8 rounded-lg bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white font-medium flex items-center justify-center gap-1.5 transition-colors"
+            className="flex-1 h-8 rounded-lg bg-[#0052FF] hover:bg-[#0052FF]/90 text-white font-medium flex items-center justify-center gap-1.5 transition-colors"
           >
             <Check className="w-3.5 h-3.5" /> {action.confirmLabel ?? "Ja, gör det"}
           </button>
@@ -154,7 +154,7 @@ export const AIActionCard = ({ action, onComplete }: Props) => {
           {["send_reminder", "mark_invoice_paid", "post_journal", "periodize_cost"].includes(action.kind) && (
             <button
               onClick={() => toast.info("Åtgärden ångrad.")}
-              className="text-[#3b82f6] hover:underline inline-flex items-center gap-1"
+              className="text-[#0052FF] hover:underline inline-flex items-center gap-1"
             >
               <RotateCcw className="w-3 h-3" /> Ångra
             </button>

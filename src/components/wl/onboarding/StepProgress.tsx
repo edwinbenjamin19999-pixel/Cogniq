@@ -22,9 +22,9 @@ export function StepProgress({ current, steps }: Props) {
               <div
                 className={`h-7 w-7 rounded-full flex items-center justify-center text-[11px] font-semibold border transition-all ${
                   isActive
-                    ? "bg-[#3b82f6] text-white border-[#3b82f6] shadow-[0_0_0_4px_rgba(0,82,255,0.12)]"
+                    ? "bg-[#0052FF] text-white border-[#0052FF] shadow-[0_0_0_4px_rgba(0,82,255,0.12)]"
                     : isDone
-                    ? "bg-[#3b82f6] text-white border-[#3b82f6]"
+                    ? "bg-[#0052FF] text-white border-[#0052FF]"
                     : "bg-white text-slate-400 border-slate-200"
                 }`}
               >
@@ -41,7 +41,7 @@ export function StepProgress({ current, steps }: Props) {
             {i < steps.length - 1 && (
               <div
                 className={`h-px w-6 sm:w-10 transition-colors ${
-                  isDone ? "bg-[#3b82f6]" : "bg-slate-200"
+                  isDone ? "bg-[#0052FF]" : "bg-slate-200"
                 }`}
               />
             )}

@@ -290,7 +290,7 @@ const Assistant = () => {
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20 relative overflow-hidden">
       {/* Subtle background depth blobs */}
       <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-[#3b82f6]/[0.02] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-[#0052FF]/[0.02] rounded-full blur-3xl pointer-events-none" />
 
       <main className="container mx-auto px-4 py-6 max-w-[1400px] relative z-10">
 
@@ -467,15 +467,15 @@ const Assistant = () => {
                       {/* Secondary actions */}
                       <div className="grid grid-cols-3 gap-2">
                         <button onClick={() => fileInputRef.current?.click()} className="flex items-center justify-center gap-2 px-3 py-2 rounded-xl border border-border/30 bg-transparent hover:bg-[#EFF6FF] hover:border-[#C8DDF5] transition-all duration-150 group">
-                          <Receipt className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#3b82f6] dark:group-hover:text-[#1E3A5F] transition-colors" />
+                          <Receipt className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#0052FF] dark:group-hover:text-[#1E3A5F] transition-colors" />
                           <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Kvitto</span>
                         </button>
                         <button onClick={() => { setInput("Skapa en faktura"); textareaRef.current?.focus(); }} className="flex items-center justify-center gap-2 px-3 py-2 rounded-xl border border-border/30 bg-transparent hover:bg-[#EFF6FF] hover:border-[#C8DDF5] transition-all duration-150 group">
-                          <FileUp className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#3b82f6] dark:group-hover:text-[#1E3A5F] transition-colors" />
+                          <FileUp className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#0052FF] dark:group-hover:text-[#1E3A5F] transition-colors" />
                           <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Faktura</span>
                         </button>
                         <button onClick={() => { setInput("Registrera ett utlägg"); textareaRef.current?.focus(); }} className="flex items-center justify-center gap-2 px-3 py-2 rounded-xl border border-border/30 bg-transparent hover:bg-[#EFF6FF] hover:border-[#C8DDF5] transition-all duration-150 group">
-                          <Wallet className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#3b82f6] dark:group-hover:text-[#1E3A5F] transition-colors" />
+                          <Wallet className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#0052FF] dark:group-hover:text-[#1E3A5F] transition-colors" />
                           <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Utlägg</span>
                         </button>
                       </div>
@@ -644,7 +644,7 @@ const Assistant = () => {
                 )}
 
                 {/* Input container */}
-                <div className="rounded-2xl border border-border/40 bg-card shadow-lg focus-within:ring-2 focus-within:ring-[#3b82f6]/20 focus-within:border-[#C8DDF5] focus-within:shadow-[0_0_20px_rgba(0,198,255,0.08)] transition-all duration-200">
+                <div className="rounded-2xl border border-border/40 bg-card shadow-lg focus-within:ring-2 focus-within:ring-[#0052FF]/20 focus-within:border-[#C8DDF5] focus-within:shadow-[0_0_20px_rgba(0,198,255,0.08)] transition-all duration-200">
                   <div className="flex items-end gap-2 p-2">
                     <div className="flex items-center pb-1.5 pl-1">
                       <Sparkles className="w-4 h-4 text-primary/40" />

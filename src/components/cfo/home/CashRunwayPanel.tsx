@@ -40,7 +40,7 @@ export function CashRunwayPanel({ companyId }: Props) {
       <div className="p-5 md:p-6 border-b border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between gap-3 flex-wrap">
         <div className="flex items-center gap-2.5">
           <div className="h-8 w-8 rounded-lg bg-[#EFF6FF] flex items-center justify-center">
-            <Wallet className="h-4 w-4 text-[#3b82f6]" />
+            <Wallet className="h-4 w-4 text-[#0052FF]" />
           </div>
           <div>
             <h3 className="font-semibold tracking-tight">Kassa & runway</h3>

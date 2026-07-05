@@ -37,7 +37,7 @@ const TimelineBar = ({ schedule }: TimelineProps) => {
             ? "bg-[#1D9E75]"
             : p.status === "skipped"
               ? "bg-[#94A3B8]"
-              : "bg-[#3b82f6]/40";
+              : "bg-[#0052FF]/40";
         return (
           <div
             key={p.id}
@@ -157,7 +157,7 @@ const Interims = () => {
                 <SelectContent>{companies.map((c) => <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>)}</SelectContent>
               </Select>
             )}
-            <Button size="sm" onClick={() => setShowManual(true)} className="h-[34px] bg-[#3b82f6] hover:bg-[#0052FF]">
+            <Button size="sm" onClick={() => setShowManual(true)} className="h-[34px] bg-[#0052FF] hover:bg-[#0052FF]">
               <Plus className="w-4 h-4 mr-1" /> Ny periodisering
             </Button>
           </div>
@@ -300,7 +300,7 @@ const Interims = () => {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setShowManual(false)}>Avbryt</Button>
-            <Button onClick={handleManualSave} disabled={saving} className="bg-[#3b82f6] hover:bg-[#0052FF]">
+            <Button onClick={handleManualSave} disabled={saving} className="bg-[#0052FF] hover:bg-[#0052FF]">
               {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : "Skapa"}
             </Button>
           </DialogFooter>

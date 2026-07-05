@@ -19,8 +19,8 @@ export interface BureauBranding {
   isLoading: boolean;
 }
 
-const DEFAULT_PRIMARY = "#3b82f6";
-const DEFAULT_ACCENT = "#3b82f6";
+const DEFAULT_PRIMARY = "#0052FF";
+const DEFAULT_ACCENT = "#0052FF";
 
 // hex (#RRGGBB) → "h s% l%" string for CSS HSL var
 function hexToHslString(hex: string): string | null {

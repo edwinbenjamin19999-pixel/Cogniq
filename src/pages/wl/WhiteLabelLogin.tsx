@@ -26,7 +26,7 @@ const Inner = () => {
           <h1 className="text-2xl font-bold text-[#0F172A]">Workspace hittades inte</h1>
           <p className="text-[#64748B]">Den här arbetsytan finns inte eller är inte aktiv.</p>
           {!isCustomDomain && (
-            <a href="https://cogniq.se" className="inline-block text-sm font-semibold text-[#3b82f6] hover:underline">
+            <a href="https://cogniq.se" className="inline-block text-sm font-semibold text-[#0052FF] hover:underline">
               Gå till Cogniq →
             </a>
           )}

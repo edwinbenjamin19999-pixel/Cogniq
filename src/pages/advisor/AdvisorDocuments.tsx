@@ -52,7 +52,7 @@ function formatDate(iso: string): string {
 function StatusPill({ status }: { status: FirmDocument["status"] }) {
   const meta = {
     ready: { label: "Klar", icon: CheckCircle2, cls: "bg-[#E1F5EE] text-[#085041] border-[#BFE6D6]" },
-    analyzing: { label: "Analyserar", icon: Loader2, cls: "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]", spin: true },
+    analyzing: { label: "Analyserar", icon: Loader2, cls: "bg-[#EFF6FF] text-[#0052FF] border-[#C8DDF5]", spin: true },
     pending: { label: "I kö", icon: Clock, cls: "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]" },
     needs_review: { label: "Granska", icon: AlertTriangle, cls: "bg-[#FCE8E8] text-[#7A1A1A] border-[#F4C8C8]" },
   }[status];
@@ -181,7 +181,7 @@ const AdvisorDocuments = () => {
         />
         <div className="relative flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#3b82f6]/80 mb-1">
+            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#0052FF]/80 mb-1">
               Dokument & data · AI-koppat
             </p>
             <h1 className="text-2xl font-bold tracking-tight">Klientarkiv</h1>
@@ -376,16 +376,16 @@ const AdvisorDocuments = () => {
         className={cn(
           "fixed bottom-6 right-6 z-30 rounded-2xl border-2 border-dashed p-4 transition-all backdrop-blur-md max-w-[280px] shadow-xl",
           dragOver
-            ? "border-[#3b82f6] bg-blue-50/95 scale-105"
-            : "border-slate-300 bg-white/90 hover:border-[#3b82f6]/50",
-          uploadingCount > 0 && "border-[#3b82f6] bg-white",
+            ? "border-[#0052FF] bg-blue-50/95 scale-105"
+            : "border-slate-300 bg-white/90 hover:border-[#0052FF]/50",
+          uploadingCount > 0 && "border-[#0052FF] bg-white",
         )}
       >
         <div className="flex items-center gap-2.5">
           {uploadingCount > 0 ? (
-            <Loader2 className="h-5 w-5 text-[#3b82f6] animate-spin shrink-0" />
+            <Loader2 className="h-5 w-5 text-[#0052FF] animate-spin shrink-0" />
           ) : (
-            <Upload className="h-5 w-5 text-[#3b82f6] shrink-0" />
+            <Upload className="h-5 w-5 text-[#0052FF] shrink-0" />
           )}
           <div className="text-xs">
             <p className="font-semibold text-slate-900">
@@ -418,7 +418,7 @@ interface KpiProps {
 }
 function Kpi({ label, value, icon: Icon, accent, spin }: KpiProps) {
   const colorMap = {
-    cyan: "text-[#3b82f6]",
+    cyan: "text-[#0052FF]",
     amber: "text-amber-300",
     rose: "text-rose-300",
     default: "text-white/80",
@@ -461,8 +461,8 @@ function FolderCard({ folder, isActive, onSelect, onOpenClient, onRequest, onDro
       }}
       className={cn(
         "p-4 cursor-pointer transition-all hover:shadow-md hover:border-[#C8DDF5]",
-        isActive && "ring-2 ring-[#3b82f6] border-[#3b82f6]",
-        dragOver && "ring-2 ring-[#3b82f6] bg-[#EFF6FF]",
+        isActive && "ring-2 ring-[#0052FF] border-[#0052FF]",
+        dragOver && "ring-2 ring-[#0052FF] bg-[#EFF6FF]",
         folder.isMissingRecent && "border-amber-300/60",
       )}
     >
@@ -511,7 +511,7 @@ function FolderCard({ folder, isActive, onSelect, onOpenClient, onRequest, onDro
             e.stopPropagation();
             onOpenClient();
           }}
-          className="font-semibold text-[#3b82f6] hover:text-[#3b82f6] inline-flex items-center gap-0.5"
+          className="font-semibold text-[#0052FF] hover:text-[#0052FF] inline-flex items-center gap-0.5"
         >
           Öppna
           <ChevronRight className="h-3 w-3" />
@@ -561,7 +561,7 @@ function TimelineRow({ doc, onOpenClient }: TimelineRowProps) {
           )}
         </div>
         <div className="text-[11px] text-slate-500 flex items-center gap-2 flex-wrap">
-          <button type="button" onClick={onOpenClient} className="font-medium text-slate-700 hover:text-[#3b82f6]">
+          <button type="button" onClick={onOpenClient} className="font-medium text-slate-700 hover:text-[#0052FF]">
             {doc.client_name}
           </button>
           <span>·</span>
@@ -570,7 +570,7 @@ function TimelineRow({ doc, onOpenClient }: TimelineRowProps) {
             <>
               <span>·</span>
               <span className="inline-flex items-center gap-0.5">
-                <Sparkles className="h-2.5 w-2.5 text-[#3b82f6]" />
+                <Sparkles className="h-2.5 w-2.5 text-[#0052FF]" />
                 AI {Math.round(doc.ai_confidence * 100)}%
               </span>
             </>

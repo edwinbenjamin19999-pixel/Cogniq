@@ -72,19 +72,19 @@ export function ConsequenceBand({ kpis, monthlyBurn, onSeedScenario }: Props) {
       <div className="flex items-center gap-1.5 ml-auto">
         <button
           onClick={() => navigate('/cash-command')}
-          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#3b82f6] hover:text-[#3b82f6] inline-flex items-center gap-1"
+          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#0052FF] hover:text-[#0052FF] inline-flex items-center gap-1"
         >
           Cash Command <ArrowRight className="h-3 w-3" />
         </button>
         <button
           onClick={() => onSeedScenario?.('cost')}
-          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#3b82f6] hover:text-[#3b82f6]"
+          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#0052FF] hover:text-[#0052FF]"
         >
           Justera kostnader
         </button>
         <button
           onClick={() => onSeedScenario?.('pricing')}
-          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#3b82f6] hover:text-[#3b82f6]"
+          className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#0052FF] hover:text-[#0052FF]"
         >
           Höj priser
         </button>

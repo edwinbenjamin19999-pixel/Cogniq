@@ -27,7 +27,7 @@ export function IssueSummaryGrid({ findings, onFilterChange, activeFilter }: Iss
             className={cn(
               "rounded-xl border p-3 text-left transition-all",
               b.border, b.bg,
-              isActive ? "ring-2 ring-offset-1 ring-[#3b82f6] scale-[1.02]" : "hover:scale-[1.02]"
+              isActive ? "ring-2 ring-offset-1 ring-[#0052FF] scale-[1.02]" : "hover:scale-[1.02]"
             )}
           >
             <div className="flex items-center gap-2">

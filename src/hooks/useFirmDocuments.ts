@@ -216,7 +216,7 @@ export const CATEGORY_LABEL: Record<DocCategory, string> = {
 
 export const CATEGORY_COLOR: Record<DocCategory, string> = {
   invoice_incoming: "bg-[#FAEEDA] text-amber-700 border-[#F0DDB7]",
-  invoice_outgoing: "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]",
+  invoice_outgoing: "bg-[#EFF6FF] text-[#0052FF] border-[#C8DDF5]",
   receipt: "bg-[#F1F5F9] text-violet-700 border-[#E2E8F0]",
   bank_statement: "bg-[#EFF6FF] text-indigo-700 border-indigo-500/20",
   contract: "bg-slate-500/10 text-slate-700 border-slate-500/20",

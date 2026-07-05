@@ -156,7 +156,7 @@ export const BudgetTracking = ({ budgetId, companyId, fiscalYear }: BudgetTracki
               <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
               <Tooltip formatter={(v: number) => `${fmt(v)} kr`} />
               <Bar dataKey="budget" fill="hsl(var(--muted-foreground))" opacity={0.3} radius={[6, 6, 0, 0]} name="Budget" />
-              <Bar dataKey="utfall" fill="#3b82f6" radius={[6, 6, 0, 0]} name="Utfall" />
+              <Bar dataKey="utfall" fill="#0052FF" radius={[6, 6, 0, 0]} name="Utfall" />
             </BarChart>
           </ResponsiveContainer>
         </CardContent>

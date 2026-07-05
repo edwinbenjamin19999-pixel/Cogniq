@@ -93,12 +93,12 @@ export const ContractList = ({ contracts, loading, onSelect, onDelete }: Props) 
         const insight = getAiInsight(c);
         const insightCls = insight?.tone === 'risk' ? 'text-[#7A1A1A] dark:text-[#C73838]'
           : insight?.tone === 'warn' ? 'text-[#7A5417] dark:text-[#C28A2B]'
-          : 'text-[#3b82f6] dark:text-[#1E3A5F]';
+          : 'text-[#0052FF] dark:text-[#1E3A5F]';
 
         return (
           <Card
             key={c.id}
-            className={`group border-slate-200/60 border-l-[3px] ${accent} shadow-[0_1px_2px_rgba(15,23,42,0.04)] hover:bg-[#3b82f6]/[0.04] hover:border-[#C8DDF5] transition-colors cursor-pointer`}
+            className={`group border-slate-200/60 border-l-[3px] ${accent} shadow-[0_1px_2px_rgba(15,23,42,0.04)] hover:bg-[#0052FF]/[0.04] hover:border-[#C8DDF5] transition-colors cursor-pointer`}
             onClick={() => onSelect(c)}
           >
             <CardContent className="p-5">
@@ -121,7 +121,7 @@ export const ContractList = ({ contracts, loading, onSelect, onDelete }: Props) 
                     {c.customer?.name && <span>· {c.customer.name}</span>}
                     <span>· {intervalLabels[c.billing_interval] || c.billing_interval}</span>
                     {c.next_invoice_date && (
-                      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#EFF6FF] dark:bg-blue-950/30 text-[#3b82f6] dark:text-[#1E3A5F] border border-blue-200/60 dark:border-[#3b82f6]/40">
+                      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#EFF6FF] dark:bg-blue-950/30 text-[#0052FF] dark:text-[#1E3A5F] border border-blue-200/60 dark:border-[#0052FF]/40">
                         <TrendingUp className="h-3 w-3" />
                         Nästa intäkt {format(new Date(c.next_invoice_date), "d MMM", { locale: sv })} · {Math.round(c.total_amount).toLocaleString("sv-SE")} kr
                       </span>

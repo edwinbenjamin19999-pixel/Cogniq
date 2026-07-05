@@ -126,7 +126,7 @@ export function SBTSimulator({ currentCO2, co2Travel, co2Energy }: SBTSimulatorP
               <Tooltip formatter={(v: number) => `${v.toFixed(2)} ton CO₂`} />
               <ReferenceLine y={targetCO2} stroke="hsl(142, 76%, 36%)" strokeDasharray="6 3" label={{ value: "Mål", position: "right", fontSize: 11 }} />
               <Line type="monotone" dataKey="target" name="Mål (1.5°C)" stroke="hsl(142, 76%, 36%)" strokeWidth={2} dot={{ r: 4 }} />
-              <Line type="monotone" dataKey="actual" name="Prognos" stroke="#3b82f6" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="actual" name="Prognos" stroke="#0052FF" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 3 }} />
             </LineChart>
           </ResponsiveContainer>
 

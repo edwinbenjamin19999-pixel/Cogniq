@@ -35,7 +35,7 @@ interface Props {
 }
 
 const scenarios: { value: ForecastScenario; label: string; tone: string }[] = [
-  { value: "base", label: "Bas", tone: "bg-[#3b82f6]" },
+  { value: "base", label: "Bas", tone: "bg-[#0052FF]" },
   { value: "best_case", label: "Bästa", tone: "bg-emerald-500" },
   { value: "worst_case", label: "Sämsta", tone: "bg-rose-500" },
   { value: "ai_case", label: "AI", tone: "bg-violet-500" },
@@ -76,7 +76,7 @@ export function CashflowForecastPanel({
               className={cn(
                 "rounded-md px-2 py-1 font-medium transition-colors",
                 scenario === s.value
-                  ? "bg-background text-foreground shadow-sm ring-1 ring-[#3b82f6]/40"
+                  ? "bg-background text-foreground shadow-sm ring-1 ring-[#0052FF]/40"
                   : "text-muted-foreground hover:text-foreground",
               )}
             >

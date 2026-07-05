@@ -71,10 +71,10 @@ export function FirmProfitabilityAIPanel({ rows, onOpenClient }: Props) {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-5">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-xl bg-white/10 backdrop-blur flex items-center justify-center">
-              <Sparkles className="h-5 w-5 text-[#3b82f6]" />
+              <Sparkles className="h-5 w-5 text-[#0052FF]" />
             </div>
             <div>
-              <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#3b82f6]/80">
+              <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#0052FF]/80">
                 AI Profit Coach
               </p>
               <h3 className="text-base font-bold tracking-tight">Lönsamhetsanalys</h3>
@@ -87,7 +87,7 @@ export function FirmProfitabilityAIPanel({ rows, onOpenClient }: Props) {
             </div>
             <div>
               <p className="text-[10px] uppercase tracking-wider text-white/50 font-semibold">Premium</p>
-              <p className="text-xl font-bold text-[#3b82f6] tabular-nums">{premiumCount}</p>
+              <p className="text-xl font-bold text-[#0052FF] tabular-nums">{premiumCount}</p>
             </div>
           </div>
         </div>

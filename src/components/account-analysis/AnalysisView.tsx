@@ -69,7 +69,7 @@ export const AnalysisView = ({ details, account, accounts }: AnalysisViewProps) 
               <Tooltip formatter={(v: number) => formatSEK(v)} labelStyle={{ fontSize: 11 }} />
               <Line type="monotone" dataKey="debit" stroke="#10b981" strokeWidth={2} name="Debet" dot={{ r: 3 }} />
               <Line type="monotone" dataKey="credit" stroke="#f43f5e" strokeWidth={2} name="Kredit" dot={{ r: 3 }} />
-              <Line type="monotone" dataKey="net" stroke="#6366f1" strokeWidth={2} name="Netto" strokeDasharray="5 5" dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="net" stroke="#0040CC" strokeWidth={2} name="Netto" strokeDasharray="5 5" dot={{ r: 3 }} />
             </LineChart>
           </ResponsiveContainer>
         </div>

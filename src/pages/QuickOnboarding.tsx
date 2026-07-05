@@ -874,14 +874,14 @@ const QuickOnboarding = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white">
-        <Loader2 className="w-6 h-6 animate-spin text-[#3b82f6]" />
+        <Loader2 className="w-6 h-6 animate-spin text-[#0052FF]" />
       </div>
     );
   }
   if (!user) return null;
 
   const primaryBtn =
-    "w-full h-[52px] rounded-xl bg-[#3b82f6] hover:bg-[#3b82f6] text-white font-semibold text-[15px] " +
+    "w-full h-[52px] rounded-xl bg-[#0052FF] hover:bg-[#0052FF] text-white font-semibold text-[15px] " +
     "shadow-[0_2px_12px_rgba(0,82,255,0.25)] hover:shadow-[0_4px_16px_rgba(0,82,255,0.35)] " +
     "hover:-translate-y-px active:translate-y-0 transition-all duration-150 " +
     "disabled:opacity-60 disabled:hover:translate-y-0 flex items-center justify-center gap-2";
@@ -930,9 +930,9 @@ const QuickOnboarding = () => {
                 inputMode="numeric"
               />
               <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                {lookingUp && <Loader2 className="w-4 h-4 animate-spin text-[#3b82f6]" />}
+                {lookingUp && <Loader2 className="w-4 h-4 animate-spin text-[#0052FF]" />}
                 {lookupDone && !lookingUp && cleanOrg.length === 10 && (
-                  <CheckCircle2 className="w-4 h-4 text-[#3b82f6]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#0052FF]" />
                 )}
               </div>
             </div>
@@ -963,8 +963,8 @@ const QuickOnboarding = () => {
             {bvData && !alreadyRegistered && bvData.source === "bolagsverket" && (
               <div className="rounded-xl border border-slate-200 bg-slate-50/50 p-4 space-y-2">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#3b82f6]" />
-                  <span className="text-[12px] font-semibold uppercase tracking-wide text-[#3b82f6]">
+                  <ShieldCheck className="w-4 h-4 text-[#0052FF]" />
+                  <span className="text-[12px] font-semibold uppercase tracking-wide text-[#0052FF]">
                     Hämtat från Bolagsverket
                   </span>
                 </div>
@@ -1008,7 +1008,7 @@ const QuickOnboarding = () => {
                   type="button"
                   onClick={createTestAccountAndAdvance}
                   disabled={submitting}
-                  className="text-[13px] text-slate-500 hover:text-[#3b82f6] underline underline-offset-2 disabled:opacity-50"
+                  className="text-[13px] text-slate-500 hover:text-[#0052FF] underline underline-offset-2 disabled:opacity-50"
                 >
                   Hoppa över – skapa testkonto utan org-nummer
                 </button>
@@ -1025,8 +1025,8 @@ const QuickOnboarding = () => {
       {step === 2 && (
         <div key="s2" className="animate-fade-in">
           <div className="flex items-center gap-2 mb-2">
-            <FileText className="w-5 h-5 text-[#3b82f6]" />
-            <span className="text-[12px] font-semibold uppercase tracking-wide text-[#3b82f6]">
+            <FileText className="w-5 h-5 text-[#0052FF]" />
+            <span className="text-[12px] font-semibold uppercase tracking-wide text-[#0052FF]">
               Steg 2 av 6 · KYC-verifiering (penningtvättslagen)
             </span>
           </div>
@@ -1058,7 +1058,7 @@ const QuickOnboarding = () => {
                 Verksamhetsbeskrivning *
               </label>
               <textarea
-                className="w-full min-h-[80px] rounded-xl border border-slate-200 px-4 py-3 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/20 focus:border-[#3b82f6]"
+                className="w-full min-h-[80px] rounded-xl border border-slate-200 px-4 py-3 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#0052FF]/20 focus:border-[#0052FF]"
                 placeholder="Beskriv kort vad ditt företag gör"
                 value={kycDescription}
                 onChange={(e) => setKycDescription(e.target.value)}
@@ -1128,7 +1128,7 @@ const QuickOnboarding = () => {
               <label className="flex items-start gap-3 cursor-pointer">
                 <input
                   type="checkbox"
-                  className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#3b82f6]"
+                  className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#0052FF]"
                   checked={kycCashIntensive}
                   onChange={(e) => setKycCashIntensive(e.target.checked)}
                 />
@@ -1140,7 +1140,7 @@ const QuickOnboarding = () => {
               <label className="flex items-start gap-3 cursor-pointer">
                 <input
                   type="checkbox"
-                  className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#3b82f6]"
+                  className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#0052FF]"
                   checked={kycInternational}
                   onChange={(e) => setKycInternational(e.target.checked)}
                 />
@@ -1158,7 +1158,7 @@ const QuickOnboarding = () => {
                     type="button"
                     onClick={() => setKycPep("no")}
                     className={`flex-1 h-10 rounded-lg text-[13px] font-medium border transition-all ${
-                      kycPep === "no" ? "bg-[#3b82f6] text-white border-[#3b82f6]" : "bg-white text-slate-600 border-slate-200 hover:border-slate-300"
+                      kycPep === "no" ? "bg-[#0052FF] text-white border-[#0052FF]" : "bg-white text-slate-600 border-slate-200 hover:border-slate-300"
                     }`}
                   >
                     Nej
@@ -1178,7 +1178,7 @@ const QuickOnboarding = () => {
               <label className="flex items-start gap-3 cursor-pointer pt-1">
                 <input
                   type="checkbox"
-                  className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#3b82f6]"
+                  className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#0052FF]"
                   checked={kycSanctionsConfirmed}
                   onChange={(e) => setKycSanctionsConfirmed(e.target.checked)}
                 />
@@ -1214,8 +1214,8 @@ const QuickOnboarding = () => {
       {step === 3 && (
         <div key="s3" className="animate-fade-in">
           <div className="flex items-center gap-2 mb-2">
-            <Landmark className="w-5 h-5 text-[#3b82f6]" />
-            <span className="text-[12px] font-semibold uppercase tracking-wide text-[#3b82f6]">
+            <Landmark className="w-5 h-5 text-[#0052FF]" />
+            <span className="text-[12px] font-semibold uppercase tracking-wide text-[#0052FF]">
               Steg 3 av 6 · Bankkoppling
             </span>
           </div>
@@ -1389,8 +1389,8 @@ const QuickOnboarding = () => {
       {step === 5 && (
         <div key="s5" className="animate-fade-in">
           <div className="flex items-center gap-2 mb-2">
-            <FileSignature className="w-5 h-5 text-[#3b82f6]" />
-            <span className="text-[12px] font-semibold uppercase tracking-wide text-[#3b82f6]">
+            <FileSignature className="w-5 h-5 text-[#0052FF]" />
+            <span className="text-[12px] font-semibold uppercase tracking-wide text-[#0052FF]">
               Steg 5 av 6 · Signera allt med BankID
             </span>
           </div>
@@ -1405,8 +1405,8 @@ const QuickOnboarding = () => {
           {/* Firmatecknare från Bolagsverket */}
           <div className="rounded-xl border border-slate-200 bg-slate-50/50 p-4 mb-4">
             <div className="flex items-center gap-2 mb-2">
-              <ShieldCheck className="w-4 h-4 text-[#3b82f6]" />
-              <span className="text-[12px] font-semibold uppercase tracking-wide text-[#3b82f6]">
+              <ShieldCheck className="w-4 h-4 text-[#0052FF]" />
+              <span className="text-[12px] font-semibold uppercase tracking-wide text-[#0052FF]">
                 Firmatecknare enligt Bolagsverket
               </span>
             </div>
@@ -1473,7 +1473,7 @@ const QuickOnboarding = () => {
             </p>
             <p>
               Fullständigt avtal:{" "}
-              <a href="/legal/customer-agreement" target="_blank" rel="noreferrer" className="text-[#3b82f6] underline">
+              <a href="/legal/customer-agreement" target="_blank" rel="noreferrer" className="text-[#0052FF] underline">
                 cogniq.se/legal/customer-agreement
               </a>.
             </p>
@@ -1502,7 +1502,7 @@ const QuickOnboarding = () => {
           <label className="flex items-start gap-3 cursor-pointer mb-3">
             <input
               type="checkbox"
-              className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#3b82f6]"
+              className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#0052FF]"
               checked={signerIsAuthorized}
               onChange={(e) => setSignerIsAuthorized(e.target.checked)}
             />
@@ -1517,17 +1517,17 @@ const QuickOnboarding = () => {
           <label className="flex items-start gap-3 cursor-pointer mb-4">
             <input
               type="checkbox"
-              className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#3b82f6]"
+              className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#0052FF]"
               checked={agreementAccepted}
               onChange={(e) => setAgreementAccepted(e.target.checked)}
             />
             <span className="text-[13px] text-slate-700">
               Jag har läst och godkänner kundavtalet,{" "}
-              <a href="/legal/privacy" target="_blank" rel="noreferrer" className="text-[#3b82f6] underline">
+              <a href="/legal/privacy" target="_blank" rel="noreferrer" className="text-[#0052FF] underline">
                 integritetspolicyn
               </a>{" "}
               och{" "}
-              <a href="/legal/dpa" target="_blank" rel="noreferrer" className="text-[#3b82f6] underline">
+              <a href="/legal/dpa" target="_blank" rel="noreferrer" className="text-[#0052FF] underline">
                 personuppgiftsbiträdesavtalet
               </a>
               , samt KYC-deklarationen enligt penningtvättslagen.
@@ -1567,7 +1567,7 @@ const QuickOnboarding = () => {
                   value={coSignerMessage}
                   onChange={(e) => setCoSignerMessage(e.target.value)}
                   rows={2}
-                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-[13px] focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/30"
+                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-[13px] focus:outline-none focus:ring-2 focus:ring-[#0052FF]/30"
                 />
               </div>
             </div>
@@ -1618,8 +1618,8 @@ const QuickOnboarding = () => {
       {/* ============== Step 6 — Klar ============== */}
       {step === 6 && (
         <div key="s6" className="animate-fade-in">
-          <div className="w-14 h-14 rounded-full bg-[#3b82f6]/10 flex items-center justify-center mb-6">
-            <Check className="w-7 h-7 text-[#3b82f6]" strokeWidth={2.5} />
+          <div className="w-14 h-14 rounded-full bg-[#0052FF]/10 flex items-center justify-center mb-6">
+            <Check className="w-7 h-7 text-[#0052FF]" strokeWidth={2.5} />
           </div>
 
           <h2 className="text-[24px] font-bold tracking-tight text-[#0F172A]">
@@ -1642,7 +1642,7 @@ const QuickOnboarding = () => {
 
             <button
               onClick={goToMigration}
-              className="w-full h-[48px] rounded-xl text-[13px] font-medium text-slate-500 hover:text-[#3b82f6] hover:bg-slate-50 transition-all duration-150"
+              className="w-full h-[48px] rounded-xl text-[13px] font-medium text-slate-500 hover:text-[#0052FF] hover:bg-slate-50 transition-all duration-150"
             >
               Importera från Fortnox / Visma →
             </button>

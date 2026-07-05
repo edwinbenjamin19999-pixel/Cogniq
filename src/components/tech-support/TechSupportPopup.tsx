@@ -65,7 +65,7 @@ export function TechSupportPopup({ open, plan, onClose, onResult }: Props) {
             {plan.mode === "BLOCKED" ? (
               <ShieldAlert className="h-5 w-5 text-[#7A1A1A]" />
             ) : (
-              <Wrench className="h-5 w-5 text-[#3b82f6]" />
+              <Wrench className="h-5 w-5 text-[#0052FF]" />
             )}
             Teknisk support
           </DialogTitle>

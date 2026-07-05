@@ -79,7 +79,7 @@ export function PricingIntelligence() { const { rates, upsertRate } = useTimeRat
         <Card>
           <CardHeader className="pb-2">
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+              <Sparkles className="h-4 w-4 text-[#0052FF]" />
               <CardTitle className="text-base">Lönsamhet per kund (kr/h)</CardTitle>
             </div>
             <p className="text-xs text-muted-foreground mt-1">
@@ -142,7 +142,7 @@ export function PricingIntelligence() { const { rates, upsertRate } = useTimeRat
                       <p className="text-sm font-medium">
                         {rate.rate_label}
                         {rate.is_default && (
-                          <span className="ml-2 text-[10px] bg-[#3b82f6]/10 text-[#3b82f6] px-1.5 py-0.5 rounded-full font-semibold">
+                          <span className="ml-2 text-[10px] bg-[#0052FF]/10 text-[#0052FF] px-1.5 py-0.5 rounded-full font-semibold">
                             Standard
                           </span>
                         )}
@@ -156,7 +156,7 @@ export function PricingIntelligence() { const { rates, upsertRate } = useTimeRat
 
                   <div className="bg-accent/50 rounded-lg p-3 space-y-2">
                     <div className="flex items-center gap-1.5">
-                      <Sparkles className="h-3.5 w-3.5 text-[#3b82f6]" />
+                      <Sparkles className="h-3.5 w-3.5 text-[#0052FF]" />
                       <span className="text-xs font-medium text-muted-foreground">AI-analys</span>
                     </div>
 
@@ -219,7 +219,7 @@ export function PricingIntelligence() { const { rates, upsertRate } = useTimeRat
               <Switch checked={newDefault} onCheckedChange={setNewDefault} id="is-default-new" />
               <Label htmlFor="is-default-new" className="text-sm cursor-pointer">Standardpris</Label>
             </div>
-            <Button onClick={handleAdd} disabled={!newRate} className="gap-1.5 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground">
+            <Button onClick={handleAdd} disabled={!newRate} className="gap-1.5 bg-[#0052FF] hover:bg-[#0052FF]/90 text-foreground">
               <Plus className="h-4 w-4" />
               Lägg till
             </Button>

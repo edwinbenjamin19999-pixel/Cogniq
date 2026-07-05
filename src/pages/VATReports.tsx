@@ -387,7 +387,7 @@ const VATReports = () => {
             <section>
               <div className="flex items-center justify-between mb-3 px-1">
                 <h2 className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-muted-foreground">
-                  <Sparkles className="h-3.5 w-3.5 text-[#3b82f6]" />
+                  <Sparkles className="h-3.5 w-3.5 text-[#0052FF]" />
                   AI-insikter · Moms
                 </h2>
                 <span className="text-[11px] text-muted-foreground">{findings.length} fynd · sorterade efter allvar</span>

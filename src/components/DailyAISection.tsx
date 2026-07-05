@@ -42,7 +42,7 @@ export const DailyAISection = () => {
             style={{ fontSize: "clamp(28px, 4vw, 44px)", letterSpacing: "-1.5px" }}
           >
             Så här ser din ekonomi ut{" "}
-            <span className="bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#0052FF] to-[#0052FF] bg-clip-text text-transparent">
               med Cogniq
             </span>
           </h2>
@@ -77,13 +77,13 @@ export const DailyAISection = () => {
           <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory px-4 pb-3 scrollbar-hide">
             <div className="snap-center flex-shrink-0 w-[88%] rounded-xl border border-[rgba(0,82,255,0.25)] bg-[rgba(0,82,255,0.06)] p-5">
               <div className="flex items-center gap-2 mb-2">
-                <Lightbulb className="w-4 h-4 text-[#3b82f6]" />
-                <span className="text-[12px] font-semibold text-[#3b82f6] uppercase tracking-wider">Insikt</span>
+                <Lightbulb className="w-4 h-4 text-[#0052FF]" />
+                <span className="text-[12px] font-semibold text-[#0052FF] uppercase tracking-wider">Insikt</span>
               </div>
               <p className="text-[15px] text-white/85 leading-relaxed">
                 Marginal <span className="tabular-nums font-semibold">−5%</span> (<span className="tabular-nums">−3 200 kr/mån</span>). Rekommendation: justera pris på X.
               </p>
-              <button className="mt-3 text-[13px] font-semibold text-[#3b82f6]">Se varför →</button>
+              <button className="mt-3 text-[13px] font-semibold text-[#0052FF]">Se varför →</button>
             </div>
             <div className="snap-center flex-shrink-0 w-[88%] rounded-xl border border-amber-500/25 bg-amber-500/[0.06] p-5">
               <div className="flex items-center gap-2 mb-2">
@@ -106,13 +106,13 @@ export const DailyAISection = () => {
         >
           <div className="rounded-xl border border-[rgba(0,82,255,0.25)] bg-[rgba(0,82,255,0.06)] p-5">
             <div className="flex items-center gap-2 mb-2">
-              <Lightbulb className="w-4 h-4 text-[#3b82f6]" />
-              <span className="text-[12px] font-semibold text-[#3b82f6] uppercase tracking-wider">Insikt</span>
+              <Lightbulb className="w-4 h-4 text-[#0052FF]" />
+              <span className="text-[12px] font-semibold text-[#0052FF] uppercase tracking-wider">Insikt</span>
             </div>
             <p className="text-[14px] text-white/80 leading-relaxed">
               Marginal <span className="tabular-nums font-semibold">−5%</span> (<span className="tabular-nums">−3 200 kr/mån</span>). Rekommendation: justera pris på X.
             </p>
-            <button className="mt-3 text-[13px] font-semibold text-[#3b82f6] hover:text-[#3b82f6] transition-colors">
+            <button className="mt-3 text-[13px] font-semibold text-[#0052FF] hover:text-[#0052FF] transition-colors">
               Se varför →
             </button>
           </div>
@@ -134,7 +134,7 @@ export const DailyAISection = () => {
             showCards ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <span className="text-[13px] text-[#3b82f6] font-medium">AI analyserar varje transaktion</span>
+          <span className="text-[13px] text-[#0052FF] font-medium">AI analyserar varje transaktion</span>
           <span className="text-[13px] text-white/20">·</span>
           <span className="text-[13px] text-emerald-400/70 font-medium">Bokför automatiskt vid hög säkerhet</span>
           <span className="text-[13px] text-white/20">·</span>

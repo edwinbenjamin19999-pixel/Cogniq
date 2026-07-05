@@ -58,7 +58,7 @@ const SEVERITY_BADGE: Record<Severity, { label: string; cls: string; dot: string
   info: {
     label: "INFO",
     cls: "bg-blue-50 text-[#1E3A8A] border-blue-200",
-    dot: "bg-[#3b82f6]",
+    dot: "bg-[#0052FF]",
   },
 };
 

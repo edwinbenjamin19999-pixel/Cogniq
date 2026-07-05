@@ -89,12 +89,12 @@ export function ProjectDetailView({ project, onBack }: Props) { const { totalRev
       </div>
 
       {/* AI Insight Banner */}
-      <Card className={cn("border-l-4", costOverpacing ? "border-l-amber-500 bg-amber-50/50 dark:bg-amber-950/20" : "border-l-[#3b82f6] bg-[#3b82f6]/5")}>
+      <Card className={cn("border-l-4", costOverpacing ? "border-l-amber-500 bg-amber-50/50 dark:bg-amber-950/20" : "border-l-[#0052FF] bg-[#0052FF]/5")}>
         <CardContent className="py-3 px-4 flex items-center gap-3">
           {costOverpacing ? (
             <AlertTriangle className="h-5 w-5 text-[#7A5417] flex-shrink-0" />
           ) : (
-            <Sparkles className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
+            <Sparkles className="h-5 w-5 text-[#0052FF] flex-shrink-0" />
           )}
           <p className="text-sm font-medium">{getInsight()}</p>
         </CardContent>

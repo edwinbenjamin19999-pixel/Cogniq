@@ -61,7 +61,7 @@ export function WaterfallChart({ rows, onClick }: Props) {
         <ReferenceLine y={0} stroke="#cbd5e1" />
         <Bar dataKey="range" radius={[6, 6, 0, 0]} cursor="pointer" onClick={(d: any) => d.row && onClick?.(d.row)}>
           {data.map((d, i) => (
-            <Cell key={i} fill={d.type === "positive" ? "#10b981" : d.type === "negative" ? "#f43f5e" : "#3b82f6"} />
+            <Cell key={i} fill={d.type === "positive" ? "#10b981" : d.type === "negative" ? "#f43f5e" : "#0052FF"} />
           ))}
         </Bar>
       </BarChart>

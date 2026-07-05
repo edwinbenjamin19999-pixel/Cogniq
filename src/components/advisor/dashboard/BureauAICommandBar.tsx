@@ -139,7 +139,7 @@ export const BureauAICommandBar = () => {
         {thinking ? (
           <Loader2 className="h-4 w-4 text-white/60 animate-spin" />
         ) : (
-          <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+          <Sparkles className="h-4 w-4 text-[#0052FF]" />
         )}
         <input
           ref={inputRef}

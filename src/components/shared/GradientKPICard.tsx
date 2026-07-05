@@ -43,7 +43,7 @@ export const KPI_GRADIENTS = {
 export const KPI_ACCENT = {
   emerald: { border: "border-l-emerald-500", icon: "text-[#085041]", dot: "bg-emerald-500" },
   rose: { border: "border-l-rose-500", icon: "text-[#7A1A1A]", dot: "bg-rose-500" },
-  cyan: { border: "border-l-[#3b82f6]", icon: "text-[#3b82f6]", dot: "bg-[#3b82f6]" },
+  cyan: { border: "border-l-[#0052FF]", icon: "text-[#0052FF]", dot: "bg-[#0052FF]" },
   amber: { border: "border-l-amber-500", icon: "text-[#7A5417]", dot: "bg-amber-500" },
   slate: { border: "border-l-slate-400", icon: "text-slate-600", dot: "bg-slate-400" },
 } as const;

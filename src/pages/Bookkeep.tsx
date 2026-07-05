@@ -163,7 +163,7 @@ const Bookkeep = () => { const { user, loading } = useAuth();
                     width: 16,
                     height: 16,
                     borderRadius: 9999,
-                    background: "#3b82f6",
+                    background: "#0052FF",
                     color: "#0F172A",
                     fontWeight: 700,
                     fontSize: 11,

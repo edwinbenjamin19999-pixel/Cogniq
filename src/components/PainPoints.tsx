@@ -34,7 +34,7 @@ export const PainPoints = () => {
         {/* Section label */}
         <div className="flex items-center justify-center gap-2 mb-4">
           <svg
-            className="w-4 h-4 text-[#3b82f6]"
+            className="w-4 h-4 text-[#0052FF]"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={2}
@@ -46,7 +46,7 @@ export const PainPoints = () => {
               d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
             />
           </svg>
-          <span className="text-[11.5px] uppercase tracking-[0.12em] font-semibold text-[#3b82f6]">
+          <span className="text-[11.5px] uppercase tracking-[0.12em] font-semibold text-[#0052FF]">
             Vanliga utmaningar
           </span>
         </div>
@@ -65,7 +65,7 @@ export const PainPoints = () => {
               className="rounded-xl border border-[#e2e8f0] bg-white p-7 hover:border-[rgba(0,82,255,0.3)] hover:shadow-lg hover:-translate-y-[3px] transition-all duration-200 group"
             >
               <div className="w-[42px] h-[42px] rounded-lg bg-[#f8fafc] border border-[#e2e8f0] flex items-center justify-center mb-4">
-                <p.icon className="w-5 h-5 text-[#3b82f6]" />
+                <p.icon className="w-5 h-5 text-[#0052FF]" />
               </div>
               <h3 className="font-semibold text-[15px] text-[#0F172A] mb-1.5">
                 {p.title}

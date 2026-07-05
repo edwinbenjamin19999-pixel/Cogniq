@@ -230,7 +230,7 @@ export const DailyAssistantModal = () => { const [open, setOpen] = useState(fals
         <div className="px-6 pt-5 pb-6 flex flex-col items-center gap-3">
           <Button
             onClick={handleDismiss}
-            className="w-full h-11 text-sm font-semibold rounded-xl bg-[#3b82f6] text-white hover:bg-[#3b82f6]/90 transition-colors"
+            className="w-full h-11 text-sm font-semibold rounded-xl bg-[#0052FF] text-white hover:bg-[#0052FF]/90 transition-colors"
           >
             Sätt igång
             <ArrowRight className="ml-2 h-4 w-4" />

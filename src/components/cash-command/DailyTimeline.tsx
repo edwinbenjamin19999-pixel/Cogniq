@@ -28,7 +28,7 @@ interface Props {
 
 const KIND_COLOR: Record<EventMarker["kind"], string> = {
   payment: "#dc2626",
-  invoice: "#3b82f6",
+  invoice: "#0052FF",
   tax: "#7c3aed",
 };
 
@@ -73,13 +73,13 @@ export function DailyTimeline({ data, riskDate, events = [], onPointClick }: Pro
         <h3 className="text-sm font-semibold">Likviditet per dag</h3>
         <div className="flex items-center gap-3 text-[11px] text-muted-foreground">
           <span className="inline-flex items-center gap-1">
-            <span className="h-1.5 w-3 rounded-sm bg-[#3b82f6]" /> Saldo
+            <span className="h-1.5 w-3 rounded-sm bg-[#0052FF]" /> Saldo
           </span>
           <span className="inline-flex items-center gap-1">
             <span className="h-2 w-2 rounded-full bg-rose-600" /> Negativ kassa
           </span>
           <span className="inline-flex items-center gap-1">
-            <span className="h-2 w-2 rounded-full bg-[#3b82f6]" /> Inbetalning
+            <span className="h-2 w-2 rounded-full bg-[#0052FF]" /> Inbetalning
           </span>
           <span className="inline-flex items-center gap-1">
             <span className="h-2 w-2 rounded-full" style={{ background: KIND_COLOR.tax }} /> Skatt
@@ -97,8 +97,8 @@ export function DailyTimeline({ data, riskDate, events = [], onPointClick }: Pro
           >
             <defs>
               <linearGradient id="balFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.4} />
-                <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
+                <stop offset="5%" stopColor="#0052FF" stopOpacity={0.4} />
+                <stop offset="95%" stopColor="#0052FF" stopOpacity={0} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
@@ -172,7 +172,7 @@ export function DailyTimeline({ data, riskDate, events = [], onPointClick }: Pro
             <Area
               type="monotone"
               dataKey="balance"
-              stroke="#3b82f6"
+              stroke="#0052FF"
               strokeWidth={2}
               fill="url(#balFill)"
             />

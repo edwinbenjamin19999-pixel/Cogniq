@@ -136,8 +136,8 @@ export const CenteredHero = () => {
 
       <div className="relative z-10 w-full max-w-[720px] mx-auto px-4 sm:px-6 text-center">
         <div className="inline-flex items-center gap-2 mb-6 border border-[rgba(0,82,255,0.25)] rounded-full px-4 py-1.5 bg-[rgba(0,82,255,0.06)]">
-          <Sparkles className="w-3.5 h-3.5 text-[#3b82f6]" />
-          <span className="text-sm text-[#3b82f6] font-medium">
+          <Sparkles className="w-3.5 h-3.5 text-[#0052FF]" />
+          <span className="text-sm text-[#0052FF] font-medium">
             Early access — begränsat antal platser
           </span>
         </div>
@@ -148,13 +148,13 @@ export const CenteredHero = () => {
         >
           <span className="sm:hidden">
             AI bokför{" "}
-            <span className="bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#0052FF] to-[#0052FF] bg-clip-text text-transparent">
               åt dig
             </span>
           </span>
           <span className="hidden sm:inline">
             Bokföring som{" "}
-            <span className="bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#0052FF] to-[#0052FF] bg-clip-text text-transparent">
               redan är gjord
             </span>
           </span>
@@ -171,7 +171,7 @@ export const CenteredHero = () => {
         </p>
 
         <p className="hidden sm:block text-[16px] text-white/80 mb-3 max-w-[560px] mx-auto leading-relaxed">
-          Spara <span className="text-[#3b82f6] font-semibold tabular-nums">10–20 timmar</span> per månad — utan manuellt arbete
+          Spara <span className="text-[#0052FF] font-semibold tabular-nums">10–20 timmar</span> per månad — utan manuellt arbete
         </p>
 
         <p className="hidden sm:block text-[15px] text-white/40 italic mb-6 max-w-[560px] mx-auto leading-relaxed">
@@ -184,7 +184,7 @@ export const CenteredHero = () => {
               key={badge}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium text-white/60 bg-white/[0.03] border border-white/[0.08]"
             >
-              <Check className="w-3 h-3 text-[#3b82f6]" />
+              <Check className="w-3 h-3 text-[#0052FF]" />
               {badge}
             </span>
           ))}
@@ -218,7 +218,7 @@ export const CenteredHero = () => {
           <Button
             type="submit"
             disabled={loading}
-            className="w-full h-13 sm:h-12 text-[15px] font-semibold bg-gradient-to-r from-[#3b82f6] to-[#3b82f6] text-white hover:brightness-110 rounded-lg shadow-[0_4px_24px_rgba(0,82,255,0.4)] transition-all duration-200 hover:scale-[1.02]"
+            className="w-full h-13 sm:h-12 text-[15px] font-semibold bg-gradient-to-r from-[#0052FF] to-[#0052FF] text-white hover:brightness-110 rounded-lg shadow-[0_4px_24px_rgba(0,82,255,0.4)] transition-all duration-200 hover:scale-[1.02]"
           >
             <span>{loading ? "Skickar..." : "Sätt igång — AI börjar direkt"}</span>
             <ArrowRight className="w-4 h-4 ml-1.5" />
@@ -267,7 +267,7 @@ export const CenteredHero = () => {
                   <p className="text-[13px] text-white/80 font-mono">
                     {TYPING_TEXT.slice(0, typedChars)}
                     {demoPhase === "typing" && (
-                      <span className="inline-block w-[2px] h-[14px] bg-[#3b82f6] ml-0.5 align-middle animate-pulse" />
+                      <span className="inline-block w-[2px] h-[14px] bg-[#0052FF] ml-0.5 align-middle animate-pulse" />
                     )}
                   </p>
                 </div>
@@ -276,7 +276,7 @@ export const CenteredHero = () => {
               {/* Processing indicators */}
               {(demoPhase === "processing" || demoPhase === "responding" || demoPhase === "done") && (
                 <div className="flex items-start gap-2">
-                  <span className="text-[11px] text-[#3b82f6] font-medium w-8 mt-1">AI:</span>
+                  <span className="text-[11px] text-[#0052FF] font-medium w-8 mt-1">AI:</span>
                   <div className="flex-1 space-y-1.5">
                     {processingSteps.map((step, i) => (
                       <div
@@ -286,7 +286,7 @@ export const CenteredHero = () => {
                         }`}
                       >
                         {demoPhase === "processing" && i === visibleProcessing - 1 ? (
-                          <Loader2 className="w-3.5 h-3.5 text-[#3b82f6] flex-shrink-0 animate-spin" />
+                          <Loader2 className="w-3.5 h-3.5 text-[#0052FF] flex-shrink-0 animate-spin" />
                         ) : (
                           <span className="w-3.5 h-3.5 flex-shrink-0" />
                         )}
@@ -309,7 +309,7 @@ export const CenteredHero = () => {
 
                     {showFinal && (
                       <div className="mt-2 pt-2 border-t border-white/[0.06] space-y-1.5">
-                        <p className="text-[13px] font-medium text-[#3b82f6]">
+                        <p className="text-[13px] font-medium text-[#0052FF]">
                           Klart. Tog 2 sekunder. Du behöver inte göra något.
                         </p>
                         <p className="text-[11px] text-white/50">

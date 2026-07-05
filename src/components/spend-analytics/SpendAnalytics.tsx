@@ -31,7 +31,7 @@ import { useChartTheme } from "@/hooks/useChartTheme";
 const CLASS_CONFIG: Record<string, { label: string; color: string }> = { "4": { label: "Varor & material", color: "hsl(var(--primary))" },
   "5": { label: "Lokalkostnader", color: "#10b981" },
   "6": { label: "Övriga rörelsekostnader", color: "#f59e0b" },
-  "7": { label: "Personalkostnader", color: "#8b5cf6" },
+  "7": { label: "Personalkostnader", color: "#0052FF" },
 };
 
 const CATEGORY_MAP: Record<string, { label: string; benchmark: number; prefixes: string[] }> = { telecom: { label: "Telekommunikation", benchmark: 1200, prefixes: ["6210", "6211", "6212", "6214"] },
@@ -49,8 +49,8 @@ const CATEGORY_MAP: Record<string, { label: string; benchmark: number; prefixes:
 };
 
 const COLORS = [
-  "hsl(var(--primary))", "#0ea5e9", "#8b5cf6", "#f59e0b", "#10b981",
-  "#ef4444", "#ec4899", "#6366f1", "#14b8a6", "#f97316", "#84cc16", "#a855f7",
+  "hsl(var(--primary))", "#0ea5e9", "#0052FF", "#f59e0b", "#10b981",
+  "#ef4444", "#ec4899", "#0040CC", "#14b8a6", "#f97316", "#84cc16", "#a855f7",
 ];
 
 export interface ExpenseVendor { name: string;
@@ -376,7 +376,7 @@ export function SpendAnalytics({ companyId }: SpendAnalyticsProps) {
             <p className="text-2xl font-bold text-foreground mt-1">{categories.length}</p>
           </CardContent>
         </Card>
-        <Card className="border-l-[3px] border-l-[#8b5cf6]">
+        <Card className="border-l-[3px] border-l-[#0052FF]">
           <CardContent className="pt-5 pb-5">
             <p className="text-sm font-medium text-foreground/70">Unika leverantörer</p>
             <p className="text-2xl font-bold text-foreground mt-1">{allVendors.length}</p>
@@ -464,10 +464,10 @@ export function SpendAnalytics({ companyId }: SpendAnalyticsProps) {
                     <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} tickFormatter={v => `${Math.round(v / 1000)}k`} />
                     <Tooltip formatter={(v: number) => `${fmt(v)} kr`} />
                     <Legend content={<CustomLegend />} />
-                    <Area type="monotone" dataKey="varor" name="Varor" stackId="1" fill="#3b82f6" fillOpacity={0.6} stroke="#3b82f6" />
+                    <Area type="monotone" dataKey="varor" name="Varor" stackId="1" fill="#0052FF" fillOpacity={0.6} stroke="#0052FF" />
                     <Area type="monotone" dataKey="lokal" name="Lokaler" stackId="1" fill="#10b981" fillOpacity={0.6} stroke="#10b981" />
                     <Area type="monotone" dataKey="ovriga" name="Övriga" stackId="1" fill="#f59e0b" fillOpacity={0.6} stroke="#f59e0b" />
-                    <Area type="monotone" dataKey="personal" name="Personal" stackId="1" fill="#8b5cf6" fillOpacity={0.6} stroke="#8b5cf6" />
+                    <Area type="monotone" dataKey="personal" name="Personal" stackId="1" fill="#0052FF" fillOpacity={0.6} stroke="#0052FF" />
                   </AreaChart>
                 </ResponsiveContainer>
               </CardContent>
@@ -511,7 +511,7 @@ export function SpendAnalytics({ companyId }: SpendAnalyticsProps) {
                     <span className="text-xs font-semibold text-foreground w-[180px] truncate text-left">{v.name}</span>
                     <div className="flex-1 relative">
                       <div className="h-5 bg-muted/40 rounded overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-[#8b5cf6] to-[#8b5cf6]/70 rounded transition-all" style={{ width: `${Math.max(12, (v.amount / (topPayrollBars[0]?.amount || 1)) * 100)}%` }} />
+                        <div className="h-full bg-gradient-to-r from-[#0052FF] to-[#0052FF]/70 rounded transition-all" style={{ width: `${Math.max(12, (v.amount / (topPayrollBars[0]?.amount || 1)) * 100)}%` }} />
                       </div>
                       <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[11px] font-bold font-mono text-foreground whitespace-nowrap">{fmt(v.amount)} kr</span>
                     </div>
@@ -666,7 +666,7 @@ export function SpendAnalytics({ companyId }: SpendAnalyticsProps) {
                     <YAxis tick={AXIS_TICK} axisLine={false} tickLine={false} />
                     <Tooltip formatter={(v: number) => `${fmt(v)} kr`} />
                     <Legend content={<CustomLegend />} />
-                    <Bar dataKey="Ditt snitt" fill="#3b82f6" radius={[6, 6, 0, 0]} />
+                    <Bar dataKey="Ditt snitt" fill="#0052FF" radius={[6, 6, 0, 0]} />
                     <Bar dataKey="Branschsnitt" fill="hsl(var(--muted-foreground))" radius={[6, 6, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>

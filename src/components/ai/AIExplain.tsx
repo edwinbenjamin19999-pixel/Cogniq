@@ -42,7 +42,7 @@ function ExplanationBody({ what, why, confidence, ifWrong, action, extra }: Omit
     <div className="space-y-3 text-[13px] leading-[1.55]">
       {/* Header */}
       <div className="flex items-center gap-2 text-[11px] uppercase tracking-wider text-slate-500">
-        <Sparkles className="h-3 w-3 text-[#3b82f6]" />
+        <Sparkles className="h-3 w-3 text-[#0052FF]" />
         AI-förklaring
       </div>
 
@@ -84,7 +84,7 @@ function ExplanationBody({ what, why, confidence, ifWrong, action, extra }: Omit
       {action && (
         <button
           onClick={action.onClick}
-          className="w-full mt-1 inline-flex items-center justify-center gap-1.5 h-9 rounded-lg bg-[#3b82f6] text-white text-[13px] font-medium active:scale-[0.98] transition-transform"
+          className="w-full mt-1 inline-flex items-center justify-center gap-1.5 h-9 rounded-lg bg-[#0052FF] text-white text-[13px] font-medium active:scale-[0.98] transition-transform"
         >
           {action.label}
           <ArrowRight className="h-3.5 w-3.5" />
@@ -127,7 +127,7 @@ export const AIExplain = ({
       }}
       aria-label={label || "Varför?"}
       className={cn(
-        "inline-flex items-center gap-1 align-middle text-slate-400 hover:text-[#3b82f6] focus:outline-none focus:text-[#3b82f6] transition-colors",
+        "inline-flex items-center gap-1 align-middle text-slate-400 hover:text-[#0052FF] focus:outline-none focus:text-[#0052FF] transition-colors",
         variant === "link" && "text-[12px] underline decoration-dotted underline-offset-2",
         className,
         triggerClassName,

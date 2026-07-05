@@ -2,10 +2,10 @@ import { Shield, Lock, Building2, Landmark, BookOpen, FileCheck, Database, Shiel
 
 const trustItems = [
   { icon: Shield, name: "Direktkoppling Skatteverket", label: "Live", badgeClass: "bg-[#E1F5EE] text-[#1D9E75] border border-[#BFE6D6]" },
-  { icon: Lock, name: "BankID-verifierat", label: "Säker", badgeClass: "bg-[rgba(0,82,255,0.1)] text-[#3b82f6] border border-[rgba(0,82,255,0.2)]" },
+  { icon: Lock, name: "BankID-verifierat", label: "Säker", badgeClass: "bg-[rgba(0,82,255,0.1)] text-[#0052FF] border border-[rgba(0,82,255,0.2)]" },
   { icon: Building2, name: "Bolagsverket", label: "Integrerat", badgeClass: "bg-[#F1F5F9] text-[#1E3A5F] border border-[#E2E8F0]" },
   { icon: BookOpen, name: "K2 & K3", label: "Stöd", badgeClass: "bg-[#E1F5EE] text-[#1D9E75] border border-[#BFE6D6]" },
-  { icon: FileCheck, name: "Full revisionslogg", label: "Spårbart", badgeClass: "bg-[rgba(0,82,255,0.1)] text-[#3b82f6] border border-[rgba(0,82,255,0.2)]" },
+  { icon: FileCheck, name: "Full revisionslogg", label: "Spårbart", badgeClass: "bg-[rgba(0,82,255,0.1)] text-[#0052FF] border border-[rgba(0,82,255,0.2)]" },
   { icon: Database, name: "BAS 2026", label: "Kontoplan", badgeClass: "bg-[#F1F5F9] text-[#1E3A5F] border border-[#E2E8F0]" },
   { icon: ShieldCheck, name: "GDPR", label: "Dataskydd", badgeClass: "bg-[#E1F5EE] text-[#1D9E75] border border-[#BFE6D6]" },
   { icon: Shield, name: "Spårbar AI", label: "Verifierbar", badgeClass: "bg-[#F1F5F9] text-[#1E3A5F] border border-[#E2E8F0]" },

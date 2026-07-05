@@ -24,7 +24,7 @@ export const ExecutiveSummaryBlock = ({
     <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl p-10">
       <div className="flex items-center gap-2 mb-6">
         <Sparkles className="h-4 w-4 text-[#1E3A5F]" />
-        <span className="text-xs uppercase tracking-[0.2em] text-[#3b82f6]/80 font-medium">
+        <span className="text-xs uppercase tracking-[0.2em] text-[#0052FF]/80 font-medium">
           Executive Summary
         </span>
         <span className={cn(

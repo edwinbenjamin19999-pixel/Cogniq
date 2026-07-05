@@ -107,7 +107,7 @@ export const InventorySupplierComparison = () => { return (
                     </span>
                     <span className="text-xs text-muted-foreground">Ledtid: {s.leadTime} d</span>
                     {s.isBest && !s.isCurrent && (
-                      <Button size="sm" className="text-xs h-7 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
+                      <Button size="sm" className="text-xs h-7 bg-[#0052FF] hover:bg-[#0052FF]/90 text-white">
                         <ShoppingCart className="h-3 w-3 mr-1" />
                         Bestall från B
                       </Button>

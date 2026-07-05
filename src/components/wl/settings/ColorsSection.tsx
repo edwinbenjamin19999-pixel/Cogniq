@@ -75,7 +75,7 @@ export function ColorsSection({ draft, update }: Props) {
             <Input
               value={draft.accent_color || ""}
               onChange={(e) => update("accent_color", e.target.value || null)}
-              placeholder="#3b82f6"
+              placeholder="#0052FF"
               className="font-mono"
             />
           </div>

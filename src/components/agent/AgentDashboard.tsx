@@ -223,8 +223,8 @@ export function AgentDashboard({ companyId }: AgentDashboardProps) {
               <div className="flex items-center justify-between mb-3">
                 <p className="text-sm font-semibold flex items-center gap-2">
                   <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3b82f6] opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3b82f6]" />
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0052FF] opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0052FF]" />
                   </span>
                   AI-konfidensfördelning — Live
                 </p>

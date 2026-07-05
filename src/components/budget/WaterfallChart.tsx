@@ -24,7 +24,7 @@ export function WaterfallChart({ revenue, cogs, grossProfit, opex, ebit, tax, ne
     const items: { name: string; base: number; value: number; color: string; isTotal: boolean }[] = [];
     
     // Revenue (starts at 0)
-    items.push({ name: "Intäkter", base: 0, value: revenue, color: "#3b82f6", isTotal: false });
+    items.push({ name: "Intäkter", base: 0, value: revenue, color: "#0052FF", isTotal: false });
     
     // COGS (negative, drops from revenue)
     items.push({ name: "COGS", base: revenue + cogs, value: -cogs, color: "#fda4af", isTotal: false });

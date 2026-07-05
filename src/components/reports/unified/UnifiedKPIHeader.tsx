@@ -44,10 +44,10 @@ const TONE: Record<KpiCardProps["tone"], { shell: string; accent: string; icon: 
     value: "text-[#7A1A1A] dark:text-rose-300",
   },
   cyan: {
-    shell: "bg-card border-border ring-1 ring-[#3b82f6]/15 dark:ring-[#3b82f6]/20",
-    accent: "bg-[#3b82f6]/70 dark:bg-[#3b82f6]/80",
-    icon: "bg-[#EFF6FF] text-[#3b82f6] dark:text-[#1E3A5F]",
-    value: "text-[#3b82f6] dark:text-[#3b82f6]",
+    shell: "bg-card border-border ring-1 ring-[#0052FF]/15 dark:ring-[#0052FF]/20",
+    accent: "bg-[#0052FF]/70 dark:bg-[#0052FF]/80",
+    icon: "bg-[#EFF6FF] text-[#0052FF] dark:text-[#1E3A5F]",
+    value: "text-[#0052FF] dark:text-[#0052FF]",
   },
   indigo: {
     shell: "bg-card border-border ring-1 ring-indigo-500/15 dark:ring-indigo-400/20",

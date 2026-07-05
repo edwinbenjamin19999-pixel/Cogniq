@@ -95,7 +95,7 @@ export const AgeingAnalysis = ({ companyId, type }: AgeingProps) => {
   if (loading) {
     return (
       <div className="py-12 flex items-center justify-center">
-        <Loader2 className="w-6 h-6 animate-spin text-[#3b82f6]" />
+        <Loader2 className="w-6 h-6 animate-spin text-[#0052FF]" />
       </div>
     );
   }

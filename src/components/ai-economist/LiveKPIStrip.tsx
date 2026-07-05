@@ -9,7 +9,7 @@ function fmtSEK(n: number) {
 type Tone = "positive" | "negative" | "warning" | "neutral";
 
 const toneStyles: Record<Tone, { value: string; border: string; accent: string }> = {
-  positive: { value: "text-[#3b82f6]", border: "border-l-2 border-[#3b82f6]/40", accent: "bg-[#3b82f6]" },
+  positive: { value: "text-[#0052FF]", border: "border-l-2 border-[#0052FF]/40", accent: "bg-[#0052FF]" },
   negative: { value: "text-red-400", border: "border-l-2 border-red-400/40", accent: "bg-red-400" },
   warning:  { value: "text-yellow-400", border: "border-l-2 border-yellow-400/40", accent: "bg-yellow-400" },
   neutral:  { value: "text-white/60", border: "border-l-2 border-white/10", accent: "bg-[#0040CC]" },

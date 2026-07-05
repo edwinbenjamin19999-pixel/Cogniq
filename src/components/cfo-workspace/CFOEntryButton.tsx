@@ -24,8 +24,8 @@ export const CFOEntryButton = ({ context, label = "Diskutera med AI CFO", varian
       variant={variant}
       size={size}
       className={cn(
-        "gap-2 border-[#C8DDF5] hover:border-[#3b82f6] bg-[#0F1F3D]",
-        "hover:from-[#3b82f6]/15 hover:to-purple-500/15 text-[#3b82f6] dark:text-[#3b82f6]",
+        "gap-2 border-[#C8DDF5] hover:border-[#0052FF] bg-[#0F1F3D]",
+        "hover:from-[#0052FF]/15 hover:to-purple-500/15 text-[#0052FF] dark:text-[#0052FF]",
         className,
       )}
     >

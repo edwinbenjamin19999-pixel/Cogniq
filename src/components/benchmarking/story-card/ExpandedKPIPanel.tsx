@@ -76,7 +76,7 @@ export function ExpandedKPIPanel({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="rounded-xl border bg-muted/20 p-4">
           <div className="flex items-center gap-2 mb-3">
-            <TrendingUp className="h-3.5 w-3.5 text-[#3b82f6]" />
+            <TrendingUp className="h-3.5 w-3.5 text-[#0052FF]" />
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Percentil över tid
             </p>
@@ -110,7 +110,7 @@ export function ExpandedKPIPanel({
 
         <div className="rounded-xl border bg-muted/20 p-4">
           <div className="flex items-center gap-2 mb-3">
-            <BarChart3 className="h-3.5 w-3.5 text-[#3b82f6]" />
+            <BarChart3 className="h-3.5 w-3.5 text-[#0052FF]" />
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Branschfördelning
             </p>
@@ -157,8 +157,8 @@ export function ExpandedKPIPanel({
       {deepDive.length > 0 && (
         <div className="rounded-xl border bg-gradient-to-br from-blue-50/60 to-transparent dark:from-blue-950/20 p-4 space-y-2">
           <div className="flex items-center gap-2 mb-1">
-            <Lightbulb className="h-3.5 w-3.5 text-[#3b82f6]" />
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#3b82f6] dark:text-[#1E3A5F]">
+            <Lightbulb className="h-3.5 w-3.5 text-[#0052FF]" />
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#0052FF] dark:text-[#1E3A5F]">
               AI-förklaring
             </p>
           </div>

@@ -267,7 +267,7 @@ const Auth = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white">
-        <Loader2 className="w-6 h-6 animate-spin text-[#3b82f6]" />
+        <Loader2 className="w-6 h-6 animate-spin text-[#0052FF]" />
       </div>
     );
   }
@@ -325,7 +325,7 @@ const Auth = () => {
         <button
           type="button"
           onClick={onToggle}
-          className="absolute inset-y-0 right-0 flex h-full w-12 items-center justify-center text-slate-400 transition-colors hover:text-[#3b82f6]"
+          className="absolute inset-y-0 right-0 flex h-full w-12 items-center justify-center text-slate-400 transition-colors hover:text-[#0052FF]"
           aria-label={visible ? "Dölj lösenord" : "Visa lösenord"}
         >
           <Icon className="h-4 w-4" />
@@ -371,7 +371,7 @@ const Auth = () => {
               <button
                 type="button"
                 onClick={() => setMode("reset")}
-                className="text-[13px] text-slate-500 hover:text-[#3b82f6] transition-colors"
+                className="text-[13px] text-slate-500 hover:text-[#0052FF] transition-colors"
               >
                 Glömt lösenord?
               </button>
@@ -385,7 +385,7 @@ const Auth = () => {
           <div className="mt-8 text-center">
             <button
               onClick={() => setMode("signup")}
-              className="text-[13px] text-slate-600 hover:text-[#3b82f6] transition-colors font-medium"
+              className="text-[13px] text-slate-600 hover:text-[#0052FF] transition-colors font-medium"
             >
               Skapa konto →
             </button>
@@ -433,7 +433,7 @@ const Auth = () => {
           <div className="mt-8 text-center">
             <button
               onClick={() => setMode("signin")}
-              className="text-[13px] text-slate-600 hover:text-[#3b82f6] transition-colors font-medium"
+              className="text-[13px] text-slate-600 hover:text-[#0052FF] transition-colors font-medium"
             >
               Har du redan konto? Logga in
             </button>
@@ -449,7 +449,7 @@ const Auth = () => {
           <div className="mb-8">
             <button
               onClick={() => setMode("signin")}
-              className="text-[13px] text-slate-500 hover:text-[#3b82f6] transition-colors mb-6"
+              className="text-[13px] text-slate-500 hover:text-[#0052FF] transition-colors mb-6"
             >
               ← Tillbaka
             </button>

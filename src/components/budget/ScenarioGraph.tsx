@@ -118,14 +118,14 @@ export function ScenarioGraph({ drivers, actualEbit, budgetEbit, scenarioPatch, 
               )}
               <Area type="monotone" dataKey="actual" stroke="#0f172a" fill="#0f172a" fillOpacity={0.05} strokeWidth={2} name="Utfall" />
               <Line type="monotone" dataKey="budget" stroke="#94a3b8" strokeDasharray="4 3" strokeWidth={1.5} dot={false} name="Budget" />
-              <Line type="monotone" dataKey="forecast" stroke="#3b82f6" strokeWidth={2} dot={false} name="Prognos AI" />
+              <Line type="monotone" dataKey="forecast" stroke="#0052FF" strokeWidth={2} dot={false} name="Prognos AI" />
               <Line type="monotone" dataKey="scenario" stroke="#f59e0b" strokeWidth={2} dot={false} name="Scenario" />
             </ComposedChart>
           </ResponsiveContainer>
           <div className="flex flex-wrap items-center gap-3 text-[10px] text-slate-600 -mt-1">
             <Legend swatch="#0f172a" label="Utfall" />
             <Legend swatch="#94a3b8" label="Budget" dashed />
-            <Legend swatch="#3b82f6" label="Prognos AI" />
+            <Legend swatch="#0052FF" label="Prognos AI" />
             <Legend swatch="#f59e0b" label="Scenario" />
           </div>
         </div>

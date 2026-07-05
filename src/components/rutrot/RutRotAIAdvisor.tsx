@@ -73,10 +73,10 @@ export function RutRotAIAdvisor({ settings }: { settings: RutRotSettings }) { co
   return (
     <div className="space-y-4 mt-4">
       {/* Current limits info */}
-      <Card className="border-l-4 border-l-[#3b82f6]">
+      <Card className="border-l-4 border-l-[#0052FF]">
         <CardContent className="p-4 space-y-3">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+            <Sparkles className="h-4 w-4 text-[#0052FF]" />
             <p className="text-sm font-medium">Gällande regler {year}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -106,7 +106,7 @@ export function RutRotAIAdvisor({ settings }: { settings: RutRotSettings }) { co
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-base flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+            <Sparkles className="h-4 w-4 text-[#0052FF]" />
             Vanliga frågor — AI-rådgivare
           </CardTitle>
         </CardHeader>

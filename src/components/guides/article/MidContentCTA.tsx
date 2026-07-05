@@ -16,7 +16,7 @@ export const MidContentCTA = ({
     <div className="flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-8">
       <div className="flex items-start gap-4 flex-1">
         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EFF6FF]">
-          <Sparkles className="w-5 h-5 text-[#3b82f6]" />
+          <Sparkles className="w-5 h-5 text-[#0052FF]" />
         </div>
         <div className="flex-1">
           <div className="text-[17px] font-semibold text-[#0F172A] tracking-tight">Vill du slippa detta manuellt?</div>

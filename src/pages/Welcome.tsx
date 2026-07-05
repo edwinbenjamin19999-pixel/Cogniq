@@ -258,7 +258,7 @@ const WelcomePage = () => {
     <div className="min-h-screen bg-[#FAFBFC]">
       <div className="max-w-2xl mx-auto px-6 py-12">
         <div className="flex items-center gap-2 mb-8">
-          <div className="h-8 w-8 rounded-lg bg-[#3b82f6] flex items-center justify-center text-white font-bold text-xs">C</div>
+          <div className="h-8 w-8 rounded-lg bg-[#0052FF] flex items-center justify-center text-white font-bold text-xs">C</div>
           <span className="text-sm font-semibold text-slate-900">Cogniq</span>
           {saving && <Loader2 className="h-3.5 w-3.5 animate-spin text-slate-400 ml-2" />}
         </div>
@@ -268,7 +268,7 @@ const WelcomePage = () => {
         {/* STEP 1 */}
         {step === 1 && (
           <Card className="p-10 border-slate-100 shadow-sm">
-            <div className="flex items-center gap-2 mb-4 text-[#3b82f6]">
+            <div className="flex items-center gap-2 mb-4 text-[#0052FF]">
               <Sparkles className="h-5 w-5" />
               <span className="text-xs uppercase tracking-wider font-medium">Aktivering</span>
             </div>
@@ -276,7 +276,7 @@ const WelcomePage = () => {
             <p className="text-slate-600 leading-relaxed mb-8">
               Ju mer du använder Cogniq, desto smartare blir den. Vi lär oss ditt företag automatiskt.
             </p>
-            <Button onClick={goNext} className="bg-[#3b82f6] hover:bg-[#0052FF] text-white px-6">
+            <Button onClick={goNext} className="bg-[#0052FF] hover:bg-[#0052FF] text-white px-6">
               Kom igång <ArrowRight className="h-4 w-4 ml-1" />
             </Button>
           </Card>
@@ -348,7 +348,7 @@ const WelcomePage = () => {
         {/* STEP 3 */}
         {step === 3 && (
           <Card className="p-8 border-slate-100 shadow-sm">
-            <div className="flex items-center gap-2 mb-1"><Landmark className="h-4 w-4 text-[#3b82f6]" />
+            <div className="flex items-center gap-2 mb-1"><Landmark className="h-4 w-4 text-[#0052FF]" />
               <h2 className="text-xl font-medium text-slate-900">Anslut din bank</h2>
             </div>
             <p className="text-sm text-slate-500 mb-6">Högsta prioritet — utan bankdata kan AI inte matcha transaktioner automatiskt.</p>
@@ -372,7 +372,7 @@ const WelcomePage = () => {
         {/* STEP 4 */}
         {step === 4 && (
           <Card className="p-8 border-slate-100 shadow-sm">
-            <div className="flex items-center gap-2 mb-1"><FileText className="h-4 w-4 text-[#3b82f6]" />
+            <div className="flex items-center gap-2 mb-1"><FileText className="h-4 w-4 text-[#0052FF]" />
               <h2 className="text-xl font-medium text-slate-900">Importera historisk data</h2>
             </div>
             <p className="text-sm text-slate-500 mb-6">Med historisk data kan jag direkt börja lära mig ditt bokföringsmönster.</p>
@@ -385,7 +385,7 @@ const WelcomePage = () => {
                 const f = e.dataTransfer.files?.[0]; if (f) handleSieFile(f);
               }}
               onClick={() => fileInputRef.current?.click()}
-              className={`rounded-xl border-2 border-dashed p-8 text-center cursor-pointer transition ${dragOver ? "border-[#3b82f6] bg-blue-50/50" : "border-slate-200 hover:border-slate-300"}`}
+              className={`rounded-xl border-2 border-dashed p-8 text-center cursor-pointer transition ${dragOver ? "border-[#0052FF] bg-blue-50/50" : "border-slate-200 hover:border-slate-300"}`}
             >
               {parsing ? (
                 <div className="flex flex-col items-center gap-2 text-slate-500"><Loader2 className="h-5 w-5 animate-spin" /><span className="text-sm">Läser SIE-fil…</span></div>
@@ -407,7 +407,7 @@ const WelcomePage = () => {
                 <div className="text-sm text-slate-900">
                   Jag hittade <span className="font-semibold">{sieSummary.entries}</span> verifikationer från <span className="font-semibold">{sieSummary.period}</span>. Vill du importera dessa?
                 </div>
-                <Button onClick={importSie} className="mt-3 bg-[#3b82f6] hover:bg-[#0052FF] text-white">
+                <Button onClick={importSie} className="mt-3 bg-[#0052FF] hover:bg-[#0052FF] text-white">
                   Importera <ArrowRight className="h-4 w-4 ml-1" />
                 </Button>
               </div>
@@ -448,7 +448,7 @@ const WelcomePage = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-8 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20 p-4">
+            <div className="mt-8 rounded-lg bg-[#0052FF]/5 border border-[#0052FF]/20 p-4">
               <div className="text-sm text-slate-900 font-medium">Allt klart. Här är din Cogniq.</div>
               <div className="text-xs text-slate-500 mt-1">Du kan ändra dashboardlayouten när som helst.</div>
             </div>
@@ -468,22 +468,22 @@ const WelcomePage = () => {
             )}
             {step === 1 && null /* CTA inside card */}
             {step === 2 && (
-              <Button onClick={saveCompanyAndNext} disabled={saving} className="bg-[#3b82f6] hover:bg-[#0052FF] text-white">
+              <Button onClick={saveCompanyAndNext} disabled={saving} className="bg-[#0052FF] hover:bg-[#0052FF] text-white">
                 Fortsätt <ArrowRight className="h-4 w-4 ml-1" />
               </Button>
             )}
             {step === 3 && (
-              <Button onClick={goNext} disabled={saving} className="bg-[#3b82f6] hover:bg-[#0052FF] text-white">
+              <Button onClick={goNext} disabled={saving} className="bg-[#0052FF] hover:bg-[#0052FF] text-white">
                 {bankConnected ? "Fortsätt" : "Fortsätt utan bank"} <ArrowRight className="h-4 w-4 ml-1" />
               </Button>
             )}
             {step === 4 && !sieSummary && (
-              <Button onClick={goNext} disabled={saving} className="bg-[#3b82f6] hover:bg-[#0052FF] text-white">
+              <Button onClick={goNext} disabled={saving} className="bg-[#0052FF] hover:bg-[#0052FF] text-white">
                 Fortsätt <ArrowRight className="h-4 w-4 ml-1" />
               </Button>
             )}
             {step === 5 && (
-              <Button onClick={finish} disabled={saving} className="bg-[#3b82f6] hover:bg-[#0052FF] text-white">
+              <Button onClick={finish} disabled={saving} className="bg-[#0052FF] hover:bg-[#0052FF] text-white">
                 Öppna dashboarden <ArrowRight className="h-4 w-4 ml-1" />
               </Button>
             )}

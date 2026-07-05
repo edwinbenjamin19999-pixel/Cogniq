@@ -410,7 +410,7 @@ export function Predictive90Forecast({ companyId }: Props) {
                 }} />
                 <Bar dataKey="inflows" fill="#22C55E" stackId="flow" />
                 <Bar dataKey="outflows" fill="#EF4444" stackId="flow" />
-                <Line type="monotone" dataKey="balance" stroke="#3b82f6" strokeWidth={2} dot={false} />
+                <Line type="monotone" dataKey="balance" stroke="#0052FF" strokeWidth={2} dot={false} />
               </ComposedChart>
             </ResponsiveContainer>
           </div>

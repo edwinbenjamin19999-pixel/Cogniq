@@ -71,8 +71,8 @@ export const InventorySmartPurchaseOrder = () => { const [selectedOrders, setSel
   return (
     <div className="space-y-4">
       {/* Summary */}
-      <div className="flex items-start gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20">
-        <Sparkles className="h-4 w-4 text-[#3b82f6] mt-0.5 flex-shrink-0" />
+      <div className="flex items-start gap-2 p-3 rounded-lg bg-[#0052FF]/5 border border-[#0052FF]/20">
+        <Sparkles className="h-4 w-4 text-[#0052FF] mt-0.5 flex-shrink-0" />
         <div className="text-sm">
           <p className="font-medium">AI föreslår konsoliderade inköpsordrar</p>
           <p className="text-xs text-muted-foreground mt-1">
@@ -84,7 +84,7 @@ export const InventorySmartPurchaseOrder = () => { const [selectedOrders, setSel
 
       {/* Suggested consolidated orders */}
       {suggestedOrders.map((order, idx) => (
-        <Card key={idx} className={selectedOrders.has(idx) ? "border-[#3b82f6]/50 ring-1 ring-[#3b82f6]/20" : ""}>
+        <Card key={idx} className={selectedOrders.has(idx) ? "border-[#0052FF]/50 ring-1 ring-[#0052FF]/20" : ""}>
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -140,7 +140,7 @@ export const InventorySmartPurchaseOrder = () => { const [selectedOrders, setSel
                 Frakt: {order.shippingCost === 0 ? "0 kr" : `${order.shippingCost} kr`}
                 {order.shippingSaved > 0 && ` (sparar ${order.shippingSaved} kr vs separat)`}
               </p>
-              <Button size="sm" className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground gap-1.5">
+              <Button size="sm" className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-foreground gap-1.5">
                 <Package className="h-3.5 w-3.5" />
                 Skicka inköpsorder
               </Button>

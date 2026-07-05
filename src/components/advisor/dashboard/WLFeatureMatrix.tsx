@@ -65,7 +65,7 @@ const FEATURES: FeatureRow[] = [
 
 const CATEGORY_TONE: Record<FeatureRow["category"], string> = {
   Bokföring: "bg-slate-100 text-slate-700",
-  Rapport: "bg-[#EFF6FF] text-[#3b82f6]",
+  Rapport: "bg-[#EFF6FF] text-[#0052FF]",
   Skatt: "bg-[#FAEEDA] text-[#7A5417]",
   Lön: "bg-[#E1F5EE] text-[#085041]",
   Fakturor: "bg-[#EFF6FF] text-blue-700",
@@ -118,7 +118,7 @@ export const WLFeatureMatrix = () => {
             key={f.tab}
             disabled={!targetClientId}
             onClick={() => open(f.tab)}
-            className="text-left rounded-xl border border-slate-200 bg-white px-3 py-2.5 hover:border-[#3b82f6] hover:bg-blue-50/30 disabled:opacity-50 disabled:cursor-not-allowed transition group"
+            className="text-left rounded-xl border border-slate-200 bg-white px-3 py-2.5 hover:border-[#0052FF] hover:bg-blue-50/30 disabled:opacity-50 disabled:cursor-not-allowed transition group"
           >
             <div className="flex items-start gap-2">
               <div className="h-8 w-8 rounded-lg bg-slate-50 flex items-center justify-center shrink-0 group-hover:bg-white">

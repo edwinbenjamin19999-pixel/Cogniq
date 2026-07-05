@@ -229,11 +229,11 @@ const CashFlowForecast = () => {
           <TooltipProvider delayDuration={200}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { id: "balance", icon: <Wallet className="w-5 h-5" style={{ color: "#3b82f6" }} />,
+                { id: "balance", icon: <Wallet className="w-5 h-5" style={{ color: "#0052FF" }} />,
                   label: "KASSASALDO IDAG", value: `${fmt(kpi.cashBalance)} kr`,
                   valueColor: kpi.cashBalance >= threshold ? "text-foreground" : "text-[#DC2626]",
                   sub: lastUpdated ? `Uppdaterad: ${lastUpdated.toLocaleTimeString("sv-SE", { hour: "2-digit", minute: "2-digit" })}` : "",
-                  accent: "#3b82f6", tooltip: "Summa konto 1910–1940 idag",
+                  accent: "#0052FF", tooltip: "Summa konto 1910–1940 idag",
                 },
                 { id: "inflows", icon: <ArrowUpRight className="w-5 h-5" style={{ color: "#22C55E" }} />,
                   label: "INBETALNINGAR 13V", value: `${fmt(kpi.totalInflows13w)} kr`,
@@ -247,11 +247,11 @@ const CashFlowForecast = () => {
                   sub: outflowBreakdown.slice(0, 3).map(b => `${b.label} ${fmt(b.amount)}`).join(" • "),
                   accent: "#EF4444", tooltip: "Summa förväntade utbetalningar kommande 13 veckor",
                 },
-                { id: "lowest", icon: <Activity className="w-5 h-5" style={{ color: kpi.lowestPoint < threshold ? "#DC2626" : "#8B5CF6" }} />,
+                { id: "lowest", icon: <Activity className="w-5 h-5" style={{ color: kpi.lowestPoint < threshold ? "#DC2626" : "#0052FF" }} />,
                   label: "LÄGSTA KASSAPUNKT", value: `${fmt(kpi.lowestPoint)} kr`,
                   valueColor: kpi.lowestPoint < 0 ? "text-[#DC2626]" : kpi.lowestPoint < threshold ? "text-[#D97706]" : "text-foreground",
                   sub: `${kpi.lowestWeekLabel} · Buffert: ${fmt(kpi.lowestPoint - threshold)} kr`,
-                  accent: kpi.lowestPoint < threshold ? "#DC2626" : "#8B5CF6",
+                  accent: kpi.lowestPoint < threshold ? "#DC2626" : "#0052FF",
                   tooltip: "Lägsta beräknade kassasaldo under 13-veckorsperioden",
                 },
               ].map(card => (
@@ -421,7 +421,7 @@ const CashFlowForecast = () => {
                         <Fragment key={w.weekIdx}>
                           <tr
                             className={`border-b cursor-pointer hover:bg-muted/30 transition-colors ${rowBg} ${expanded ? "bg-primary/[0.03]" : ""}`}
-                            style={expanded ? { borderLeft: "3px solid #3b82f6" } : {}}
+                            style={expanded ? { borderLeft: "3px solid #0052FF" } : {}}
                             onClick={() => toggleWeek(w.weekIdx)}
                           >
                             <td className="p-2 pl-4">{expanded ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}</td>
@@ -439,7 +439,7 @@ const CashFlowForecast = () => {
                             <td className="p-2 text-center"><StatusPill status={w.status} /></td>
                           </tr>
                           {expanded && (
-                            <tr className="bg-primary/[0.02]" style={{ borderLeft: "3px solid #3b82f6" }}>
+                            <tr className="bg-primary/[0.02]" style={{ borderLeft: "3px solid #0052FF" }}>
                               <td colSpan={8} className="px-6 py-3">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                   {/* Inflows */}
@@ -451,7 +451,7 @@ const CashFlowForecast = () => {
                                         <div className="flex items-center gap-2">
                                           <span>{item.description}</span>
                                           {item.overdueDays && <span className="text-[#DC2626] italic text-[10px]">FÖRFALLEN {item.overdueDays}d</span>}
-                                          {item.source === "manual" && <span className="text-[10px] bg-[#3b82f6]/10 text-[#3b82f6] px-1.5 rounded">Manuell</span>}
+                                          {item.source === "manual" && <span className="text-[10px] bg-[#0052FF]/10 text-[#0052FF] px-1.5 rounded">Manuell</span>}
                                           {item.source === "pattern" && <span className="text-[10px] bg-muted text-muted-foreground px-1.5 rounded">Mönster</span>}
                                         </div>
                                         <span className="font-mono tabular-nums text-[#059669]">+{fmt(item.amount)}</span>
@@ -471,7 +471,7 @@ const CashFlowForecast = () => {
                                       <div key={item.id} className="flex items-center justify-between text-xs py-1 border-b border-border/50 last:border-0">
                                         <div className="flex items-center gap-2">
                                           <span>{item.description}</span>
-                                          {item.source === "manual" && <span className="text-[10px] bg-[#3b82f6]/10 text-[#3b82f6] px-1.5 rounded">Manuell</span>}
+                                          {item.source === "manual" && <span className="text-[10px] bg-[#0052FF]/10 text-[#0052FF] px-1.5 rounded">Manuell</span>}
                                           {item.source === "pattern" && <span className="text-[10px] bg-muted text-muted-foreground px-1.5 rounded">Mönster</span>}
                                         </div>
                                         <span className="font-mono tabular-nums text-[#DC2626]">−{fmt(item.amount)}</span>

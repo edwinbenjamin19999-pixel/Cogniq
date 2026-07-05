@@ -175,7 +175,7 @@ export function APInvoiceAssistantChat({
   };
 
   return (
-    <div className="rounded-2xl bg-slate-950 text-slate-100 border-t-2 border-[#3b82f6] overflow-hidden shadow-lg">
+    <div className="rounded-2xl bg-slate-950 text-slate-100 border-t-2 border-[#0052FF] overflow-hidden shadow-lg">
       {/* Header */}
       <button
         type="button"
@@ -269,13 +269,13 @@ export function APInvoiceAssistantChat({
               onChange={(e) => setInput(e.target.value)}
               placeholder={`Ställ en fråga om fakturan från ${supplierName}…`}
               disabled={streaming}
-              className="bg-slate-900 border-slate-800 text-slate-100 placeholder:text-slate-500 text-xs h-9 focus-visible:ring-[#3b82f6]/40"
+              className="bg-slate-900 border-slate-800 text-slate-100 placeholder:text-slate-500 text-xs h-9 focus-visible:ring-[#0052FF]/40"
             />
             <Button
               type="submit"
               size="sm"
               disabled={streaming || !input.trim()}
-              className="bg-[#3b82f6] hover:bg-[#3b82f6] text-slate-950 h-9"
+              className="bg-[#0052FF] hover:bg-[#0052FF] text-slate-950 h-9"
             >
               <Send className="h-3.5 w-3.5" />
             </Button>

@@ -41,7 +41,7 @@ const statusLabel: Record<AgentActivityStatus, string> = {
 const statusTone: Record<AgentActivityStatus, string> = {
   done: "bg-emerald-50 text-emerald-700 border-emerald-200",
   corrected: "bg-amber-50 text-amber-700 border-amber-200",
-  in_progress: "bg-blue-50 text-[#3b82f6] border-blue-200",
+  in_progress: "bg-blue-50 text-[#0052FF] border-blue-200",
 };
 
 function confidenceTone(c?: number) {
@@ -314,7 +314,7 @@ function ReviewDetailPanel({
                       <td className="px-3 py-1.5 text-right tabular-nums text-emerald-700">
                         {l.amount > 0 ? formatSEK(l.amount) : "—"}
                       </td>
-                      <td className="px-3 py-1.5 text-right tabular-nums text-[#3b82f6]">
+                      <td className="px-3 py-1.5 text-right tabular-nums text-[#0052FF]">
                         {l.amount < 0 ? formatSEK(Math.abs(l.amount)) : "—"}
                       </td>
                     </tr>

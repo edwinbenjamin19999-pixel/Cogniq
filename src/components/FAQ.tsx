@@ -72,7 +72,7 @@ export const FAQ = () => {
                 <AccordionTrigger className="px-5 py-4 hover:no-underline gap-3 text-left">
                   <div className="flex items-center gap-3 flex-1">
                     <div className="w-9 h-9 rounded-lg bg-[rgba(0,82,255,0.08)] flex items-center justify-center flex-shrink-0">
-                      <faq.icon className="w-[18px] h-[18px] text-[#3b82f6]" />
+                      <faq.icon className="w-[18px] h-[18px] text-[#0052FF]" />
                     </div>
                     <span className="text-[15px] sm:text-base font-semibold text-white/90">{faq.q}</span>
                   </div>

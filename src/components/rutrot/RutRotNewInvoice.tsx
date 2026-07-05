@@ -170,8 +170,8 @@ export function RutRotNewInvoice({ open, onOpenChange, settings }: Props) { cons
             </div>
           )}
 
-          <div className="flex items-center gap-2 p-3 rounded-lg bg-[#3b82f6]/5 border border-[#3b82f6]/20 text-xs text-muted-foreground">
-            <Sparkles className="h-4 w-4 text-[#3b82f6] flex-shrink-0" />
+          <div className="flex items-center gap-2 p-3 rounded-lg bg-[#0052FF]/5 border border-[#0052FF]/20 text-xs text-muted-foreground">
+            <Sparkles className="h-4 w-4 text-[#0052FF] flex-shrink-0" />
             <span>AI skapar automatiskt bokföring: 1510 kundfordran, 1580 fordran SKV, 3010 intäkt, 2611 moms.</span>
           </div>
 

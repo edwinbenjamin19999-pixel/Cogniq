@@ -53,7 +53,7 @@ export function AnimatedBenchmarkBar({
           <div
             className={cn(
               "h-4 w-4 rounded-full border-2 border-background shadow-md",
-              simulating && "ring-4 ring-[#3b82f6]/40 animate-pulse",
+              simulating && "ring-4 ring-[#0052FF]/40 animate-pulse",
             )}
             style={{ backgroundColor: verdict.markerColor }}
           />

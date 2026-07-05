@@ -163,7 +163,7 @@ export default function AdvisorProfitability() {
               <XAxis dataKey="month" stroke="#94A3B8" fontSize={11} tickFormatter={(v) => `M${v}`} />
               <YAxis stroke="#94A3B8" fontSize={11} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
               <Tooltip formatter={(v: number) => fmtSek(v)} />
-              <Line type="monotone" dataKey="revenue" stroke="#3b82f6" strokeWidth={2} dot={false} />
+              <Line type="monotone" dataKey="revenue" stroke="#0052FF" strokeWidth={2} dot={false} />
             </LineChart>
           </ResponsiveContainer>
         </div>

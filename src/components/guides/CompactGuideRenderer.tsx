@@ -58,7 +58,7 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
       {/* Hero */}
       <section className="pt-20 pb-10 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto max-w-[760px] px-6">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#0052FF]">
             <BookOpen className="w-3 h-3" />
             {guide.category}
           </div>
@@ -91,7 +91,7 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
               <ul className="mt-4 space-y-2">
                 {s.list.map((item, j) => (
                   <li key={j} className="flex items-start gap-2 leading-relaxed">
-                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3b82f6]" />
+                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0052FF]" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -118,7 +118,7 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
 
         {/* Cogniq block */}
         <section className="my-12 rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#0F172A] p-8 text-white">
-          <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-[#3b82f6]">
+          <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-[#0052FF]">
             <Sparkles className="w-3.5 h-3.5" /> Hur Cogniq hjälper
           </div>
           <p className="mt-3 text-white/85 leading-relaxed">{guide.northledgerNote}</p>
@@ -143,12 +143,12 @@ export const CompactGuideRenderer = ({ guide, canonicalPath }: Props) => {
                   className="group flex items-start justify-between gap-4 rounded-xl border border-slate-100 bg-white p-4 hover:border-[#C8DDF5] hover:shadow-sm transition-all"
                 >
                   <div>
-                    <div className="text-[14px] font-semibold text-[#0F172A] group-hover:text-[#3b82f6] transition-colors">
+                    <div className="text-[14px] font-semibold text-[#0F172A] group-hover:text-[#0052FF] transition-colors">
                       {r.title}
                     </div>
                     <div className="mt-1 text-xs text-[#94a3b8]">{r.readingTime} min läsning</div>
                   </div>
-                  <ArrowRight className="w-4 h-4 mt-0.5 text-[#3b82f6] group-hover:translate-x-0.5 transition-transform shrink-0" />
+                  <ArrowRight className="w-4 h-4 mt-0.5 text-[#0052FF] group-hover:translate-x-0.5 transition-transform shrink-0" />
                 </Link>
               ))}
             </div>

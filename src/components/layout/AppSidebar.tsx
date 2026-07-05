@@ -12,6 +12,7 @@ import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent,
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 import { BrandedLogo } from "@/components/wl/BrandedLogo";
+import aiCore from "@/assets/ai-core.png";
 import { useTenant } from "@/contexts/TenantContext";
 import { usePlatformAdmin } from "@/hooks/usePlatformAdmin";
 import { AddCompanyDialog } from "@/components/companies/AddCompanyDialog";
@@ -44,7 +45,7 @@ export const AppSidebar = () => { const location = useLocation();
   const sidebarMenuButtonClass = "flex items-center gap-2 px-3 text-[13px] font-medium text-white/70 border-l-2 border-transparent hover:text-white hover:bg-white/[0.06] cursor-pointer transition-colors rounded-md whitespace-normal h-9 min-h-0 leading-tight !overflow-visible [&>span:last-child]:!overflow-visible [&>span:last-child]:!whitespace-normal [&>span:last-child]:!text-clip";
   const sidebarMenuButtonActiveClass = tenant
     ? "font-semibold border"
-    : "!text-white !font-semibold !bg-[#0052FF]/[0.18] !border-l-2 !border-[#3b82f6]";
+    : "!text-white !font-semibold !bg-[#0052FF]/[0.18] !border-l-2 !border-[#0052FF]";
   const tenantActiveStyle = tenant
     ? {
         backgroundColor: `hsl(var(--brand-primary) / 0.18)`,
@@ -85,10 +86,24 @@ export const AppSidebar = () => { const location = useLocation();
     : filteredGroups;
 
   return (
-    <Sidebar className="bg-[#0F172A] border-r [border-width:0.5px] border-white/[0.06]">
-      {/* Logo header (tenant-aware) */}
+    <Sidebar
+      className="bg-[#0F172A] border-r [border-width:0.5px] border-white/[0.06]"
+      style={{
+        backgroundImage:
+          "radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)",
+        backgroundSize: "26px 26px",
+      }}
+    >
+      {/* Logo header — Cogniq 3D-orb + wordmark (tenant-aware) */}
       <SidebarHeader className="p-4 border-b [border-width:0.5px] border-white/[0.06]">
-        <BrandedLogo />
+        <div className="flex items-center gap-2.5">
+          {!tenant && (
+            <span className="relative flex h-8 w-8 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-[#0B1220]">
+              <img src={aiCore} alt="" aria-hidden className="h-full w-full object-cover" />
+            </span>
+          )}
+          <BrandedLogo />
+        </div>
       </SidebarHeader>
 
       <SidebarContent className="px-2 py-2">
@@ -274,7 +289,7 @@ export const AppSidebar = () => { const location = useLocation();
           Anpassa
         </button>
         <AddCompanyDialog
-          trigger={ <button className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-[#3b82f6] hover:underline transition-colors">
+          trigger={ <button className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg text-[12px] text-[#0052FF] hover:underline transition-colors">
               <Plus className="h-3.5 w-3.5" />
               Lägg till företag
             </button>

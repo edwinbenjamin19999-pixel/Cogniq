@@ -91,7 +91,7 @@ const SalesByHourChart = ({ todaySales }: { todaySales: PosDailySales | undefine
             {data.map((entry, i) => (
               <Cell
                 key={i}
-                fill={entry.isCurrent ? "#8b5cf6" : entry.isPeak ? "#10b981" : entry.isBelow ? "#93c5fd" : "#3b82f6"}
+                fill={entry.isCurrent ? "#0052FF" : entry.isPeak ? "#10b981" : entry.isBelow ? "#93c5fd" : "#0052FF"}
                 opacity={entry.isCurrent ? 1 : 0.85}
               />
             ))}

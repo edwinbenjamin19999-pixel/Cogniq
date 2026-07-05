@@ -25,7 +25,7 @@ export const AdvisorTopBar = ({ user, firmName, firmLogo, criticalCount }: Advis
         {firmLogo ? (
           <img src={firmLogo} alt={firmName ?? ""} className="h-7 w-7 rounded-lg object-cover shrink-0" />
         ) : (
-          <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#3b82f6] to-blue-500 shrink-0" />
+          <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#0052FF] to-blue-500 shrink-0" />
         )}
         <ClientSwitcherDropdown variant="mobile" />
       </div>

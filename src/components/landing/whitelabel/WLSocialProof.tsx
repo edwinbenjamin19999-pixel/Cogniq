@@ -10,7 +10,7 @@ export const WLSocialProof = () => {
           {pills.map((p) => (
             <span
               key={p}
-              className="px-4 py-1.5 rounded-full border border-[#3b82f6]/20 bg-[#3b82f6]/[0.06] text-[#3b82f6] text-xs font-medium tracking-wide"
+              className="px-4 py-1.5 rounded-full border border-[#0052FF]/20 bg-[#0052FF]/[0.06] text-[#0052FF] text-xs font-medium tracking-wide"
             >
               {p}
             </span>

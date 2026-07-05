@@ -242,7 +242,7 @@ function BulkButton({ icon: Icon, label, impact, count, onClick }: { icon: typeo
       onClick={onClick}
       className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-[#C8DDF5] dark:border-[#C8DDF5] bg-blue-50/50 dark:bg-[#EFF6FF] hover:bg-blue-100/60 dark:hover:bg-[#EFF6FF] transition-colors text-xs"
     >
-      <Icon className="h-3.5 w-3.5 text-[#3b82f6]" />
+      <Icon className="h-3.5 w-3.5 text-[#0052FF]" />
       <span className="font-semibold text-slate-900 dark:text-white">{label}</span>
       <span className="text-muted-foreground">·</span>
       <span className="text-[#085041] font-semibold tabular-nums">+{formatSEK(impact)}</span>

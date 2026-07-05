@@ -134,7 +134,7 @@ export const AutomationScore = ({ companyId }: AutomationScoreProps) => {
           </p>
           <button
             onClick={() => navigate("/automation")}
-            className="text-[#3b82f6] dark:text-[#1E3A5F] font-semibold text-xs flex-shrink-0 flex items-center gap-1 hover:text-[#3b82f6] transition-colors"
+            className="text-[#0052FF] dark:text-[#1E3A5F] font-semibold text-xs flex-shrink-0 flex items-center gap-1 hover:text-[#0052FF] transition-colors"
           >
             Förbättra
             <ArrowRight className="w-3 h-3" />

@@ -62,7 +62,7 @@ const SECTION_COLORS: Record<string, string> = {
   C: "border-l-amber-500",
   D: "border-l-orange-500",
   E: "border-l-emerald-500",
-  F: "border-l-[#3b82f6]",
+  F: "border-l-[#0052FF]",
 };
 
 const SECTION_BG: Record<string, string> = {

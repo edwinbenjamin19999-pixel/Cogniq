@@ -13,9 +13,9 @@ interface Props {
 const PRIMARY_TONE = {
   neutral: {
     bg: "bg-blue-50/70 dark:bg-blue-950/30",
-    border: "border-blue-200/60 dark:border-[#3b82f6]/40",
+    border: "border-blue-200/60 dark:border-[#0052FF]/40",
     iconBg: "bg-[#EFF6FF]",
-    iconColor: "text-[#3b82f6] dark:text-[#1E3A5F]",
+    iconColor: "text-[#0052FF] dark:text-[#1E3A5F]",
     Icon: CheckCircle2,
   },
   warning: {
@@ -85,7 +85,7 @@ export const AgeingInsightStack = ({ bundle, companyId, type }: Props) => {
             <button
               type="button"
               onClick={() => handleSendReminder(targets, companyId, type)}
-              className="inline-flex items-center gap-1.5 h-9 px-4 rounded-lg bg-[#3b82f6] hover:bg-[#3b82f6] text-white text-sm font-medium transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 h-9 px-4 rounded-lg bg-[#0052FF] hover:bg-[#0052FF] text-white text-sm font-medium transition-colors shadow-sm"
             >
               {primary.actionLabel ??
                 (type === "AR" ? "Skicka påminnelse" : "Markera för betalning")}

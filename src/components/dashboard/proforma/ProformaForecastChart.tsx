@@ -36,7 +36,7 @@ export const ProformaForecastChart = ({ data, confidenceBand, riskMonths, avgCon
 
   const confidenceBadgeTone =
     avgConfidence >= 0.7
-      ? "bg-[#EFF6FF] text-[#3b82f6] border-[#C8DDF5]"
+      ? "bg-[#EFF6FF] text-[#0052FF] border-[#C8DDF5]"
       : avgConfidence >= 0.5
       ? "bg-slate-50 text-slate-700 border-slate-200"
       : "bg-[#FAEEDA] text-[#7A5417] border-[#F0DDB7]";

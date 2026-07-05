@@ -12,7 +12,7 @@ export const AboutTrustBar = () => (
     <div className="container mx-auto max-w-6xl px-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
       {items.map(({ icon: Icon, label }) => (
         <div key={label} className="inline-flex items-center gap-2 text-white/45 text-[13px] font-medium">
-          <Icon className="w-4 h-4 text-[#3b82f6]" />
+          <Icon className="w-4 h-4 text-[#0052FF]" />
           {label}
         </div>
       ))}

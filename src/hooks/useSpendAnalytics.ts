@@ -4,11 +4,11 @@ import { supabase } from '@/integrations/supabase/client';
 import { format, subMonths, startOfMonth } from 'date-fns';
 
 const CATEGORY_MAP: Record<string, { range: [number, number]; label: string; color: string }> = {
-  'Personal': { range: [7000, 7699], label: 'Personal', color: '#6366f1' },
+  'Personal': { range: [7000, 7699], label: 'Personal', color: '#0040CC' },
   'Lokaler': { range: [5010, 5099], label: 'Lokaler & hyra', color: '#f59e0b' },
   'Marknadsföring': { range: [6100, 6299], label: 'Marknadsföring', color: '#10b981' },
-  'IT & Teknik': { range: [6500, 6599], label: 'IT & Teknik', color: '#3b82f6' },
-  'Fordon': { range: [5600, 5799], label: 'Fordon & resor', color: '#8b5cf6' },
+  'IT & Teknik': { range: [6500, 6599], label: 'IT & Teknik', color: '#0052FF' },
+  'Fordon': { range: [5600, 5799], label: 'Fordon & resor', color: '#0052FF' },
   'Administration': { range: [6800, 6999], label: 'Administration', color: '#ec4899' },
   'Råvaror': { range: [4000, 4999], label: 'Inköp & råvaror', color: '#f97316' },
   'Avskrivningar': { range: [7800, 7999], label: 'Avskrivningar', color: '#94a3b8' },

@@ -291,8 +291,8 @@ export function ReceiptAgent({ companyId, userId }: ReceiptAgentProps) { const [
             <div className="bg-[#0F1F3D] border border-blue-100/50 rounded-2xl px-5 py-3">
               <div className="flex items-center gap-6 flex-wrap">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-[#3b82f6]" />
-                  <span className="text-sm font-medium text-[#3b82f6]">AI-insikter</span>
+                  <Sparkles className="h-4 w-4 text-[#0052FF]" />
+                  <span className="text-sm font-medium text-[#0052FF]">AI-insikter</span>
                 </div>
                 <div className="flex items-center gap-5 text-sm text-muted-foreground">
                   <span><span className="font-semibold text-foreground">{insightsProcessed}</span> kvitton bearbetade</span>

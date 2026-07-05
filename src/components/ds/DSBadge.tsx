@@ -18,7 +18,7 @@ const styles: Record<DSBadgeVariant, { bg: string; text: string; border: string;
   success: { bg: "#E1F5EE", text: "#085041", border: "#5DCAA5", dot: "#0F6E56" },
   warning: { bg: "#FAEEDA", text: "#412402", border: "#EF9F27", dot: "#854F0B" },
   danger:  { bg: "#FCEBEB", text: "#501313", border: "#F09595", dot: "#791F1F" },
-  ai:      { bg: "#EEEDFE", text: "#26215C", border: "#AFA9EC", dot: "#534AB7" },
+  ai:      { bg: "#EEEDFE", text: "#26215C", border: "#AFA9EC", dot: "#4D7CFF" },
   beta:    { bg: "#F1F5F9", text: "#475569", border: "#E2E8F0", dot: "#94A3B8" },
   info:    { bg: "#EFF6FF", text: "#0C447C", border: "#85B7EB", dot: "#1074A0" },
 };

@@ -148,8 +148,8 @@ export const ARPriorityList = ({ openInvoices, customers }: Props) => {
                   {/* FULL-WIDTH — AI recommendation + actions */}
                   <div className="col-span-2 flex items-center justify-between gap-3 pt-2 border-t border-slate-100 dark:border-slate-800">
                     <div className="flex items-center gap-2 min-w-0 flex-1">
-                      <Sparkles className="h-3.5 w-3.5 text-[#3b82f6] flex-shrink-0" />
-                      <span className="text-xs font-medium text-[#3b82f6] dark:text-[#3b82f6] truncate">{item.recommendation}</span>
+                      <Sparkles className="h-3.5 w-3.5 text-[#0052FF] flex-shrink-0" />
+                      <span className="text-xs font-medium text-[#0052FF] dark:text-[#0052FF] truncate">{item.recommendation}</span>
                     </div>
                     <div className="flex gap-1.5 flex-shrink-0">
                       <Button

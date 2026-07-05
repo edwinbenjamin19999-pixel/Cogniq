@@ -50,7 +50,7 @@ export function LogoDropzone({ logoUrl, onFile, onClear }: Props) {
             <button
               type="button"
               onClick={() => inputRef.current?.click()}
-              className="text-xs text-[#3b82f6] hover:text-[#3b82f6] font-medium px-2 py-1"
+              className="text-xs text-[#0052FF] hover:text-[#0052FF] font-medium px-2 py-1"
             >
               Byt
             </button>
@@ -75,8 +75,8 @@ export function LogoDropzone({ logoUrl, onFile, onClear }: Props) {
           onClick={() => inputRef.current?.click()}
           className={`cursor-pointer rounded-2xl border-2 border-dashed p-6 text-center transition-all ${
             isDragging
-              ? "border-[#3b82f6] bg-blue-50/40"
-              : "border-slate-200 hover:border-[#3b82f6]/40 hover:bg-slate-50/50"
+              ? "border-[#0052FF] bg-blue-50/40"
+              : "border-slate-200 hover:border-[#0052FF]/40 hover:bg-slate-50/50"
           }`}
         >
           <div className="mx-auto h-10 w-10 rounded-xl bg-slate-100 flex items-center justify-center mb-2">

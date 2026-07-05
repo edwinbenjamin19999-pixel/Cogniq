@@ -22,7 +22,7 @@ export const ArticleHero = ({ h1, intro, intent, readingTime, updatedAt }: Artic
     <header className="relative border-b border-slate-900/[0.06] bg-[radial-gradient(ellipse_at_top,_#F0F9FF_0%,_#FAFBFC_60%)] pt-32 pb-16">
       <div className="container mx-auto max-w-[760px] px-6 text-center">
         <div className="flex items-center justify-center gap-3 text-[11px] uppercase tracking-[0.14em] text-slate-500">
-          <span className="inline-flex items-center rounded-full border border-slate-900/[0.08] bg-white/70 px-3 py-1 font-semibold text-[#3b82f6] backdrop-blur">
+          <span className="inline-flex items-center rounded-full border border-slate-900/[0.08] bg-white/70 px-3 py-1 font-semibold text-[#0052FF] backdrop-blur">
             {intentLabel[intent]}
           </span>
           <span className="inline-flex items-center gap-1.5 font-medium">

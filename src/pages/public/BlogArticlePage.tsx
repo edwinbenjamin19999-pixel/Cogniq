@@ -49,9 +49,9 @@ export default function BlogArticlePage() {
         <section className="pt-28 pb-10 bg-gradient-to-b from-slate-50 to-white">
           <div className="container mx-auto max-w-3xl px-6">
             <nav className="flex items-center gap-1.5 text-xs text-[#94a3b8] mb-6">
-              <Link to="/" className="hover:text-[#3b82f6]">Hem</Link>
+              <Link to="/" className="hover:text-[#0052FF]">Hem</Link>
               <ChevronRight className="w-3 h-3" />
-              <Link to="/blog" className="hover:text-[#3b82f6]">Blogg</Link>
+              <Link to="/blog" className="hover:text-[#0052FF]">Blogg</Link>
               <ChevronRight className="w-3 h-3" />
               <span className="text-[#0F172A]">{article.title}</span>
             </nav>
@@ -84,7 +84,7 @@ export default function BlogArticlePage() {
 
             {/* Final inline CTA */}
             <div className="mt-12 rounded-2xl bg-[#0F172A] p-8 md:p-10 text-white">
-              <div className="text-xs uppercase tracking-[0.2em] text-[#3b82f6]">Redo att testa?</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-[#0052FF]">Redo att testa?</div>
               <h3 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight">Låt AI sköta din bokföring</h3>
               <p className="mt-2 text-white/60 max-w-lg">Onboarding på 30 minuter. Ingen bindning. Bygg en framtidssäker ekonomi.</p>
               <div className="mt-5 flex flex-col sm:flex-row gap-3">

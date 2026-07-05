@@ -8,7 +8,7 @@ import { format, startOfWeek, endOfWeek, addWeeks, eachDayOfInterval, isToday, i
 import { sv } from "date-fns/locale";
 
 const PROJECT_COLORS = [
-  "bg-[#3b82f6]/20 border-[#3b82f6]/40 text-[#3b82f6]",
+  "bg-[#0052FF]/20 border-[#0052FF]/40 text-[#0052FF]",
   "bg-[#EFF6FF] border-blue-300 text-blue-700 dark:bg-blue-900/30 dark:border-blue-700 dark:text-[#1E3A5F]",
   "bg-[#E1F5EE] border-[#BFE6D6] text-[#085041] dark:bg-emerald-900/30 dark:border-emerald-700 dark:text-[#1D9E75]",
   "bg-[#F1F5F9] border-purple-300 text-purple-700 dark:bg-purple-900/30 dark:border-purple-700 dark:text-[#1E3A5F]",
@@ -85,14 +85,14 @@ export function WeekView() { const [weekOffset, setWeekOffset] = useState(0);
                 key={key}
                 className={cn(
                   "rounded-lg border p-2 min-h-[120px] flex flex-col",
-                  today ? "border-[#3b82f6] bg-[#3b82f6]/5" : "border-border"
+                  today ? "border-[#0052FF] bg-[#0052FF]/5" : "border-border"
                 )}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <span className={cn("text-xs font-medium", today ? "text-[#3b82f6]" : "text-muted-foreground")}>
+                  <span className={cn("text-xs font-medium", today ? "text-[#0052FF]" : "text-muted-foreground")}>
                     {format(day, "EEE", { locale: sv })}
                   </span>
-                  <span className={cn("text-[10px]", today ? "text-[#3b82f6] font-bold" : "text-muted-foreground")}>
+                  <span className={cn("text-[10px]", today ? "text-[#0052FF] font-bold" : "text-muted-foreground")}>
                     {format(day, "d")}
                   </span>
                 </div>
@@ -134,7 +134,7 @@ export function WeekView() { const [weekOffset, setWeekOffset] = useState(0);
           </span>
           <div className="flex gap-3 text-xs text-muted-foreground">
             <span className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-full bg-[#3b82f6]" /> Fakturerbar
+              <span className="w-2 h-2 rounded-full bg-[#0052FF]" /> Fakturerbar
             </span>
             <span className="flex items-center gap-1">
               <span className="w-2 h-2 rounded-full bg-muted-foreground/30" /> Ej fakturerbar

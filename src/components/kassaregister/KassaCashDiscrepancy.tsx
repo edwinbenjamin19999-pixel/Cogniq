@@ -91,7 +91,7 @@ export function KassaCashDiscrepancy({ sales }: Props) { const today = format(ne
               </div>
 
               {!submitted ? (
-                <Button onClick={handleSubmit} disabled={!actualCash} className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground">
+                <Button onClick={handleSubmit} disabled={!actualCash} className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-foreground">
                   Beräkna differens
                 </Button>
               ) : discrepancy !== null && (

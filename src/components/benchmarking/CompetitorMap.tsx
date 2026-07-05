@@ -123,7 +123,7 @@ export function CompetitorMap({ sniCode, companyEbitda, companyGrowth, companyRe
               <ReferenceLine x={10} stroke="hsl(var(--muted-foreground))" strokeDasharray="6 3" />
               <Tooltip content={<CustomTooltip />} />
               <Scatter name="Peers" data={yourPeers} fill="hsl(var(--muted-foreground))" fillOpacity={0.4} />
-              <Scatter name="Ditt bolag" data={[you]} fill="#3b82f6" strokeWidth={2} stroke="#3b82f6" />
+              <Scatter name="Ditt bolag" data={[you]} fill="#0052FF" strokeWidth={2} stroke="#0052FF" />
             </ScatterChart>
           </ResponsiveContainer>
 

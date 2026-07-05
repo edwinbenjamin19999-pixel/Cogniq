@@ -20,7 +20,7 @@ export function ZReportFlowVisual() {
   return (
     <div className="rounded-2xl border border-slate-200/70 bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
       <div className="flex items-center gap-2 mb-4">
-        <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+        <Sparkles className="h-4 w-4 text-[#0052FF]" />
         <h4 className="text-sm font-semibold text-slate-800">Live: Z-rapport → bokföring</h4>
       </div>
 
@@ -41,18 +41,18 @@ export function ZReportFlowVisual() {
           </div>
         </div>
 
-        <ArrowRight className="hidden md:block h-4 w-4 text-[#3b82f6] animate-pulse mx-auto" />
+        <ArrowRight className="hidden md:block h-4 w-4 text-[#0052FF] animate-pulse mx-auto" />
 
         {/* AI */}
         <div className="rounded-xl border border-[#C8DDF5] bg-[#0F1F3D] p-3 flex flex-col items-center justify-center text-center">
           <div className="h-10 w-10 rounded-full bg-[#EFF6FF] flex items-center justify-center animate-pulse mb-1.5">
-            <Brain className="h-5 w-5 text-[#3b82f6]" />
+            <Brain className="h-5 w-5 text-[#0052FF]" />
           </div>
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-[#3b82f6]">AI-motor</p>
-          <p className="text-[10px] text-[#3b82f6]/80 mt-0.5">BAS 2025</p>
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-[#0052FF]">AI-motor</p>
+          <p className="text-[10px] text-[#0052FF]/80 mt-0.5">BAS 2025</p>
         </div>
 
-        <ArrowRight className="hidden md:block h-4 w-4 text-[#3b82f6] animate-pulse mx-auto" />
+        <ArrowRight className="hidden md:block h-4 w-4 text-[#0052FF] animate-pulse mx-auto" />
 
         {/* OUTPUT */}
         <div className="rounded-xl border border-slate-200 bg-slate-50/60 p-3">

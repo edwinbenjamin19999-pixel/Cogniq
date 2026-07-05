@@ -83,7 +83,7 @@ export function PerformanceStatusHeader({
           </div>
           <h2 className="text-2xl font-semibold text-slate-900 leading-snug">{reason}</h2>
           <div className="mt-3 flex items-start gap-2 text-sm text-slate-600 min-h-[1.25rem]">
-            <Sparkles className="h-4 w-4 mt-0.5 text-[#3b82f6] shrink-0" />
+            <Sparkles className="h-4 w-4 mt-0.5 text-[#0052FF] shrink-0" />
             {aiLoading ? (
               <span className="inline-flex items-center gap-2 text-slate-400">
                 <Loader2 className="h-3 w-3 animate-spin" /> AI analyserar avvikelser…

@@ -71,7 +71,7 @@ export function RutRotSetup() { const { saveSettings } = useRutRotSettings();
   return (
     <div className="max-w-lg mx-auto py-16 space-y-6">
       <div className="text-center space-y-2">
-        <Sparkles className="h-8 w-8 text-[#3b82f6] mx-auto" />
+        <Sparkles className="h-8 w-8 text-[#0052FF] mx-auto" />
         <h2 className="text-xl font-bold">Bekräfta registrering</h2>
         <p className="text-sm text-muted-foreground">
           {choice === "both" ? "RUT och ROT" : choice === "rut" ? "RUT" : "ROT"} aktiveras för ditt företag
@@ -99,7 +99,7 @@ export function RutRotSetup() { const { saveSettings } = useRutRotSettings();
             <Button
               onClick={handleSave}
               disabled={!fSkatt || saveSettings.isPending}
-              className="flex-1 bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white"
+              className="flex-1 bg-[#0052FF] hover:bg-[#0052FF]/90 text-white"
             >
               {saveSettings.isPending ? "Sparar..." : "Aktivera"}
             </Button>

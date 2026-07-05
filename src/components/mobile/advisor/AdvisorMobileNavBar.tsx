@@ -39,12 +39,12 @@ export const AdvisorMobileNavBar = ({ active, onChange }: AdvisorMobileNavBarPro
             onClick={() => { haptic("light"); onChange(t.id); }}
             className={cn(
               "relative flex flex-col items-center justify-center gap-0.5 min-h-[44px] active:scale-90 transition-all duration-150",
-              isActive ? "text-[#3b82f6]" : "text-white/45",
+              isActive ? "text-[#0052FF]" : "text-white/45",
             )}
           >
             {isActive && (
               <span className={cn(
-                "absolute top-1 left-1/2 -translate-x-1/2 h-0.5 w-6 rounded-full bg-[#3b82f6]",
+                "absolute top-1 left-1/2 -translate-x-1/2 h-0.5 w-6 rounded-full bg-[#0052FF]",
                 "shadow-[0_0_8px_rgba(0,82,255,0.7)]",
               )} />
             )}

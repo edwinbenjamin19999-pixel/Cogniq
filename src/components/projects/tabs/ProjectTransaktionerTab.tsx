@@ -41,7 +41,7 @@ export function ProjectTransaktionerTab({ project }: { project: Project }) { con
         <CardTitle className="text-base">Transaktioner</CardTitle>
         <Dialog open={showAdd} onOpenChange={setShowAdd}>
           <DialogTrigger asChild>
-            <Button size="sm" className="bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
+            <Button size="sm" className="bg-[#0052FF] hover:bg-[#0052FF]/90 text-white">
               <Plus className="h-3.5 w-3.5 mr-1" />
               Lägg till
             </Button>
@@ -71,7 +71,7 @@ export function ProjectTransaktionerTab({ project }: { project: Project }) { con
                 <Label>Datum</Label>
                 <Input type="date" value={txDate} onChange={(e) => setTxDate(e.target.value)} />
               </div>
-              <Button onClick={handleAdd} disabled={addTransaction.isPending || !txAmount} className="w-full bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-white">
+              <Button onClick={handleAdd} disabled={addTransaction.isPending || !txAmount} className="w-full bg-[#0052FF] hover:bg-[#0052FF]/90 text-white">
                 Lägg till
               </Button>
             </div>

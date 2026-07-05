@@ -82,7 +82,7 @@ export const MobileApp = ({ user, signOut }: MobileAppProps) => {
     { id: "receipts", label: "Kvitton & underlag", icon: Camera, color: "#0040CC" },
     { id: "expenses", label: "Utlägg", icon: Receipt, color: "#1D9E75" },
     { id: "documents", label: "Dokument", icon: FileBox, color: "#94A3B8" },
-    { id: "chat", label: "Fråga AI", icon: Sparkles, color: "#3b82f6" },
+    { id: "chat", label: "Fråga AI", icon: Sparkles, color: "#0052FF" },
   ];
 
   const isChat = tab === "chat";

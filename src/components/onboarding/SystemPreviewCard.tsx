@@ -27,7 +27,7 @@ export const SystemPreviewCard = () => {
       {/* AI insights row */}
       <div className="rounded-xl bg-white/[0.04] border border-white/5 p-3 mb-3">
         <div className="flex items-center gap-2 mb-1.5">
-          <Sparkles className="w-3.5 h-3.5 text-[var(--brand-primary,#3b82f6)]" />
+          <Sparkles className="w-3.5 h-3.5 text-[var(--brand-primary,#0052FF)]" />
           <span className="text-[12px] font-medium text-white/90">AI har redan analyserat din ekonomi</span>
         </div>
         <p className="text-[11px] text-white/50 pl-5">3 förbättringsförslag redo att granska</p>
@@ -62,7 +62,7 @@ const MiniKpi = ({ label, value, gradient }: { label: string; value: string; gra
 const FlowStep = ({ icon: Icon, label, highlight }: { icon: any; label: string; highlight?: boolean }) => (
   <div className="flex flex-col items-center gap-1 flex-1">
     <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${
-      highlight ? "bg-[var(--brand-primary,#3b82f6)]/20 text-[var(--brand-primary,#3b82f6)]" : "bg-white/[0.06] text-white/60"
+      highlight ? "bg-[var(--brand-primary,#0052FF)]/20 text-[var(--brand-primary,#0052FF)]" : "bg-white/[0.06] text-white/60"
     }`}>
       <Icon className="w-3.5 h-3.5" />
     </div>

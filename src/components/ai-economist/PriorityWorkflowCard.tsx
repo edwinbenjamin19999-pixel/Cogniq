@@ -151,7 +151,7 @@ export function PriorityWorkflowCard({ insight, companyId, onPrimary, onIgnore, 
       <div className="mt-4 border-t border-slate-100 dark:border-white/5 pt-3">
         <button
           onClick={() => setExpanded(s => !s)}
-          className="w-full flex items-center justify-between text-xs font-medium text-slate-700 dark:text-white/80 hover:text-[#3b82f6] dark:hover:text-[#3b82f6] transition-colors"
+          className="w-full flex items-center justify-between text-xs font-medium text-slate-700 dark:text-white/80 hover:text-[#0052FF] dark:hover:text-[#0052FF] transition-colors"
         >
           <span className="flex items-center gap-1.5">
             {expanded ? <ChevronDown className="h-3.5 w-3.5" /> : <ChevronRight className="h-3.5 w-3.5" />}

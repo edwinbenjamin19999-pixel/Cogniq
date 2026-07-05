@@ -84,7 +84,7 @@ export default function AccountingGuidesIndexPage() {
         {/* Hero */}
         <section className="pt-32 pb-12 bg-gradient-to-b from-slate-50 to-white">
           <div className="container mx-auto max-w-3xl px-6 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#3b82f6]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200/60 bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#0052FF]">
               <BookOpen className="w-3 h-3" />
               Bokföringsguider · {allCards.length} guider
             </div>
@@ -135,7 +135,7 @@ export default function AccountingGuidesIndexPage() {
                       />
                     ))}
                   </div>
-                  <div className="mt-4 inline-flex items-center gap-1.5 text-xs italic text-[#3b82f6]">
+                  <div className="mt-4 inline-flex items-center gap-1.5 text-xs italic text-[#0052FF]">
                     <Sparkles className="w-3 h-3" />
                     Alla dessa moment hanteras automatiskt av Cogniq
                   </div>
@@ -152,7 +152,7 @@ export default function AccountingGuidesIndexPage() {
         <section className="py-16">
           <div className="container mx-auto max-w-4xl px-6">
             <div className="rounded-3xl bg-gradient-to-br from-blue-50 via-white to-slate-50 border border-blue-100/60 shadow-[0_8px_32px_-12px_rgba(0,82,255,0.18)] p-10 md:p-14 text-center">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#3b82f6] text-white mb-5">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0052FF] text-white mb-5">
                 <Sparkles className="w-6 h-6" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0F172A]">
@@ -162,7 +162,7 @@ export default function AccountingGuidesIndexPage() {
                 Cogniq bokför kvitton, fakturor och moms automatiskt med AI.
               </p>
               <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
-                <Button asChild size="lg" className="bg-[#3b82f6] text-white hover:bg-[#3b82f6] gap-1.5">
+                <Button asChild size="lg" className="bg-[#0052FF] text-white hover:bg-[#0052FF] gap-1.5">
                   <Link to="/auth">
                     Testa gratis <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -184,7 +184,7 @@ export default function AccountingGuidesIndexPage() {
         <section className="pb-16">
           <div className="container mx-auto max-w-4xl px-6">
             <div className="rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#0F172A] p-8 md:p-10 text-white">
-              <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-[#3b82f6]">
+              <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-[#0052FF]">
                 <Building2 className="w-3.5 h-3.5" /> För redovisningsbyråer
               </div>
               <h2 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight">
@@ -194,7 +194,7 @@ export default function AccountingGuidesIndexPage() {
                 Erbjud automatiserad bokföring under ditt eget varumärke. Multi-client management, white label branding och AI-driven kvalitetskontroll.
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                <Button asChild className="bg-[#3b82f6] text-white hover:bg-[#3b82f6] gap-1.5">
+                <Button asChild className="bg-[#0052FF] text-white hover:bg-[#0052FF] gap-1.5">
                   <Link to="/white-label">
                     Starta White Label <ArrowRight className="w-3.5 h-3.5" />
                   </Link>

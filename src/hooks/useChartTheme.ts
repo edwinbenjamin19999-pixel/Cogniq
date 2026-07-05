@@ -49,15 +49,15 @@ export function useChartTheme() {
 
     // Brand-safe chart colors (works in both modes)
     colors: {
-      violet: "#8b5cf6",
+      violet: "#0052FF",
       emerald: "#10b981",
-      blue: "#3b82f6",
+      blue: "#0052FF",
       amber: "#f59e0b",
       rose: "#f43f5e",
-      indigo: "#6366f1",
+      indigo: "#0040CC",
       teal: "#14b8a6",
       orange: "#f97316",
-      cyan: "#3b82f6",
+      cyan: "#0052FF",
       red: "#ef4444",
       green: "#22c55e",
     },

@@ -65,7 +65,7 @@ async function hydrateTenant(tenant: any): Promise<ResolvedTenant> {
     ...tenant,
     branding: brandingRes.data ?? {
       logo_url: null, logo_dark_url: null, favicon_url: null,
-      primary_color: "#3b82f6", accent_color: null, style_preset: "enterprise",
+      primary_color: "#0052FF", accent_color: null, style_preset: "enterprise",
       heading_font: "Inter", body_font: "Inter",
     },
     ai: aiRes.data ?? {

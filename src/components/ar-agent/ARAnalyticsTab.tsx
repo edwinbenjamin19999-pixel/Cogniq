@@ -176,7 +176,7 @@ export const ARAnalyticsTab = ({ openInvoices, paidInvoices, customers, writtenO
                   formatter={(v: number, name: string) => [`${fmt(v)} kr`, name === "best" ? "Bästa fall" : name === "ai" ? "AI-prognos" : "Sämsta fall"]}
                 />
                 <Area type="monotone" dataKey="best" stroke="#34d399" fill="#34d399" fillOpacity={0.1} strokeWidth={1} />
-                <Area type="monotone" dataKey="ai" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.2} strokeWidth={2} />
+                <Area type="monotone" dataKey="ai" stroke="#0052FF" fill="#0052FF" fillOpacity={0.2} strokeWidth={2} />
                 <Area type="monotone" dataKey="worst" stroke="#fb7185" fill="#fb7185" fillOpacity={0.05} strokeWidth={1} />
               </AreaChart>
             </ResponsiveContainer>
@@ -235,7 +235,7 @@ export const ARAnalyticsTab = ({ openInvoices, paidInvoices, customers, writtenO
                   contentStyle={{ background: "rgba(15,23,42,0.95)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "14px", backdropFilter: "blur(12px)", fontSize: "12px" }}
                   formatter={(v: number) => [`${v} dagar`, "DSO"]}
                 />
-                <Line type="monotone" dataKey="dso" stroke="#3b82f6" strokeWidth={2} dot={false} />
+                <Line type="monotone" dataKey="dso" stroke="#0052FF" strokeWidth={2} dot={false} />
               </LineChart>
             </ResponsiveContainer>
           </div>
@@ -372,9 +372,9 @@ function AgingDecisionEngine({ aging, openInvoices, customers }: AgingProps) {
       {/* AI Insight + Cash Flow Impact (2-col grid) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Insight Card */}
-        <div className="rounded-2xl border-l-[3px] border-l-[#3b82f6] border border-slate-200/70 bg-white shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
+        <div className="rounded-2xl border-l-[3px] border-l-[#0052FF] border border-slate-200/70 bg-white shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
           <div className="flex items-center gap-2 mb-2">
-            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+            <Sparkles className="h-4 w-4 text-[#0052FF]" />
             <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">AI-insikt</span>
           </div>
           <p className="text-base font-semibold text-slate-900 leading-snug">
@@ -392,7 +392,7 @@ function AgingDecisionEngine({ aging, openInvoices, customers }: AgingProps) {
           {overdueCount > 0 && (
             <Button
               size="sm"
-              className="mt-4 bg-[#3b82f6] hover:bg-[#3b82f6] text-white"
+              className="mt-4 bg-[#0052FF] hover:bg-[#0052FF] text-white"
               onClick={() => setExpandedBucket(largestOverdue.idx > 0 ? largestOverdue.idx : 1)}
             >
               <Send className="h-3.5 w-3.5 mr-1.5" />
@@ -404,10 +404,10 @@ function AgingDecisionEngine({ aging, openInvoices, customers }: AgingProps) {
         {/* Cash Flow Impact */}
         <div className="rounded-2xl border border-blue-200/60 bg-gradient-to-br from-blue-50 to-white shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:shadow-md transition-shadow p-5">
           <div className="flex items-center gap-2 mb-2">
-            <Wallet className="h-4 w-4 text-[#3b82f6]" />
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#3b82f6]/80">Om alla förfallna fakturor betalas</span>
+            <Wallet className="h-4 w-4 text-[#0052FF]" />
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#0052FF]/80">Om alla förfallna fakturor betalas</span>
           </div>
-          <p className="text-3xl font-bold tabular-nums text-[#3b82f6]">
+          <p className="text-3xl font-bold tabular-nums text-[#0052FF]">
             +{fmt(overdueAmount)} <span className="text-lg font-medium">kr i kassa</span>
           </p>
           <p className="text-sm text-slate-600 mt-2">
@@ -501,7 +501,7 @@ function AgingDecisionEngine({ aging, openInvoices, customers }: AgingProps) {
                         <Button
                           size="sm"
                           variant="outline"
-                          className="h-7 text-xs border-[#C8DDF5] text-[#3b82f6] hover:bg-[#EFF6FF]"
+                          className="h-7 text-xs border-[#C8DDF5] text-[#0052FF] hover:bg-[#EFF6FF]"
                           disabled={sendReminder.isPending}
                           onClick={() =>
                             c.invoiceIds.forEach((id) => {

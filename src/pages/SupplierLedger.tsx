@@ -75,7 +75,7 @@ const KPICard = ({ icon: Icon, accent, title, value, interpretation, trend, dela
     rose: { bar: "bg-rose-500", icon: "text-[#7A1A1A]", iconBg: "bg-[#FCE8E8]" },
     amber: { bar: "bg-amber-500", icon: "text-[#7A5417]", iconBg: "bg-[#FAEEDA]" },
     emerald: { bar: "bg-emerald-500", icon: "text-[#085041]", iconBg: "bg-[#E1F5EE]" },
-    cyan: { bar: "bg-[#3b82f6]", icon: "text-[#3b82f6]", iconBg: "bg-[#EFF6FF]" },
+    cyan: { bar: "bg-[#0052FF]", icon: "text-[#0052FF]", iconBg: "bg-[#EFF6FF]" },
     slate: { bar: "bg-slate-400", icon: "text-slate-600", iconBg: "bg-slate-100" },
   }[accent];
   return (
@@ -110,7 +110,7 @@ const SupplierAvatar = ({ name }: { name: string }) => {
   const initials = name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
   const colors = [
     "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
-    "from-emerald-500 to-blue-500", "from-blue-500 to-[#3b82f6]",
+    "from-emerald-500 to-blue-500", "from-blue-500 to-[#0052FF]",
     "from-violet-500 to-indigo-500", "from-fuchsia-500 to-purple-500",
   ];
   return (

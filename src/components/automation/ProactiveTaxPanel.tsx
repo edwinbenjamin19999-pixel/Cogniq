@@ -246,7 +246,7 @@ export const ProactiveTaxPanel = ({ companyId }: ProactiveTaxPanelProps) => { co
           </div>
         )}
 
-        <Button className="w-full" style={{ backgroundColor: '#3b82f6', color: '#0F2137' }}>
+        <Button className="w-full" style={{ backgroundColor: '#0052FF', color: '#0F2137' }}>
           <Lock className="w-4 h-4 mr-2" />
           Implementera valda åtgärder och signera med BankID
         </Button>

@@ -10,8 +10,8 @@ interface ContentCardProps {
   title?: string;
   subtitle?: string;
   icon?: LucideIcon;
-  accentColor?: string;       // e.g. 'border-[#3b82f6]'
-  iconBgClass?: string;       // e.g. 'bg-[#EFF6FF] text-[#3b82f6]'
+  accentColor?: string;       // e.g. 'border-[#0052FF]'
+  iconBgClass?: string;       // e.g. 'bg-[#EFF6FF] text-[#0052FF]'
   actions?: React.ReactNode;
   children: React.ReactNode;
   className?: string;

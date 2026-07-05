@@ -44,7 +44,7 @@ export function BrandedLogo({ onClick }: Props) {
   return (
     <button onClick={handle} className="text-xl font-bold tracking-tight">
       <span className="text-white font-bold">Cog</span>
-      <span className="text-[#3b82f6] font-bold">niq</span>
+      <span className="text-[#0052FF] font-bold">niq</span>
     </button>
   );
 }

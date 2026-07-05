@@ -50,12 +50,12 @@ export const RecurringRevenueOverview = ({ contracts, stats }: Props) => {
   const deltaUp = mrrDelta >= 0;
 
   return (
-    <Card className="rounded-2xl border-slate-200/60 border-l-[3px] border-l-[#3b82f6] shadow-[0_1px_2px_rgba(15,23,42,0.04)] overflow-hidden">
+    <Card className="rounded-2xl border-slate-200/60 border-l-[3px] border-l-[#0052FF] shadow-[0_1px_2px_rgba(15,23,42,0.04)] overflow-hidden">
       <div className="p-6">
         <div className="flex items-center justify-between mb-1">
           <div className="flex items-center gap-2">
-            <Zap className="h-4 w-4 text-[#3b82f6] dark:text-[#1E3A5F]" />
-            <span className="text-[11px] font-semibold tracking-wider text-[#3b82f6] dark:text-[#3b82f6] uppercase">Recurring revenue</span>
+            <Zap className="h-4 w-4 text-[#0052FF] dark:text-[#1E3A5F]" />
+            <span className="text-[11px] font-semibold tracking-wider text-[#0052FF] dark:text-[#0052FF] uppercase">Recurring revenue</span>
           </div>
           <span className="text-[11px] text-muted-foreground">Senaste 30 dagar</span>
         </div>

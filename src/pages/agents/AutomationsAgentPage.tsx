@@ -329,7 +329,7 @@ export default function AutomationsAgentPage() {
       {/* HEADER */}
       <header className="flex items-start justify-between gap-4 border-b border-slate-100 pb-5">
         <div className="flex items-start gap-4">
-          <div className="rounded-xl border border-slate-200/70 bg-white p-2.5 text-[#3b82f6]">
+          <div className="rounded-xl border border-slate-200/70 bg-white p-2.5 text-[#0052FF]">
             <Workflow size={32} strokeWidth={1.6} />
           </div>
           <div>

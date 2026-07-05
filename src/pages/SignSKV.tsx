@@ -146,7 +146,7 @@ export default function SignSKV() {
       <div className="w-full max-w-sm bg-white rounded-2xl shadow-xl overflow-hidden">
         {/* Header */}
         <div className="px-6 pt-6 pb-4 border-b">
-          <div className="flex items-center gap-2 text-[#3b82f6] mb-2">
+          <div className="flex items-center gap-2 text-[#0052FF] mb-2">
             <ShieldCheck className="h-5 w-5" />
             <span className="text-xs font-semibold uppercase tracking-wider">
               Cogniq Signering
@@ -178,7 +178,7 @@ export default function SignSKV() {
                 Direkt efter signering skickas deklarationen automatiskt till
                 Skatteverket.
               </div>
-              <Button onClick={start} className="w-full gap-2 bg-[#3b82f6] hover:bg-[#3b82f6]/80">
+              <Button onClick={start} className="w-full gap-2 bg-[#0052FF] hover:bg-[#0052FF]/80">
                 <Smartphone className="h-4 w-4" />
                 Starta BankID
               </Button>

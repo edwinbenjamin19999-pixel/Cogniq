@@ -141,7 +141,7 @@ export function AIGroupAdjustmentsPanel({ periodId, isLocked }: Props) {
                     size="sm"
                     onClick={() => handleApply(s)}
                     disabled={isLocked || create.isPending}
-                    className="h-7 px-3 text-xs bg-[#3b82f6] hover:bg-[#3b82f6] text-white"
+                    className="h-7 px-3 text-xs bg-[#0052FF] hover:bg-[#0052FF] text-white"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5 mr-1" /> Tillämpa
                   </Button>

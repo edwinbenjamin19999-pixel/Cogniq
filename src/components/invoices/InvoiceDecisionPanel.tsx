@@ -271,7 +271,7 @@ export const InvoiceDecisionPanel = ({ invoice, companyId, onUpdated }: Decision
                   >
                     <div
                       className={`h-6 w-6 rounded-full flex items-center justify-center ${
-                        done ? "bg-emerald-500 text-white" : next ? "bg-[#3b82f6] text-white" : "bg-muted text-muted-foreground"
+                        done ? "bg-emerald-500 text-white" : next ? "bg-[#0052FF] text-white" : "bg-muted text-muted-foreground"
                       }`}
                     >
                       {done ? <CheckCircle2 className="h-3.5 w-3.5" /> : <User2 className="h-3.5 w-3.5" />}
@@ -285,7 +285,7 @@ export const InvoiceDecisionPanel = ({ invoice, companyId, onUpdated }: Decision
                     <Badge variant="outline" className="text-[10px]">
                       Steg {i + 1}/{requiredSteps}
                     </Badge>
-                    {next && <ChevronRight className="h-3.5 w-3.5 text-[#3b82f6]" />}
+                    {next && <ChevronRight className="h-3.5 w-3.5 text-[#0052FF]" />}
                   </div>
                 );
               })}

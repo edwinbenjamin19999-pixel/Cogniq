@@ -66,7 +66,7 @@ export function CommandHeader({
               )}
               {typeof confidencePct === "number" && (
                 <span className="flex items-center gap-1">
-                  <ShieldCheck className="h-3 w-3 text-[#3b82f6]" />
+                  <ShieldCheck className="h-3 w-3 text-[#0052FF]" />
                   AI-konfidens {Math.round(confidencePct)}%
                 </span>
               )}

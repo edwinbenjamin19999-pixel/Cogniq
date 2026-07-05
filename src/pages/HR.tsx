@@ -90,7 +90,7 @@ const EmpAvatar = ({ name }: { name: string }) => {
   const colors = [
     "from-violet-500 to-indigo-500", "from-emerald-500 to-blue-500",
     "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
-    "from-blue-500 to-[#3b82f6]", "from-fuchsia-500 to-purple-500",
+    "from-blue-500 to-[#0052FF]", "from-fuchsia-500 to-purple-500",
   ];
   return (
     <div className={`h-10 w-10 rounded-xl bg-gradient-to-br ${colors[name.charCodeAt(0) % colors.length]} flex items-center justify-center text-white text-xs font-bold shrink-0`}>

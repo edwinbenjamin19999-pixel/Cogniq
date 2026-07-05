@@ -18,7 +18,7 @@ const SEVERITY: Record<
   },
   info: {
     icon: Info,
-    iconCls: "text-[#3b82f6] bg-[#EFF6FF]",
+    iconCls: "text-[#0052FF] bg-[#EFF6FF]",
     ring: "border-[#C8DDF5]",
   },
 };
@@ -68,7 +68,7 @@ export const WorkflowAIPanel = ({ insights }: Props) => {
                 {ins.suggestedAction && (
                   <button
                     type="button"
-                    className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-[#3b82f6] hover:text-[#3b82f6]"
+                    className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-[#0052FF] hover:text-[#0052FF]"
                   >
                     {ins.suggestedAction}
                     <ArrowRight className="h-3 w-3" />

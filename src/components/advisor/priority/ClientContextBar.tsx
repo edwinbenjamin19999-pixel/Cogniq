@@ -198,7 +198,7 @@ export const ClientContextBar = () => {
       {/* Top reason banner (compact) */}
       {priority?.topReason && (
         <div className="hidden lg:flex items-center gap-1.5 text-[11px] text-white/70 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10 max-w-[300px] truncate">
-          <Sparkles className="h-3 w-3 text-[#3b82f6] shrink-0" />
+          <Sparkles className="h-3 w-3 text-[#0052FF] shrink-0" />
           <span className="truncate">{priority.topReason.label}</span>
         </div>
       )}

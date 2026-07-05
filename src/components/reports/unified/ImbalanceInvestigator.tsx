@@ -176,7 +176,7 @@ export function ImbalanceInvestigator({
                       key={e.entryId}
                       onClick={() => onEntryClick?.(e.entryId)}
                       className={cn(
-                        "w-full text-left rounded-xl border bg-card hover:border-[#3b82f6] transition-all px-4 py-3",
+                        "w-full text-left rounded-xl border bg-card hover:border-[#0052FF] transition-all px-4 py-3",
                         e.match === "exact"
                           ? "border-rose-300/70 bg-rose-50/40 dark:bg-rose-950/20"
                           : "border-border",
@@ -226,11 +226,11 @@ export function ImbalanceInvestigator({
                     <button
                       key={`${s.accountNumber}-${s.anomalyType}`}
                       onClick={() => onAccountClick?.(s.accountNumber)}
-                      className="w-full text-left rounded-xl border border-border bg-card hover:border-[#3b82f6] hover:bg-blue-50/30 dark:hover:bg-blue-950/20 transition-all px-4 py-3"
+                      className="w-full text-left rounded-xl border border-border bg-card hover:border-[#0052FF] hover:bg-blue-50/30 dark:hover:bg-blue-950/20 transition-all px-4 py-3"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="min-w-0 flex-1">
-                          <p className="text-sm font-semibold text-[#3b82f6] dark:text-[#3b82f6]">
+                          <p className="text-sm font-semibold text-[#0052FF] dark:text-[#0052FF]">
                             {s.accountNumber} · {s.accountName}
                           </p>
                           <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
@@ -257,10 +257,10 @@ export function ImbalanceInvestigator({
                   {imbalance.fixes.map((f) => (
                     <div
                       key={f.id}
-                      className="rounded-xl border border-blue-200/70 dark:border-[#3b82f6]/40 bg-blue-50/40 dark:bg-blue-950/20 px-4 py-3"
+                      className="rounded-xl border border-blue-200/70 dark:border-[#0052FF]/40 bg-blue-50/40 dark:bg-blue-950/20 px-4 py-3"
                     >
                       <div className="flex items-start gap-3">
-                        <Sparkles className="w-4 h-4 text-[#3b82f6] dark:text-[#1E3A5F] shrink-0 mt-0.5" />
+                        <Sparkles className="w-4 h-4 text-[#0052FF] dark:text-[#1E3A5F] shrink-0 mt-0.5" />
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">{f.title}</p>
                           <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">

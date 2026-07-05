@@ -66,7 +66,7 @@ export function AlertsStrip({ companyId }: Props) {
                 </div>
                 <h4 className="font-semibold text-sm leading-snug line-clamp-2">{it.title}</h4>
                 <p className="text-[11px] text-muted-foreground mt-1 line-clamp-2">{it.explanation}</p>
-                <div className="mt-2 flex items-center gap-1 text-[11px] text-[#3b82f6] dark:text-[#1E3A5F] font-medium">
+                <div className="mt-2 flex items-center gap-1 text-[11px] text-[#0052FF] dark:text-[#1E3A5F] font-medium">
                   Granska <ArrowRight className="h-3 w-3" />
                 </div>
               </button>

@@ -51,7 +51,7 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
       {/* LEFT: Form */}
       <div className="space-y-6">
         <div>
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EFF6FF] border border-blue-100 text-[10px] font-semibold text-[#3b82f6] uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EFF6FF] border border-blue-100 text-[10px] font-semibold text-[#0052FF] uppercase tracking-wider mb-3">
             <Sparkles className="h-3 w-3" /> Steg 1 · Brand identity
           </div>
           <h1 className="text-2xl font-bold text-slate-900 leading-tight">
@@ -87,7 +87,7 @@ export function Step1BrandIdentity({ draft, update, slugAvailable, checkingSlug 
 
           <div className="space-y-2">
             <label className="text-xs font-medium text-slate-700">Adress</label>
-            <div className="flex items-stretch rounded-md border border-slate-200 bg-white overflow-hidden focus-within:ring-2 focus-within:ring-[#3b82f6]/30 focus-within:border-[#3b82f6]">
+            <div className="flex items-stretch rounded-md border border-slate-200 bg-white overflow-hidden focus-within:ring-2 focus-within:ring-[#0052FF]/30 focus-within:border-[#0052FF]">
               <input
                 value={draft.slug}
                 onChange={(e) => update("slug", slugify(e.target.value))}

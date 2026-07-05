@@ -83,7 +83,7 @@ export function AgentPerformance({ companyId, stats }: Props) {
               <Line
                 type="monotone"
                 dataKey="rate"
-                stroke="#3b82f6"
+                stroke="#0052FF"
                 strokeWidth={2}
                 dot={{ r: 3, fill: "hsl(var(--primary))" }}
               />

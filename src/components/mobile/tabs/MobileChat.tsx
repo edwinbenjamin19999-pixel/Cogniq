@@ -647,7 +647,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
                       renderAssistantMsg(m)
                     )
                   ) : (
-                    <div className="bg-[#3b82f6] text-white rounded-2xl px-4 py-3 text-[15px] leading-[1.5] whitespace-pre-wrap break-words">{m.content}</div>
+                    <div className="bg-[#0052FF] text-white rounded-2xl px-4 py-3 text-[15px] leading-[1.5] whitespace-pre-wrap break-words">{m.content}</div>
                   )}
                 </div>
               </div>
@@ -664,7 +664,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
         {showNewActivity && (
           <button
             onClick={() => scrollBottom()}
-            className="sticky bottom-2 mx-auto block bg-[#3b82f6] text-white text-[13px] font-medium px-4 h-9 rounded-full shadow-lg active:scale-95 transition-transform flex items-center gap-1.5"
+            className="sticky bottom-2 mx-auto block bg-[#0052FF] text-white text-[13px] font-medium px-4 h-9 rounded-full shadow-lg active:scale-95 transition-transform flex items-center gap-1.5"
           >
             <ArrowDown className="h-3.5 w-3.5" />
             Ny aktivitet
@@ -741,7 +741,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
           autoCapitalize="sentences"
           spellCheck={false}
           className="flex-1 bg-slate-800 placeholder:text-slate-500 outline-none min-w-0 min-h-[44px] max-h-[140px] rounded-2xl px-4 py-3 border border-slate-700 focus:border-indigo-500 transition-colors resize-none leading-[1.4]"
-          style={{ fontSize: "16px", color: "#ffffff", WebkitTextFillColor: "#ffffff", caretColor: "#818cf8" }}
+          style={{ fontSize: "16px", color: "#ffffff", WebkitTextFillColor: "#ffffff", caretColor: "#4D7CFF" }}
         />
 
         {/* Send button — always visible (per spec), 44×44 px */}
@@ -752,7 +752,7 @@ export const MobileChat = ({ user, initialMessage, onInitialMessageConsumed, onB
           className={cn(
             "min-h-[44px] min-w-[44px] rounded-xl flex items-center justify-center transition-all flex-shrink-0 active:scale-[0.97]",
             input.trim() && !streaming
-              ? "bg-[#3b82f6] text-white"
+              ? "bg-[#0052FF] text-white"
               : "bg-slate-800 text-slate-600 cursor-not-allowed"
           )}
         >

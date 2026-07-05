@@ -98,7 +98,7 @@ export function CashBridgeFlow({ openingCash, closingCash, segments, onSegmentCl
         <div className="flex items-center gap-3 text-[11px] text-muted-foreground">
           <span className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-emerald-500" /> Inflöde</span>
           <span className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-rose-500" /> Utflöde</span>
-          <span className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-[#3b82f6]" /> Saldo</span>
+          <span className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-[#0052FF]" /> Saldo</span>
         </div>
       </div>
 
@@ -122,8 +122,8 @@ export function CashBridgeFlow({ openingCash, closingCash, segments, onSegmentCl
                 <div
                   className={cn(
                     "w-full rounded-md transition-all group-hover:opacity-90",
-                    b.variant === "opening" && "bg-[#3b82f6]/80",
-                    b.variant === "closing" && "bg-[#3b82f6]",
+                    b.variant === "opening" && "bg-[#0052FF]/80",
+                    b.variant === "closing" && "bg-[#0052FF]",
                     b.variant === "in" && "bg-emerald-500/85",
                     b.variant === "out" && "bg-rose-500/85",
                   )}
@@ -137,7 +137,7 @@ export function CashBridgeFlow({ openingCash, closingCash, segments, onSegmentCl
                   "mt-0.5 text-xs font-semibold tabular-nums",
                   b.variant === "in" && "text-[#085041] dark:text-[#1D9E75]",
                   b.variant === "out" && "text-[#7A1A1A] dark:text-[#C73838]",
-                  (b.variant === "opening" || b.variant === "closing") && "text-[#3b82f6] dark:text-[#3b82f6]",
+                  (b.variant === "opening" || b.variant === "closing") && "text-[#0052FF] dark:text-[#0052FF]",
                 )}>
                   {b.variant === "out" ? `−${formatSEK(Math.abs(b.value))}` : formatSEK(b.value)}
                 </div>

@@ -447,11 +447,11 @@ export function useForecast13w(companyId: string | undefined) { const [weeks, se
       const catColors: Record<string, string> = { customer: "#22C55E",
         supplier: "#EF4444",
         salary: "#F59E0B",
-        vat: "#8B5CF6",
-        ftax: "#6366F1",
+        vat: "#0052FF",
+        ftax: "#0040CC",
         employer_fee: "#EC4899",
-        recurring: "#3b82f6",
-        manual: "#3b82f6",
+        recurring: "#0052FF",
+        manual: "#0052FF",
       };
 
       const inBreakdown: CategoryBreakdown[] = Array.from(inCats.entries())

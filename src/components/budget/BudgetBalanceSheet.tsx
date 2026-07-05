@@ -203,7 +203,7 @@ export const BudgetBalanceSheet = ({ rrRows, cfData, driverBR }: BudgetBalanceSh
           ))}
           <div>
             <label className="text-xs text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1">
-              <Clock className="w-3 h-3 text-[#3b82f6]" /> DSO (dagar)
+              <Clock className="w-3 h-3 text-[#0052FF]" /> DSO (dagar)
             </label>
             <Input type="number" value={dso} onChange={e => setDso(parseInt(e.target.value) || 30)}
               className="mt-1 text-sm font-mono text-right h-8" />

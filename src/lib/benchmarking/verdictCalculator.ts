@@ -37,9 +37,9 @@ export function getVerdict(percentile: number, smartWarning?: string | null): Ve
       tone: "watch",
       label: "Bevaka",
       badgeClass:
-        "bg-blue-50 text-[#3b82f6] border-blue-200 dark:bg-blue-950/40 dark:text-[#3b82f6] dark:border-[#3b82f6]",
-      accentClass: "border-l-4 border-l-[#3b82f6]",
-      markerColor: "#3b82f6",
+        "bg-blue-50 text-[#0052FF] border-blue-200 dark:bg-blue-950/40 dark:text-[#0052FF] dark:border-[#0052FF]",
+      accentClass: "border-l-4 border-l-[#0052FF]",
+      markerColor: "#0052FF",
     };
   }
   return {

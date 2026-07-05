@@ -112,7 +112,7 @@ export function AIHero({
       {/* Verdict */}
       <div className="space-y-1">
         <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-[#3b82f6]" />
+          <Sparkles className="w-4 h-4 text-[#0052FF]" />
           {status.headline}
         </h2>
         {status.reasons[0] && <p className="text-sm text-slate-700">{status.reasons[0]}</p>}
@@ -131,7 +131,7 @@ export function AIHero({
             key={c.key}
             type="button"
             onClick={() => onDriverFocus?.(c.key)}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#3b82f6] hover:bg-blue-50/60 transition-colors"
+            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-medium border border-slate-200 bg-white text-slate-700 hover:border-[#0052FF] hover:bg-blue-50/60 transition-colors"
           >
             {DRIVER_LABELS[c.key] ?? c.key}
           </button>

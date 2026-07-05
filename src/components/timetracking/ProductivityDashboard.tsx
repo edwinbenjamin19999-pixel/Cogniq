@@ -169,7 +169,7 @@ export function ProductivityDashboard() {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm flex items-center gap-1.5">
-              <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+              <Sparkles className="h-4 w-4 text-[#0052FF]" />
               Faktureringsgrad — 12 veckors trend
             </CardTitle>
           </CardHeader>
@@ -185,7 +185,7 @@ export function ProductivityDashboard() {
                     formatter={(v: number) => [`${v}%`, "Faktureringsgrad"]}
                   />
                   <ReferenceLine y={80} stroke="hsl(var(--muted-foreground))" strokeDasharray="4 4" label={{ value: "Mål 80%", position: "right", className: "text-[10px] fill-muted-foreground" }} />
-                  <Line type="monotone" dataKey="rate" stroke="#3b82f6" strokeWidth={2} dot={{ fill: "#3b82f6", r: 3 }} />
+                  <Line type="monotone" dataKey="rate" stroke="#0052FF" strokeWidth={2} dot={{ fill: "#0052FF", r: 3 }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -324,7 +324,7 @@ export function ProductivityDashboard() {
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-sm flex items-center gap-1.5">
-            <Sparkles className="h-4 w-4 text-[#3b82f6]" />
+            <Sparkles className="h-4 w-4 text-[#0052FF]" />
             AI Produktivitetsinsikter
           </CardTitle>
         </CardHeader>
@@ -400,7 +400,7 @@ export function ProductivityDashboard() {
           </div>
           <div className="flex gap-2 flex-shrink-0">
             <Button size="sm" variant="outline" className="text-xs">Inte nu</Button>
-            <Button size="sm" className="text-xs bg-[#3b82f6] hover:bg-[#3b82f6]/90 text-foreground">Aktivera</Button>
+            <Button size="sm" className="text-xs bg-[#0052FF] hover:bg-[#0052FF]/90 text-foreground">Aktivera</Button>
           </div>
         </CardContent>
       </Card>

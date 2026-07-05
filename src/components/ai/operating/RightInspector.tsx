@@ -117,7 +117,7 @@ export function RightInspector({ selectedAgent, selectedTrigger, onClose }: Prop
                 <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Allowed actions</div>
                 <div className="flex flex-wrap gap-1 mt-1">
                   {selectedAgent.allowed_actions.map((a) => (
-                    <span key={a} className="text-[10px] px-1.5 py-0.5 rounded-full bg-[#EFF6FF] text-[#3b82f6] font-mono">{a}</span>
+                    <span key={a} className="text-[10px] px-1.5 py-0.5 rounded-full bg-[#EFF6FF] text-[#0052FF] font-mono">{a}</span>
                   ))}
                 </div>
               </div>
@@ -182,7 +182,7 @@ export function RightInspector({ selectedAgent, selectedTrigger, onClose }: Prop
                     "w-1 h-1 rounded-full",
                     l.status === "completed" && "bg-emerald-500",
                     l.status === "failed" && "bg-rose-500",
-                    l.status === "running" && "bg-[#3b82f6] animate-pulse",
+                    l.status === "running" && "bg-[#0052FF] animate-pulse",
                     !["completed", "failed", "running"].includes(l.status) && "bg-slate-300",
                   )} />
                   <span className="font-mono text-slate-700 flex-1 truncate">{l.task_type}</span>

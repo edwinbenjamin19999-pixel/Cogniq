@@ -60,7 +60,7 @@ export function BudgetDecisionHeader({
               className={cn(
                 "px-3 py-1 rounded-full text-xs font-medium border transition-colors",
                 activeKpi === k
-                  ? "bg-[#3b82f6] text-white border-blue-600"
+                  ? "bg-[#0052FF] text-white border-blue-600"
                   : "bg-white text-slate-600 border-slate-200 hover:border-slate-300"
               )}
             >

@@ -140,7 +140,7 @@ export const BureauPortfolioKPIs = () => {
         label="AI-automatiserat idag"
         value={String(aiAutoToday)}
         sub="verifikationer och avstämningar"
-        accent="#534AB7"
+        accent="#4D7CFF"
         badge="AI"
       />
     </div>

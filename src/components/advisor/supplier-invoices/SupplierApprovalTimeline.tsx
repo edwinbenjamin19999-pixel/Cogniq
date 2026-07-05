@@ -41,7 +41,7 @@ export function SupplierApprovalTimeline({ stage }: { stage: SupplierInvoiceStag
             <div
               className={`h-6 w-6 rounded-full flex items-center justify-center ring-1 ${
                 isCurrent
-                  ? "bg-[#3b82f6] text-white ring-[#3b82f6]"
+                  ? "bg-[#0052FF] text-white ring-[#0052FF]"
                   : reached
                   ? "bg-emerald-500 text-white ring-emerald-500"
                   : "bg-white text-[#94A3B8] ring-[#E2E8F0]"

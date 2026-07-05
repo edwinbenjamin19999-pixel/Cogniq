@@ -56,7 +56,7 @@ const SectionLabel = ({ children }: { children: React.ReactNode }) => (
 const AIBadge = ({ confidence, reasoning, onApply }: { confidence: number; reasoning?: string; onApply?: () => void }) => (
   <Popover>
     <PopoverTrigger asChild>
-      <button type="button" className="inline-flex items-center gap-1 rounded-full bg-blue-50 text-[#3b82f6] border border-blue-200 px-1.5 py-px text-[10px] font-medium hover:bg-blue-100">
+      <button type="button" className="inline-flex items-center gap-1 rounded-full bg-blue-50 text-[#0052FF] border border-blue-200 px-1.5 py-px text-[10px] font-medium hover:bg-blue-100">
         <Sparkles className="w-2.5 h-2.5" />AI · {Math.round(confidence * 100)}%
       </button>
     </PopoverTrigger>

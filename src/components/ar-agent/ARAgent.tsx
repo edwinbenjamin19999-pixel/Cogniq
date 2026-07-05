@@ -218,16 +218,16 @@ export const ARAgent = ({ companyId, customerFilter, onClearCustomerFilter }: AR
 
       {/* Customer context banner — when filtered to one customer */}
       {customerFilter && activeCustomerRecord && (
-        <div className="rounded-2xl border border-slate-200/70 border-l-[3px] border-l-[#3b82f6] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
+        <div className="rounded-2xl border border-slate-200/70 border-l-[3px] border-l-[#0052FF] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
           <div className="flex items-start gap-4 flex-wrap">
             <div className="h-12 w-12 rounded-full bg-[#0F1F3D] flex items-center justify-center flex-shrink-0">
-              <User className="h-5 w-5 text-[#3b82f6]" />
+              <User className="h-5 w-5 text-[#0052FF]" />
             </div>
             <div className="flex-1 min-w-[240px] space-y-1">
               <div className="flex items-center gap-2 flex-wrap">
                 <button
                   onClick={() => setProfilePanel(activeCustomerRecord)}
-                  className="text-base font-semibold text-slate-900 hover:text-[#3b82f6]"
+                  className="text-base font-semibold text-slate-900 hover:text-[#0052FF]"
                 >
                   {customerFilter}
                 </button>
@@ -259,7 +259,7 @@ export const ARAgent = ({ companyId, customerFilter, onClearCustomerFilter }: AR
               <Button size="sm" variant="outline" className="text-xs h-8" onClick={() => toast.success("Uppföljning schemalagd")}>
                 <CalendarClock className="h-3 w-3 mr-1" /> Schemalägg
               </Button>
-              <Button size="sm" className="text-xs h-8 bg-[#3b82f6] hover:bg-[#3b82f6] text-white" onClick={() => toast.success(`Påminnelse skickad till ${customerFilter}`)}>
+              <Button size="sm" className="text-xs h-8 bg-[#0052FF] hover:bg-[#0052FF] text-white" onClick={() => toast.success(`Påminnelse skickad till ${customerFilter}`)}>
                 <Bell className="h-3 w-3 mr-1" /> Skicka påminnelse
               </Button>
               <Button size="sm" variant="ghost" className="text-xs h-8 text-slate-500" onClick={onClearCustomerFilter}>
@@ -335,7 +335,7 @@ export const ARAgent = ({ companyId, customerFilter, onClearCustomerFilter }: AR
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
               <p className="text-sm font-semibold text-foreground flex items-center gap-2">
-                <Zap className="h-4 w-4 text-[#3b82f6]" />
+                <Zap className="h-4 w-4 text-[#0052FF]" />
                 Aktivera automatisk uppföljning
               </p>
               <p className="text-xs text-muted-foreground">

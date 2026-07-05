@@ -111,7 +111,7 @@ export function SupplierDrawer({ vendor, onClose, totalSpend, months }: Props) {
               <ChartGradients />
                     <XAxis dataKey="month" tick={AXIS_TICK} axisLine={false} tickLine={false} />
                     <Tooltip formatter={(v: number) => `${fmt(v)} kr`} />
-                    <Area type="monotone" dataKey="amount" fill="#3b82f6" fillOpacity={0.2} stroke="#3b82f6" strokeWidth={2} />
+                    <Area type="monotone" dataKey="amount" fill="#0052FF" fillOpacity={0.2} stroke="#0052FF" strokeWidth={2} />
                   </AreaChart>
                 </ResponsiveContainer>
               </CardContent>

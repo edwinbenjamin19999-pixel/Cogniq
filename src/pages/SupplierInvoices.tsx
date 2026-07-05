@@ -82,7 +82,7 @@ const KPICard = ({
   delay?: number;
 }) => {
   const accentMap = {
-    cyan: "border-l-[#3b82f6] bg-[#EFF6FF] text-[#3b82f6]",
+    cyan: "border-l-[#0052FF] bg-[#EFF6FF] text-[#0052FF]",
     rose: "border-l-rose-500 bg-[#FCE8E8] text-[#7A1A1A]",
     emerald: "border-l-emerald-500 bg-[#E1F5EE] text-[#085041]",
     amber: "border-l-amber-500 bg-[#FAEEDA] text-[#7A5417]",
@@ -117,7 +117,7 @@ const SupplierAvatar = ({ name }: { name: string }) => {
   const colors = [
     "from-violet-500 to-indigo-500", "from-emerald-500 to-blue-500",
     "from-rose-500 to-pink-500", "from-amber-500 to-orange-500",
-    "from-blue-500 to-[#3b82f6]", "from-fuchsia-500 to-purple-500",
+    "from-blue-500 to-[#0052FF]", "from-fuchsia-500 to-purple-500",
   ];
   const idx = (name?.charCodeAt(0) ?? 0) % colors.length;
   return (
@@ -461,10 +461,10 @@ const SupplierInvoiceList = ({
   if (invoices.length === 0) {
     return (
       <Card className="overflow-hidden">
-        <div className="h-[3px] bg-[#3b82f6]" />
+        <div className="h-[3px] bg-[#0052FF]" />
         <CardContent className="py-16 text-center">
           <div className="rounded-2xl bg-[#EFF6FF] dark:bg-blue-900/30 p-3 inline-block mb-4">
-            <FileText className="w-12 h-12 text-[#3b82f6] dark:text-[#3b82f6]" />
+            <FileText className="w-12 h-12 text-[#0052FF] dark:text-[#0052FF]" />
           </div>
           <p className="text-slate-500 font-medium">
             Inga leverantörsfakturor matchar filtret
