@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cogniq — Agentisk redovisning</title>
+<link rel="stylesheet" href="../tokens/colors.css">
+<link rel="stylesheet" href="../tokens/fonts.css">
+<link rel="stylesheet" href="../tokens/typography.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--font-sans);
+    background:var(--c-page);
+    color:var(--c-text-1);
+    -webkit-font-smoothing:antialiased;
+    line-height:var(--lh-body);
+  }
+  a{color:inherit;text-decoration:none}
+  a:hover{color:var(--c-brand)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+  .mono{font-family:var(--font-mono)}
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--c-brand);
+  }
+
+  /* ── Buttons ── */
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--font-sans);font-size:14px;font-weight:var(--fw-semibold);
+    padding:11px 20px;border-radius:9px;border:1px solid transparent;
+    cursor:pointer;transition:.15s ease;white-space:nowrap;
+  }
+  .btn-primary{background:var(--c-brand);color:#fff;box-shadow:0 1px 2px rgba(0,40,120,.25)}
+  .btn-primary:hover{background:var(--c-brand-deep);color:#fff;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--c-text-1);border-color:var(--c-border-strong)}
+  .btn-ghost:hover{background:var(--c-surface);border-color:var(--c-text-3);color:var(--c-text-1)}
+  .btn-dark-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.22)}
+  .btn-dark-ghost:hover{background:rgba(255,255,255,.12);color:#fff}
+
+  /* ── Nav ── */
+  nav{position:sticky;top:0;z-index:50;background:rgba(11,29,42,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:var(--fw-bold);font-size:19px;letter-spacing:-.02em;color:#fff}
+  .brand .dot{width:22px;height:22px;border-radius:6px;background:var(--c-brand);display:grid;place-items:center;color:#fff;font-size:13px;font-family:var(--font-mono)}
+  .nav-links{display:flex;gap:30px;font-size:14px;color:rgba(255,255,255,.78)}
+  .nav-links a:hover{color:#fff}
+  .nav-right{display:flex;align-items:center;gap:18px;font-size:14px;color:rgba(255,255,255,.8)}
+  @media(max-width:860px){.nav-links{display:none}}
+
+  /* ── Hero ── */
+  .hero{position:relative;background:var(--c-hero-navy);color:#fff;overflow:hidden;padding:96px 0 0}
+  .hero::before{content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(1100px 520px at 72% -6%, rgba(0,82,255,.30), transparent 60%),
+      radial-gradient(700px 400px at 6% 8%, rgba(77,124,255,.12), transparent 55%);
+    pointer-events:none}
+  .hero::after{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+    background-size:60px 60px;mask-image:radial-gradient(900px 500px at 50% 0%,#000,transparent 75%)}
+  .hero-in{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto}
+  .pill{display:inline-flex;align-items:center;gap:9px;padding:6px 14px 6px 8px;border:1px solid rgba(255,255,255,.16);border-radius:100px;font-size:12.5px;color:rgba(255,255,255,.82);margin-bottom:30px}
+  .pill b{background:var(--c-brand);color:#fff;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;padding:3px 8px;border-radius:100px;text-transform:uppercase}
+  h1{font-family:var(--font-display);font-weight:var(--fw-bold);font-size:clamp(42px,6.4vw,74px);line-height:1.02;letter-spacing:-.035em;margin-bottom:22px}
+  h1 .accent{color:#7DA5FF}
+  .sub{font-size:clamp(16px,1.6vw,19px);line-height:1.55;color:rgba(255,255,255,.72);max-width:600px;margin:0 auto 34px}
+  .cta-row{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+  .trust{margin-top:56px;padding-bottom:8px}
+  .trust p{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:18px}
+  .trust-logos{display:flex;gap:38px;justify-content:center;align-items:center;flex-wrap:wrap;color:rgba(255,255,255,.62);font-family:var(--font-display);font-weight:var(--fw-semibold);font-size:17px;letter-spacing:-.01em}
+
+  /* ── Product shot ── */
+  .shot{position:relative;z-index:2;max-width:1000px;margin:64px auto -120px;padding:0 32px}
+  .board{background:var(--c-surface);border:1px solid var(--c-border);border-radius:16px;box-shadow:0 40px 80px -32px rgba(4,18,40,.55),0 2px 6px rgba(4,18,40,.2);overflow:hidden}
+  .board-bar{display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid var(--c-border);background:var(--c-surface)}
+  .tl{width:11px;height:11px;border-radius:50%}
+  .board-tab{margin-left:14px;font-size:12px;color:var(--c-text-3);font-family:var(--font-mono)}
+  .board-body{display:grid;grid-template-columns:200px 1fr;min-height:440px}
+  .side{background:var(--c-sidebar);padding:20px 14px;display:flex;flex-direction:column;gap:3px}
+  .side .s-brand{display:flex;align-items:center;gap:8px;color:#fff;font-family:var(--font-display);font-weight:700;font-size:15px;padding:4px 8px 16px}
+  .side .s-brand .dot{width:18px;height:18px;border-radius:5px;background:var(--c-brand);display:grid;place-items:center;font-size:11px;font-family:var(--font-mono)}
+  .s-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:7px;font-size:12.5px;color:rgba(255,255,255,.62)}
+  .s-item .ic{width:15px;height:15px;border-radius:4px;border:1.5px solid currentColor;opacity:.8}
+  .s-item.active{background:rgba(255,255,255,.09);color:#fff}
+  .s-item.active .ic{background:var(--c-brand);border-color:var(--c-brand)}
+  .main{padding:22px 24px;background:var(--c-page)}
+  .m-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
+  .m-head h3{font-family:var(--font-display);font-size:19px;font-weight:600;letter-spacing:-.02em;color:var(--c-text-1)}
+  .m-head p{font-size:12px;color:var(--c-text-3);margin-top:3px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+  .kpi{background:var(--c-surface);border:1px solid var(--c-border);border-radius:11px;padding:14px}
+  .kpi .lab{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--c-text-3)}
+  .kpi .val{font-family:var(--font-mono);font-size:22px;letter-spacing:-.02em;color:var(--c-text-1);margin-top:8px}
+  .kpi .val.pos{color:var(--c-value-positive)}
+  .kpi .delta{font-size:11px;margin-top:5px;color:var(--c-text-2)}
+  .kpi .delta.up{color:var(--c-value-positive)}
+  .flag{background:var(--c-surface);border:1px solid var(--c-border);border-radius:11px;overflow:hidden}
+  .flag-top{display:flex;align-items:center;gap:10px;padding:12px 15px;border-bottom:1px solid var(--c-border-subtle)}
+  .flag-badge{width:26px;height:26px;border-radius:7px;background:var(--c-ai-bg);color:var(--c-ai);display:grid;place-items:center;font-family:var(--font-mono);font-size:13px}
+  .flag-top .t{font-size:12.5px;font-weight:600;color:var(--c-text-1)}
+  .flag-top .n{margin-left:auto;font-family:var(--font-mono);font-size:10px;background:var(--c-danger-bg);color:var(--c-danger-text);padding:3px 8px;border-radius:100px}
+  .flag-row{display:flex;align-items:center;gap:12px;padding:11px 15px;font-size:12.5px;border-top:1px solid var(--c-border-subtle)}
+  .flag-row .rc{font-family:var(--font-mono);font-size:10px;color:var(--c-text-3);width:52px}
+  .flag-row .rt{color:var(--c-text-2);flex:1}
+  .flag-row .rs{font-family:var(--font-mono);font-size:11px}
+  .rs.neg{color:var(--c-value-negative)}
+  .rs.ok{color:var(--c-value-positive)}
+  @media(max-width:720px){.board-body{grid-template-columns:1fr}.side{display:none}.kpis{grid-template-columns:1fr 1fr}}
+
+  /* ── Integrations strip ── */
+  .strip{background:var(--c-surface);border-top:1px solid var(--c-border);border-bottom:1px solid var(--c-border);padding:150px 0 40px}
+  .strip p{text-align:center;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--c-text-3);margin-bottom:26px}
+  .strip-logos{display:flex;gap:44px;justify-content:center;align-items:center;flex-wrap:wrap;font-family:var(--font-display);font-weight:600;font-size:19px;color:var(--c-text-2);letter-spacing:-.01em}
+
+  /* ── Feature: split ── */
+  section.feat{padding:104px 0}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .split h2{font-family:var(--font-display);font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin:16px 0 18px}
+  .split p.lead{font-size:16px;color:var(--c-text-2);line-height:1.6;margin-bottom:26px}
+  .checks{display:flex;flex-direction:column;gap:14px}
+  .check{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--c-text-1)}
+  .check .ck{flex:none;width:20px;height:20px;border-radius:6px;background:var(--c-brand-tint);color:var(--c-brand);display:grid;place-items:center;font-size:12px;margin-top:1px}
+  .check span b{font-weight:600}
+  .check span i{font-style:normal;color:var(--c-text-2)}
+  /* anomaly visual card */
+  .avvik{background:var(--c-surface);border:1px solid var(--c-border);border-radius:16px;padding:8px;box-shadow:0 30px 60px -30px rgba(15,23,42,.28)}
+  .avvik-h{display:flex;align-items:center;gap:10px;padding:14px 15px 13px}
+  .avvik-h .sp{width:28px;height:28px;border-radius:8px;background:var(--c-ai-bg);color:var(--c-ai);display:grid;place-items:center;font-family:var(--font-mono);font-size:14px}
+  .avvik-h .txt{font-size:13px;font-weight:600}
+  .avvik-h .txt small{display:block;font-weight:400;color:var(--c-text-3);font-size:11.5px;margin-top:1px}
+  .avvik-card{background:var(--c-page);border:1px solid var(--c-border);border-radius:11px;padding:15px;margin:0 6px 6px}
+  .avvik-tag{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--c-danger-text);background:var(--c-danger-bg);padding:3px 8px;border-radius:100px;display:inline-block;margin-bottom:10px}
+  .avvik-card p{font-size:13px;color:var(--c-text-1);line-height:1.55;margin-bottom:14px}
+  .avvik-meta{display:flex;gap:22px;padding-top:12px;border-top:1px solid var(--c-border-subtle)}
+  .avvik-meta div{font-size:11px}
+  .avvik-meta .k{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--c-text-3);margin-bottom:5px}
+  .avvik-meta .v{font-family:var(--font-mono);font-size:12px;color:var(--c-text-1)}
+  .avvik-act{display:flex;gap:9px;padding:13px 6px 6px}
+  .avvik-act .b1{flex:1;text-align:center;font-size:12.5px;font-weight:600;color:#fff;background:var(--c-brand);padding:9px;border-radius:8px}
+  .avvik-act .b2{flex:1;text-align:center;font-size:12.5px;font-weight:500;color:var(--c-text-2);background:var(--c-surface-raised);padding:9px;border-radius:8px}
+  @media(max-width:820px){.split{grid-template-columns:1fr;gap:40px}.split.rev .vis{order:-1}}
+
+  /* ── Three up ── */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+  .card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:14px;padding:26px;transition:.18s}
+  .card:hover{border-color:var(--c-border-strong);transform:translateY(-2px);box-shadow:0 18px 40px -26px rgba(15,23,42,.3)}
+  .card .ci{width:38px;height:38px;border-radius:10px;background:var(--c-brand-tint);color:var(--c-brand);display:grid;place-items:center;font-family:var(--font-mono);font-size:17px;margin-bottom:16px}
+  .card h4{font-family:var(--font-display);font-size:16px;font-weight:600;letter-spacing:-.01em;margin-bottom:8px}
+  .card p{font-size:13.5px;color:var(--c-text-2);line-height:1.55}
+  .sec-head{text-align:center;max-width:600px;margin:0 auto}
+  .sec-head h2{font-family:var(--font-display);font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin:14px 0 14px}
+  .sec-head p{font-size:16px;color:var(--c-text-2);line-height:1.6}
+  @media(max-width:820px){.grid3{grid-template-columns:1fr}}
+
+  /* ── CTA band ── */
+  .cta{background:var(--c-hero-navy);color:#fff;border-radius:22px;text-align:center;padding:72px 40px;position:relative;overflow:hidden;margin:0 0 96px}
+  .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 340px at 50% 120%,rgba(0,82,255,.4),transparent 62%)}
+  .cta-inner{position:relative;z-index:2}
+  .cta h2{font-family:var(--font-display);font-size:clamp(30px,4vw,46px);font-weight:700;letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}
+  .cta p{color:rgba(255,255,255,.72);font-size:17px;margin-bottom:30px}
+
+  /* ── Footer ── */
+  footer{border-top:1px solid var(--c-border);padding:44px 0 60px;color:var(--c-text-3);font-size:13px}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  .foot-in .brand{color:var(--c-text-1)}
+  .foot-in .brand .dot{background:var(--c-brand)}
+  .foot-links{display:flex;gap:26px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="brand"><span class="dot">C</span>Cogniq</div>
+    <div class="nav-links">
+      <a href="#">Produkt</a>
+      <a href="#">Integrationer</a>
+      <a href="#">Priser</a>
+      <a href="#">Kundcase</a>
+    </div>
+    <div class="nav-right">
+      <a href="#">Logga in</a>
+      <a href="#" class="btn btn-primary">Kom igång</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="pill"><b>Nytt</b> Cogniq 4 — djupanalys ner på verifikatsnivå</div>
+    <h1>Redovisning som <span class="accent">granskar sig själv.</span></h1>
+    <p class="sub">Agenter sköter avstämning, kontroll och månadsbokslut i bakgrunden. Ditt team går från att mata in siffror till att fatta beslut.</p>
+    <div class="cta-row">
+      <a href="#" class="btn btn-primary">Kom igång — 30 dagar fritt</a>
+      <a href="#" class="btn btn-dark-ghost">Boka demo</a>
+    </div>
+    <div class="trust">
+      <p>Används av Nordens vassaste ekonomiteam</p>
+      <div class="trust-logos">
+        <span>Nordwind</span><span>Fjord&amp;Co</span><span>Lagom</span><span>Vektor</span><span>Saga Labs</span>
+      </div>
+    </div>
+  </div>
+  <div class="shot">
+    <div class="board">
+      <div class="board-bar">
+        <span class="tl" style="background:#FF5F57"></span><span class="tl" style="background:#FEBC2E"></span><span class="tl" style="background:#28C840"></span>
+        <span class="board-tab">app.cogniq.se/oversikt</span>
+      </div>
+      <div class="board-body">
+        <aside class="side">
+          <div class="s-brand"><span class="dot">C</span>Cogniq</div>
+          <div class="s-item active"><span class="ic"></span>Översikt</div>
+          <div class="s-item"><span class="ic"></span>Avstämningar</div>
+          <div class="s-item"><span class="ic"></span>Verifikat</div>
+          <div class="s-item"><span class="ic"></span>Rapporter</div>
+          <div class="s-item"><span class="ic"></span>Moms &amp; skatt</div>
+          <div class="s-item"><span class="ic"></span>Kunder</div>
+        </aside>
+        <div class="main">
+          <div class="m-head">
+            <div>
+              <h3>Översikt</h3>
+              <p>Yoga-Yoga Mindful AB · Räkenskapsår 2025</p>
+            </div>
+            <span class="btn btn-ghost" style="padding:7px 13px;font-size:12.5px">Exportera</span>
+          </div>
+          <div class="kpis">
+            <div class="kpi"><div class="lab">Likvida medel</div><div class="val">1 284 500</div><div class="delta up">▲ 8,2% mot förra mån</div></div>
+            <div class="kpi"><div class="lab">Resultat YTD</div><div class="val pos">+342 100</div><div class="delta up">▲ 14,6%</div></div>
+            <div class="kpi"><div class="lab">Avvikelser</div><div class="val">6</div><div class="delta">3 kräver åtgärd</div></div>
+          </div>
+          <div class="flag">
+            <div class="flag-top">
+              <span class="flag-badge">✦</span>
+              <span class="t">Cogniq hittade 6 avvikelser i bokföringen</span>
+              <span class="n">3 nya</span>
+            </div>
+            <div class="flag-row"><span class="rc">B57</span><span class="rt">Kundfordran konterad bort utan registrerat inflöde</span><span class="rs neg">−48 200</span></div>
+            <div class="flag-row"><span class="rc">V112</span><span class="rt">Moms 25% på leverantörsfaktura saknar underlag</span><span class="rs neg">−12 050</span></div>
+            <div class="flag-row"><span class="rc">B65</span><span class="rt">Periodisering föreslagen — hyra kv.4</span><span class="rs ok">löst</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="strip">
+  <div class="wrap">
+    <p>Integreras direkt med</p>
+    <div class="strip-logos">
+      <span>Fortnox</span><span>Visma</span><span>Bokio</span><span>Monitor ERP</span><span>Briox</span>
+    </div>
+  </div>
+</section>
+
+<section class="feat">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Kontroll utan handpåläggning</span>
+      <h2>Ta kontroll genom att släppa kontrollen.</h2>
+      <p class="lead">Cogniq analyserar bokföringen med förståelse för hur just din bransch fungerar — och flaggar bara det som faktiskt avviker. Du bestämmer själv vilka kontroller som gäller.</p>
+      <div class="checks">
+        <div class="check"><span class="ck">✓</span><span><b>Djupanalys ner på verifikatsnivå.</b> <i>Varje avvikelse länkar till verifikat, konto och lagrum.</i></span></div>
+        <div class="check"><span class="ck">✓</span><span><b>Lär sig ditt kontoplan.</b> <i>Inga regler att underhålla — modellen anpassar sig.</i></span></div>
+        <div class="check"><span class="ck">✓</span><span><b>Källhänvisat, alltid.</b> <i>Kontrollera svaret själv, ner till paragraf.</i></span></div>
+      </div>
+    </div>
+    <div class="vis">
+      <div class="avvik">
+        <div class="avvik-h">
+          <span class="sp">✦</span>
+          <span class="txt">Avvikelse upptäckt<small>Fordringar · konto 1510</small></span>
+        </div>
+        <div class="avvik-card">
+          <span class="avvik-tag">Kräver åtgärd</span>
+          <p>Fordringar som normalt innebär inflöde av likvida medel har konterats bort — men inga likvida medel har registrerats.</p>
+          <div class="avvik-meta">
+            <div><div class="k">Verifikat</div><div class="v">B9 · B18 · B57</div></div>
+            <div><div class="k">Konto</div><div class="v">1510 Kundfordringar</div></div>
+            <div><div class="k">Belopp</div><div class="v" style="color:var(--c-value-negative)">−48 200</div></div>
+          </div>
+        </div>
+        <div class="avvik-act">
+          <span class="b1">Markera som löst</span>
+          <span class="b2">Ej ett problem</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feat" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">En plattform · alla roller</span>
+      <h2>Byggt för hur ekonomiteam faktiskt jobbar.</h2>
+      <p>Från löpande bokföring till bokslut och rådgivning — samma verktyg, oavsett roll eller arbetssätt.</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><div class="ci">◷</div><h4>Realtidsbokföring</h4><p>Transaktioner kategoriseras och stäms av mot kontoutdrag dygnet runt — utan att du lyfter ett finger.</p></div>
+      <div class="card"><div class="ci">✦</div><h4>Fråga Cogniq</h4><p>Din alltid-på analytiker. Ställ komplexa skatte- och redovisningsfrågor och få källhänvisade svar på sekunder.</p></div>
+      <div class="card"><div class="ci">⤢</div><h4>Agentiskt bokslut</h4><p>Underlag samlas in, avvikelser flaggas och checklistor drivs framåt automatiskt inför månadsstängning.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <div class="cta-inner">
+        <h2>Byt till Cogniq idag.</h2>
+        <p>Upplev redovisning, omtänkt från grunden.</p>
+        <div class="cta-row"><a href="#" class="btn btn-primary">Kom igång fritt</a><a href="#" class="btn btn-dark-ghost">Boka demo</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="brand"><span class="dot">C</span>Cogniq</div>
+    <div class="foot-links">
+      <a href="#">Produkt</a><a href="#">Priser</a><a href="#">Om oss</a><a href="#">Legal</a>
+    </div>
+    <span>© 2026 Cogniq</span>
+  </div>
+</footer>
+
+</body>
+</html>

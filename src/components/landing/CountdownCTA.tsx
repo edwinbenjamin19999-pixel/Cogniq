@@ -2,7 +2,6 @@ import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { HeroProductMockup } from "./HeroProductMockup";
 import { useWaitlistCount, incrementWaitlist } from "@/hooks/useWaitlistCount";
 
 /**
@@ -132,10 +131,6 @@ export const CountdownCTA = () => {
             </span>
           </div>
         </div>
-      </div>
-
-      <div className="relative z-10 mx-auto mt-4 w-full max-w-[1600px] px-6 pb-8">
-        <HeroProductMockup />
       </div>
     </section>
   );

@@ -1,182 +1,218 @@
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, TrendingUp, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Sparkles,
+  LayoutDashboard,
+  GitCompareArrows,
+  Receipt,
+  BarChart3,
+  Percent,
+  Users,
+} from "lucide-react";
 import { useWaitlistCount } from "@/hooks/useWaitlistCount";
-import { SectionLabel } from "./SectionLabel";
 
 /**
- * MINIMALIST MODERN HERO — asymmetriskt 1.1fr/0.9fr-grid på varm off-white.
- * Vänster: Calistoga-rubrik med gradient-text + gradient-underline på
- * nyckelordet, gradient-CTA. Höger: Higgsfield-genererad 3D-glaskomposition
- * som svävar, roterande streckad ring, två flytande KPI-kort.
- * Under: produktvideon i upphöjt skuggat kort.
+ * AGENTISK REDOVISNING HERO — mörk navy scen (matchar footerns ink-navy),
+ * dot-grid + radial blå glow, produktskärm (sidebar + KPI:er + AI-flaggad
+ * avvikelsepanel) som svävar ned i nästa sektion. Ersätter tidigare ljusa
+ * hero: denna variant bär "granskar sig själv"-löftet visuellt genom att
+ * visa AI:n som hittar och förklarar avvikelser i bokföringen.
  */
+const NAV_ITEMS = [
+  { label: "Översikt", icon: LayoutDashboard, active: true },
+  { label: "Avstämningar", icon: GitCompareArrows, active: false },
+  { label: "Verifikat", icon: Receipt, active: false },
+  { label: "Rapporter", icon: BarChart3, active: false },
+  { label: "Moms & skatt", icon: Percent, active: false },
+  { label: "Kunder", icon: Users, active: false },
+] as const;
+
+const KPIS = [
+  { label: "Likvida medel", value: "1 284 500", delta: "▲ 8,2% mot förra mån", positive: false },
+  { label: "Resultat YTD", value: "+342 100", delta: "▲ 14,6%", positive: true },
+  { label: "Avvikelser", value: "6", delta: "3 kräver åtgärd", positive: false },
+] as const;
+
+const FLAGS = [
+  { code: "B57", text: "Kundfordran konterad bort utan registrerat inflöde", value: "−48 200", negative: true },
+  { code: "V112", text: "Moms 25% på leverantörsfaktura saknar underlag", value: "−12 050", negative: true },
+  { code: "B65", text: "Periodisering föreslagen — hyra kv.4", value: "löst", negative: false },
+] as const;
+
 export const Hero = () => {
   const navigate = useNavigate();
   const { count } = useWaitlistCount();
 
-  const scrollToId = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    else window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
-  };
-
   return (
-    <section id="hero-section" className="relative w-full overflow-hidden bg-background bg-dot-grid pt-[60px]">
-      {/* Radial accent-glow — atmosfäriskt djup, känns mer än syns */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 right-[-10%] h-[600px] w-[600px] rounded-full bg-[#0052FF] opacity-[0.08] blur-[150px]" />
-        <div className="absolute bottom-0 left-[-10%] h-[400px] w-[400px] rounded-full bg-[#4D7CFF] opacity-[0.04] blur-[120px]" />
+    <section id="hero-section" className="relative w-full bg-[#0B1D2A] pt-[60px]">
+      {/* Radial blå glow + dot-grid — egen overflow-hidden yta, stör inte overlap nedanför */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(1100px 520px at 72% -6%, rgba(0,82,255,0.30), transparent 60%), radial-gradient(700px 400px at 6% 8%, rgba(77,124,255,0.14), transparent 55%)",
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-50"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+            maskImage: "radial-gradient(900px 500px at 50% 0%, #000, transparent 75%)",
+            WebkitMaskImage: "radial-gradient(900px 500px at 50% 0%, #000, transparent 75%)",
+          }}
+        />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-10 lg:pt-24">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
-          {/* ── Vänster: text ── */}
-          <div className="text-center lg:text-left">
-            <div className="hero-anim hero-anim-badge flex justify-center lg:justify-start">
-              <SectionLabel pulse>Beslutsintelligens för växande bolag</SectionLabel>
-            </div>
-
-            <h1 className="hero-anim hero-anim-headline mt-8 font-display text-[2.75rem] leading-[1.05] tracking-[-0.02em] text-foreground md:text-6xl lg:text-[4.6rem]">
-              Ekonomin som{" "}
-              <span className="relative inline-block whitespace-nowrap">
-                <span className="text-[#0052FF]">tänker själv.</span>
-                <span
-                  aria-hidden
-                  className="absolute -bottom-1 left-0 h-3 w-full rounded-sm bg-[#0052FF]/15 md:-bottom-2 md:h-4"
-                />
-              </span>
-            </h1>
-
-            <p className="hero-anim hero-anim-sub mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground lg:mx-0">
-              Cogniq bokför, stämmer av och deklarerar automatiskt — och
-              förvandlar varje siffra till prognoser, varningar och beslut du
-              kan lita på. Byggt för svenska regler, spårbart in i minsta
-              verifikat.
-            </p>
-
-            <div className="hero-anim hero-anim-cta mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
-              <button
-                onClick={() => navigate("/auth")}
-                className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#0052FF] px-8 text-base font-bold text-white shadow-accent transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0040CC] hover:shadow-accent-lg active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 sm:w-auto"
-              >
-                Gå med i piloten
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden />
-              </button>
-              <button
-                onClick={() => scrollToId("how-it-works")}
-                className="inline-flex h-14 w-full items-center justify-center rounded-xl border border-border bg-card px-6 text-base font-semibold text-foreground transition-all duration-200 hover:border-[#0052FF]/30 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 sm:w-auto"
-              >
-                Se Cogniq i arbete ↓
-              </button>
-            </div>
-
-            {/* Social proof */}
-            <div className="hero-anim hero-anim-cta mt-10 border-t border-border pt-6">
-              <p className="text-sm font-medium text-muted-foreground">
-                <span aria-hidden className="hero-live-dot mr-2 inline-block h-2 w-2 rounded-full bg-emerald-500 align-middle" />
-                <span className="font-semibold text-foreground tabular-nums">
-                  {count.toLocaleString("sv-SE")}
-                </span>{" "}
-                anmälda · 14 aktiva pilotkunder · Lansering Q3 2026
-              </p>
-            </div>
-          </div>
-
-          {/* ── Höger: abstrakt svävande UI-komposition (ref-stil) ── */}
-          <div aria-hidden className="relative hidden h-[480px] select-none lg:block">
-            {/* Roterande streckad ring — glaciärt långsam */}
-            <div className="hero-ring absolute left-1/2 top-1/2 h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-[#0052FF]/20" />
-
-            {/* Stort skelett-kort */}
-            <div className="hero-float-slow absolute left-[6%] top-[10%] z-10 w-[300px] rounded-2xl border border-border bg-card p-5 shadow-xl">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-xl bg-[#0052FF]/15" />
-                <div className="space-y-2">
-                  <div className="h-2.5 w-32 rounded-full bg-muted" />
-                  <div className="h-2 w-20 rounded-full bg-muted" />
-                </div>
-              </div>
-              <div className="mt-4 space-y-2.5">
-                <div className="h-2 w-full rounded-full bg-muted" />
-                <div className="h-2 w-4/5 rounded-full bg-muted" />
-              </div>
-              <div className="mt-4 grid grid-cols-3 gap-2">
-                <div className="h-10 rounded-lg bg-gradient-to-br from-[#0052FF]/15 to-[#4D7CFF]/10" />
-                <div className="h-10 rounded-lg bg-muted" />
-                <div className="h-10 rounded-lg bg-muted" />
-              </div>
-            </div>
-
-            {/* Mindre överlappande kort */}
-            <div className="hero-float-a absolute bottom-[16%] left-[30%] z-20 w-[220px] rounded-2xl border border-border bg-card p-4 shadow-xl">
-              <div className="flex items-center justify-between">
-                <div className="h-8 w-8 rounded-full bg-[#0052FF]" />
-                <div className="grid grid-cols-3 gap-1">
-                  {Array.from({ length: 9 }).map((_, i) => (
-                    <span key={i} className="h-1 w-1 rounded-full bg-[#0052FF]/30" />
-                  ))}
-                </div>
-              </div>
-              <div className="mt-3 space-y-2">
-                <div className="h-2 w-full rounded-full bg-muted" />
-                <div className="h-2 w-2/3 rounded-full bg-muted" />
-              </div>
-            </div>
-
-            {/* Mini-statkort */}
-            <div className="hero-float-b absolute right-[2%] top-[22%] z-20 rounded-xl border border-border bg-card px-4 py-3 shadow-xl">
-              <div className="flex items-center gap-2.5">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0052FF] text-white">
-                  <Sparkles className="h-4 w-4" strokeWidth={2} />
-                </span>
-                <div>
-                  <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Kontering</div>
-                  <div className="text-sm font-semibold text-foreground">98% konfidens</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Likviditets-kort */}
-            <div className="hero-float-a absolute bottom-[4%] right-[10%] z-20 rounded-xl border border-border bg-card px-4 py-3 shadow-xl" style={{ animationDelay: "1.2s" }}>
-              <div className="flex items-center gap-2.5">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600">
-                  <TrendingUp className="h-4 w-4" strokeWidth={2} />
-                </span>
-                <div>
-                  <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Likviditet</div>
-                  <div className="text-sm font-semibold tabular-nums text-foreground">+12,4%</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Live-pill */}
-            <div className="absolute bottom-[24%] left-[4%] z-20 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 shadow-md">
-              <span className="hero-live-dot h-2 w-2 rounded-full bg-emerald-500" />
-              <span className="text-xs font-medium text-foreground">AI bokför — live</span>
-            </div>
-
-            {/* Hörnaccent — solid blå kloss */}
-            <div className="absolute right-[6%] bottom-[30%] z-0 h-12 w-12 rounded-xl bg-[#0052FF] opacity-90 shadow-accent" />
-            {/* Blå cirkel bakom */}
-            <div className="absolute left-[16%] bottom-[6%] z-0 h-16 w-16 rounded-full bg-gradient-to-br from-[#0052FF]/20 to-[#4D7CFF]/10" />
-          </div>
+      <div className="relative z-[2] mx-auto max-w-3xl px-6 pt-20 pb-2 text-center md:pt-24">
+        <div className="hero-anim hero-anim-badge inline-flex items-center gap-2.5 rounded-full border border-white/15 py-1.5 pl-2 pr-4 text-[12.5px] text-white/80">
+          <span className="rounded-full bg-[#0052FF] px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-white">
+            Nytt
+          </span>
+          Djupanalys ner på verifikatsnivå
         </div>
 
-        {/* ── Produktvideo i upphöjt kort ── */}
-        <div className="hero-anim hero-anim-video mx-auto mt-16 max-w-[880px]">
-          <div className="overflow-hidden rounded-2xl border border-border bg-card p-1.5 shadow-xl">
-            <div className="flex items-center gap-1.5 rounded-t-xl bg-muted px-3.5 py-2.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-border" />
-              <span className="h-2.5 w-2.5 rounded-full bg-border" />
-              <span className="h-2.5 w-2.5 rounded-full bg-border" />
-              <div className="ml-2 flex h-5 max-w-[260px] flex-grow items-center rounded-md bg-card px-2.5">
-                <span className="font-mono text-[11px] text-muted-foreground hero-urlbar-text">app.cogniq.se</span>
+        <h1 className="hero-anim hero-anim-headline mt-7 font-display text-[2.6rem] font-bold leading-[1.03] tracking-[-0.03em] text-white md:text-6xl lg:text-[4.3rem]">
+          Redovisning som <span className="text-[#7DA5FF]">granskar sig själv.</span>
+        </h1>
+
+        <p className="hero-anim hero-anim-sub mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+          Agenter sköter avstämning, kontroll och månadsbokslut i bakgrunden.
+          Ditt team går från att mata in siffror till att fatta beslut.
+        </p>
+
+        <div className="hero-anim hero-anim-cta mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <button
+            onClick={() => navigate("/auth")}
+            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0052FF] px-7 text-[15px] font-semibold text-white shadow-[0_1px_2px_rgba(0,40,120,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0040CC] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B1D2A] sm:w-auto"
+          >
+            Gå med i piloten
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+          </button>
+          <button
+            onClick={() => navigate("/contact")}
+            className="inline-flex h-12 w-full items-center justify-center rounded-xl border border-white/[0.22] bg-white/[0.06] px-7 text-[15px] font-semibold text-white transition-all duration-200 hover:bg-white/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B1D2A] sm:w-auto"
+          >
+            Boka demo
+          </button>
+        </div>
+
+        <div className="hero-anim hero-anim-cta mt-12">
+          <p className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-white/40">
+            Pilotfas pågår
+          </p>
+          <p className="mt-3 text-sm font-medium text-white/70">
+            <span aria-hidden className="hero-live-dot mr-2 inline-block h-2 w-2 rounded-full bg-emerald-400 align-middle" />
+            <span className="font-semibold text-white tabular-nums">
+              {count.toLocaleString("sv-SE")}
+            </span>{" "}
+            anmälda · 14 aktiva pilotkunder · Lansering Q3 2026
+          </p>
+        </div>
+      </div>
+
+      {/* Produktskärm — svävar ned över nästa sektion (kompenseras av dess top-padding) */}
+      <div className="hero-anim hero-anim-video relative z-[2] mx-auto -mb-28 mt-14 max-w-[1000px] px-6 md:-mb-32 md:mt-16">
+        <div className="overflow-hidden rounded-2xl border border-[#16273a] bg-white shadow-[0_40px_80px_-32px_rgba(4,18,40,0.55),0_2px_6px_rgba(4,18,40,0.2)]">
+          {/* Fönsterlist */}
+          <div className="flex items-center gap-2 border-b border-slate-200 bg-white px-4 py-3">
+            <span className="h-[11px] w-[11px] rounded-full bg-[#FF5F57]" />
+            <span className="h-[11px] w-[11px] rounded-full bg-[#FEBC2E]" />
+            <span className="h-[11px] w-[11px] rounded-full bg-[#28C840]" />
+            <span className="ml-3.5 font-mono text-xs text-slate-400">app.cogniq.se/oversikt</span>
+          </div>
+
+          <div className="grid min-h-[420px] grid-cols-1 md:grid-cols-[200px_1fr]">
+            {/* Sidebar */}
+            <aside className="hidden flex-col gap-0.5 bg-[#0B1D2A] p-3.5 md:flex">
+              <div className="flex items-center gap-2 px-2 pb-4 pt-1 font-display text-[15px] font-bold text-white">
+                <span className="grid h-[18px] w-[18px] place-items-center rounded-[5px] bg-[#0052FF] font-mono text-[11px]">
+                  C
+                </span>
+                Cogniq
               </div>
-            </div>
-            <div className="relative w-full overflow-hidden rounded-b-xl" style={{ aspectRatio: "16 / 10", background: "#0F172A" }}>
-              <video autoPlay loop muted playsInline poster="/hero-demo-poster.jpg" className="absolute inset-0 block h-full w-full object-cover">
-                <source src="/hero-demo.mp4" type="video/mp4" />
-              </video>
+              {NAV_ITEMS.map((item) => (
+                <div
+                  key={item.label}
+                  className={`flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-[12.5px] ${
+                    item.active ? "bg-white/[0.09] text-white" : "text-white/60"
+                  }`}
+                >
+                  <item.icon className="h-[14px] w-[14px]" strokeWidth={2} aria-hidden />
+                  {item.label}
+                </div>
+              ))}
+            </aside>
+
+            {/* Huvudyta */}
+            <div className="bg-[#FAFBFD] p-5 md:p-6">
+              <div className="mb-4 flex items-start justify-between gap-3">
+                <div>
+                  <h3 className="font-display text-[19px] font-semibold tracking-tight text-[#0F172A]">
+                    Översikt
+                  </h3>
+                  <p className="mt-0.5 text-xs text-slate-400">
+                    Cogniq Demo AB · Räkenskapsår 2025
+                  </p>
+                </div>
+                <span className="whitespace-nowrap rounded-md border border-slate-200 bg-white px-3 py-1.5 text-xs text-slate-600">
+                  Exportera
+                </span>
+              </div>
+
+              <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                {KPIS.map((k) => (
+                  <div key={k.label} className="rounded-xl border border-slate-200 bg-white p-3.5">
+                    <div className="font-mono text-[9.5px] uppercase tracking-wider text-slate-400">
+                      {k.label}
+                    </div>
+                    <div
+                      className={`mt-2 font-mono text-[21px] tracking-tight tabular-nums ${
+                        k.positive ? "text-emerald-600" : "text-[#0F172A]"
+                      }`}
+                    >
+                      {k.value}
+                    </div>
+                    <div className={`mt-1 text-[11px] ${k.delta.startsWith("▲") ? "text-emerald-600" : "text-slate-500"}`}>
+                      {k.delta}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <div className="flex items-center gap-2.5 border-b border-slate-100 px-4 py-3">
+                  <span className="grid h-[26px] w-[26px] flex-shrink-0 place-items-center rounded-lg bg-[#EAF0FF] text-[#0052FF]">
+                    <Sparkles className="h-3.5 w-3.5" strokeWidth={2} aria-hidden />
+                  </span>
+                  <span className="text-[12.5px] font-semibold text-[#0F172A]">
+                    Cogniq hittade 6 avvikelser i bokföringen
+                  </span>
+                  <span className="ml-auto whitespace-nowrap rounded-full bg-red-50 px-2.5 py-1 font-mono text-[10px] text-red-600">
+                    3 nya
+                  </span>
+                </div>
+                {FLAGS.map((f) => (
+                  <div
+                    key={f.code}
+                    className="flex items-center gap-3 border-t border-slate-100 px-4 py-2.5 text-[12.5px]"
+                  >
+                    <span className="w-[46px] flex-shrink-0 font-mono text-[10px] text-slate-400">
+                      {f.code}
+                    </span>
+                    <span className="flex-1 text-slate-600">{f.text}</span>
+                    <span
+                      className={`font-mono text-[11px] tabular-nums ${
+                        f.negative ? "text-red-600" : "text-emerald-600"
+                      }`}
+                    >
+                      {f.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -193,21 +229,12 @@ export const Hero = () => {
         .hero-anim-sub      { animation: heroFadeUp 700ms 200ms forwards cubic-bezier(0.16,1,0.3,1); }
         .hero-anim-cta      { animation: heroFadeUp 700ms 300ms forwards cubic-bezier(0.16,1,0.3,1); }
         .hero-anim-video    { animation: heroFadeUp 800ms 450ms forwards cubic-bezier(0.16,1,0.3,1); }
-        @keyframes heroRingSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
-        .hero-ring { animation: heroRingSpin 60s linear infinite; }
-        @keyframes heroFloatSlow { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-        .hero-float-slow { animation: heroFloatSlow 6s ease-in-out infinite; }
-        @keyframes heroFloatA { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        .hero-float-a { animation: heroFloatA 5s ease-in-out infinite; }
-        @keyframes heroFloatB { 0%,100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
-        .hero-float-b { animation: heroFloatB 4s ease-in-out 0.6s infinite; }
         @keyframes heroLivePulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.6; transform: scale(1.3); } }
         .hero-live-dot { animation: heroLivePulse 2s ease-in-out infinite; }
         @media (prefers-reduced-motion: reduce) {
           .hero-anim { opacity: 1; animation: none; }
-          .hero-ring, .hero-float-slow, .hero-float-a, .hero-float-b, .hero-live-dot { animation: none; }
+          .hero-live-dot { animation: none; }
         }
-        @media (max-width: 640px) { .hero-urlbar-text { display: none; } }
       `}</style>
     </section>
   );

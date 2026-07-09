@@ -2,6 +2,9 @@ import { lazy, Suspense, ReactNode } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/landing/Hero";
 import { Reveal } from "@/components/landing/Reveal";
+import { IntegrationsStrip } from "@/components/landing/IntegrationsStrip";
+import { AnomalyControlSection } from "@/components/landing/AnomalyControlSection";
+import { TeamWorkflowSection } from "@/components/landing/TeamWorkflowSection";
 import { AIEngineSection } from "@/components/landing/AIEngineSection";
 import { ReceiptFlowSection } from "@/components/landing/ReceiptFlowSection";
 import { Pillars } from "@/components/landing/Pillars";
@@ -38,7 +41,10 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <IntegrationsStrip />
         <Reveal><CountdownCTA /></Reveal>
+        <Reveal><AnomalyControlSection /></Reveal>
+        <Reveal><TeamWorkflowSection /></Reveal>
         <Reveal><InteractiveDemoPreview /></Reveal>
         <Reveal><Pillars /></Reveal>
         <AIEngineSection />
