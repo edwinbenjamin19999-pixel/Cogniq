@@ -6,6 +6,7 @@ import { SocialProofStrip } from "@/components/landing/SocialProofStrip";
 import { FeaturesSection } from "@/components/landing/FeaturesSection";
 import { AIEkonomSection } from "@/components/landing/AIEkonomSection";
 import { PricingSection } from "@/components/landing/PricingSection";
+import { FAQ } from "@/components/landing/FAQ";
 import { ClosingCTA } from "@/components/landing/ClosingCTA";
 
 const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
@@ -28,6 +29,7 @@ const Index = () => {
         <Reveal><FeaturesSection /></Reveal>
         <AIEkonomSection />
         <Reveal><PricingSection /></Reveal>
+        <Reveal><FAQ /></Reveal>
         <Reveal><ClosingCTA /></Reveal>
       </main>
       <Suspense fallback={null}>
