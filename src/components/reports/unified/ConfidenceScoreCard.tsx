@@ -11,25 +11,20 @@ export function ConfidenceScoreCard({ confidence, countsBySeverity }: Confidence
   const pct = Math.round(confidence * 100);
   const tone = pct >= 85 ? "emerald" : pct >= 60 ? "amber" : "rose";
 
+  // F07 · vitt kort med hairline (som dashboarden). Bar + värde bär tonen.
   const toneStyles = {
     emerald: {
-      shell: "bg-card border-border ring-1 ring-emerald-500/15 dark:ring-emerald-400/20",
-      accent: "bg-emerald-500/70 dark:bg-emerald-400/80",
-      bar: "bg-[#0F1F3D]",
+      bar: "bg-[#16A34A]",
       icon: "bg-[#E1F5EE] text-[#085041] dark:text-[#1D9E75]",
       value: "text-[#085041] dark:text-emerald-300",
     },
     amber: {
-      shell: "bg-card border-border ring-1 ring-amber-500/15 dark:ring-amber-400/20",
-      accent: "bg-amber-500/70 dark:bg-amber-400/80",
-      bar: "bg-[#0F1F3D]",
+      bar: "bg-[#D97706]",
       icon: "bg-[#FAEEDA] text-[#7A5417] dark:text-[#C28A2B]",
       value: "text-[#7A5417] dark:text-amber-300",
     },
     rose: {
-      shell: "bg-card border-border ring-1 ring-rose-500/15 dark:ring-rose-400/20",
-      accent: "bg-rose-500/70 dark:bg-rose-400/80",
-      bar: "bg-[#0F1F3D]",
+      bar: "bg-[#DC2626]",
       icon: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-[#C73838]",
       value: "text-[#7A1A1A] dark:text-rose-300",
     },
@@ -39,13 +34,7 @@ export function ConfidenceScoreCard({ confidence, countsBySeverity }: Confidence
     <TooltipProvider delayDuration={200}>
       <Tooltip>
         <TooltipTrigger asChild>
-          <div
-            className={cn(
-              "relative overflow-hidden rounded-2xl border p-5 cursor-help transition-all hover:shadow-md hover:-translate-y-0.5",
-              toneStyles.shell,
-            )}
-          >
-            <div className={cn("absolute inset-x-0 top-0 h-px", toneStyles.accent)} />
+          <div className="relative overflow-hidden rounded-xl border border-[#E2E8F0] dark:border-slate-800 bg-white dark:bg-slate-900 p-5 cursor-help transition-shadow hover:shadow-[0_4px_12px_rgba(15,23,42,0.06)]">
             <div className="flex items-start gap-3">
               <div className={cn("rounded-xl w-10 h-10 flex items-center justify-center shrink-0", toneStyles.icon)}>
                 <Sparkles className="w-5 h-5" />

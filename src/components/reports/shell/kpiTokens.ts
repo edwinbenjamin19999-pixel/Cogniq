@@ -19,32 +19,33 @@ export interface AccentStyle {
   stroke: string; // for sparkline
 }
 
+// F07 · alla kort vita med #E2E8F0-hairline (som dashboarden). Tonen bärs av
+// ikon-chip, trend-pill och insight — inte av ytan.
+const F07_SURFACE = "bg-white dark:bg-slate-900";
+const F07_BORDER = "border-[#E2E8F0] dark:border-slate-800";
+
 export const TONE_STYLES: Record<KpiTone, ToneStyle> = {
   neutral: {
-    surface:
-      "bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-900",
-    border: "border-slate-200/60 dark:border-slate-800",
+    surface: F07_SURFACE,
+    border: F07_BORDER,
     trendPositive: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300",
     trendNegative: "bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300",
   },
   positive: {
-    surface:
-      "bg-gradient-to-b from-emerald-50/50 to-white dark:from-emerald-950/20 dark:to-slate-900",
-    border: "border-emerald-200/60 dark:border-emerald-900/50",
+    surface: F07_SURFACE,
+    border: F07_BORDER,
     trendPositive: "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300",
     trendNegative: "bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300",
   },
   negative: {
-    surface:
-      "bg-gradient-to-b from-rose-50/50 to-white dark:from-rose-950/20 dark:to-slate-900",
-    border: "border-rose-200/60 dark:border-rose-900/50",
+    surface: F07_SURFACE,
+    border: F07_BORDER,
     trendPositive: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300",
     trendNegative: "bg-rose-100 text-rose-700 dark:bg-rose-950/50 dark:text-rose-300",
   },
   warning: {
-    surface:
-      "bg-gradient-to-b from-amber-50/50 to-white dark:from-amber-950/20 dark:to-slate-900",
-    border: "border-amber-200/60 dark:border-amber-900/50",
+    surface: F07_SURFACE,
+    border: F07_BORDER,
     trendPositive: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300",
     trendNegative: "bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300",
   },

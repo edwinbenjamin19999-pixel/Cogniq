@@ -14,14 +14,10 @@ export function BalanceStatusCard({ balanced, difference, onInvestigate }: Balan
       type="button"
       onClick={onInvestigate}
       className={cn(
-        "group relative overflow-hidden rounded-2xl text-left w-full transition-all duration-200",
-        "border bg-card shadow-sm hover:shadow-md hover:-translate-y-0.5",
-        balanced
-          ? "border-border ring-1 ring-emerald-500/15 dark:ring-emerald-400/20"
-          : "border-border ring-1 ring-rose-500/20 dark:ring-rose-400/25",
+        "group relative overflow-hidden rounded-xl text-left w-full transition-shadow duration-200",
+        "border border-[#E2E8F0] dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-[0_4px_12px_rgba(15,23,42,0.06)]",
       )}
     >
-      <div className={cn("absolute inset-x-0 top-0 h-px", balanced ? "bg-emerald-500/70 dark:bg-emerald-400/80" : "bg-rose-500/80 dark:bg-rose-400/90")} />
       <div className="px-5 py-4 flex items-start gap-3">
         <div
           className={cn(

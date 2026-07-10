@@ -30,56 +30,22 @@ interface KpiCardProps {
   formatAsAbs?: boolean;
 }
 
-const TONE: Record<KpiCardProps["tone"], { shell: string; accent: string; icon: string; value: string }> = {
-  emerald: {
-    shell: "bg-card border-border ring-1 ring-emerald-500/15 dark:ring-emerald-400/20",
-    accent: "bg-emerald-500/70 dark:bg-emerald-400/80",
-    icon: "bg-[#E1F5EE] text-[#085041] dark:text-[#1D9E75]",
-    value: "text-[#085041] dark:text-emerald-300",
-  },
-  rose: {
-    shell: "bg-card border-border ring-1 ring-rose-500/15 dark:ring-rose-400/20",
-    accent: "bg-rose-500/70 dark:bg-rose-400/80",
-    icon: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-[#C73838]",
-    value: "text-[#7A1A1A] dark:text-rose-300",
-  },
-  cyan: {
-    shell: "bg-card border-border ring-1 ring-[#0052FF]/15 dark:ring-[#0052FF]/20",
-    accent: "bg-[#0052FF]/70 dark:bg-[#0052FF]/80",
-    icon: "bg-[#EFF6FF] text-[#0052FF] dark:text-[#1E3A5F]",
-    value: "text-[#0052FF] dark:text-[#0052FF]",
-  },
-  indigo: {
-    shell: "bg-card border-border ring-1 ring-indigo-500/15 dark:ring-indigo-400/20",
-    accent: "bg-indigo-500/70 dark:bg-indigo-400/80",
-    icon: "bg-[#EFF6FF] text-indigo-600 dark:text-indigo-400",
-    value: "text-indigo-700 dark:text-indigo-300",
-  },
-  amber: {
-    shell: "bg-card border-border ring-1 ring-amber-500/15 dark:ring-amber-400/20",
-    accent: "bg-amber-500/70 dark:bg-amber-400/80",
-    icon: "bg-[#FAEEDA] text-[#7A5417] dark:text-[#C28A2B]",
-    value: "text-[#7A5417] dark:text-amber-300",
-  },
-  slate: {
-    shell: "bg-card border-border ring-1 ring-foreground/10",
-    accent: "bg-foreground/50",
-    icon: "bg-muted text-muted-foreground",
-    value: "text-foreground",
-  },
+// F07 · alla kort är vita med #E2E8F0-hairline (som dashboarden). Semantiken
+// bärs av den pastellfärgade ikon-chippen, värdet är alltid ink.
+const TONE: Record<KpiCardProps["tone"], { icon: string }> = {
+  emerald: { icon: "bg-[#E1F5EE] text-[#085041] dark:text-[#1D9E75]" },
+  rose: { icon: "bg-[#FCE8E8] text-[#7A1A1A] dark:text-[#C73838]" },
+  cyan: { icon: "bg-[#EFF6FF] text-[#0052FF] dark:text-[#1E3A5F]" },
+  indigo: { icon: "bg-[#EFF6FF] text-indigo-600 dark:text-indigo-400" },
+  amber: { icon: "bg-[#FAEEDA] text-[#7A5417] dark:text-[#C28A2B]" },
+  slate: { icon: "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300" },
 };
 
 function KpiCard({ label, value, subtext, icon: Icon, tone, formatAsAbs }: KpiCardProps) {
   const t = TONE[tone];
   const display = formatAsAbs ? formatSEK(Math.abs(value)) : formatSEK(value);
   return (
-    <div
-      className={cn(
-        "relative overflow-hidden rounded-2xl border shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5",
-        t.shell,
-      )}
-    >
-      <div className={cn("absolute inset-x-0 top-0 h-px", t.accent)} />
+    <div className="relative overflow-hidden rounded-xl border border-[#E2E8F0] dark:border-slate-800 bg-white dark:bg-slate-900 transition-shadow hover:shadow-[0_4px_12px_rgba(15,23,42,0.06)]">
       <div className="px-5 py-4 flex items-start gap-3">
         <div className={cn("rounded-xl w-10 h-10 flex items-center justify-center shrink-0", t.icon)}>
           <Icon className="w-5 h-5" />
@@ -91,7 +57,10 @@ function KpiCard({ label, value, subtext, icon: Icon, tone, formatAsAbs }: KpiCa
           >
             {label}
           </p>
-          <p className={cn("text-xl font-bold leading-tight mt-0.5 tabular-nums truncate", t.value)} title={display}>
+          <p
+            className="text-[15px] font-bold leading-tight mt-0.5 tabular-nums whitespace-nowrap text-[#0F172A] dark:text-slate-50"
+            title={display}
+          >
             {display}
           </p>
           <p className="text-[11px] text-muted-foreground mt-1 truncate">{subtext}</p>
