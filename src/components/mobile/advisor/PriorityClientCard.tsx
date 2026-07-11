@@ -44,10 +44,10 @@ export const PriorityClientCard = ({ client, onTap, onApprove, onFlag }: Priorit
   return (
     <div className="relative touch-pan-y">
       <div className="absolute inset-0 flex items-center justify-between px-5 rounded-2xl overflow-hidden pointer-events-none">
-        <div className="flex items-center gap-2 text-emerald-300 text-xs font-semibold">
+        <div className="flex items-center gap-2 text-emerald-600 text-xs font-semibold">
           <Check className="h-4 w-4" /> Godkänn
         </div>
-        <div className="flex items-center gap-2 text-rose-300 text-xs font-semibold">
+        <div className="flex items-center gap-2 text-rose-600 text-xs font-semibold">
           Flagga <Flag className="h-4 w-4" />
         </div>
       </div>
@@ -61,9 +61,9 @@ export const PriorityClientCard = ({ client, onTap, onApprove, onFlag }: Priorit
         style={{ transform: `translateX(${dx}px)`, transition: dx === 0 ? "transform 200ms cubic-bezier(0.2,0,0,1)" : "none" }}
         className={cn(
           "relative w-full text-left rounded-2xl overflow-hidden",
-          "bg-white/[0.04] backdrop-blur-xl border border-white/10",
-          "shadow-[0_8px_32px_-12px_rgba(0,0,0,0.5)]",
-          "active:bg-white/[0.06]",
+          "bg-white border border-[#E2E8F0]",
+          "shadow-sm",
+          "active:bg-[#F8FAFC]",
         )}
       >
         <div className="flex">
@@ -71,26 +71,26 @@ export const PriorityClientCard = ({ client, onTap, onApprove, onFlag }: Priorit
           <div className="flex-1 p-3.5 min-w-0">
             <div className="flex items-start justify-between gap-2">
               <div className="min-w-0">
-                <div className="text-[15px] font-semibold text-white truncate">
+                <div className="text-[15px] font-semibold text-[#0F172A] truncate">
                   {client.name}
                 </div>
                 {issue && (
                   <div className={cn(
                     "text-xs mt-0.5 truncate",
-                    issue.severity === "critical" ? "text-rose-300" :
-                    issue.severity === "warning" ? "text-amber-300" : "text-white/55"
+                    issue.severity === "critical" ? "text-rose-600" :
+                    issue.severity === "warning" ? "text-amber-600" : "text-[#64748B]"
                   )}>
                     {issue.text}
                   </div>
                 )}
                 {!issue && (
-                  <div className="text-xs mt-0.5 text-emerald-300/80">Inga öppna ärenden</div>
+                  <div className="text-xs mt-0.5 text-emerald-600">Inga öppna ärenden</div>
                 )}
               </div>
-              <ChevronRight className="h-4 w-4 text-white/30 flex-shrink-0 mt-0.5" />
+              <ChevronRight className="h-4 w-4 text-[#94A3B8] flex-shrink-0 mt-0.5" />
             </div>
 
-            <div className="grid grid-cols-3 gap-2 mt-3 pt-3 border-t border-white/5">
+            <div className="grid grid-cols-3 gap-2 mt-3 pt-3 border-t border-[#E2E8F0]">
               <Mini label="Verifikat" value={String(client.draftEntries)} />
               <Mini label="Förfallet" value={String(client.overdueInvoices)} accent={client.overdueInvoices > 0} />
               <Mini label="Utlägg" value={String(client.pendingExpenses)} />
@@ -104,10 +104,10 @@ export const PriorityClientCard = ({ client, onTap, onApprove, onFlag }: Priorit
 
 const Mini = ({ label, value, accent }: { label: string; value: string; accent?: boolean }) => (
   <div>
-    <div className="text-[10px] uppercase tracking-wider text-white/40">{label}</div>
+    <div className="text-[10px] uppercase tracking-wider text-[#94A3B8]">{label}</div>
     <div className={cn(
       "text-sm font-bold tabular-nums",
-      accent ? "text-rose-300" : "text-white/90"
+      accent ? "text-rose-600" : "text-[#0F172A]"
     )}>{value}</div>
   </div>
 );

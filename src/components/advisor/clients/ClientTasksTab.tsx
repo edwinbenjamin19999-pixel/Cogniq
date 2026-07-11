@@ -104,7 +104,7 @@ export const ClientTasksTab = ({ companyId, firmId }: Props) => {
               key={f}
               onClick={() => setFilter(f)}
               className={`px-3 py-1.5 rounded-md transition ${
-                filter === f ? "bg-slate-900 text-white" : "text-slate-600 hover:bg-slate-50"
+                filter === f ? "bg-[#0052FF] text-white" : "text-slate-600 hover:bg-slate-50"
               }`}
             >
               {f === "active" ? "Aktiva" : f === "done" ? "Slutförda" : "Alla"}

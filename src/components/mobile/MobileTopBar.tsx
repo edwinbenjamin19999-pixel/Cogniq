@@ -83,7 +83,7 @@ export const MobileTopBar = ({ user, signOut }: MobileTopBarProps) => {
   return (
     <>
       <header
-        className="sticky top-0 z-40 bg-[#0B1929] text-white flex items-center justify-between"
+        className="sticky top-0 z-40 bg-[#0052FF] text-white flex items-center justify-between"
         style={{
           paddingTop: "env(safe-area-inset-top)",
           height: "calc(56px + env(safe-area-inset-top))",

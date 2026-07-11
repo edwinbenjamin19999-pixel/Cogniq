@@ -15,10 +15,10 @@ export const PriorityBanner = ({ total, critical, warning, healthy }: PriorityBa
 
   return (
     <div className="px-4 pt-4 pb-3">
-      <h1 className="text-[22px] font-bold text-white leading-tight tracking-tight">
+      <h1 className="text-[22px] font-bold text-[#0F172A] leading-tight tracking-tight">
         {headline}
       </h1>
-      <p className="text-xs text-white/50 mt-1">{total} aktiva mandat</p>
+      <p className="text-xs text-[#64748B] mt-1">{total} aktiva mandat</p>
 
       <div className="flex items-center gap-2 mt-3">
         <Pill count={critical} label="Kritiska" tone="critical" pulse />
@@ -33,9 +33,9 @@ const Pill = ({
   count, label, tone, pulse = false,
 }: { count: number; label: string; tone: "critical" | "warning" | "healthy"; pulse?: boolean }) => {
   const styles = {
-    critical: "bg-rose-500/15 text-rose-300 border-rose-400/30 shadow-[0_0_16px_rgba(244,63,94,0.25)]",
-    warning: "bg-amber-500/15 text-amber-300 border-amber-400/30 shadow-[0_0_12px_rgba(245,158,11,0.18)]",
-    healthy: "bg-emerald-500/15 text-emerald-300 border-emerald-400/30",
+    critical: "bg-rose-50 text-rose-600 border-rose-200",
+    warning: "bg-amber-50 text-amber-600 border-amber-200",
+    healthy: "bg-emerald-50 text-emerald-600 border-emerald-200",
   } as const;
   const dot = {
     critical: "bg-rose-400",
@@ -49,7 +49,7 @@ const Pill = ({
     )}>
       <span className={cn("h-1.5 w-1.5 rounded-full", dot[tone], pulse && count > 0 && "animate-pulse")} />
       <span>{count}</span>
-      <span className="text-white/60 font-normal">{label}</span>
+      <span className="text-[#64748B] font-normal">{label}</span>
     </div>
   );
 };

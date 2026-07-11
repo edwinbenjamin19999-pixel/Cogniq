@@ -63,7 +63,7 @@ export default function ChartOfAccounts() {
           </button>
           <button
             onClick={h.openAddDrawer}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0F1F3D] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#0052FF]/20 hover:-translate-y-0.5 transition-all duration-200 shadow-md"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0052FF] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#0052FF]/20 hover:-translate-y-0.5 transition-all duration-200 shadow-md"
           >
             <Plus className="w-4 h-4" /> Lägg till konto
           </button>
@@ -73,8 +73,8 @@ export default function ChartOfAccounts() {
       <KPIFilterCards stats={h.stats} currentFilter={h.kpiFilter} onFilterChange={h.setKpiFilter} />
 
       {/* AI Insights Strip */}
-      <div className="mx-8 mb-2 px-5 py-3.5 rounded-2xl bg-[#0F1F3D] border border-blue-100/50 flex items-center gap-4">
-        <div className="w-8 h-8 rounded-xl bg-[#0F1F3D] flex items-center justify-center flex-shrink-0">
+      <div className="mx-8 mb-2 px-5 py-3.5 rounded-2xl bg-[#EFF6FF] border border-[#E2E8F0] flex items-center gap-4">
+        <div className="w-8 h-8 rounded-xl bg-white border border-[#E2E8F0] flex items-center justify-center flex-shrink-0">
           <Sparkles className="w-4 h-4 text-[#0052FF]" />
         </div>
         <div className="flex items-center gap-6 text-sm">

@@ -36,7 +36,7 @@ export const BudgetPageHeader = ({ companies, selectedCompany, onCompanyChange,
     <div className="space-y-4">
       {/* Title */}
       <div className="flex items-center gap-3">
-        <div className="p-2 rounded-xl bg-[#0F1F3D] text-white">
+        <div className="p-2 rounded-xl bg-[#0052FF] text-white">
           <PiggyBank className="h-5 w-5" />
         </div>
         <div>
@@ -78,7 +78,7 @@ export const BudgetPageHeader = ({ companies, selectedCompany, onCompanyChange,
 
         <div className="flex-1" />
 
-        <Button variant="outline" size="sm" onClick={onAIClick} className="bg-[#0F1F3D] text-white border-0 hover:from-purple-700 hover:to-indigo-700 gap-1.5">
+        <Button variant="outline" size="sm" onClick={onAIClick} className="bg-[#0052FF] text-white border-0 hover:from-purple-700 hover:to-indigo-700 gap-1.5">
           <Sparkles className="w-3.5 h-3.5" />
           AI-förslag
         </Button>

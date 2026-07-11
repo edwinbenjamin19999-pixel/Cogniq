@@ -24,21 +24,21 @@ export function ConsolidationCockpitHeader({
 }: Props) {
   return (
     <div className="relative overflow-hidden rounded-3xl mb-6">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a1428] via-[#0F172A] to-[#1a1442]" />
+      <div className="absolute inset-0 bg-[#0052FF]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,82,255,0.15),transparent_50%)]" />
       <div className="relative p-8 backdrop-blur-xl">
         <div className="flex items-start justify-between gap-6 flex-wrap">
           <div className="space-y-3">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-[#0F1F3D] border border-[#C8DDF5] flex items-center justify-center backdrop-blur-sm">
-                <Building2 className="w-6 h-6 text-[#0052FF]" />
+              <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center backdrop-blur-sm">
+                <Building2 className="w-6 h-6 text-white" />
               </div>
               <div>
-                <p className="text-xs font-medium uppercase tracking-widest text-[#0052FF]/70">Group Consolidation Cockpit</p>
+                <p className="text-xs font-medium uppercase tracking-widest text-white/70">Group Consolidation Cockpit</p>
                 <h1 className="text-2xl font-semibold text-white tracking-tight">{groupName || 'Välj koncern'}</h1>
               </div>
             </div>
-            <div className="flex items-center gap-4 text-sm text-slate-300/80 ml-15">
+            <div className="flex items-center gap-4 text-sm text-white/70 ml-15">
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5" />
                 {format(new Date(periodStart), 'd MMM', { locale: sv })} – {format(new Date(periodEnd), 'd MMM yyyy', { locale: sv })}
@@ -83,7 +83,7 @@ export function ConsolidationCockpitHeader({
               size="sm"
               onClick={onRunConsolidation}
               disabled={isRunning}
-              className="bg-[#0F1F3D] hover:from-[#0052FF] hover:to-[#0052FF] text-white border-0 shadow-[0_0_20px_rgba(0,82,255,0.3)]"
+              className="bg-white text-[#0052FF] hover:bg-white/90 border-0 shadow-[0_0_20px_rgba(0,82,255,0.3)]"
             >
               <Play className="w-4 h-4 mr-1.5" />
               {isRunning ? 'Kör…' : 'Kör konsolidering'}

@@ -70,7 +70,7 @@ export function TurningPointsPanel({ points, onSimulate, onDrilldown }: Props) {
                   </button>
                   <button
                     onClick={() => onDrilldown(p)}
-                    className="inline-flex items-center gap-1 rounded-lg bg-slate-900 px-2.5 py-1.5 text-xs font-medium text-white transition hover:bg-slate-800"
+                    className="inline-flex items-center gap-1 rounded-lg bg-[#0052FF] px-2.5 py-1.5 text-xs font-medium text-white transition hover:bg-[#0040CC]"
                   >
                     Drilldown
                     <ArrowRight className="h-3 w-3" />

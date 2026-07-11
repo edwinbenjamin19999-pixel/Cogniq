@@ -245,7 +245,7 @@ const EcommerceOverview = () => {
             <div className="flex gap-1">
               {(["7d", "30d", "90d", "year"] as const).map(p => (
                 <Button key={p} size="sm" variant={chartPeriod === p ? "default" : "ghost"}
-                  className={cn("h-7 text-xs px-3", chartPeriod === p && "bg-[#0F1F3D] text-white")}
+                  className={cn("h-7 text-xs px-3", chartPeriod === p && "bg-[#0052FF] text-white")}
                   onClick={() => setChartPeriod(p)}>
                   {p === "year" ? "Helår" : p === "7d" ? "7d" : p === "30d" ? "30d" : "90d"}
                 </Button>
@@ -316,7 +316,7 @@ const EcommerceOverview = () => {
                     <TableRow key={order.id} className="hover:bg-muted/30 cursor-pointer">
                       <TableCell>
                         <div className="flex items-center gap-2">
-                          <div className="h-7 w-7 rounded-full bg-[#0F1F3D] flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0">
+                          <div className="h-7 w-7 rounded-full bg-[#0052FF] flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0">
                             {(order.customer_country || "?")[0]}
                           </div>
                           <span className="font-mono text-xs font-medium">{order.platform_order_id?.slice(0, 12)}</span>
@@ -353,7 +353,7 @@ const EcommerceOverview = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
-                      <div className="h-full bg-[#0F1F3D] rounded-full transition-all duration-500"
+                      <div className="h-full bg-[#0052FF] rounded-full transition-all duration-500"
                         style={{ width: `${barPct}%` }} />
                     </div>
                     <span className="text-xs text-muted-foreground tabular-nums w-16 text-right">{fmt(p.revenue)} kr</span>

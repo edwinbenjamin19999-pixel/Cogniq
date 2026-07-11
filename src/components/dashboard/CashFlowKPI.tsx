@@ -187,28 +187,28 @@ export const CashFlowKPI = ({ companyId }: CashFlowKPIProps) => {
           value={`${fmt(data.totalBalance)} kr`}
           sub={`${data.balanceChange7d >= 0 ? "+" : ""}${fmt(data.balanceChange7d)} kr (7d)`}
           icon={Wallet}
-          gradient="bg-[#0F1F3D]"
+          gradient="bg-white border border-[#E2E8F0]"
         />
         <GradientKPICard
           label="Nettokassaflöde (30d)"
           value={`${data.netCashFlow >= 0 ? "+" : ""}${fmt(data.netCashFlow)} kr`}
           sub={`↑ ${fmt(data.inflow30d)} · ↓ ${fmt(data.outflow30d)}`}
           icon={data.netCashFlow >= 0 ? TrendingUp : TrendingDown}
-          gradient={data.netCashFlow >= 0 ? "bg-[#0F1F3D]" : "bg-[#0F1F3D]"}
+          gradient={data.netCashFlow >= 0 ? "bg-white border border-[#E2E8F0]" : "bg-white border border-[#E2E8F0]"}
         />
         <GradientKPICard
           label="Runway"
           value={data.runwayDays > 365 ? "12+ mån" : `${data.runwayDays} dagar`}
           sub={healthStatus.label}
           icon={ShieldCheck}
-          gradient={data.runwayDays > 180 ? "bg-[#0F1F3D]" : data.runwayDays > 60 ? "bg-[#0F1F3D]" : "bg-[#0F1F3D]"}
+          gradient={data.runwayDays > 180 ? "bg-white border border-[#E2E8F0]" : data.runwayDays > 60 ? "bg-white border border-[#E2E8F0]" : "bg-white border border-[#E2E8F0]"}
         />
         <GradientKPICard
           label="Likviditetskvot"
           value={`${data.liquidityRatio.toFixed(1)}x`}
           sub={data.liquidityRatio >= 1.5 ? "Stark likviditet" : data.liquidityRatio >= 1 ? "Acceptabel" : "Kritisk"}
           icon={Droplets}
-          gradient={data.liquidityRatio >= 1.5 ? "bg-[#0F1F3D]" : "bg-[#0F1F3D]"}
+          gradient={data.liquidityRatio >= 1.5 ? "bg-white border border-[#E2E8F0]" : "bg-white border border-[#E2E8F0]"}
         />
       </div>
 

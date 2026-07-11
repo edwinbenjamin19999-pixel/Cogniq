@@ -264,7 +264,7 @@ export const AccrualReversal = ({ companyId, onEntryCreated }: AccrualReversalPr
               size="sm"
               onClick={createReversal}
               disabled={!selectedEntry || !reversalDate || isCreating}
-              className="h-[34px] rounded-[8px] text-[12px] bg-[#0F1F3D] hover:bg-[#15294D] text-white"
+              className="h-[34px] rounded-[8px] text-[12px] bg-[#0052FF] hover:bg-[#0040CC] text-white"
             >
               {isCreating ? <><Loader2 className="w-4 h-4 mr-1 animate-spin" />Skapar...</> : <><RotateCcw className="w-4 h-4 mr-1" />Skapa återföring</>}
             </Button>

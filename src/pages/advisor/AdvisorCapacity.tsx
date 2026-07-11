@@ -251,7 +251,7 @@ export default function AdvisorCapacity() {
       )}
 
       {/* SUMMARY — godkänt dark card för byråtotalerna */}
-      <div className="bg-[#111827] border border-white/[0.08] rounded-[12px] p-4 text-white">
+      <div className="bg-[#0052FF] border border-white/[0.08] rounded-[12px] p-4 text-white">
         <h3 className="text-[12px] font-medium uppercase tracking-wide text-white/70 mb-3">Byråns totaler</h3>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <div><p className="text-[10px] uppercase text-white/50">Total kapacitet</p><p className="text-[18px] font-medium tabular-nums">{staff.length === 0 ? "—" : `${totals.cap.toFixed(0)}h`}</p></div>

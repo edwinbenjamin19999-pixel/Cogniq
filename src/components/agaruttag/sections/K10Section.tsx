@@ -120,14 +120,14 @@ export function K10Section({ inputs, calc }: Props) {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setUseHuvudregel(false)}
-                className={`text-xs px-3 py-1.5 rounded-full font-medium transition-colors ${!useHuvudregel ? "bg-[#0F1F3D] text-white" : "bg-white text-[#64748B] border border-[#E2E8F0]"}`}
+                className={`text-xs px-3 py-1.5 rounded-full font-medium transition-colors ${!useHuvudregel ? "bg-[#0052FF] text-white" : "bg-white text-[#64748B] border border-[#E2E8F0]"}`}
               >
                 Förenklingsregeln
               </button>
               <Switch checked={useHuvudregel} onCheckedChange={setUseHuvudregel} />
               <button
                 onClick={() => setUseHuvudregel(true)}
-                className={`text-xs px-3 py-1.5 rounded-full font-medium transition-colors ${useHuvudregel ? "bg-[#0F1F3D] text-white" : "bg-white text-[#64748B] border border-[#E2E8F0]"}`}
+                className={`text-xs px-3 py-1.5 rounded-full font-medium transition-colors ${useHuvudregel ? "bg-[#0052FF] text-white" : "bg-white text-[#64748B] border border-[#E2E8F0]"}`}
               >
                 Huvudregeln
               </button>

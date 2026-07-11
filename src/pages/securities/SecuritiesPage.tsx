@@ -51,7 +51,7 @@ export default function SecuritiesPage() {
           label="Totalt värde"
           value={new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK', maximumFractionDigits: 0 }).format(totalValue)}
           icon={Wallet}
-          solidClass="bg-[#0F1F3D]"
+          solidClass="bg-[#0052FF]"
           subLabel={`${accounts.length} depåer`}
         />
         <MetricCard

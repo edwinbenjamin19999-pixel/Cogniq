@@ -161,7 +161,7 @@ const EcommerceInventory = () => {
               <Card key={item.id} className="bg-card/50 border-border/50 cursor-pointer hover:border-border" onClick={() => setDetailItem(item)}>
                 <CardContent className="pt-4 pb-3">
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-[#0F1F3D] flex items-center justify-center text-xs font-bold text-slate-600">{item.sku.slice(0, 2)}</div>
+                    <div className="w-10 h-10 rounded-lg bg-[#F1F5F9] border border-[#E2E8F0] flex items-center justify-center text-xs font-bold text-slate-600">{item.sku.slice(0, 2)}</div>
                     <div className="flex-1 min-w-0">
                       <p className="font-medium text-sm truncate">{item.product_name ?? item.sku}</p>
                       <p className="text-xs text-muted-foreground font-mono">{item.sku}</p>

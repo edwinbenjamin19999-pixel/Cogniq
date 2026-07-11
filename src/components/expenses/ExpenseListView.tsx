@@ -101,7 +101,7 @@ export default function ExpenseListView({ claims, loading, onSelect, onApprove, 
             <TabsTrigger
               key={t.value}
               value={t.value}
-              className="text-xs h-[28px] px-3 rounded-[8px] data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white data-[state=active]:shadow-none"
+              className="text-xs h-[28px] px-3 rounded-[8px] data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-none"
             >
               {t.label}
               {statusCounts[t.value] ? (

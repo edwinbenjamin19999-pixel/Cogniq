@@ -11,8 +11,8 @@ export const AdvisorApprovals = () => {
   if (isLoading) {
     return (
       <div className="p-4 space-y-3">
-        <Skeleton className="h-24 bg-white/5" />
-        <Skeleton className="h-24 bg-white/5" />
+        <Skeleton className="h-24 bg-[#E2E8F0]" />
+        <Skeleton className="h-24 bg-[#E2E8F0]" />
       </div>
     );
   }
@@ -22,7 +22,7 @@ export const AdvisorApprovals = () => {
 
   return (
     <div className="space-y-5 p-4 pb-4">
-      <h1 className="text-xl font-bold text-white">Att godkänna</h1>
+      <h1 className="text-xl font-bold text-[#0F172A]">Att godkänna</h1>
 
       <Section title="Verifikat" Icon={FileCheck} items={drafts.map((c) => ({
         id: c.id, name: c.name, count: c.draftEntries,
@@ -46,11 +46,11 @@ const Section = ({
   <div>
     <div className="flex items-center gap-2 mb-2">
       <Icon className="h-3.5 w-3.5 text-[#0052FF]" />
-      <h2 className="text-[10px] uppercase tracking-widest text-white/50 font-semibold">{title}</h2>
-      <span className="text-[10px] text-white/30 tabular-nums">({items.length})</span>
+      <h2 className="text-[10px] uppercase tracking-widest text-[#94A3B8] font-semibold">{title}</h2>
+      <span className="text-[10px] text-[#94A3B8] tabular-nums">({items.length})</span>
     </div>
     {items.length === 0 ? (
-      <div className="rounded-2xl bg-white/[0.03] border border-white/10 p-4 text-center text-xs text-white/50">
+      <div className="rounded-2xl bg-white border border-[#E2E8F0] p-4 text-center text-xs text-[#64748B]">
         Inget att granska
       </div>
     ) : (
@@ -61,11 +61,11 @@ const Section = ({
             onClick={() => onTap(it.id)}
             className={cn(
               "w-full flex items-center justify-between rounded-xl px-3 py-3",
-              "bg-white/[0.04] backdrop-blur-xl border border-white/10",
+              "bg-white border border-[#E2E8F0] shadow-sm",
               "active:scale-[0.98] transition-transform",
             )}
           >
-            <span className="text-sm font-medium text-white truncate">{it.name}</span>
+            <span className="text-sm font-medium text-[#0F172A] truncate">{it.name}</span>
             <span className="text-xs font-bold tabular-nums text-[#0052FF] px-2 py-0.5 rounded-full bg-[#0052FF]/15">
               {it.count}
             </span>

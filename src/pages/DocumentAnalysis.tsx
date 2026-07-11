@@ -110,7 +110,7 @@ function AIPreviewPanel({ result }: { result: any }) {
   const pct = Math.round((result.confidence || 0) * 100);
 
   return (
-    <Card className="bg-[#0F1F3D] dark:from-blue-950/20 dark:to-blue-950/20 border-blue-200/50 dark:border-[#0052FF]/30">
+    <Card className="bg-[#EFF6FF] dark:from-blue-950/20 dark:to-blue-950/20 border-blue-200/50 dark:border-[#0052FF]/30">
       <CardContent className="p-5">
         <div className="flex items-center gap-2 mb-4">
           <Sparkles className="w-5 h-5 text-[#0052FF]" />
@@ -146,7 +146,7 @@ function AIPreviewPanel({ result }: { result: any }) {
         </div>
 
         <div className="flex gap-2">
-          <Button size="sm" className="bg-[#0F1F3D] hover:from-[#0052FF] hover:to-blue-700 text-white" onClick={() => toast.success("Verifikation skapad automatiskt!")}>
+          <Button size="sm" className="bg-[#0052FF] hover:bg-[#0040CC] text-white" onClick={() => toast.success("Verifikation skapad automatiskt!")}>
             <Zap className="w-4 h-4 mr-1" />
             Bokför automatiskt
           </Button>

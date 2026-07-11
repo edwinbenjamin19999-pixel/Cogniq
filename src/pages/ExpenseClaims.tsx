@@ -166,7 +166,7 @@ const ExpenseClaims = () => { const { user, loading } = useAuth();
             )}
             <Button
               onClick={() => setShowCreate(true)}
-              className="h-[34px] rounded-[8px] bg-[#0F1F3D] hover:bg-[#0F1F3D]/90 text-white"
+              className="h-[34px] rounded-[8px] bg-[#0052FF] hover:bg-[#0040CC] text-white"
             >
               <Plus className="w-4 h-4 mr-2" /> Nytt utlägg
             </Button>
@@ -177,10 +177,10 @@ const ExpenseClaims = () => { const { user, loading } = useAuth();
 
         <Tabs value={mainTab} onValueChange={setMainTab}>
           <TabsList className="bg-[#F1F5F9] p-1 rounded-[10px] h-auto">
-            <TabsTrigger value="expenses" className="h-[28px] px-3 rounded-[8px] data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white data-[state=active]:shadow-none">
+            <TabsTrigger value="expenses" className="h-[28px] px-3 rounded-[8px] data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-none">
               <Receipt className="w-4 h-4 mr-1" /> Utlägg
             </TabsTrigger>
-            <TabsTrigger value="statistics" className="h-[28px] px-3 rounded-[8px] data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white data-[state=active]:shadow-none">
+            <TabsTrigger value="statistics" className="h-[28px] px-3 rounded-[8px] data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-none">
               <BarChart3 className="w-4 h-4 mr-1" /> Statistik
             </TabsTrigger>
           </TabsList>

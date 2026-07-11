@@ -83,7 +83,7 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
       <tr className={cn(
         "transition-colors",
         isHeader && "bg-slate-100 dark:bg-slate-800",
-        isTotal && "bg-slate-800 dark:bg-slate-900",
+        isTotal && "bg-[#F1F5F9] dark:bg-slate-900",
         isSubtotal && "bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-700",
         isKPI && "bg-blue-50/50 dark:bg-blue-950/10 border-b border-blue-100 dark:border-[#0052FF]",
         type === "account" && "border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/60 dark:hover:bg-slate-800/30"
@@ -91,7 +91,7 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
         <td className={cn(
           "py-2.5 px-4 text-xs",
           isHeader && "font-black uppercase tracking-widest text-slate-500 dark:text-slate-400",
-          isTotal && "text-sm font-black text-white",
+          isTotal && "text-sm font-black text-[#0F172A]",
           isSubtotal && "font-semibold text-slate-800 dark:text-slate-200",
           isKPI && "font-semibold text-[#0052FF] dark:text-[#1E3A5F]",
           type === "account" && "text-slate-700 dark:text-slate-300"
@@ -101,7 +101,7 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
         {!isHeader ? (
           <td className={cn(
             "py-2.5 px-4 text-right tabular-nums font-mono",
-            isTotal && "text-sm font-black text-white",
+            isTotal && "text-sm font-black text-[#0F172A]",
             isSubtotal && "text-xs font-bold text-slate-800 dark:text-slate-200",
             isKPI && "text-xs font-bold text-[#0052FF] dark:text-[#1E3A5F]",
             type === "account" && (value === 0 ? "text-slate-300 dark:text-slate-600 text-xs" : value < 0 ? "text-[#7A1A1A] dark:text-[#C73838] italic text-xs" : "text-slate-800 dark:text-slate-200 text-xs"),
@@ -130,9 +130,9 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* RESULTATRÄKNING */}
         <div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-card shadow-sm">
-          <div className="px-4 py-3 bg-slate-800 dark:bg-slate-900 flex items-center gap-2">
+          <div className="px-4 py-3 bg-white dark:bg-slate-900 border-b border-[#E2E8F0] flex items-center gap-2">
             <div className="w-1 h-5 rounded-full bg-[#0052FF]" />
-            <h3 className="text-sm font-bold text-white">Resultaträkning</h3>
+            <h3 className="text-sm font-bold text-[#0F172A]">Resultaträkning</h3>
           </div>
           <div className="max-h-[600px] overflow-y-auto">
             <table className="w-full">
@@ -173,9 +173,9 @@ export const BudgetFinancialStatements = ({ rows, cfData }: Props) => {
 
         {/* BALANSRÄKNING */}
         <div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-card shadow-sm">
-          <div className="px-4 py-3 bg-slate-800 dark:bg-slate-900 flex items-center gap-2">
+          <div className="px-4 py-3 bg-white dark:bg-slate-900 border-b border-[#E2E8F0] flex items-center gap-2">
             <div className="w-1 h-5 rounded-full bg-violet-400" />
-            <h3 className="text-sm font-bold text-white">Balansräkning</h3>
+            <h3 className="text-sm font-bold text-[#0F172A]">Balansräkning</h3>
           </div>
           <div className="max-h-[600px] overflow-y-auto">
             <table className="w-full">

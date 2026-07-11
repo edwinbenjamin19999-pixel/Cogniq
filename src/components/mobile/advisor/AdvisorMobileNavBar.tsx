@@ -25,8 +25,8 @@ export const AdvisorMobileNavBar = ({ active, onChange }: AdvisorMobileNavBarPro
     <div
       className={cn(
         "mx-auto max-w-md grid grid-cols-5 h-[64px]",
-        "bg-slate-900/75 backdrop-blur-2xl border border-white/10 rounded-2xl",
-        "shadow-[0_12px_40px_-8px_rgba(0,0,0,0.7)]",
+        "bg-white/90 backdrop-blur-2xl border border-[#E2E8F0] rounded-2xl",
+        "shadow-[0_8px_24px_-8px_rgba(15,23,42,0.15)]",
       )}
     >
       {tabs.map((t) => {
@@ -39,7 +39,7 @@ export const AdvisorMobileNavBar = ({ active, onChange }: AdvisorMobileNavBarPro
             onClick={() => { haptic("light"); onChange(t.id); }}
             className={cn(
               "relative flex flex-col items-center justify-center gap-0.5 min-h-[44px] active:scale-90 transition-all duration-150",
-              isActive ? "text-[#0052FF]" : "text-white/45",
+              isActive ? "text-[#0052FF]" : "text-[#64748B]",
             )}
           >
             {isActive && (

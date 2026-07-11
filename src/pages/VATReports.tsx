@@ -317,7 +317,7 @@ const VATReports = () => {
               onClick={() => { setPeriodType("monthly"); setSelectedPeriod("1"); }}
               className={cn(
                 "px-3 h-[28px] text-sm font-medium rounded-[8px] transition-colors",
-                periodType === "monthly" ? "bg-[#0F1F3D] text-white" : "text-[#475569] hover:bg-white"
+                periodType === "monthly" ? "bg-[#0052FF] text-white" : "text-[#475569] hover:bg-white"
               )}
             >
               Månadsvis
@@ -326,7 +326,7 @@ const VATReports = () => {
               onClick={() => { setPeriodType("quarterly"); setSelectedPeriod("1"); }}
               className={cn(
                 "px-3 h-[28px] text-sm font-medium rounded-[8px] transition-colors",
-                periodType === "quarterly" ? "bg-[#0F1F3D] text-white" : "text-[#475569] hover:bg-white"
+                periodType === "quarterly" ? "bg-[#0052FF] text-white" : "text-[#475569] hover:bg-white"
               )}
             >
               Kvartalsvis
@@ -368,8 +368,8 @@ const VATReports = () => {
                 className={cn(
                   "px-3 h-[28px] text-sm font-medium rounded-full transition-colors whitespace-nowrap relative",
                   isActive
-                    ? "bg-[#0F1F3D] text-white"
-                    : "bg-white text-[#475569] border-[0.5px] border-[#E2E8F0] hover:border-[#0F1F3D]/30"
+                    ? "bg-[#0052FF] text-white"
+                    : "bg-white text-[#475569] border-[0.5px] border-[#E2E8F0] hover:border-[#0052FF]/30"
                 )}
               >
                 {p.label}
@@ -406,9 +406,9 @@ const VATReports = () => {
             <Tabs defaultValue="declaration" className="space-y-5">
               <div className="bg-[#F1F5F9] rounded-[10px] p-1 inline-flex gap-1">
                 <TabsList className="bg-transparent p-0 h-auto">
-                  <TabsTrigger value="declaration" className="data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white rounded-[8px] px-3 h-[28px] text-sm font-medium data-[state=active]:shadow-none">Momsdeklaration</TabsTrigger>
-                  <TabsTrigger value="reconciliation" className="data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white rounded-[8px] px-3 h-[28px] text-sm font-medium data-[state=active]:shadow-none">Momsavstämning</TabsTrigger>
-                  <TabsTrigger value="accounts" className="data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white rounded-[8px] px-3 h-[28px] text-sm font-medium data-[state=active]:shadow-none">Kontounderlag</TabsTrigger>
+                  <TabsTrigger value="declaration" className="data-[state=active]:bg-[#0052FF] data-[state=active]:text-white rounded-[8px] px-3 h-[28px] text-sm font-medium data-[state=active]:shadow-none">Momsdeklaration</TabsTrigger>
+                  <TabsTrigger value="reconciliation" className="data-[state=active]:bg-[#0052FF] data-[state=active]:text-white rounded-[8px] px-3 h-[28px] text-sm font-medium data-[state=active]:shadow-none">Momsavstämning</TabsTrigger>
+                  <TabsTrigger value="accounts" className="data-[state=active]:bg-[#0052FF] data-[state=active]:text-white rounded-[8px] px-3 h-[28px] text-sm font-medium data-[state=active]:shadow-none">Kontounderlag</TabsTrigger>
                 </TabsList>
               </div>
 

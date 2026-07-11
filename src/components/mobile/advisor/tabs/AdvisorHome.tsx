@@ -27,9 +27,9 @@ export const AdvisorHome = ({ selectedIds, toggleSelected, onNavigate }: Advisor
   if (isLoading) {
     return (
       <div className="p-4 space-y-3">
-        <Skeleton className="h-20 bg-white/5" />
-        <Skeleton className="h-24 bg-white/5" />
-        <Skeleton className="h-24 bg-white/5" />
+        <Skeleton className="h-20 bg-[#E2E8F0]" />
+        <Skeleton className="h-24 bg-[#E2E8F0]" />
+        <Skeleton className="h-24 bg-[#E2E8F0]" />
       </div>
     );
   }
@@ -42,7 +42,7 @@ export const AdvisorHome = ({ selectedIds, toggleSelected, onNavigate }: Advisor
 
       <div className="px-4 space-y-2">
         <div className="flex items-center justify-between">
-          <h2 className="text-[10px] uppercase tracking-widest text-white/40 font-semibold">
+          <h2 className="text-[10px] uppercase tracking-widest text-[#94A3B8] font-semibold">
             Prioriterade klienter
           </h2>
           {clients.length > 10 && (
@@ -55,8 +55,8 @@ export const AdvisorHome = ({ selectedIds, toggleSelected, onNavigate }: Advisor
           )}
         </div>
         {top.length === 0 ? (
-          <div className="rounded-2xl bg-white/[0.04] border border-white/10 p-6 text-center">
-            <div className="text-sm text-white/60">Inga aktiva klienter ännu</div>
+          <div className="rounded-2xl bg-white border border-[#E2E8F0] p-6 text-center">
+            <div className="text-sm text-[#64748B]">Inga aktiva klienter ännu</div>
           </div>
         ) : (
           <div className="space-y-2">

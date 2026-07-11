@@ -77,7 +77,7 @@ export const AgeingDistributionBar = ({ buckets, total }: Props) => {
                   {b.label}
                 </span>
               </div>
-              <p className="text-sm font-bold text-slate-900 dark:text-slate-50 tabular-nums truncate">
+              <p className="text-sm font-bold text-slate-900 dark:text-slate-50 tabular-nums">
                 {fmtSEK(b.total)} kr
               </p>
               <p className="text-[11px] text-slate-500 tabular-nums">

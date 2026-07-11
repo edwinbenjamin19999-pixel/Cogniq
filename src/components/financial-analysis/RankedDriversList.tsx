@@ -108,7 +108,7 @@ export function RankedDriversList({ drivers, rows, onDrill }: Props) {
                 {/* Rank */}
                 <div className={cn(
                   "shrink-0 h-7 w-7 rounded-lg flex items-center justify-center text-xs font-bold tabular-nums",
-                  idx === 0 ? "bg-slate-900 text-white" : "bg-slate-100 text-slate-600"
+                  idx === 0 ? "bg-[#0052FF] text-white" : "bg-slate-100 text-slate-600"
                 )}>
                   {idx + 1}
                 </div>

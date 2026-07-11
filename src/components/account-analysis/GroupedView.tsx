@@ -113,7 +113,7 @@ export const GroupedView = ({ details, accounts }: GroupedViewProps) => {
       <div className="max-h-[calc(100vh-420px)] overflow-auto flex-1">
         <table className="w-full">
           <thead className="sticky top-0 z-10">
-            <tr className="bg-slate-800 dark:bg-slate-900 text-white">
+            <tr className="bg-[#0052FF] dark:bg-slate-900 text-white">
               <th className="text-left px-4 py-3 text-[11px] font-semibold uppercase tracking-wider">Grupp</th>
               <th className="text-left px-4 py-3 text-[11px] font-semibold uppercase tracking-wider w-16">Antal</th>
               <th className="text-right px-4 py-3 text-[11px] font-semibold uppercase tracking-wider w-24">Ökning</th>

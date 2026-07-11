@@ -156,7 +156,7 @@ export const ClientNotesTab = ({ companyId, firmId }: Props) => {
               key={t}
               onClick={() => setTagFilter((c) => (c === t ? null : t))}
               className={`px-2 py-0.5 rounded-full text-[11px] border ${
-                tagFilter === t ? "bg-slate-900 text-white border-slate-900" : "bg-white text-slate-600 border-slate-200"
+                tagFilter === t ? "bg-[#0052FF] text-white border-[#0052FF]" : "bg-white text-slate-600 border-slate-200"
               }`}
             >
               {t}

@@ -30,12 +30,12 @@ export function CompactAIAlertBar({
   if (!issues.length) return null;
 
   return (
-    <div className="bg-[#0F172A] border border-white/[0.08] rounded-xl px-5 py-3 flex items-center gap-3 mb-5">
+    <div className="bg-white border border-[#E2E8F0] rounded-xl px-5 py-3 flex items-center gap-3 mb-5">
       <Sparkles className="w-4 h-4 text-[#0052FF] shrink-0" />
-      <div className="text-white/70 text-sm flex-1 min-w-0 truncate">
+      <div className="text-[#64748B] text-sm flex-1 min-w-0 truncate">
         {issues.map((i, idx) => (
           <span key={idx}>
-            {idx > 0 && <span className="text-white/30 mx-2">·</span>}
+            {idx > 0 && <span className="text-[#94A3B8] mx-2">·</span>}
             {i.text}
           </span>
         ))}

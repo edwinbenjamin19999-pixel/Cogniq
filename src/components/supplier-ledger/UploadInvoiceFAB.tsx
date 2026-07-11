@@ -11,7 +11,7 @@ export function UploadInvoiceFAB() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-full bg-[#0F1F3D] text-white shadow-[0_8px_24px_rgba(0,82,255,0.4)] hover:shadow-[0_12px_32px_rgba(0,82,255,0.5)] hover:scale-105 transition-all flex items-center justify-center group"
+        className="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-full bg-[#0052FF] text-white shadow-[0_8px_24px_rgba(0,82,255,0.4)] hover:shadow-[0_12px_32px_rgba(0,82,255,0.5)] hover:scale-105 transition-all flex items-center justify-center group"
         aria-label="Lägg till leverantörsfaktura"
       >
         <Plus className="h-6 w-6" />

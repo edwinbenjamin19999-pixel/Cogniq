@@ -104,7 +104,7 @@ export const BusinessPulseWidget = ({ companyId, size = "large" }: BusinessPulse
                 className={cn(
                   "rounded-md px-3 py-1 text-[11px] font-medium transition-colors",
                   activeFilter === cat
-                    ? "bg-gray-900 text-white"
+                    ? "bg-[#0052FF] text-white"
                     : "bg-gray-50 text-gray-500 hover:bg-gray-100",
                 )}
               >

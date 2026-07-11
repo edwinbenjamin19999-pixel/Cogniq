@@ -812,7 +812,7 @@ export const AGIForm = ({ companyId, taxYear }: AGIFormProps) => { const { user 
       )}
 
       {/* ─── AI BANNER ─── */}
-      <div className="rounded-xl bg-[#0B1929] p-6 border border-white/5">
+      <div className="rounded-xl bg-[#0052FF] p-6 border border-white/5">
         <div className="flex items-start justify-between gap-6 flex-wrap">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-1.5 bg-[#EEEDFE] text-[#26215C] border-[0.5px] border-[#AFA9EC] rounded-full text-[10px] font-medium px-[8px] py-px">

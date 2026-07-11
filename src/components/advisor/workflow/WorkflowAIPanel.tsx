@@ -31,7 +31,7 @@ export const WorkflowAIPanel = ({ insights }: Props) => {
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-4">
       <div className="flex items-center gap-2 mb-3">
-        <div className="h-7 w-7 rounded-lg bg-[#0F1F3D] flex items-center justify-center">
+        <div className="h-7 w-7 rounded-lg bg-[#0052FF] flex items-center justify-center">
           <Sparkles className="h-4 w-4 text-white" />
         </div>
         <div>

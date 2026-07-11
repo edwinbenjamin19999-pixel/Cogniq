@@ -53,31 +53,31 @@ function InvoicePreviewCard({ data }: { data: InvoiceData }) {
 
   if (sent) {
     return (
-      <div className="bg-emerald-950 border border-emerald-800 rounded-2xl p-5 text-center">
-        <CheckCircle className="h-10 w-10 text-emerald-400 mx-auto mb-2" />
-        <p className="text-emerald-200 font-semibold">Faktura {data.invoiceNumber} skickad!</p>
-        <p className="text-emerald-400/60 text-xs mt-1">{data.customer}</p>
+      <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 text-center">
+        <CheckCircle className="h-10 w-10 text-emerald-500 mx-auto mb-2" />
+        <p className="text-emerald-700 font-semibold">Faktura {data.invoiceNumber} skickad!</p>
+        <p className="text-emerald-600 text-xs mt-1">{data.customer}</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden">
+    <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden">
       {/* Header */}
-      <div className="p-4 border-b border-slate-800">
+      <div className="p-4 border-b border-[#E2E8F0]">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="bg-indigo-600 rounded-xl p-2">
+            <div className="bg-[#0052FF] rounded-xl p-2">
               <FileText className="h-5 w-5 text-white" />
             </div>
             <div>
-              <p className="text-white font-semibold text-sm">Faktura redo</p>
-              <p className="text-slate-400 text-xs">{data.invoiceNumber}</p>
+              <p className="text-[#0F172A] font-semibold text-sm">Faktura redo</p>
+              <p className="text-[#64748B] text-xs">{data.invoiceNumber}</p>
             </div>
           </div>
           <div className="text-right">
-            <p className="text-slate-500 text-xs">Förfallodatum</p>
-            <p className="text-slate-300 text-xs font-medium">{data.dueDate} (+30 dagar)</p>
+            <p className="text-[#94A3B8] text-xs">Förfallodatum</p>
+            <p className="text-[#475569] text-xs font-medium">{data.dueDate} (+30 dagar)</p>
           </div>
         </div>
       </div>
@@ -86,47 +86,47 @@ function InvoicePreviewCard({ data }: { data: InvoiceData }) {
       <div className="p-4 space-y-3">
         {/* Customer */}
         <div>
-          <p className="text-slate-500 text-xs uppercase tracking-wider mb-0.5">Kund</p>
-          <p className="text-white font-medium text-sm">{data.customer || "—"}</p>
+          <p className="text-[#94A3B8] text-xs uppercase tracking-wider mb-0.5">Kund</p>
+          <p className="text-[#0F172A] font-medium text-sm">{data.customer || "—"}</p>
         </div>
 
         {/* Line item */}
-        <div className="bg-slate-800/50 rounded-xl p-3">
-          <p className="text-slate-300 text-sm mb-1">{data.description || "Konsulttjänster"}</p>
+        <div className="bg-[#F1F5F9] rounded-xl p-3">
+          <p className="text-[#475569] text-sm mb-1">{data.description || "Konsulttjänster"}</p>
           <div className="flex items-center justify-between">
-            <span className="text-slate-400 text-xs">
+            <span className="text-[#64748B] text-xs">
               {data.hours ? `${data.hours} h × ${formatSEK(data.hourlyRate ?? 0)}/h` : "1 st"}
             </span>
-            <span className="text-white font-semibold text-sm">{formatSEK(netto)}</span>
+            <span className="text-[#0F172A] font-semibold text-sm">{formatSEK(netto)}</span>
           </div>
         </div>
 
         {/* Totals */}
-        <div className="space-y-1.5 pt-2 border-t border-slate-800">
+        <div className="space-y-1.5 pt-2 border-t border-[#E2E8F0]">
           <div className="flex justify-between text-sm">
-            <span className="text-slate-400">Netto</span>
-            <span className="text-slate-300">{formatSEK(netto)}</span>
+            <span className="text-[#64748B]">Netto</span>
+            <span className="text-[#475569]">{formatSEK(netto)}</span>
           </div>
           <div className="flex justify-between text-sm">
-            <span className="text-slate-400">Moms (25%)</span>
-            <span className="text-slate-300">{formatSEK(moms)}</span>
+            <span className="text-[#64748B]">Moms (25%)</span>
+            <span className="text-[#475569]">{formatSEK(moms)}</span>
           </div>
-          <div className="flex justify-between text-sm font-bold pt-1 border-t border-slate-700">
-            <span className="text-white">Totalt att betala</span>
-            <span className="text-emerald-400 text-base">{formatSEK(total)}</span>
+          <div className="flex justify-between text-sm font-bold pt-1 border-t border-[#E2E8F0]">
+            <span className="text-[#0F172A]">Totalt att betala</span>
+            <span className="text-emerald-600 text-base">{formatSEK(total)}</span>
           </div>
         </div>
       </div>
 
       {/* Actions */}
       <div className="p-4 pt-0 flex gap-2">
-        <button className="flex-1 bg-slate-800 text-slate-300 rounded-xl py-3 text-sm font-semibold min-h-[52px] active:scale-95 transition-transform border border-slate-700">
+        <button className="flex-1 bg-white text-[#475569] rounded-xl py-3 text-sm font-semibold min-h-[52px] active:scale-95 transition-transform border border-[#E2E8F0]">
           Redigera
         </button>
         <button
           onClick={handleSend}
           disabled={sending}
-          className="flex-1 bg-indigo-600 text-white rounded-xl py-3 text-sm font-semibold min-h-[52px] active:scale-95 transition-transform flex items-center justify-center gap-1"
+          className="flex-1 bg-[#0052FF] text-white rounded-xl py-3 text-sm font-semibold min-h-[52px] active:scale-95 transition-transform flex items-center justify-center gap-1"
         >
           {sending ? <Loader2 className="h-4 w-4 animate-spin" /> : <>Skicka faktura →</>}
         </button>

@@ -114,7 +114,7 @@ const TableHeader = ({ title, lastColLabel = "Helår" }: { title: string; lastCo
 );
 
 const SummaryRow = ({ label, values, annual, sparkline = false }: { label: string; values: number[]; annual: number; sparkline?: boolean }) => (
-  <div className="flex items-center border-t-2 border-[#C8DDF5] dark:border-indigo-800 bg-[#0F1F3D] dark:from-indigo-950/30 dark:to-blue-950/20">
+  <div className="flex items-center border-t-2 border-[#C8DDF5] dark:border-indigo-800 bg-[#F1F5F9] dark:from-indigo-950/30 dark:to-blue-950/20">
     <div className="min-w-[180px] px-3 py-2 text-sm font-bold sticky left-0 bg-inherit z-10 border-r">{label}</div>
     {values.map((v, i) => (
       <div key={i} className={cn("w-[75px] min-w-[75px] text-right px-1.5 py-2 text-xs font-bold tabular-nums border-r",
@@ -267,7 +267,7 @@ export const BudgetDriverModel = ({ className, drivers, onDriversChange }: Props
           className={cn(
             "px-4 py-2 rounded-full text-sm font-medium transition-all",
             activeView === "model"
-              ? "bg-[#0F1F3D] text-white shadow-lg shadow-indigo-500/25"
+              ? "bg-[#0052FF] text-white shadow-lg shadow-indigo-500/25"
               : "bg-muted text-muted-foreground hover:bg-muted/80"
           )}
         >
@@ -278,7 +278,7 @@ export const BudgetDriverModel = ({ className, drivers, onDriversChange }: Props
           className={cn(
             "px-4 py-2 rounded-full text-sm font-medium transition-all",
             activeView === "scenarios"
-              ? "bg-[#0F1F3D] text-white shadow-lg shadow-indigo-500/25"
+              ? "bg-[#0052FF] text-white shadow-lg shadow-indigo-500/25"
               : "bg-muted text-muted-foreground hover:bg-muted/80"
           )}
         >

@@ -82,7 +82,7 @@ export const SIEExportPanel = ({ companyId, companyName }: SIEExportPanelProps) 
       <Card className="rounded-2xl shadow-md">
         <CardContent className="p-6 space-y-5">
           <div className="flex items-center gap-3 mb-2">
-            <div className="p-2.5 rounded-xl bg-[#0F1F3D]">
+            <div className="p-2.5 rounded-xl bg-[#0052FF]">
               <FileCode className="h-5 w-5 text-white" />
             </div>
             <div>
@@ -143,7 +143,7 @@ export const SIEExportPanel = ({ companyId, companyName }: SIEExportPanelProps) 
           <Button
             onClick={handleExport}
             disabled={exporting}
-            className="w-full h-12 text-base font-semibold rounded-xl bg-[#0F1F3D] hover:from-indigo-700 hover:to-violet-700"
+            className="w-full h-12 text-base font-semibold rounded-xl bg-[#0052FF] hover:bg-[#0040CC]"
           >
             {exporting ? (
               <>

@@ -129,7 +129,7 @@ export const ClientContextBar = () => {
       className="w-full px-5 py-2.5 flex items-center gap-4 text-white border-b border-white/5"
       style={{
         background:
-          "linear-gradient(90deg, hsl(220 47% 11%) 0%, hsl(222 47% 14%) 60%, hsl(243 70% 18%) 100%)",
+          "linear-gradient(90deg, #0052FF 0%, #0040CC 100%)",
       }}
       role="region"
       aria-label="Klientläge"
@@ -198,7 +198,7 @@ export const ClientContextBar = () => {
       {/* Top reason banner (compact) */}
       {priority?.topReason && (
         <div className="hidden lg:flex items-center gap-1.5 text-[11px] text-white/70 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10 max-w-[300px] truncate">
-          <Sparkles className="h-3 w-3 text-[#0052FF] shrink-0" />
+          <Sparkles className="h-3 w-3 text-white shrink-0" />
           <span className="truncate">{priority.topReason.label}</span>
         </div>
       )}

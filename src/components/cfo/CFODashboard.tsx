@@ -208,7 +208,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {/* KASSABALANS */}
-        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10">
+        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-white border border-[#E2E8F0] dark:border-white/10">
           <CardContent className="pt-4 pb-3 px-4">
             <div className="flex items-center gap-2 mb-1">
               <DollarSign className={cn("h-4 w-4", runwayColor === "destructive" ? "text-destructive" : "text-[#085041]")} />
@@ -236,7 +236,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         </Card>
 
         {/* OMSÄTTNING */}
-        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10" style={{ animationDelay: '50ms' }}>
+        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-white border border-[#E2E8F0] dark:border-white/10" style={{ animationDelay: '50ms' }}>
           <CardContent className="pt-4 pb-3 px-4">
             <div className="flex items-center gap-2 mb-1">
               <TrendingUp className="h-4 w-4 text-[#0052FF]" />
@@ -270,7 +270,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         </Card>
 
         {/* EBITDA-MARGINAL */}
-        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10" style={{ animationDelay: '100ms' }}>
+        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-white border border-[#E2E8F0] dark:border-white/10" style={{ animationDelay: '100ms' }}>
           <CardContent className="pt-4 pb-3 px-4">
             <div className="flex items-center gap-2 mb-1">
               <Shield className="h-4 w-4" style={{ color: gaugeMarginColor }} />
@@ -296,7 +296,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         </Card>
 
         {/* ÅRETS RESULTAT */}
-        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-[#0F1F3D] border border-white/60 dark:border-white/10" style={{ animationDelay: '150ms' }}>
+        <Card className="relative overflow-hidden group hover:shadow-[0_0_20px_rgba(0,82,255,0.15)] hover:-translate-y-0.5 transition-all duration-200 animate-fade-in bg-white border border-[#E2E8F0] dark:border-white/10" style={{ animationDelay: '150ms' }}>
           <CardContent className="pt-4 pb-3 px-4">
             <div className="flex items-center gap-2 mb-1">
               <Calendar className="h-4 w-4 text-[#7A5417]" />
@@ -327,9 +327,9 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
       </div>
 
       {/* AI Summary Card — Centerpiece */}
-      <div className="bg-[#0F1F3D] dark:from-indigo-950/30 dark:to-blue-950/20 border border-indigo-200/40 dark:border-indigo-800/30 rounded-2xl p-6 animate-fade-in">
+      <div className="bg-white dark:from-indigo-950/30 dark:to-blue-950/20 border border-indigo-200/40 dark:border-indigo-800/30 rounded-2xl p-6 animate-fade-in">
         <div className="flex items-center gap-2 mb-4">
-          <div className="h-8 w-8 rounded-xl bg-[#0F1F3D] flex items-center justify-center shadow-[0_0_12px_rgba(99,102,241,0.25)]">
+          <div className="h-8 w-8 rounded-xl bg-[#0052FF] flex items-center justify-center shadow-[0_0_12px_rgba(99,102,241,0.25)]">
             <Sparkles className="h-4 w-4 text-white" />
           </div>
           <span className="text-sm font-bold text-indigo-900 dark:text-indigo-200">AI Analys</span>
@@ -351,7 +351,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
       {/* Opportunity & Risk Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in">
         {/* Opportunities */}
-        <div className="border border-emerald-200/50 bg-[#0F1F3D] dark:from-emerald-950/20 dark:to-green-950/10 rounded-2xl p-4 shadow-[0_0_16px_rgba(16,185,129,0.08)]">
+        <div className="border border-emerald-200/50 bg-white dark:from-emerald-950/20 dark:to-green-950/10 rounded-2xl p-4 shadow-[0_0_16px_rgba(16,185,129,0.08)]">
           <div className="flex items-center gap-2 mb-3">
             <Lightbulb className="h-4 w-4 text-[#085041]" />
             <span className="text-sm font-semibold text-[#085041] dark:text-emerald-300">Möjligheter</span>
@@ -370,7 +370,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
         </div>
 
         {/* Risks */}
-        <div className="border border-rose-200/50 bg-[#0F1F3D] dark:from-rose-950/20 dark:to-red-950/10 rounded-2xl p-4 shadow-[0_0_16px_rgba(244,63,94,0.06)]">
+        <div className="border border-rose-200/50 bg-white dark:from-rose-950/20 dark:to-red-950/10 rounded-2xl p-4 shadow-[0_0_16px_rgba(244,63,94,0.06)]">
           <div className="flex items-center gap-2 mb-3">
             <AlertTriangle className="h-4 w-4 text-[#7A1A1A]" />
             <span className="text-sm font-semibold text-[#7A1A1A] dark:text-rose-300">Risker</span>
@@ -414,7 +414,7 @@ export const CFODashboard = ({ companyId, userName = "du" }: CFODashboardProps) 
               className={cn(
                 "flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap min-h-[44px]",
                 isActive
-                  ? "bg-[#0F1F3D] text-white shadow-[0_0_12px_rgba(0,82,255,0.25)]"
+                  ? "bg-[#0052FF] text-white shadow-[0_0_12px_rgba(0,82,255,0.25)]"
                   : "text-muted-foreground hover:text-foreground hover:bg-[#EFF6FF]"
               )}
             >

@@ -46,9 +46,9 @@ const statusColor = (s?: string) => {
   switch (s) {
     case 'approved': return 'bg-[#E1F5EE] text-[#1D9E75] border-[#BFE6D6]';
     case 'pending_approval': return 'bg-[#FAEEDA] text-[#C28A2B] border-[#F0DDB7]';
-    case 'draft': return 'bg-slate-500/10 text-slate-400 border-slate-500/30';
+    case 'draft': return 'bg-slate-500/10 text-[#64748B] border-slate-500/30';
     case 'deleted': return 'bg-[#FCE8E8] text-[#C73838] border-[#F4C8C8]';
-    default: return 'bg-slate-500/10 text-slate-400 border-slate-500/30';
+    default: return 'bg-slate-500/10 text-[#64748B] border-slate-500/30';
   }
 };
 
@@ -130,20 +130,20 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
 
   return (
     <div
-      className={`fixed right-0 top-0 h-full w-[480px] bg-slate-950 shadow-lg
+      className={`fixed right-0 top-0 h-full w-[480px] bg-[#F8FAFC] shadow-lg
                   border-l-2 border-[#0052FF]/60 z-50 transform transition-transform duration-300 ease-out
                   ${detail ? 'translate-x-0' : 'translate-x-full'}`}
     >
       {detail && (
         <>
           {/* Header */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-950">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-[#E2E8F0] bg-white">
             <div className="flex items-center gap-3 min-w-0">
               <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] border border-[#C8DDF5] flex items-center justify-center flex-shrink-0">
                 <FileText className="w-4 h-4 text-[#1E3A5F]" />
               </div>
               <div className="min-w-0">
-                <h3 className="font-semibold text-slate-100 text-sm truncate">
+                <h3 className="font-semibold text-[#0F172A] text-sm truncate">
                   {detail.isVirtualRow ? detail.description : `Verifikat #${detail.journal_number}`}
                 </h3>
                 {!detail.isVirtualRow && meta && (
@@ -153,7 +153,7 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
                 )}
               </div>
             </div>
-            <button onClick={onClose} className="text-slate-500 hover:text-slate-200 transition-colors flex-shrink-0">
+            <button onClick={onClose} className="text-[#64748B] hover:text-[#0F172A] transition-colors flex-shrink-0">
               <X className="w-5 h-5" />
             </button>
           </div>
@@ -161,7 +161,7 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
           <div className="overflow-y-auto h-[calc(100%-64px)] pb-20">
             {/* Översikt */}
             <Section title="Översikt">
-              <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-2.5 shadow-inner">
+              <div className="bg-white border border-[#E2E8F0] rounded-xl p-4 space-y-2.5 shadow-inner">
                 <Row label="Datum" value={detail.entry_date} mono />
                 <Row label="Beskrivning" value={detail.description} truncate />
                 {meta?.series_code && (
@@ -184,7 +184,7 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
             {/* AI-spår */}
             {!detail.isVirtualRow && meta && (
               <Section title="AI-spår">
-                <div className="bg-slate-900/60 border border-[#C8DDF5] rounded-xl p-4 space-y-3 shadow-inner">
+                <div className="bg-white border border-[#C8DDF5] rounded-xl p-4 space-y-3 shadow-inner">
                   {isAI && (
                     <TraceItem
                       icon={Sparkles}
@@ -217,12 +217,12 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
                     />
                   )}
                   {!isAI && !meta.receipt_matched && !hasVATAccount && !meta.document_id && (
-                    <div className="text-xs text-slate-500 italic">Inget AI-spår tillgängligt för denna verifikation.</div>
+                    <div className="text-xs text-[#64748B] italic">Inget AI-spår tillgängligt för denna verifikation.</div>
                   )}
                   {meta.ai_explanation && (
-                    <div className="mt-2 pt-3 border-t border-slate-800">
-                      <p className="text-[10px] uppercase tracking-wider text-slate-500 mb-1">AI-motivering</p>
-                      <p className="text-xs text-slate-300 leading-relaxed italic">"{meta.ai_explanation}"</p>
+                    <div className="mt-2 pt-3 border-t border-[#E2E8F0]">
+                      <p className="text-[10px] uppercase tracking-wider text-[#64748B] mb-1">AI-motivering</p>
+                      <p className="text-xs text-[#475569] leading-relaxed italic">"{meta.ai_explanation}"</p>
                     </div>
                   )}
                 </div>
@@ -232,8 +232,8 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
             {/* Tidslinje */}
             {!detail.isVirtualRow && meta && (
               <Section title="Tidslinje">
-                <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4 shadow-inner">
-                  <ol className="relative border-l border-slate-700 ml-2 space-y-4">
+                <div className="bg-white border border-[#E2E8F0] rounded-xl p-4 shadow-inner">
+                  <ol className="relative border-l border-[#E2E8F0] ml-2 space-y-4">
                     <TimelineNode
                       color="cyan"
                       label="Skapad"
@@ -265,7 +265,7 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
             {detail.anomalyType && (
               <Section title="Avvikelse">
                 <div className="bg-[#FAEEDA] border border-[#F0DDB7] rounded-xl p-4">
-                  <p className="text-xs text-amber-300 leading-relaxed">{detail.anomalyReason}</p>
+                  <p className="text-xs text-[#7A5417] leading-relaxed">{detail.anomalyReason}</p>
                 </div>
               </Section>
             )}
@@ -273,8 +273,8 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
             {/* Verifikatrader */}
             {!detail.isVirtualRow && rows.length > 0 && (
               <Section title="Verifikatrader">
-                <div className="bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden shadow-inner">
-                  <div className="grid grid-cols-[80px_1fr_100px_100px] px-3 py-2 border-b border-slate-800 text-[10px] uppercase tracking-wider text-slate-500 font-medium">
+                <div className="bg-white border border-[#E2E8F0] rounded-xl overflow-hidden shadow-inner">
+                  <div className="grid grid-cols-[80px_1fr_100px_100px] px-3 py-2 border-b border-[#E2E8F0] text-[10px] uppercase tracking-wider text-[#64748B] font-medium">
                     <span>Konto</span>
                     <span>Benämning</span>
                     <span className="text-right">Debet</span>
@@ -283,17 +283,17 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
                   {rows.map((r, i) => (
                     <div
                       key={i}
-                      className="grid grid-cols-[80px_1fr_100px_100px] px-3 py-3 border-b border-slate-800/60 text-sm hover:bg-[#EFF6FF] transition-colors items-center"
+                      className="grid grid-cols-[80px_1fr_100px_100px] px-3 py-3 border-b border-[#E2E8F0] text-sm hover:bg-[#EFF6FF] transition-colors items-center"
                     >
-                      <span className="font-mono text-[11px] inline-flex items-center justify-center px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 w-fit">{r.konto}</span>
-                      <span className="text-slate-300 px-2 truncate text-xs">{r.kontoName}</span>
+                      <span className="font-mono text-[11px] inline-flex items-center justify-center px-1.5 py-0.5 rounded bg-[#F1F5F9] text-[#475569] border border-[#E2E8F0] w-fit">{r.konto}</span>
+                      <span className="text-[#475569] px-2 truncate text-xs">{r.kontoName}</span>
                       <span className="text-[#1D9E75] tabular-nums text-right text-xs">{r.debit > 0 ? formatSEK(r.debit) : ''}</span>
                       <span className="text-[#C73838] tabular-nums text-right text-xs">{r.credit > 0 ? formatSEK(r.credit) : ''}</span>
                     </div>
                   ))}
-                  <div className="grid grid-cols-[80px_1fr_100px_100px] px-3 py-3 border-t-2 border-[#C8DDF5] bg-slate-950/50 text-sm font-semibold items-center">
+                  <div className="grid grid-cols-[80px_1fr_100px_100px] px-3 py-3 border-t-2 border-[#C8DDF5] bg-[#F8FAFC] text-sm font-semibold items-center">
                     <span></span>
-                    <span className="text-slate-400 px-2 text-xs uppercase tracking-wider">Summa</span>
+                    <span className="text-[#64748B] px-2 text-xs uppercase tracking-wider">Summa</span>
                     <span className="text-[#1D9E75] tabular-nums text-right">{formatSEK(totalDebit)}</span>
                     <span className="text-[#C73838] tabular-nums text-right">{formatSEK(totalCredit)}</span>
                   </div>
@@ -304,13 +304,13 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
 
           {/* Footer actions */}
           {!detail.isVirtualRow && (
-            <div className="absolute bottom-0 left-0 right-0 border-t border-slate-800 bg-slate-950/95 backdrop-blur px-6 py-3 flex items-center gap-2">
+            <div className="absolute bottom-0 left-0 right-0 border-t border-[#E2E8F0] bg-white/95 backdrop-blur px-6 py-3 flex items-center gap-2">
               {meta?.document_id && (
                 <button className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#EFF6FF] hover:bg-[#EFF6FF] border border-[#C8DDF5] text-[#0052FF] text-xs font-medium transition-colors">
                   <ExternalLink className="w-3.5 h-3.5" /> Visa underlag
                 </button>
               )}
-              <button className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs font-medium transition-colors">
+              <button className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#F1F5F9] hover:bg-[#E2E8F0] border border-[#E2E8F0] text-[#475569] text-xs font-medium transition-colors">
                 <Download className="w-3.5 h-3.5" /> Exportera PDF
               </button>
             </div>
@@ -325,15 +325,15 @@ export const VoucherSidePanel = ({ detail, onClose }: VoucherSidePanelProps) => 
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <div className="px-6 pt-5">
-    <p className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-2 pb-1.5 border-b border-slate-800/60">{title}</p>
+    <p className="text-[10px] uppercase tracking-wider text-[#64748B] font-semibold mb-2 pb-1.5 border-b border-[#E2E8F0]">{title}</p>
     {children}
   </div>
 );
 
 const Row = ({ label, value, mono, truncate, accent }: { label: string; value: string; mono?: boolean; truncate?: boolean; accent?: boolean }) => (
   <div className="flex justify-between items-baseline text-sm gap-3">
-    <span className="text-slate-500 text-xs">{label}</span>
-    <span className={`font-medium text-right ${truncate ? 'max-w-[260px] truncate' : ''} ${mono ? 'tabular-nums' : ''} ${accent ? 'text-[#1E3A5F] text-base' : 'text-slate-200 text-xs'}`}>{value}</span>
+    <span className="text-[#64748B] text-xs">{label}</span>
+    <span className={`font-medium text-right ${truncate ? 'max-w-[260px] truncate' : ''} ${mono ? 'tabular-nums' : ''} ${accent ? 'text-[#1E3A5F] text-base' : 'text-[#0F172A] text-xs'}`}>{value}</span>
   </div>
 );
 
@@ -344,14 +344,14 @@ const TraceItem = ({ icon: Icon, label, meta, pill, action }: { icon: any; label
     </div>
     <div className="flex-1 min-w-0">
       <div className="flex items-center gap-2">
-        <span className="text-xs font-medium text-slate-200">{label}</span>
+        <span className="text-xs font-medium text-[#0F172A]">{label}</span>
         {pill && (
           <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#0052FF] border border-[#C8DDF5] tabular-nums font-mono">{pill}</span>
         )}
       </div>
-      {meta && <p className="text-[11px] text-slate-500 mt-0.5">{meta}</p>}
+      {meta && <p className="text-[11px] text-[#64748B] mt-0.5">{meta}</p>}
     </div>
-    {action && <ExternalLink className="w-3.5 h-3.5 text-slate-500 mt-1.5" />}
+    {action && <ExternalLink className="w-3.5 h-3.5 text-[#64748B] mt-1.5" />}
   </div>
 );
 
@@ -361,10 +361,10 @@ const TimelineNode = ({ color, label, timestamp, actor }: { color: 'cyan' | 'eme
     <li className="ml-4 relative">
       <span className={`absolute -left-[22px] top-1 w-2.5 h-2.5 rounded-full ${dotColor} ring-4`} />
       <div className="flex items-baseline justify-between gap-2">
-        <span className="text-xs font-medium text-slate-200">{label}</span>
-        <span className="text-[10px] text-slate-500 tabular-nums">{timestamp}</span>
+        <span className="text-xs font-medium text-[#0F172A]">{label}</span>
+        <span className="text-[10px] text-[#64748B] tabular-nums">{timestamp}</span>
       </div>
-      <p className="text-[11px] text-slate-500 mt-0.5">{actor}</p>
+      <p className="text-[11px] text-[#64748B] mt-0.5">{actor}</p>
     </li>
   );
 };

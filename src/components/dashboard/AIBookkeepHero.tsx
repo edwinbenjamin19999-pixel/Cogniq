@@ -26,7 +26,7 @@ export const AIBookkeepHero = () => {
   return (
     <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-none border border-violet-100 dark:border-violet-900/50 overflow-hidden">
       {/* ── Gradient hero band ── */}
-      <div className="bg-[#0F1F3D] px-6 py-5 relative overflow-hidden">
+      <div className="bg-[#0052FF] px-6 py-5 relative overflow-hidden">
         {/* Decorative orbs */}
         <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/10 rounded-full blur-2xl pointer-events-none" />
         <div className="absolute -bottom-4 left-1/3 w-24 h-24 rounded-full blur-xl pointer-events-none" style={{ background: "hsl(var(--brand-primary) / 0.18)" }} />
@@ -91,7 +91,7 @@ export const AIBookkeepHero = () => {
 
           <button
             onClick={() => navigate("/bookkeep")}
-            className="bg-[#0F1F3D] w-11 h-11 rounded-2xl flex items-center justify-center shadow-md shadow-violet-200 dark:shadow-violet-900/50 hover:shadow-none hover:shadow-violet-300 dark:hover:shadow-violet-800/50 hover:scale-110 transition-all duration-200 flex-shrink-0"
+            className="bg-[#0052FF] w-11 h-11 rounded-2xl flex items-center justify-center shadow-md shadow-violet-200 dark:shadow-violet-900/50 hover:shadow-none hover:shadow-violet-300 dark:hover:shadow-violet-800/50 hover:scale-110 transition-all duration-200 flex-shrink-0"
           >
             <ArrowRight className="w-5 h-5 text-white" />
           </button>

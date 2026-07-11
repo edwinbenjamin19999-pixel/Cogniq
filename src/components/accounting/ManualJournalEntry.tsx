@@ -1022,7 +1022,7 @@ export const ManualJournalEntry = ({ companyId }: { companyId: string }) => { co
             {isSaving && isDraft ? <Loader2 className="w-4 h-4 mr-1 animate-spin" /> : <Save className="w-4 h-4 mr-1" />}
             Spara utkast
           </Button>
-          <Button size="sm" onClick={() => handleSave(false)} disabled={isSaving || validation.blocking} className="h-[34px] rounded-[8px] text-[12px] bg-[#0F1F3D] hover:bg-[#15294D] text-white disabled:opacity-60">
+          <Button size="sm" onClick={() => handleSave(false)} disabled={isSaving || validation.blocking} className="h-[34px] rounded-[8px] text-[12px] bg-[#0052FF] hover:bg-[#0040CC] text-white disabled:opacity-60">
             {isSaving && !isDraft ? <Loader2 className="w-4 h-4 mr-1 animate-spin" /> : <ArrowRight className="w-4 h-4 mr-1" />}
             {!isBalanced ? `Inte i balans (${difference.toLocaleString("sv-SE", { minimumFractionDigits: 2 })} kr)` : "Bokför"}
           </Button>

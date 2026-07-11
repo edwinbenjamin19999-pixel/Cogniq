@@ -255,7 +255,7 @@ export default function ReviewQueuePage() {
                 onClick={() => setTab(t.key)}
                 className={`px-3 py-1.5 rounded-full text-xs font-medium border transition ${
                   active
-                    ? "bg-slate-900 text-white border-slate-900"
+                    ? "bg-[#0052FF] text-white border-[#0052FF]"
                     : "bg-white text-slate-700 border-slate-200 hover:border-slate-300"
                 }`}
               >

@@ -12,12 +12,12 @@ export const AdvisorAI = () => {
           <Sparkles className="h-4 w-4 text-[#0052FF]" />
         </div>
         <div>
-          <h1 className="text-xl font-bold text-white leading-none">AI-insikter</h1>
-          <p className="text-[10px] text-white/40 mt-1">Aggregerat över portfolion · Beta</p>
+          <h1 className="text-xl font-bold text-[#0F172A] leading-none">AI-insikter</h1>
+          <p className="text-[10px] text-[#94A3B8] mt-1">Aggregerat över portfolion · Beta</p>
         </div>
       </div>
       {isLoading ? (
-        <Skeleton className="h-40 bg-white/5" />
+        <Skeleton className="h-40 bg-[#E2E8F0]" />
       ) : (
         <div className="-mx-4">
           <AdvisorAIOverview clients={clients} onSeeAll={() => { /* same view */ }} />

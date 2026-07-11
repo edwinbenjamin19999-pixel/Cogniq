@@ -132,7 +132,7 @@ export function AccountDrawer({
                 onClick={() => setFormOrigin("bas")}
                 className={`flex-1 py-3 px-4 rounded-xl border text-sm font-medium transition-all text-left ${
                   formOrigin === "bas"
-                    ? "border-slate-900 bg-slate-900 text-white"
+                    ? "border-[#0052FF] bg-[#0052FF] text-white"
                     : "border-slate-200 text-slate-600 hover:border-slate-400"
                 }`}
               >
@@ -174,7 +174,7 @@ export function AccountDrawer({
           <button onClick={onClose} className="flex-1 py-2.5 rounded-xl border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors">
             Avbryt
           </button>
-          <button onClick={onSave} disabled={saving} className="flex-[2] py-2.5 rounded-xl bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 shadow-md shadow-slate-900/20 transition-all active:scale-[0.98] disabled:opacity-50">
+          <button onClick={onSave} disabled={saving} className="flex-[2] py-2.5 rounded-xl bg-[#0052FF] text-white text-sm font-semibold hover:bg-[#0040CC] shadow-md shadow-[#0052FF]/20 transition-all active:scale-[0.98] disabled:opacity-50">
             {saving ? "Sparar…" : editingAccount ? "Spara ändringar" : "Lägg till konto"}
           </button>
         </div>

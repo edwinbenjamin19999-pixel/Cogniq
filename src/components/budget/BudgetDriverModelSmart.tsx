@@ -250,7 +250,7 @@ export const BudgetDriverModelSmart = ({ className, companyId }: Props) => {
       <Card className="border border-border/50 backdrop-blur-sm" style={{ background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--card) / 0.95) 100%)" }}>
         <CardHeader className="pb-3">
           <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-lg bg-[#0F1F3D]">
+            <div className="p-1.5 rounded-lg bg-[#0052FF]">
               <TrendingUp className="w-4 h-4 text-white" />
             </div>
             <div className="flex-1">

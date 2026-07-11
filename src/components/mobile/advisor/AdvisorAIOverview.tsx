@@ -50,8 +50,8 @@ export const AdvisorAIOverview = ({ clients, onSeeAll }: AdvisorAIOverviewProps)
   return (
     <div className="px-4">
       <div className={cn(
-        "rounded-2xl p-4 backdrop-blur-xl border border-white/10",
-        "bg-gradient-to-br from-[hsl(var(--brand-primary)/0.12)] via-white/[0.04] to-white/[0.02]",
+        "rounded-2xl p-4 border border-[#E2E8F0] shadow-sm",
+        "bg-white",
       )}>
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
@@ -59,28 +59,28 @@ export const AdvisorAIOverview = ({ clients, onSeeAll }: AdvisorAIOverviewProps)
               <Sparkles className="h-3.5 w-3.5 text-[#0052FF]" />
             </div>
             <div>
-              <div className="text-sm font-semibold text-white leading-none">AI-översikt</div>
-              <div className="text-[10px] text-white/40 mt-0.5">Beta</div>
+              <div className="text-sm font-semibold text-[#0F172A] leading-none">AI-översikt</div>
+              <div className="text-[10px] text-[#94A3B8] mt-0.5">Beta</div>
             </div>
           </div>
         </div>
         <ul className="space-y-2">
           {insights.map((ins, i) => {
             const Icon = ins.Icon;
-            const tone = ins.tone === "critical" ? "text-rose-300"
-              : ins.tone === "warning" ? "text-amber-300"
+            const tone = ins.tone === "critical" ? "text-rose-600"
+              : ins.tone === "warning" ? "text-amber-600"
               : "text-[#0052FF]";
             return (
               <li key={i} className="flex items-start gap-2.5">
                 <Icon className={cn("h-3.5 w-3.5 mt-0.5 flex-shrink-0", tone)} />
-                <span className="text-xs text-white/80 leading-relaxed">{ins.text}</span>
+                <span className="text-xs text-[#475569] leading-relaxed">{ins.text}</span>
               </li>
             );
           })}
         </ul>
         <button
           onClick={onSeeAll}
-          className="mt-3 w-full flex items-center justify-center gap-1 text-xs font-semibold text-[#0052FF] hover:text-[#0052FF] active:scale-[0.98] transition-all py-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08]"
+          className="mt-3 w-full flex items-center justify-center gap-1 text-xs font-semibold text-[#0052FF] hover:text-[#0052FF] active:scale-[0.98] transition-all py-2 rounded-lg bg-[#F1F5F9] hover:bg-[#E2E8F0]"
         >
           Visa alla insikter <ChevronRight className="h-3 w-3" />
         </button>

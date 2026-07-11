@@ -39,7 +39,7 @@ const MAIntelligencePage = () => {
       <div className="max-w-2xl mx-auto py-8 px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="w-20 h-20 rounded-3xl bg-[#0F1F3D] flex items-center justify-center mx-auto mb-6 shadow-xl">
+          <div className="w-20 h-20 rounded-3xl bg-[#0052FF] flex items-center justify-center mx-auto mb-6 shadow-xl">
             <TrendingUp className="w-10 h-10 text-white" />
           </div>
           <h2 className="text-3xl font-bold text-foreground mb-3">M&A Intelligence</h2>

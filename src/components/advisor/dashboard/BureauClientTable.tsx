@@ -247,7 +247,7 @@ export const BureauClientTable = ({ onAddClient }: Props) => {
           <button
             type="button"
             onClick={handleAddClick}
-            className="inline-flex items-center gap-1 rounded-[8px] bg-[#0B1929] text-white text-[12px] font-semibold h-[34px] px-3 hover:bg-[#142a44]"
+            className="inline-flex items-center gap-1 rounded-[8px] bg-[#0052FF] text-white text-[12px] font-semibold h-[34px] px-3 hover:bg-[#0040CC]"
           >
             <Plus className="h-3.5 w-3.5" /> Lägg till klient
           </button>
@@ -420,7 +420,7 @@ export const BureauClientTable = ({ onAddClient }: Props) => {
                               <div className="flex flex-col gap-1.5">
                                 <button
                                   onClick={() => open(s)}
-                                  className="rounded-md bg-[#0B1929] text-white text-[11px] font-semibold px-2.5 py-1.5 hover:bg-[#142a44]"
+                                  className="rounded-md bg-[#0052FF] text-white text-[11px] font-semibold px-2.5 py-1.5 hover:bg-[#0040CC]"
                                 >
                                   Öppna klient
                                 </button>

@@ -27,7 +27,7 @@ export const AccountingSubNav = () => { const navigate = useNavigate();
               onClick={() => navigate(path)}
               className={`inline-flex items-center h-[34px] rounded-[8px] px-[12px] text-[12px] font-medium transition-colors ${
                 isActive
-                  ? "bg-[#0F1F3D] text-white"
+                  ? "bg-[#0052FF] text-white"
                   : "text-[#64748B] hover:text-[#0F172A] hover:bg-[#F1F5F9]"
               }`}
             >

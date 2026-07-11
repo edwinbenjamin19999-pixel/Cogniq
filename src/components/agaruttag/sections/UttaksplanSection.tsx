@@ -100,7 +100,7 @@ export function UttaksplanSection({ forestagenLonManad, gransbelopp }: Props) {
           </div>
           <div className="h-3 rounded-full bg-[#F1F5F9] overflow-hidden">
             <div
-              className="h-full rounded-full bg-[#0F1F3D] transition-all duration-1000 ease-out"
+              className="h-full rounded-full bg-[#0052FF] transition-all duration-1000 ease-out"
               style={{ width: `${barWidth}%` }}
             />
           </div>

@@ -222,7 +222,7 @@ export function ActionExecuteSheet({
                 <Undo2 className="h-3.5 w-3.5 mr-1.5" />
                 Ångra
               </Button>
-              <Button className="flex-1 bg-slate-900 hover:bg-slate-800 text-white" onClick={close}>
+              <Button className="flex-1 bg-[#0052FF] hover:bg-[#0040CC] text-white" onClick={close}>
                 Klart
               </Button>
             </div>

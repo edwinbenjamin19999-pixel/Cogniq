@@ -58,7 +58,7 @@ export function FirmSupplierAIPanel({ rows, onAction }: Props) {
     <aside className="space-y-3">
       <div className="rounded-3xl bg-white border border-[#E2E8F0] p-4">
         <div className="flex items-center gap-2 mb-3">
-          <div className="h-7 w-7 rounded-lg bg-[#0F1F3D] flex items-center justify-center">
+          <div className="h-7 w-7 rounded-lg bg-[#0052FF] flex items-center justify-center">
             <Sparkles className="h-3.5 w-3.5 text-white" />
           </div>
           <div>

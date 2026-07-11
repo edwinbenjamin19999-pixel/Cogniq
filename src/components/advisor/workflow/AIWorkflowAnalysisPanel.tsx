@@ -33,7 +33,7 @@ export const AIWorkflowAnalysisPanel = ({
 
   return (
     <div className="fixed inset-y-0 right-0 z-50 w-full max-w-[360px] p-4">
-      <div className="rounded-[12px] bg-[#0B1929] p-[16px] shadow-2xl max-w-[320px] ml-auto">
+      <div className="rounded-[12px] bg-[#0052FF] p-[16px] shadow-2xl max-w-[320px] ml-auto">
         <div className="flex items-start justify-between mb-[12px]">
           <div className="flex items-center gap-[8px]">
             <div className="h-[24px] w-[24px] rounded-[6px] bg-white/10 flex items-center justify-center">

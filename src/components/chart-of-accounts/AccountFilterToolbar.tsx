@@ -62,7 +62,7 @@ export function AccountFilterToolbar({
             onClick={() => onClassFilterChange(cls.value)}
             className={`text-xs px-3 py-1.5 rounded-full whitespace-nowrap transition-colors ${
               classFilter === cls.value
-                ? "bg-slate-900 text-white"
+                ? "bg-[#0052FF] text-white"
                 : "bg-white border border-slate-200 text-slate-500 hover:border-slate-400"
             }`}
           >

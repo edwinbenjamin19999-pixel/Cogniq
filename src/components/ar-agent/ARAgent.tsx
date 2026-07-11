@@ -220,7 +220,7 @@ export const ARAgent = ({ companyId, customerFilter, onClearCustomerFilter }: AR
       {customerFilter && activeCustomerRecord && (
         <div className="rounded-2xl border border-slate-200/70 border-l-[3px] border-l-[#0052FF] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)]">
           <div className="flex items-start gap-4 flex-wrap">
-            <div className="h-12 w-12 rounded-full bg-[#0F1F3D] flex items-center justify-center flex-shrink-0">
+            <div className="h-12 w-12 rounded-full bg-[#EFF6FF] flex items-center justify-center flex-shrink-0">
               <User className="h-5 w-5 text-[#0052FF]" />
             </div>
             <div className="flex-1 min-w-[240px] space-y-1">
@@ -330,7 +330,7 @@ export const ARAgent = ({ companyId, customerFilter, onClearCustomerFilter }: AR
       <ARRecommendationPanel openInvoices={openInvoices} customers={customers} />
 
       {/* Automation Toggle */}
-      <Card className="border-[#C8DDF5] bg-[#0F1F3D] dark:from-blue-950/20 dark:to-blue-950/10">
+      <Card className="border-[#C8DDF5] bg-white dark:from-blue-950/20 dark:to-blue-950/10">
         <CardContent className="py-4 px-5">
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">

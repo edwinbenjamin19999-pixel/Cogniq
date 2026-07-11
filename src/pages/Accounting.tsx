@@ -474,7 +474,7 @@ const Accounting = () => { const { user, loading } = useAuth();
                                   <Button size="sm" variant="outline" onClick={() => runGuardAndApprove(entry.id, false)} disabled={approvingId === entry.id} className="h-[28px] rounded-[6px] text-[11px] px-2 border-[#E2E8F0]">
                                     <CheckCircle className="h-3 w-3" />
                                   </Button>
-                                  <Button size="sm" onClick={() => runGuardAndApprove(entry.id, true)} disabled={approvingId === entry.id || !entry.supplier_iban} className="h-[28px] rounded-[6px] text-[11px] px-2 bg-[#0F1F3D] hover:bg-[#15294D] text-white">
+                                  <Button size="sm" onClick={() => runGuardAndApprove(entry.id, true)} disabled={approvingId === entry.id || !entry.supplier_iban} className="h-[28px] rounded-[6px] text-[11px] px-2 bg-[#0052FF] hover:bg-[#0040CC] text-white">
                                     {approvingId === entry.id ? <Loader2 className="h-3 w-3 animate-spin" /> : <><CreditCard className="h-3 w-3 mr-1" />Betala</>}
                                   </Button>
                                 </div>
@@ -483,7 +483,7 @@ const Accounting = () => { const { user, loading } = useAuth();
                                   {approvingId === entry.id ? <Loader2 className="h-3 w-3 animate-spin" /> : <><Trash2 className="h-3 w-3 mr-1" />Radera</>}
                                 </Button>
                               ) : (
-                                <Button size="sm" onClick={() => runGuardAndApprove(entry.id, false)} disabled={approvingId === entry.id} className="h-[28px] rounded-[6px] text-[11px] px-2 bg-[#0F1F3D] hover:bg-[#15294D] text-white">
+                                <Button size="sm" onClick={() => runGuardAndApprove(entry.id, false)} disabled={approvingId === entry.id} className="h-[28px] rounded-[6px] text-[11px] px-2 bg-[#0052FF] hover:bg-[#0040CC] text-white">
                                   {approvingId === entry.id ? <Loader2 className="h-3 w-3 animate-spin" /> : <><CheckCircle className="h-3 w-3 mr-1" />Godkänn</>}
                                 </Button>
                               )}

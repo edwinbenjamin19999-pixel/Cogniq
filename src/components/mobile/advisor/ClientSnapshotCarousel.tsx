@@ -8,9 +8,9 @@ interface ClientSnapshotCarouselProps {
 }
 
 const TAG_BY_URGENCY: Record<FirmClientEnriched["urgency"], { label: string; tone: string; Icon: typeof TrendingUp }> = {
-  high: { label: "Behöver granskning", tone: "bg-rose-500/15 text-rose-300 border-rose-400/30", Icon: TrendingDown },
-  medium: { label: "Risk ökar", tone: "bg-amber-500/15 text-amber-300 border-amber-400/30", Icon: Minus },
-  low: { label: "Stabil", tone: "bg-emerald-500/15 text-emerald-300 border-emerald-400/30", Icon: TrendingUp },
+  high: { label: "Behöver granskning", tone: "bg-rose-50 text-rose-600 border-rose-200", Icon: TrendingDown },
+  medium: { label: "Risk ökar", tone: "bg-amber-50 text-amber-600 border-amber-200", Icon: Minus },
+  low: { label: "Stabil", tone: "bg-emerald-50 text-emerald-600 border-emerald-200", Icon: TrendingUp },
 };
 
 export const ClientSnapshotCarousel = ({ clients, onTap }: ClientSnapshotCarouselProps) => {
@@ -18,10 +18,10 @@ export const ClientSnapshotCarousel = ({ clients, onTap }: ClientSnapshotCarouse
   return (
     <div className="pl-4 pr-2">
       <div className="flex items-center justify-between mb-2 pr-2">
-        <h2 className="text-[10px] uppercase tracking-widest text-white/40 font-semibold">
+        <h2 className="text-[10px] uppercase tracking-widest text-[#94A3B8] font-semibold">
           Klient-snapshot
         </h2>
-        <span className="text-[10px] text-white/35">{clients.length} st</span>
+        <span className="text-[10px] text-[#94A3B8]">{clients.length} st</span>
       </div>
       <div className="flex gap-2.5 overflow-x-auto snap-x snap-mandatory pb-3 -mr-2 pr-4 scrollbar-none">
         {clients.map((c) => {
@@ -33,11 +33,11 @@ export const ClientSnapshotCarousel = ({ clients, onTap }: ClientSnapshotCarouse
               onClick={() => onTap(c.id)}
               className={cn(
                 "snap-start flex-shrink-0 w-[180px] rounded-2xl p-3 text-left",
-                "bg-white/[0.06] backdrop-blur-xl border border-white/10",
+                "bg-white border border-[#E2E8F0] shadow-sm",
                 "active:scale-[0.97] transition-transform duration-150",
               )}
             >
-              <div className="text-sm font-semibold text-white truncate">{c.name}</div>
+              <div className="text-sm font-semibold text-[#0F172A] truncate">{c.name}</div>
               <div className={cn(
                 "inline-flex items-center gap-1 mt-1.5 px-2 py-0.5 rounded-full border text-[10px] font-medium",
                 tag.tone,
@@ -60,10 +60,10 @@ export const ClientSnapshotCarousel = ({ clients, onTap }: ClientSnapshotCarouse
 
 const SnapKpi = ({ label, value, accent }: { label: string; value: string; accent?: boolean }) => (
   <div>
-    <div className="text-[9px] uppercase text-white/35 tracking-wider">{label}</div>
+    <div className="text-[9px] uppercase text-[#94A3B8] tracking-wider">{label}</div>
     <div className={cn(
       "text-sm font-bold tabular-nums",
-      accent ? "text-rose-300" : "text-white/90",
+      accent ? "text-rose-600" : "text-[#0F172A]",
     )}>{value}</div>
   </div>
 );

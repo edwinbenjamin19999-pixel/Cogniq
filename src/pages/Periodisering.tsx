@@ -309,8 +309,8 @@ const Periodisering = () => {
                     onClick={() => setEntryType(t.key)}
                     className={`h-[28px] px-3 rounded-[8px] text-sm font-medium border-[0.5px] transition-colors ${
                       entryType === t.key
-                        ? "bg-[#0F1F3D] text-white border-[#0F1F3D]"
-                        : "bg-white text-[#475569] border-[#E2E8F0] hover:border-[#0F1F3D]/30"
+                        ? "bg-[#0052FF] text-white border-[#0052FF]"
+                        : "bg-white text-[#475569] border-[#E2E8F0] hover:border-[#0052FF]/30"
                     }`}
                   >
                     {t.label}
@@ -352,13 +352,13 @@ const Periodisering = () => {
           {/* AI Banner */}
           {showAISuggestion && (
             <div className="p-4 rounded-[12px] border-[0.5px] border-[#C8DDF5] bg-[#EFF6FF] flex items-start gap-3">
-              <div className="w-8 h-8 rounded-full bg-[#0F1F3D] flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#0052FF] flex items-center justify-center shrink-0">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
               <div className="flex-1">
                 <p className="text-sm text-[#1E3A5F]">{aiText}</p>
                 <div className="flex gap-2 mt-2">
-                  <Button size="sm" onClick={acceptAI} className="h-[28px] rounded-[8px] bg-[#0F1F3D] hover:bg-[#0F1F3D]/90 text-white">Godkänn förslag</Button>
+                  <Button size="sm" onClick={acceptAI} className="h-[28px] rounded-[8px] bg-[#0052FF] hover:bg-[#0040CC] text-white">Godkänn förslag</Button>
                   <Button size="sm" variant="outline" onClick={() => setShowAISuggestion(false)} className="h-[28px] rounded-[8px] border-[0.5px] border-[#E2E8F0]">Avfärda</Button>
                 </div>
               </div>
@@ -457,7 +457,7 @@ const Periodisering = () => {
 
               {/* Save button */}
               <div className="flex justify-end mt-4">
-                <Button onClick={handleSave} disabled={saving || !isBalanced} className="h-[34px] rounded-[8px] bg-[#0F1F3D] hover:bg-[#0F1F3D]/90 text-white">
+                <Button onClick={handleSave} disabled={saving || !isBalanced} className="h-[34px] rounded-[8px] bg-[#0052FF] hover:bg-[#0040CC] text-white">
                   {saving ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Sparar...</> : "Spara verifikation"}
                 </Button>
               </div>
@@ -473,10 +473,10 @@ const Periodisering = () => {
           </div>
           <Tabs value={entryFilter} onValueChange={setEntryFilter}>
             <TabsList className="w-full grid grid-cols-4 h-7 bg-[#F1F5F9] p-0.5 rounded-[8px]">
-              <TabsTrigger value="alla" className="text-xs rounded-[6px] data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white data-[state=active]:shadow-none">Alla</TabsTrigger>
-              <TabsTrigger value="periodiseringar" className="text-xs rounded-[6px] data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white data-[state=active]:shadow-none">Per.</TabsTrigger>
-              <TabsTrigger value="avsattningar" className="text-xs rounded-[6px] data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white data-[state=active]:shadow-none">Avs.</TabsTrigger>
-              <TabsTrigger value="aterforing" className="text-xs rounded-[6px] data-[state=active]:bg-[#0F1F3D] data-[state=active]:text-white data-[state=active]:shadow-none">Åter.</TabsTrigger>
+              <TabsTrigger value="alla" className="text-xs rounded-[6px] data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-none">Alla</TabsTrigger>
+              <TabsTrigger value="periodiseringar" className="text-xs rounded-[6px] data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-none">Per.</TabsTrigger>
+              <TabsTrigger value="avsattningar" className="text-xs rounded-[6px] data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-none">Avs.</TabsTrigger>
+              <TabsTrigger value="aterforing" className="text-xs rounded-[6px] data-[state=active]:bg-[#0052FF] data-[state=active]:text-white data-[state=active]:shadow-none">Åter.</TabsTrigger>
             </TabsList>
           </Tabs>
           <div className="space-y-1.5 max-h-[calc(100vh-250px)] overflow-y-auto">

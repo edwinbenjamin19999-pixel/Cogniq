@@ -98,7 +98,7 @@ export function HistorikPrognosChart({ forestagenLonManad, lagbeskattadUtdelning
                   onClick={() => setView(b.mode)}
                   className={`text-[11px] h-[28px] px-3 rounded-[6px] font-medium transition-colors ${
                     view === b.mode
-                      ? "bg-[#0F1F3D] text-white"
+                      ? "bg-[#0052FF] text-white"
                       : "text-[#64748B] hover:text-[#0F1F3D]"
                   }`}
                 >

@@ -23,7 +23,7 @@ export const EcommercePageHeader = ({ icon: Icon,
 }: EcommercePageHeaderProps) => { return (
     <div className="flex items-start justify-between mb-8">
       <div className="flex items-start">
-        <div className="w-8 h-8 p-1.5 rounded-xl bg-[#0F1F3D] text-white mr-3 flex items-center justify-center shrink-0">
+        <div className="w-8 h-8 p-1.5 rounded-xl bg-[#0052FF] text-white mr-3 flex items-center justify-center shrink-0">
           <Icon className="w-full h-full" />
         </div>
         <div>
@@ -36,7 +36,7 @@ export const EcommercePageHeader = ({ icon: Icon,
         <Button
           onClick={onAction}
           disabled={actionDisabled}
-          className="bg-[#0F1F3D] hover:from-blue-600 hover:to-emerald-700 text-white border-0 gap-2"
+          className="bg-[#0052FF] hover:bg-[#0040CC] text-white border-0 gap-2"
         >
           {ActionIcon && <ActionIcon className="h-4 w-4" />}
           {actionLabel}

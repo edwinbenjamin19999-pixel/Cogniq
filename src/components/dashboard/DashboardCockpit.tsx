@@ -977,7 +977,7 @@ export const DashboardCockpit = ({
                   </div>
                   AI-insikter & prognoser
                 </CardTitle>
-                <span className="bg-[#0F1F3D] text-white text-xs px-2 py-0.5 rounded-full font-medium">AI</span>
+                <span className="bg-[#0052FF] text-white text-xs px-2 py-0.5 rounded-full font-medium">AI</span>
               </div>
             </CardHeader>
             <CardContent className="space-y-2">
@@ -1030,7 +1030,7 @@ export const DashboardCockpit = ({
               )}
               <button
                 onClick={() => navigate("/assistant")}
-                className="w-full bg-[#0F1F3D] text-white rounded-xl h-11 flex items-center justify-center gap-2 font-medium text-sm hover:from-[#0052FF] hover:to-slate-900 transition-all duration-200 mt-2"
+                className="w-full bg-[#0052FF] text-white rounded-xl h-11 flex items-center justify-center gap-2 font-medium text-sm hover:bg-[#0040CC] transition-all duration-200 mt-2"
               >
                 <Sparkles className="h-4 w-4" />Fråga AI-revisorn
               </button>

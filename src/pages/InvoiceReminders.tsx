@@ -239,7 +239,7 @@ const InvoiceReminders = () => {
       <div className="px-8 space-y-6">
         {/* AI Decision Banner */}
         {enriched.length > 0 && (
-          <div className="rounded-2xl bg-[#0F1F3D] border border-[#C8DDF5] p-6 shadow-lg">
+          <div className="rounded-2xl bg-white border border-[#E2E8F0] p-6 shadow-lg">
             <div className="flex flex-col lg:flex-row lg:items-center gap-5">
               <div className="flex items-start gap-4 flex-1">
                 <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0052FF] to-blue-600 flex items-center justify-center shadow-lg shadow-[#0052FF]/30 flex-shrink-0">
@@ -251,9 +251,9 @@ const InvoiceReminders = () => {
                       AI Beslutsmotor
                     </span>
                     <span className="h-1 w-1 rounded-full bg-[#0052FF]/60" />
-                    <span className="text-[10px] text-slate-300">live-analys</span>
+                    <span className="text-[10px] text-[#64748B]">live-analys</span>
                   </div>
-                  <p className="text-lg font-semibold text-white leading-tight">
+                  <p className="text-lg font-semibold text-[#0F172A] leading-tight">
                     {enriched.length} fordringar analyserade —{" "}
                     <span className="text-[#0052FF]">{formatSEK(Math.round(aiSummary.recoveryEst))}</span> bedöms återvinningsbart
                   </p>
@@ -264,12 +264,12 @@ const InvoiceReminders = () => {
                       </span>
                     )}
                     {aiSummary.plan > 0 && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-violet-500/15 border border-violet-400/30 text-violet-200 text-xs font-medium">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-violet-500/15 border border-violet-400/30 text-violet-700 text-xs font-medium">
                         <CalendarClock className="h-3 w-3" /> {aiSummary.plan} behöver betalplan
                       </span>
                     )}
                     {aiSummary.collection > 0 && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-500/15 border border-rose-400/30 text-rose-200 text-xs font-medium">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-500/15 border border-rose-400/30 text-rose-700 text-xs font-medium">
                         <Gavel className="h-3 w-3" /> {aiSummary.collection} till inkasso ({formatSEK(aiSummary.collectionAmount)})
                       </span>
                     )}

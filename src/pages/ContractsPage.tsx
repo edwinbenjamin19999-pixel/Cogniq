@@ -93,36 +93,36 @@ const ContractsPage = () => { const [activeCompanyId, setActiveCompanyId] = useS
 
       {isEmpty ? (
         // ============ EMPTY STATE HERO ============
-        <div className="relative overflow-hidden rounded-2xl bg-[#0F1F3D] border border-slate-800 p-10 md:p-14 shadow-[0_8px_40px_-12px_rgba(0,82,255,0.25)]">
+        <div className="relative overflow-hidden rounded-2xl bg-white border border-[#E2E8F0] p-10 md:p-14 shadow-[0_8px_40px_-12px_rgba(0,82,255,0.25)]">
           {/* Cyan glow accent */}
           <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#EFF6FF] blur-3xl pointer-events-none" />
-          <div className="absolute top-0 left-0 w-1 h-full bg-[#0F1F3D]" />
+          <div className="absolute top-0 left-0 w-1 h-full bg-[#0052FF]" />
 
           <div className="relative max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#C8DDF5] mb-5">
               <Sparkles className="h-3.5 w-3.5 text-[#1E3A5F]" />
               <span className="text-xs font-medium text-[#0052FF] tracking-wide">REVENUE INTELLIGENCE</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-3 tracking-tight">
               Lägg till din första återkommande intäktsström
             </h2>
-            <p className="text-base md:text-lg text-slate-300 mb-7 leading-relaxed">
+            <p className="text-base md:text-lg text-[#64748B] mb-7 leading-relaxed">
               AI genererar fakturor, intäkter och prognoser automatiskt — du gör inget.
             </p>
             <div className="flex flex-wrap gap-3 mb-10">
-              <Button size="lg" onClick={() => setShowForm(true)} className="bg-[#0052FF] hover:bg-[#0052FF] text-slate-950 font-semibold shadow-lg shadow-[#0052FF]/20">
+              <Button size="lg" onClick={() => setShowForm(true)} className="bg-[#0052FF] hover:bg-[#0040CC] text-white font-semibold shadow-lg shadow-[#0052FF]/20">
                 <Plus className="h-4 w-4 mr-1.5" />Lägg till återkommande intäktsström
               </Button>
-              <Button size="lg" variant="outline" onClick={() => setShowExamples(true)} className="border-slate-700 bg-slate-900/50 text-slate-200 hover:bg-slate-800 hover:text-white">
+              <Button size="lg" variant="outline" onClick={() => setShowExamples(true)} className="border-[#E2E8F0] bg-white text-[#475569] hover:bg-[#F1F5F9] hover:text-[#0F172A]">
                 Se exempel →
               </Button>
             </div>
 
             <ExamplesDialog open={showExamples} onOpenChange={setShowExamples} onCreate={() => { setShowExamples(false); setShowForm(true); }} />
 
-            <div className="h-px w-full bg-slate-800 mb-6" />
+            <div className="h-px w-full bg-[#E2E8F0] mb-6" />
 
-            <p className="text-[11px] uppercase tracking-wider text-slate-500 mb-4 font-medium">Vad händer när du har avtal</p>
+            <p className="text-[11px] uppercase tracking-wider text-[#64748B] mb-4 font-medium">Vad händer när du har avtal</p>
             <div className="grid md:grid-cols-3 gap-4">
               <FeatureRow icon={RefreshCw} title="Automatisk fakturering" sub="varje månad" />
               <FeatureRow icon={TrendingUp} title="MRR/ARR-prognos" sub="12 månader framåt" />
@@ -249,8 +249,8 @@ function FeatureRow({ icon: Icon, title, sub }: { icon: any; title: string; sub:
         <Icon className="h-4 w-4 text-[#1E3A5F]" />
       </div>
       <div>
-        <p className="text-sm font-semibold text-white">{title}</p>
-        <p className="text-xs text-slate-400">{sub}</p>
+        <p className="text-sm font-semibold text-[#0F172A]">{title}</p>
+        <p className="text-xs text-[#64748B]">{sub}</p>
       </div>
     </div>
   );

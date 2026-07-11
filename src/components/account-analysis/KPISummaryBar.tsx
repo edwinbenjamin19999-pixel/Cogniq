@@ -76,7 +76,7 @@ export const KPISummaryBar = ({ account, allSummaries }: KPISummaryBarProps) => 
               </p>
             </div>
             <p
-              className="font-semibold tabular-nums truncate"
+              className="font-semibold tabular-nums"
               style={{ fontSize: 14, color: valueColor(chip.tone) }}
               title={chip.value}
             >

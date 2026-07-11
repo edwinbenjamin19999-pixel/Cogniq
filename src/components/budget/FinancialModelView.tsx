@@ -122,8 +122,8 @@ export const FinancialModelView = ({ rr, br }: Props) => {
       const sectionKey = row.key.replace("-header", "");
       const isExpanded = expandedSections.has(sectionKey);
       return (
-        <tr key={row.key} className="bg-slate-900 dark:bg-slate-950 cursor-pointer select-none" onClick={() => toggleSection(sectionKey)}>
-          <td colSpan={14} className="py-2 px-3 text-[11px] font-black uppercase tracking-widest text-white">
+        <tr key={row.key} className="bg-[#F1F5F9] dark:bg-slate-950 cursor-pointer select-none" onClick={() => toggleSection(sectionKey)}>
+          <td colSpan={14} className="py-2 px-3 text-[11px] font-black uppercase tracking-widest text-[#0F172A]">
             <span className="flex items-center gap-1.5">
               {isExpanded ? <ChevronDown className="w-3 h-3" /> : <ChevronRight className="w-3 h-3" />}
               {row.label}
@@ -154,13 +154,13 @@ export const FinancialModelView = ({ rr, br }: Props) => {
         key={row.key}
         className={cn(
           "transition-colors",
-          isTotal && "bg-slate-900 dark:bg-slate-950 text-white font-bold",
+          isTotal && "bg-[#F1F5F9] dark:bg-slate-950 text-[#0F172A] font-bold",
           isSubtotal && "bg-slate-100 dark:bg-slate-800 font-semibold border-t border-slate-200 dark:border-slate-700",
           isKPI && "bg-blue-50/50 dark:bg-blue-950/20",
           !isTotal && !isSubtotal && !isKPI && "hover:bg-slate-50 dark:hover:bg-slate-800/50 border-b border-slate-50 dark:border-slate-900",
         )}
       >
-        <td className={cn("py-1.5 px-3 text-xs whitespace-nowrap", isTotal && "text-white font-bold text-[13px]")} style={{ paddingLeft: `${12 + (row.indent || 0) * 16}px` }}>
+        <td className={cn("py-1.5 px-3 text-xs whitespace-nowrap", isTotal && "text-[#0F172A] font-bold text-[13px]")} style={{ paddingLeft: `${12 + (row.indent || 0) * 16}px` }}>
           <span className="flex items-center gap-1.5">
             {row.label}
             {row.formula && (

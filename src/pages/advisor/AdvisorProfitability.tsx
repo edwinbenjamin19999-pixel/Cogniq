@@ -135,7 +135,7 @@ export default function AdvisorProfitability() {
       </div>
 
       {/* AI INSIGHTS */}
-      <div className="bg-[#0B1929] rounded-[12px] p-4 text-white">
+      <div className="bg-[#0052FF] rounded-[12px] p-4 text-white">
         <div className="flex items-center gap-2 mb-3">
           <Sparkles className="h-4 w-4 text-purple-300" />
           <span className="text-[10px] font-semibold uppercase tracking-wider text-purple-300">AI-insikter</span>

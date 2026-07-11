@@ -218,7 +218,7 @@ export const BureauAICommandBar = () => {
                         navigate(a.route);
                         close();
                       }}
-                      className="rounded-md bg-[#0B1929] text-white text-[11px] font-semibold px-2.5 py-1 hover:bg-[#142a44]"
+                      className="rounded-md bg-[#0052FF] text-white text-[11px] font-semibold px-2.5 py-1 hover:bg-[#0040CC]"
                     >
                       {a.label}
                     </button>

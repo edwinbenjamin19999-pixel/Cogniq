@@ -139,7 +139,7 @@ export const AISuggestionCard = ({ suggestion, onAccept, onDismiss, isLoading }:
 
       {/* Actions */}
       <div className="flex items-center gap-2 pt-1">
-        <Button size="sm" className="h-[34px] rounded-[8px] text-[12px] gap-1.5 bg-[#0F1F3D] hover:bg-[#15294D] text-white" onClick={onAccept}>
+        <Button size="sm" className="h-[34px] rounded-[8px] text-[12px] gap-1.5 bg-[#0052FF] hover:bg-[#0040CC] text-white" onClick={onAccept}>
           <Check className="h-3.5 w-3.5" />
           Acceptera
         </Button>

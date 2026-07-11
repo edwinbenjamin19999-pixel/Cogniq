@@ -127,7 +127,7 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent side="right" className="w-[500px] sm:w-[600px] p-0 flex flex-col">
-        <SheetHeader className="bg-[#0F1F3D] text-white px-6 py-4">
+        <SheetHeader className="bg-[#0052FF] text-white px-6 py-4">
           <div className="flex items-center gap-2">
             <div className="p-1.5 rounded-lg bg-white/20">
               <Bot className="w-4 h-4" />
@@ -143,7 +143,7 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
             {messages.map((msg, i) => (
               <div key={i} className={cn("flex gap-2", msg.role === "user" ? "justify-end" : "justify-start")}>
                 {msg.role === "assistant" && (
-                  <div className="w-7 h-7 rounded-full bg-[#0F1F3D] flex items-center justify-center shrink-0 mt-1">
+                  <div className="w-7 h-7 rounded-full bg-[#0052FF] flex items-center justify-center shrink-0 mt-1">
                     <Bot className="w-3.5 h-3.5 text-white" />
                   </div>
                 )}
@@ -163,7 +163,7 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
                   </p>
                 </div>
                 {msg.role === "user" && (
-                  <div className="w-7 h-7 rounded-full bg-[#0F1F3D] flex items-center justify-center shrink-0 mt-1">
+                  <div className="w-7 h-7 rounded-full bg-[#0052FF] flex items-center justify-center shrink-0 mt-1">
                     <User className="w-3.5 h-3.5 text-white" />
                   </div>
                 )}
@@ -171,7 +171,7 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
             ))}
             {loading && (
               <div className="flex gap-2 justify-start">
-                <div className="w-7 h-7 rounded-full bg-[#0F1F3D] flex items-center justify-center shrink-0">
+                <div className="w-7 h-7 rounded-full bg-[#0052FF] flex items-center justify-center shrink-0">
                   <Bot className="w-3.5 h-3.5 text-white" />
                 </div>
                 <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
@@ -220,7 +220,7 @@ export const BudgetAIAssistant = ({ open, onOpenChange, companyId, budgetId, onF
               onKeyDown={e => e.key === "Enter" && sendMessage()}
               className="flex-1"
             />
-            <Button size="icon" onClick={() => sendMessage()} disabled={!input.trim() || loading} className="bg-[#0F1F3D] hover:from-indigo-700 hover:to-purple-700">
+            <Button size="icon" onClick={() => sendMessage()} disabled={!input.trim() || loading} className="bg-[#0052FF] hover:from-indigo-700 hover:to-purple-700">
               <Send className="w-4 h-4" />
             </Button>
           </div>

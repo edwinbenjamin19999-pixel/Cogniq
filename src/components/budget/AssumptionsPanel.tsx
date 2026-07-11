@@ -71,7 +71,7 @@ export const AssumptionsPanel = ({ open, onOpenChange, drivers, onDriversChange 
       <SheetContent className="w-[380px] sm:w-[420px] overflow-y-auto">
         <SheetHeader className="pb-4">
           <SheetTitle className="text-base flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-[#0F1F3D] flex items-center justify-center">
+            <div className="w-7 h-7 rounded-lg bg-[#0052FF] flex items-center justify-center">
               <TrendingUp className="w-4 h-4 text-white" />
             </div>
             Antaganden

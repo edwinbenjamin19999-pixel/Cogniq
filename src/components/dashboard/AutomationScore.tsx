@@ -66,7 +66,7 @@ export const AutomationScore = ({ companyId }: AutomationScoreProps) => {
   return (
     <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-none border-0 overflow-hidden">
       {/* Dark header with grade circle */}
-      <div className="bg-[#0F1F3D] px-6 py-5 flex items-center justify-between">
+      <div className="bg-[#0052FF] px-6 py-5 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="bg-[#EFF6FF] rounded-xl p-2">
             <Zap className="w-5 h-5 text-[#1E3A5F]" />
@@ -85,7 +85,7 @@ export const AutomationScore = ({ companyId }: AutomationScoreProps) => {
         </p>
         <div className="relative bg-slate-100 dark:bg-slate-800 rounded-full h-5 overflow-hidden">
           <div
-            className="h-full bg-[#0F1F3D] rounded-full transition-all duration-[1200ms] ease-out flex items-center justify-end pr-2"
+            className="h-full bg-[#0052FF] rounded-full transition-all duration-[1200ms] ease-out flex items-center justify-end pr-2"
             style={{ width: mounted ? `${Math.max(overallScore, 8)}%` : "0%" }}
           >
             {overallScore > 15 && (
@@ -127,7 +127,7 @@ export const AutomationScore = ({ companyId }: AutomationScoreProps) => {
 
       {/* Tips footer */}
       {overallScore < 80 && stats.totalEntries > 0 && (
-        <div className="bg-[#0F1F3D] dark:from-blue-950/30 dark:to-violet-950/30 px-6 py-4 border-t border-slate-50 dark:border-slate-800 flex items-center gap-3">
+        <div className="bg-[#F1F5F9] dark:from-blue-950/30 dark:to-violet-950/30 px-6 py-4 border-t border-slate-50 dark:border-slate-800 flex items-center gap-3">
           <Lightbulb className="w-5 h-5 text-[#7A5417] flex-shrink-0" />
           <p className="text-slate-600 dark:text-slate-400 text-xs italic flex-1">
             Tips: Använd AI-bokföring och koppla banken för att höja din poäng

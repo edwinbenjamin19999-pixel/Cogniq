@@ -39,7 +39,7 @@ export function BASUpdateModal({ open, saving, onConfirm, onClose }: Props) {
           <button onClick={onClose} className="flex-1 py-2.5 rounded-xl border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors">
             Avbryt
           </button>
-          <button onClick={onConfirm} disabled={saving} className="flex-grow py-2.5 rounded-xl bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition-colors disabled:opacity-50">
+          <button onClick={onConfirm} disabled={saving} className="flex-grow py-2.5 rounded-xl bg-[#0052FF] text-white text-sm font-semibold hover:bg-[#0040CC] transition-colors disabled:opacity-50">
             {saving ? "Uppdaterar…" : "Uppdatera BAS"}
           </button>
         </div>

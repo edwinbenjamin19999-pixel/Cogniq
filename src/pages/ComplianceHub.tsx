@@ -75,7 +75,7 @@ const KPICard = ({
     <div
       className={`relative overflow-hidden rounded-[12px] p-5 animate-fade-in border-[0.5px] ${
         isPrimary
-          ? "bg-[#0F1F3D] border-[#0F1F3D] text-white"
+          ? "bg-[#0052FF] border-[#0052FF] text-white"
           : "bg-white border-[#E2E8F0] text-[#0F1F3D]"
       }`}
       style={{ animationDelay: `${delay}ms`, animationFillMode: "both" }}
@@ -346,7 +346,7 @@ const ComplianceHub = () => {
                         <td className="px-4 py-3 text-right">
                           <div className="flex items-center justify-end gap-1.5">
                             <Button size="sm" variant="outline" className="h-7 text-xs" onClick={() => setKycReview(item)}>Granska</Button>
-                            <Button size="sm" className="h-7 text-xs bg-[#0F1F3D] hover:bg-[#1E3A5F] text-white" onClick={() => handleKycApprove(item)}>Godkänn</Button>
+                            <Button size="sm" className="h-7 text-xs bg-[#0052FF] hover:bg-[#0040CC] text-white" onClick={() => handleKycApprove(item)}>Godkänn</Button>
                             <Button size="sm" variant="outline" className="h-7 text-xs border-[#F4C8C8] text-[#7A1A1A] hover:bg-[#FCE8E8]" onClick={() => setKycRejectTarget(item)}>Avvisa</Button>
                           </div>
                         </td>
@@ -392,7 +392,7 @@ const ComplianceHub = () => {
                       <Badge key={c} variant="outline" className="text-[10px] bg-[#F1F5F9] text-[#1E3A5F] border-[#E2E8F0]">{c}</Badge>
                     ))}
                   </div>
-                  <Button size="sm" className="w-full bg-[#0F1F3D] hover:bg-[#1E3A5F] text-white">
+                  <Button size="sm" className="w-full bg-[#0052FF] hover:bg-[#0040CC] text-white">
                     <FileJson className="h-3.5 w-3.5 mr-1.5" /> Generera export
                   </Button>
                 </CardContent>
@@ -418,7 +418,7 @@ const ComplianceHub = () => {
                     className={`text-sm ${sarError ? "border-destructive" : ""}`}
                   />
                   <Button onClick={validateAndConfirm} disabled={exportMutation.isPending} size="sm"
-                    className="bg-[#0F1F3D] hover:bg-[#1E3A5F] text-white shrink-0">
+                    className="bg-[#0052FF] hover:bg-[#0040CC] text-white shrink-0">
                     {exportMutation.isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />}
                   </Button>
                 </div>

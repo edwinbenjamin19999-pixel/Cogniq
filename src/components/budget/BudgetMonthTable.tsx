@@ -203,8 +203,8 @@ export function BudgetMonthTable({ rows, selectedMonth, onMonthSelect, title, ed
             <col style={{ width: "100px" }} />
           </colgroup>
           <thead className="sticky top-0 z-30">
-            <tr className="bg-slate-800 dark:bg-slate-900">
-              <th className="sticky left-0 z-40 bg-slate-800 dark:bg-slate-900 text-left px-4 py-3 text-xs font-semibold text-slate-300 uppercase tracking-wider border-r border-slate-700">
+            <tr className="bg-[#F1F5F9] dark:bg-slate-900">
+              <th className="sticky left-0 z-40 bg-[#F1F5F9] dark:bg-slate-900 text-left px-4 py-3 text-xs font-semibold text-[#64748B] uppercase tracking-wider border-r border-[#E2E8F0]">
                 {title ?? "Post"}
               </th>
               {MONTHS.map((m) => (
@@ -212,14 +212,14 @@ export function BudgetMonthTable({ rows, selectedMonth, onMonthSelect, title, ed
                   key={m.key}
                   onClick={() => onMonthSelect?.(m.idx)}
                   className={cn(
-                    "text-right px-2 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer transition-colors hover:bg-slate-700/50",
-                    selectedMonth === m.idx ? "bg-indigo-800/50 text-indigo-200" : "text-slate-300"
+                    "text-right px-2 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer transition-colors hover:bg-slate-200/60",
+                    selectedMonth === m.idx ? "bg-[#0052FF]/10 text-[#0052FF]" : "text-[#64748B]"
                   )}
                 >
                   {m.label}
                 </th>
               ))}
-              <th className="text-right px-3 py-3 text-xs font-semibold text-indigo-200 uppercase tracking-wider bg-indigo-900 dark:bg-indigo-950 border-l border-indigo-700">
+              <th className="text-right px-3 py-3 text-xs font-semibold text-[#0052FF] uppercase tracking-wider bg-[#EEF2FF] dark:bg-indigo-950 border-l border-[#E2E8F0]">
                 Helår
               </th>
             </tr>

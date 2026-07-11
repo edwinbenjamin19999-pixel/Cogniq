@@ -298,7 +298,7 @@ export const MobileReceipts = ({ initialSegment = "receipt" }: { initialSegment?
               <p className="text-slate-400 text-sm mt-1">Kvitto, faktura eller underlag</p>
             </div>
             <div className="px-5 pb-5 space-y-2.5">
-              <button onClick={() => { setUploadMode("receipt"); cameraRef.current?.click(); }} className="w-full bg-slate-900 text-white rounded-xl py-3.5 font-semibold text-sm active:scale-[0.97] transition-all duration-200 min-h-[44px]">
+              <button onClick={() => { setUploadMode("receipt"); cameraRef.current?.click(); }} className="w-full bg-[#0052FF] text-white rounded-xl py-3.5 font-semibold text-sm active:scale-[0.97] transition-all duration-200 min-h-[44px]">
                 📷 Öppna kamera
               </button>
               <button onClick={() => { setUploadMode("receipt"); fileRef.current?.click(); }} className="w-full bg-white border-2 border-slate-200 text-slate-700 rounded-xl py-3.5 font-semibold text-sm active:scale-[0.97] transition-all duration-200 min-h-[44px]">

@@ -116,14 +116,14 @@ export const BudgetOnboardingNew = ({ companyId, fiscalYear, onBudgetCreated }: 
   if (creating) { return (
       <div className="max-w-md mx-auto mt-16 text-center space-y-6">
         <div className="relative w-20 h-20 mx-auto">
-          <div className="absolute inset-0 rounded-full bg-[#0F1F3D] animate-pulse opacity-20" />
-          <div className="absolute inset-2 rounded-full bg-[#0F1F3D] flex items-center justify-center">
+          <div className="absolute inset-0 rounded-full bg-[#0052FF] animate-pulse opacity-20" />
+          <div className="absolute inset-2 rounded-full bg-[#0052FF] flex items-center justify-center">
             <Sparkles className="w-8 h-8 text-white animate-pulse" />
           </div>
         </div>
         <p className="text-sm font-medium">{progress || "Skapar budget..."}</p>
         <div className="h-2 bg-muted rounded-full overflow-hidden max-w-xs mx-auto">
-          <div className="h-full bg-[#0F1F3D] animate-pulse" style={{ width: "60%" }} />
+          <div className="h-full bg-[#0052FF] animate-pulse" style={{ width: "60%" }} />
         </div>
       </div>
     );
@@ -164,7 +164,7 @@ export const BudgetOnboardingNew = ({ companyId, fiscalYear, onBudgetCreated }: 
       <Card className="max-w-lg mx-auto mt-12">
         <CardContent className="pt-6 space-y-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-[#0F1F3D] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-full bg-[#0052FF] flex items-center justify-center">
               <Sparkles className="w-4 h-4 text-white" />
             </div>
             <div>
@@ -187,7 +187,7 @@ export const BudgetOnboardingNew = ({ companyId, fiscalYear, onBudgetCreated }: 
             {aiStep < aiSteps.length - 1 ? (
               <Button size="sm" onClick={() => setAiStep(aiStep + 1)}>Nästa <ArrowRight className="w-4 h-4 ml-1" /></Button>
             ) : (
-              <Button size="sm" onClick={() => createBudget("ai", parseInt(growthTarget) || 15)} className="bg-[#0F1F3D]">
+              <Button size="sm" onClick={() => createBudget("ai", parseInt(growthTarget) || 15)} className="bg-[#0052FF]">
                 <Sparkles className="w-4 h-4 mr-1" /> Generera budget
               </Button>
             )}
